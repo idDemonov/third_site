@@ -1,17 +1,13 @@
-.container {
-
-}
+.container {}
 .header {
 	&__body {
-		// @include flexbox;
-		display: flex;
-		padding-top: 15px;
+		@include flexbox;
+		margin-top: 0.937rem;
+		line-height: 17px; //Вставить в другое место
 	}
-	&__column {
-
-	}
+	&__column {}
 	&__logo {
-		padding-right: 285px;
+		padding-right: 17.812rem;
 	}
 }
 .menu-header {
@@ -19,17 +15,38 @@
 	&__list {
 		display: flex;
 		font-size: 14px;
+		padding-top: 1.125rem;
 	}
 	&__link { //:not(:last-child)   На всякий случай если будут проблемы у отступа справа, элемента "Зарегистрироваться"
-		padding-right: 20px;
+		padding-right: 1.25rem;
+		white-space: nowrap
 	}
 }
 .bottom-header {
-	&__login {}
-	&__register {}
+	&__login {
+		color: #BC9CFF;
+		border: 2px solid #BC9CFF;
+		border-radius: 22px;
+		padding: 0.625rem 1.25rem;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 13px;
+		letter-spacing: 0.062rem;
+
+	}
+	&__register {
+		color: #ffffff;
+		background: linear-gradient(#BC9CFF, #8BA4F9);
+		border-radius: 22px;
+		padding: 0.625rem 1.25rem;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 13px;
+		letter-spacing: 0.062rem;
+	}
 }
 .dropdown-menu-header {
 		&--thumbnail { // Придумать другое название модификатора(Какой?)
-			padding:3px 6px; // ТУТ-Костыль: подумать как оцинтровать стрелку выпадающего меню
+			padding: 5px 6px; // ТУТ-Костыль: подумать как оцинтровать стрелку выпадающего меню
 		}
 }
