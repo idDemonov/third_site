@@ -1,1 +1,33 @@
-header{}
+.container {
+
+}
+.header {
+	&__body {
+		// @include flexbox;
+		display: flex;
+		padding-top: 15px;
+	}
+	&__column {
+
+	}
+	&__logo {
+		padding-right: 285px;
+	}
+}
+.menu-header {
+	&__menu {}
+	&__list {
+		display: flex;
+	}
+	&__link {
+		padding-right: 20px;
+	}
+}
+.dropdown-menu-header {
+}
+
+
+.bottom-header {
+	&__login {}
+	&__register {}
+}
