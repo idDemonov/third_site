@@ -25,13 +25,13 @@
 .bottom-header {
 	&__login {
 		color: #BC9CFF;
-		border: 2px solid #BC9CFF;
+		border: 2px solid #BC9CFF; // Нужно сделать градиент
 		border-radius: 22px;
-		padding: 0.625rem 1.25rem;
+		padding: 0.5rem 1.125rem;
+		background: #ffffff;
 		text-transform: uppercase;
 		font-weight: bold;
-		font-size: 13px;
-		letter-spacing: 0.062rem;
+		font-size: 12px;
 
 	}
 	&__register {
@@ -41,12 +41,11 @@
 		padding: 0.625rem 1.25rem;
 		text-transform: uppercase;
 		font-weight: bold;
-		font-size: 13px;
-		letter-spacing: 0.062rem;
+		font-size: 12px;
 	}
 }
 .dropdown-menu-header {
-		&--thumbnail { // Придумать другое название модификатора(Какой?)
+		&--thumbnail { // Придумать другое название модификатора(От слова какой?)
 			padding: 5px 6px; // ТУТ-Костыль: подумать как оцинтровать стрелку выпадающего меню
 		}
 }
