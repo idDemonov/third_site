@@ -28,15 +28,9 @@
 
 .link-menu-header {
 	&__icon {
-	padding: 5px 6px; // ТУТ-Костыль: подумать как оцинтровать стрелку выпадающего меню}
+	padding: 5px 6px; // ТУТ-Костыль: подумать как оцинтровать стрелку выпадающего меню
 	}
 }
-
-.menu-header-dropdown {
-	&__list {}
-	&__item {}
-}
-
 
 .bottom-header {
 	&__login {
@@ -61,38 +55,63 @@
 	}
 }
 .menu-header-dropdown {
-	&__list {}
-	&__item {}
-	&__item--icon {
+	&__list {
+		text-align: right;
+		margin-left: -4.25rem;
+	}
+	&__item {
+		padding-bottom: 1rem;
+		text-align: right;
+		position: absolute;
+	}
+	&__icon {
 		display: none;
 	}
 }
 
+.menu-header-dropdown{
+	&__list:hover {
+		font-size: 12px;
 
+	}
+	&__icon {}
+	&__item:hover{
+		position: inherit;
+	}
+}
+
+.menu-header-dropdown {// Скрываю меню
+	&__login {font-size: 0px;}
+	&__register {font-size: 0px;}
+}
 // ---------------------------------
 
 @media screen and (max-width: 850px) { // Скрываю меню, раскрываю иконку меню
 	.menu-header--no {
-	display: none;
+		display: none;
 	}
 	.menu-header-dropdown {
-		&__item--icon {
+		&__icon {
 			display: block;
-			margin: -0.3rem 1.125rem;
 		}
 	}
 	.menu-header-dropdown:hover {
 		&__item {
-			display: block;
 			font-size: 16px;
 		}
 	}
 }
 
-@media screen and (max-width: 499px) { // Убераю кнопку Войти и Зарегестрироваться
-	.menu-header {
+@media screen and (max-width: 520px) { 
+	.menu-header {// Скрываю кнопку Войти и Зарегестрироваться из навигации
 		&__list--bottom {
 			display: none;
 		}
 	}
+	.menu-header-dropdown {  // Добавляю кнопку Войти и Зарегестрироваться в выпадающее меню
+	&__login {font-size: 12px;}
+	&__register {font-size: 12px;}
 }
+}
+
+
