@@ -101,9 +101,9 @@ h1,h2,h3,h4,h5,h6 {
 	max-width:$mw+px;
 	margin: 0 auto;
 	width: 100%;
-	@media (max-width:$md1+px){max-width: 970px;}
-	@media (max-width:$md2+px){max-width: 750px;}
-	@media (max-width:$md3+px){max-width: none;padding:0 10px;}
+	// @media (max-width:$md1+px){max-width: 970px;}
+	// @media (max-width:$md2+px){max-width: 750px;}
+	// @media (max-width:$md3+px){max-width: none;padding:0 10px;} Надо разобраться
 }
 //</ОСНОВНАЯ СЕТКА>===========================================================================================================
 

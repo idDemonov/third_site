@@ -3,24 +3,31 @@
 	&__body {
 		@include flexbox;
 		margin-top: 0.937rem;
-		line-height: 17px; //Вставить в другое место
+		justify-content: space-between;
 	}
 	&__column {}
-	&__logo {
-		padding-right: 17.812rem;
-	}
+	&__logo {}
 }
+
 .menu-header {
-	&__menu {}
+	&__menu {
+		@include flexbox;
+	}
 	&__list {
-		display: flex;
+		@include flexbox;
 		font-size: 14px;
 		padding-top: 1.125rem;
 	}
-	&__link { //:not(:last-child)   На всякий случай если будут проблемы у отступа справа, элемента "Зарегистрироваться"
-		padding-right: 1.25rem;
+	&__link { //:not(:last-child) На всякий случай если будут проблемы у отступа справа, элемента "Зарегистрироваться"
+		padding-right: 1.25vw;
 		white-space: nowrap
 	}
+	&__link--current {}
+}
+.dropdown-menu-header {
+		&--dropdown { // Желательно другое название модификатора
+			padding: 5px 6px; // ТУТ-Костыль: подумать как оцинтровать стрелку выпадающего меню
+		}
 }
 .bottom-header {
 	&__login {
@@ -43,9 +50,4 @@
 		font-weight: bold;
 		font-size: 12px;
 	}
-}
-.dropdown-menu-header {
-		&--thumbnail { // Придумать другое название модификатора(От слова какой?)
-			padding: 5px 6px; // ТУТ-Костыль: подумать как оцинтровать стрелку выпадающего меню
-		}
 }
