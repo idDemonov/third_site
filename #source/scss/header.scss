@@ -6,7 +6,9 @@
 		justify-content: space-between;
 	}
 	&__column {}
-	&__logo {}
+	&__logo {
+		padding-left: 1.125rem;
+	}
 }
 
 .menu-header {
@@ -22,13 +24,20 @@
 		padding-right: 1.25vw;
 		white-space: nowrap
 	}
-	&__link--current {}
 }
-.dropdown-menu-header {
-		&--dropdown { // Желательно другое название модификатора
-			padding: 5px 6px; // ТУТ-Костыль: подумать как оцинтровать стрелку выпадающего меню
-		}
+
+.link-menu-header {
+	&__icon {
+	padding: 5px 6px; // ТУТ-Костыль: подумать как оцинтровать стрелку выпадающего меню}
+	}
 }
+
+.menu-header-dropdown {
+	&__list {}
+	&__item {}
+}
+
+
 .bottom-header {
 	&__login {
 		color: #BC9CFF;
@@ -49,5 +58,41 @@
 		text-transform: uppercase;
 		font-weight: bold;
 		font-size: 12px;
+	}
+}
+.menu-header-dropdown {
+	&__list {}
+	&__item {}
+	&__item--icon {
+		display: none;
+	}
+}
+
+
+// ---------------------------------
+
+@media screen and (max-width: 850px) { // Скрываю меню, раскрываю иконку меню
+	.menu-header--no {
+	display: none;
+	}
+	.menu-header-dropdown {
+		&__item--icon {
+			display: block;
+			margin: -0.3rem 1.125rem;
+		}
+	}
+	.menu-header-dropdown:hover {
+		&__item {
+			display: block;
+			font-size: 16px;
+		}
+	}
+}
+
+@media screen and (max-width: 499px) { // Убераю кнопку Войти и Зарегестрироваться
+	.menu-header {
+		&__list--bottom {
+			display: none;
+		}
 	}
 }

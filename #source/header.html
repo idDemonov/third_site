@@ -5,21 +5,30 @@
 				<a class="header__logo" href="../index.html"><img src="img/logo.svg" alt=""></a>
 			</div>
 			<nav class="menu-header__menu">
-				<div class="header__column menu-header">
+
+				<div class="header__column menu-header menu-header--no">
 					<ul class="menu-header__list">
-						<li class="menu-header__link menu-header__link--current"><a href="#">О нас</a></li>
-						<li class="menu-header__link dropdown-menu-header">
-							Услуги<img class="dropdown-menu-header--dropdown"  src="../img/dropdown.svg" alt="#"><!-- не забыть добавить палец вместо мыши -->
-						</li>
+						<li class="menu-header__link menu-header__link"><a href="#">О нас</a></li>
+						<li class="menu-header__link link-menu-header">Услуги<img class="link-menu-header__icon"  src="../img/dropdown.svg" alt="#"><!-- не забыть добавить палец вместо мыши --></li>
 						<li class="menu-header__link"><a href="#">Вакансии</a></li>
 						<li class="menu-header__link"><a href="#">Новости</a></li>
-						<li class="menu-header__link dropdown-menu-header">
-							Соглашения<img class="dropdown-menu-header--dropdown" src="../img/dropdown.svg" alt="#"> <!-- не забыть добавить палец вместо мыши -->
-						</li>
+						<li class="menu-header__link link-menu-header">Соглашения<img class="link-menu-header__icon" src="../img/dropdown.svg" alt="#"> <!-- не забыть добавить палец вместо мыши --></li>
 					</ul>
 				</div>
+
+				<div class="menu-header-dropdown">
+					<ul class="menu-header-dropdown__list">
+						<li class="menu-header-dropdown__item menu-header-dropdown__item--icon"><img src="https://img.icons8.com/nolan/64/000000/drag-list-down.png"></li>
+						<li class="menu-header-dropdown__item">О нас</li>
+						<li class="menu-header-dropdown__item">Услуги</li>
+						<li class="menu-header-dropdown__item">Вакансии</li>
+						<li class="menu-header-dropdown__item">Новости</li>
+						<li class="menu-header-dropdown__item">Соглашения</li>
+					</ul>
+				</div>
+
 				<div class="header__column menu-header">
-					<ul class="menu-header__list">
+					<ul class="menu-header__list menu-header__list--bottom">
 						<li class="menu-header__link bottom-header">
 							<a class="bottom-header__login" href="#">Войти</a>
 						</li>
