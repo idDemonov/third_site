@@ -54,50 +54,13 @@
 		font-size: 12px;
 	}
 }
-.menu-header-dropdown {
-	&__list {
-		text-align: right;
-		margin-left: -4.25rem;
-	}
-	&__item {
-		padding-bottom: 1rem;
-		text-align: right;
-		position: absolute;
-	}
-	&__icon {
-		display: none;
-	}
-}
 
-.menu-header-dropdown{
-	&__list:hover {
-		font-size: 12px;
-
-	}
-	&__icon {}
-	&__item:hover{
-		position: inherit;
-	}
-}
-
-.menu-header-dropdown {// Скрываю меню
-	&__login {font-size: 0px;}
-	&__register {font-size: 0px;}
-}
 // ---------------------------------
 
-@media screen and (max-width: 850px) { // Скрываю меню, раскрываю иконку меню
-	.menu-header--no {
+@media screen and (max-width: 850px) { // Скрываю меню
+	.menu-header {
+		&--hiding {
 		display: none;
-	}
-	.menu-header-dropdown {
-		&__icon {
-			display: block;
-		}
-	}
-	.menu-header-dropdown:hover {
-		&__item {
-			font-size: 16px;
 		}
 	}
 }
@@ -108,10 +71,6 @@
 			display: none;
 		}
 	}
-	.menu-header-dropdown {  // Добавляю кнопку Войти и Зарегестрироваться в выпадающее меню
-	&__login {font-size: 12px;}
-	&__register {font-size: 12px;}
-}
 }
 
 

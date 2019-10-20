@@ -139,45 +139,13 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   font-size: 12px; }
 
-.menu-header-dropdown__list {
-  text-align: right;
-  margin-left: -4.25rem; }
-
-.menu-header-dropdown__item {
-  padding-bottom: 1rem;
-  text-align: right;
-  position: absolute; }
-
-.menu-header-dropdown__icon {
-  display: none; }
-
-.menu-header-dropdown__list:hover {
-  font-size: 12px; }
-
-.menu-header-dropdown__item:hover {
-  position: inherit; }
-
-.menu-header-dropdown__login {
-  font-size: 0px; }
-
-.menu-header-dropdown__register {
-  font-size: 0px; }
-
 @media screen and (max-width: 850px) {
-  .menu-header--no {
-    display: none; }
-  .menu-header-dropdown__icon {
-    display: block; }
-  .menu-header-dropdown:hover__item {
-    font-size: 16px; } }
+  .menu-header--hiding {
+    display: none; } }
 
 @media screen and (max-width: 520px) {
   .menu-header__list--bottom {
-    display: none; }
-  .menu-header-dropdown__login {
-    font-size: 12px; }
-  .menu-header-dropdown__register {
-    font-size: 12px; } }
+    display: none; } }
 
 a {
   color: inherit; }
