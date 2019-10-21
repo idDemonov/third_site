@@ -1,4 +1,5 @@
 .wrapper-burger{
+    margin-left: 100px;
     width: 320px;
     background: linear-gradient(#BC9CFF, #8BA4F9);
     position: relative;
@@ -7,7 +8,6 @@
     height: 40px;
     font-family: 'Montserrat';
     font-size: 16px;
-    margin: 0 1.25rem;
 }
 
 #check-menu{
@@ -94,6 +94,3 @@
     display: none;
 }
 
-.wrapper-burger {
-    display: none;
-}

@@ -1,5 +1,7 @@
 .header {
 	&__body {
+
+		// height: 70px;
 		@include flexbox;
 		margin-top: 0.937rem;
 		justify-content: space-between;
@@ -11,7 +13,10 @@
 
 .menu-header {
 	&__menu {
-		@include flexbox;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		flex-direction: row;
 	}
 	&__list {
 		@include flexbox;
@@ -65,18 +70,19 @@
 		}
 	}
 	.wrapper-burger {
+		font-size: 14px;
 		display: block;
 	}
 }
 
-@media screen and (max-width: 480px) { 
-	.wrapper-burger {
-		width: 170px;
+// @media screen and (max-width: 480px) { 
+// 	.wrapper-burger {
+// 		width: 170px;
 		
-		}
-	.dropdown-menu {
-		font-size: 10px;
-	}
-}
+// 		}
+// 	.dropdown-menu {
+// 		font-size: 10px;
+// 	}
+// }
 
 
