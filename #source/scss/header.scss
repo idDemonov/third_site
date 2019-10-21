@@ -1,11 +1,9 @@
-.container {}
 .header {
 	&__body {
 		@include flexbox;
 		margin-top: 0.937rem;
 		justify-content: space-between;
 	}
-	&__column {}
 	&__logo {
 		padding-left: 1.125rem;
 	}
@@ -62,14 +60,18 @@
 		&--hiding {
 		display: none;
 		}
+		&__list--bottom {// Скрываю кнопку Войти и Зарегестрироваться из навигации
+			display: none;
+		}
+	}
+	.wrapper-burger {
+		display: block;
 	}
 }
 
-@media screen and (max-width: 520px) { 
-	.menu-header {// Скрываю кнопку Войти и Зарегестрироваться из навигации
-		&__list--bottom {
-			display: none;
-		}
+@media screen and (max-width: 480px) { 
+.wrapper-burger{
+	width: 170px;
 	}
 }
 
