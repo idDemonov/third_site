@@ -1,7 +1,5 @@
 .header {
 	&__body {
-
-		// height: 70px;
 		@include flexbox;
 		margin-top: 0.937rem;
 		justify-content: space-between;
@@ -13,10 +11,7 @@
 
 .menu-header {
 	&__menu {
-		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
-		flex-direction: row;
+		@include flexbox;
 	}
 	&__list {
 		@include flexbox;
@@ -70,8 +65,9 @@
 		}
 	}
 	.wrapper-burger {
-		font-size: 14px;
+		flex-basis: 300px;
 		display: block;
+		padding-right: 1.125rem;
 	}
 }
 
@@ -84,5 +80,3 @@
 // 		font-size: 10px;
 // 	}
 // }
-
-

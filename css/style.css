@@ -77,12 +77,12 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%; }
 
 .wrapper-burger {
-  margin-left: 100px;
-  width: 320px;
+  margin-left: 1.125rem;
   background: -webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
   background: -webkit-linear-gradient(#BC9CFF, #8BA4F9);
   background: -o-linear-gradient(#BC9CFF, #8BA4F9);
   background: linear-gradient(#BC9CFF, #8BA4F9);
+  border-radius: 22px;
   position: relative;
   color: white;
   text-align: center;
@@ -136,8 +136,7 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
   -webkit-transition: .5s all;
   -o-transition: .5s all;
-  transition: .5s all;
-  font-size: 16px; }
+  transition: .5s all; }
 
 .dropdown-menu__link {
   display: block;
@@ -146,10 +145,15 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
   text-decoration: none;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
-  background-color: #000; }
+  background-color: #000;
+  font-size: 0.9rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
+  background: -webkit-linear-gradient(#BC9CFF, #8BA4F9);
+  background: -o-linear-gradient(#BC9CFF, #8BA4F9);
+  background: linear-gradient(#BC9CFF, #8BA4F9); }
 
 .dropdown-menu__link:hover {
-  background-color: rgba(0, 0, 0, 0.9); }
+  background: #313c8f; }
 
 #check-menu:checked ~ .dropdown-menu {
   max-height: 500px; }
@@ -170,6 +174,9 @@ h1, h2, h3, h4, h5, h6 {
 #check-menu:checked ~ .burger-line--fourth {
   display: none; }
 
+.wrapper-burger {
+  display: none; }
+
 .header__body {
   display: -webkit-box;
   display: -moz-box;
@@ -187,17 +194,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .menu-header__menu {
   display: -webkit-box;
+  display: -moz-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row; }
+  font-size: 0; }
 
 .menu-header__list {
   display: -webkit-box;
@@ -244,8 +245,10 @@ h1, h2, h3, h4, h5, h6 {
   .menu-header__list--bottom {
     display: none; }
   .wrapper-burger {
-    font-size: 14px;
-    display: block; } }
+    -ms-flex-preferred-size: 300px;
+    flex-basis: 300px;
+    display: block;
+    padding-right: 1.125rem; } }
 
 a {
   color: inherit; }
