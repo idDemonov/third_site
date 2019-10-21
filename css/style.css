@@ -137,7 +137,8 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
   -webkit-transition: .5s all;
   -o-transition: .5s all;
-  transition: .5s all; }
+  transition: .5s all;
+  font-size: 16px; }
 
 .dropdown-menu__link {
   display: block;
@@ -152,8 +153,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: rgba(0, 0, 0, 0.9); }
 
 #check-menu:checked ~ .dropdown-menu {
-  max-height: 500px;
-  font-size: 16px; }
+  max-height: 500px; }
 
 #check-menu:checked ~ .burger-line--first {
   display: none; }
@@ -246,7 +246,9 @@ h1, h2, h3, h4, h5, h6 {
 
 @media screen and (max-width: 480px) {
   .wrapper-burger {
-    width: 170px; } }
+    width: 170px; }
+  .dropdown-menu {
+    font-size: 10px; } }
 
 a {
   color: inherit; }
