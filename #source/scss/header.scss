@@ -5,7 +5,8 @@
 		justify-content: space-between;
 	}
 	&__logo {
-		padding-left: 1.125rem;
+		padding-left: 12%;
+		padding-right: 24.5%;
 	}
 }
 
@@ -57,26 +58,13 @@
 
 @media screen and (max-width: 850px) { // Скрываю меню
 	.menu-header {
-		&--hiding {
+		&__menu {
 		display: none;
 		}
-		&__list--bottom {// Скрываю кнопку Войти и Зарегестрироваться из навигации
-			display: none;
-		}
 	}
+
 	.wrapper-burger {
-		flex-basis: 300px;
+		flex-basis: 320px;
 		display: block;
-		padding-right: 1.125rem;
 	}
 }
-
-// @media screen and (max-width: 480px) { 
-// 	.wrapper-burger {
-// 		width: 170px;
-		
-// 		}
-// 	.dropdown-menu {
-// 		font-size: 10px;
-// 	}
-// }

@@ -1,5 +1,6 @@
 .wrapper-burger{
-    margin-left: 1.125rem;
+    margin-right: 2%;
+    margin-left: 20px;
     background: linear-gradient(#BC9CFF, #8BA4F9);
     border-radius: 22px;
     position: relative;
@@ -63,7 +64,7 @@
     &__link {
         display: block;
         width: 100%;
-        padding: 10px;
+        padding: 2vw;
         color: white;
         text-decoration: none;
         border-top: 1px solid rgba(255,255,255,.3);

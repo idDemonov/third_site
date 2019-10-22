@@ -5,7 +5,6 @@
 	display: -ms-flexbox;
 	display: -webkit-flex;
 	display: flex;
-	font-size: 0;
 }
 //</МИКСИНЫ>===============================================================================================
 
@@ -43,8 +42,7 @@ $fontfamily:"Montserrat";
 	box-sizing: border-box;
 }
 
-:focus,:active{outline: none;}
-a:focus,a:active{outline: none;}// Убераю подчеркивание у ссылок
+
 
 aside,nav,footer,header,section{display: block;} // На всякий случай
 
@@ -85,7 +83,6 @@ h1,h2,h3,h4,h5,h6 {
 .wrapper{
 	width: 100%;
 	min-height: 100%;
-	// overflow: hidden; Не понятно в чем проблема
 	color: rgba(31, 32, 65, 0.5);
 }
 //</ОБОЛОЧКА>===========================================================================================================

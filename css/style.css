@@ -10,12 +10,6 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-:focus, :active {
-  outline: none; }
-
-a:focus, a:active {
-  outline: none; }
-
 aside, nav, footer, header, section {
   display: block; }
 
@@ -77,7 +71,8 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%; }
 
 .wrapper-burger {
-  margin-left: 1.125rem;
+  margin-right: 2%;
+  margin-left: 20px;
   background: -webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
   background: -webkit-linear-gradient(#BC9CFF, #8BA4F9);
   background: -o-linear-gradient(#BC9CFF, #8BA4F9);
@@ -141,7 +136,7 @@ h1, h2, h3, h4, h5, h6 {
 .dropdown-menu__link {
   display: block;
   width: 100%;
-  padding: 10px;
+  padding: 2vw;
   color: white;
   text-decoration: none;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
@@ -183,22 +178,21 @@ h1, h2, h3, h4, h5, h6 {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  font-size: 0;
   margin-top: 0.937rem;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between; }
 
 .header__logo {
-  padding-left: 1.125rem; }
+  padding-left: 12%;
+  padding-right: 24.5%; }
 
 .menu-header__menu {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
-  display: flex;
-  font-size: 0; }
+  display: flex; }
 
 .menu-header__list {
   display: -webkit-box;
@@ -206,7 +200,6 @@ h1, h2, h3, h4, h5, h6 {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  font-size: 0;
   font-size: 14px;
   padding-top: 1.125rem; }
 
@@ -240,15 +233,12 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 12px; }
 
 @media screen and (max-width: 850px) {
-  .menu-header--hiding {
-    display: none; }
-  .menu-header__list--bottom {
+  .menu-header__menu {
     display: none; }
   .wrapper-burger {
-    -ms-flex-preferred-size: 300px;
-    flex-basis: 300px;
-    display: block;
-    padding-right: 1.125rem; } }
+    -ms-flex-preferred-size: 320px;
+    flex-basis: 320px;
+    display: block; } }
 
 a {
   color: inherit; }
