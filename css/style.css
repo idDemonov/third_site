@@ -62,16 +62,79 @@ h1, h2, h3, h4, h5, h6 {
 
 .wrapper {
   width: 100%;
-  min-height: 100%;
-  color: rgba(31, 32, 65, 0.5); }
+  max-width: 1440px;
+  margin: 0 auto; }
 
 .container {
-  max-width: 1160px;
-  margin: 0 auto;
-  width: 100%; }
+  width: 100%;
+  max-width: 1172px;
+  margin: 0 auto; }
+
+.header__body {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 15px 1%; }
+
+.body-header__menu {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  padding-top: 0.687rem; }
+
+.menu-header__list {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+
+.menu-header__list:not(:last-child) {
+  padding-right: 1.25vw; }
+
+.menu-header__link {
+  font-size: 14px;
+  line-height: 17px;
+  color: rgba(31, 32, 65, 0.5); }
+
+.menu-header__link:not(:last-child) {
+  padding-right: 1.25vw; }
+
+.link-menu-header__icon {
+  padding: 5px 5px; }
+
+.identification-header__login {
+  color: #BC9CFF;
+  border: 2px solid #BC9CFF;
+  border-radius: 22px;
+  padding: 0.5rem 1.125rem;
+  background: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px; }
+
+.identification-header__register {
+  color: #FFFFFF;
+  background: -webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
+  background: -webkit-linear-gradient(#BC9CFF, #8BA4F9);
+  background: -o-linear-gradient(#BC9CFF, #8BA4F9);
+  background: linear-gradient(#BC9CFF, #8BA4F9);
+  border-radius: 22px;
+  padding: 0.625rem 1.25rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px; }
 
 .wrapper-burger {
-  margin-right: 2%;
   margin-left: 20px;
   background: -webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
   background: -webkit-linear-gradient(#BC9CFF, #8BA4F9);
@@ -172,68 +235,20 @@ h1, h2, h3, h4, h5, h6 {
 .wrapper-burger {
   display: none; }
 
-.header__body {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  margin-top: 0.937rem;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between; }
-
-.header__logo {
-  padding-left: 12%;
-  padding-right: 24.5%; }
-
-.menu-header__menu {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex; }
-
-.menu-header__list {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  font-size: 14px;
-  padding-top: 1.125rem; }
-
-.menu-header__link {
-  padding-right: 1.25vw;
-  white-space: nowrap; }
-
-.link-menu-header__icon {
-  padding: 5px 6px; }
-
-.bottom-header__login {
-  color: #BC9CFF;
-  border: 2px solid #BC9CFF;
-  border-radius: 22px;
-  padding: 0.5rem 1.125rem;
-  background: #ffffff;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 12px; }
-
-.bottom-header__register {
-  color: #ffffff;
-  background: -webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
-  background: -webkit-linear-gradient(#BC9CFF, #8BA4F9);
-  background: -o-linear-gradient(#BC9CFF, #8BA4F9);
-  background: linear-gradient(#BC9CFF, #8BA4F9);
-  border-radius: 22px;
-  padding: 0.625rem 1.25rem;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 12px; }
-
 @media screen and (max-width: 850px) {
-  .menu-header__menu {
+  .menu-header__list--block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .identification-header__login {
+    margin-left: 53px; }
+  .identification-header__register {
+    position: relative;
+    top: 20px; } }
+
+@media screen and (max-width: 740px) {
+  .body-header__menu {
     display: none; }
   .wrapper-burger {
     -ms-flex-preferred-size: 320px;
