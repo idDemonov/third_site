@@ -268,13 +268,20 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 380px;
   height: 374px;
   background-color: #fff;
-  border: 1px solid; }
+  border: 1px solid;
+  padding: 30px 30px 40px 30px; }
 
 .body-main__epigraph {
   margin-top: auto;
   margin-left: auto;
   text-align: right;
   max-width: 297px; }
+
+.epigraph-main__text {
+  font-style: normal;
+  color: #1f2041;
+  font-size: 14px;
+  line-height: 24px; }
 
 a {
   color: inherit; }

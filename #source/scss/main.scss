@@ -22,10 +22,10 @@
 	&__form {
 		width: 100%;
 		max-width: 380px;
-		height: 374px;
+		height: 374px;//delite
 		background-color: #fff;
-		border: 1px solid;
-		
+		border: 1px solid;//delite
+		padding: 30px 30px 40px 30px;
 	}
 	&__epigraph {
 		margin-top: auto;
@@ -35,3 +35,11 @@
 	}
 }
 
+.epigraph-main {
+	&__text {
+		font-style: normal;
+		color: rgb(31, 32, 65);
+		font-size: 14px;
+		line-height: 24px;
+	}
+}
