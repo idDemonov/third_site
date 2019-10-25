@@ -13,19 +13,25 @@
 		padding-top: 70px;
 		height: 100vh;
 		max-height: 830px;
+		@include flexbox;
+		flex-direction: column;
 	}
 }
 
 .body-main {
 	&__form {
-		width: 380px;
+		width: 100%;
+		max-width: 380px;
 		height: 374px;
 		background-color: #fff;
 		border: 1px solid;
 		
 	}
 	&__epigraph {
+		margin-top: auto;
+		margin-left: auto;
 		text-align: right;
+		max-width: 297px;
 	}
 }
 
