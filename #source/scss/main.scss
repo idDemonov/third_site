@@ -1,0 +1,27 @@
+.main {
+	&--wrapper-background {
+		background-image: url(../img/background/image-1.jpg);
+		background-size: cover;
+		background-position: center center;
+		width: 100%;
+		height: 100vh;
+	}
+}
+
+.main {
+	&__body {
+		padding-top: 70px;
+	}
+}
+
+.body-main {
+	&__form {
+		width: 380px;
+		height: 374px;
+		background-color: #fff;
+		border: 1px solid;
+		
+	}
+	&__epigraph {}
+}
+
