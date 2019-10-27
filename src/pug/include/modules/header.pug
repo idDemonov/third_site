@@ -1,0 +1,42 @@
+.header__body.body-header
+	.body-header__logo.logo
+		a(href='index.html')
+			img(src='assets/img/logo.svg', alt='Логотип')
+	nav.body-header__menu.menu-header
+		ul.menu-header__list
+			li.menu-header__link
+				a(href='#') О нас
+			li.menu-header__link.link-menu-header
+				a(href='#')
+					| Услуги
+					img.link-menu-header__icon(src='assets/img/dropdown.svg', alt='#')
+			li.menu-header__link
+				a(href='#') Вакансии
+			li.menu-header__link
+				a(href='#') Новости
+			li.menu-header__link.link-menu-header
+				a(href='#')
+					| Соглашения
+					img.link-menu-header__icon(src='assets/img/dropdown.svg', alt='#')
+		ul.menu-header__list.menu-header__list--block
+			li.menu-header__link.identification-header
+				a.identification-header__login(href='#') Войти
+			li.menu-header__link.identification-header
+				a.identification-header__register(href='#') Зарегистрироваться
+	//----------------------------Бургер меню-----------------------------------------------------
+	.wrapper-burger
+		input#check-menu(type='checkbox')
+		label.checkbox-label(for='check-menu') MENU
+		.burger-line.burger-line--first
+		.burger-line.burger-line--second
+		.burger-line.burger-line--third
+		.burger-line.burger-line--fourth
+		nav.dropdown-menu
+			a.dropdown-menu__link(href='#') О нас
+			a.dropdown-menu__link(href='#') Услуги
+			a.dropdown-menu__link(href='#') Вакансии
+			a.dropdown-menu__link(href='#') Новости
+			a.dropdown-menu__link(href='#') Соглашения
+			a.dropdown-menu__link(href='#') Войти
+			a.dropdown-menu__link(href='#') Зарегистрироваться
+	//------------------------------------------------------

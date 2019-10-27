@@ -1,20 +1,20 @@
 .header {
 	&__body {
-		@include flexbox;
+		display: flex;
 		justify-content: space-between;
 	}
 }
 .body-header {
 	&__logo {}
 	&__menu {
-		@include flexbox;
+		display: flex;
 		padding-top: 11px;
 	}
 }
 .logo {}
 .menu-header {
 	&__list {
-		@include flexbox;
+		display: flex;
 	}
 	&__list:not(:last-child) {
 		padding-right: 1.25vw;
