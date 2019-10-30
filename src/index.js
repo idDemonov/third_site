@@ -1,8 +1,7 @@
 // JS
-import './js/'
+import './js/datepicker.min.js'
 
 // SCSS
-import './assets/scss/style.scss'
+import './scss/style.scss'
+// OTHER
 
-// CSS (example)
-// import './assets/css/main.css'

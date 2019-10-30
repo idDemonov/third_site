@@ -1,6 +1,6 @@
 .main {
 	&--wrapper-background {
-		background-image: url(../img/background/image-1.jpg);
+		background-image: url(/../assets/img/background/image-1.jpg);
 		background-size: cover;
 		background-position: center center;
 		width: 100%;
@@ -42,4 +42,43 @@
 		font-size: 14px;
 		line-height: 24px;
 	}
+}
+
+.form-main {
+	&__title {
+		font-style: normal;
+		font-weight: bold;
+		font-size: 24px;
+		line-height: 30px;
+		color: #1F2041;
+		margin-bottom: 20px;
+	}
+	&__date {
+		display: flex;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 15px;
+		text-transform: uppercase;
+		color: #1F2041;
+	}
+	&__guests {}
+	&__bottom {}
+}
+.date-form-main {
+	&__arrival {}
+	&__departure {}
+}
+.arrival-date-form {
+}
+.arrival-date-for {
+	&__title {}
+	&__calendar {}
+}
+.datepicker-here {
+}
+.departure-date-form {
+}
+.guests-form-main {
+	&__input {}
 }
