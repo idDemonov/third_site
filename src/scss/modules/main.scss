@@ -24,7 +24,6 @@
 		max-width: 380px;
 		height: 374px;//delite
 		background-color: #fff;
-		border: 1px solid;//delite
 		padding: 30px 30px 40px 30px;
 	}
 	&__epigraph {
@@ -64,8 +63,22 @@
 		color: #1F2041;
 		margin-bottom: 21px;
 	}
-	&__guests {}
-	&__bottom {}
+	&__guests {
+		margin-bottom: 45px;
+	}
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
+		color: #FFFFFF;
+		background: linear-gradient(#BC9CFF, #8BA4F9);
+		border-radius: 22px;
+		padding: 0.625rem 1.125rem;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 15px;
+		max-width: 320px;
+	}
 }
 .date-form-main {
 	&__arrival {}
@@ -79,7 +92,8 @@
 	&__calendar {
 		max-width: 150px;
 		height: 44px;
-		border: 1px solid black;
+		border: 1px solid rgba(31, 32, 65, 0.25);
+		border-radius: 4px;
 	}
 }
 .guests-form-main {
@@ -87,7 +101,8 @@
 		width: 100%;
 		max-width: 320px;
 		height: 44px;
-		border: 1px solid black;
+		border: 1px solid rgba(31, 32, 65, 0.25);
+		border-radius: 4px;
 	}
 	&__title {
 		font-style: normal;
@@ -97,5 +112,10 @@
 		text-transform: uppercase;
 		color: #1F2041;
 		margin-bottom: 6px;
+	}
+}
+.bottom-form-main {
+	&__link {
+		
 	}
 }
