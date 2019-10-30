@@ -55,12 +55,14 @@
 	}
 	&__date {
 		display: flex;
+		justify-content: space-between;
 		font-style: normal;
 		font-weight: bold;
 		font-size: 12px;
 		line-height: 15px;
 		text-transform: uppercase;
 		color: #1F2041;
+		margin-bottom: 21px;
 	}
 	&__guests {}
 	&__bottom {}
@@ -69,16 +71,31 @@
 	&__arrival {}
 	&__departure {}
 }
-.arrival-date-form {
-}
+
 .arrival-date-for {
-	&__title {}
-	&__calendar {}
-}
-.datepicker-here {
-}
-.departure-date-form {
+	&__title {
+		margin-bottom: 6px;
+	}
+	&__calendar {
+		max-width: 150px;
+		height: 44px;
+		border: 1px solid black;
+	}
 }
 .guests-form-main {
-	&__input {}
+	&__input {
+		width: 100%;
+		max-width: 320px;
+		height: 44px;
+		border: 1px solid black;
+	}
+	&__title {
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 15px;
+		text-transform: uppercase;
+		color: #1F2041;
+		margin-bottom: 6px;
+	}
 }
