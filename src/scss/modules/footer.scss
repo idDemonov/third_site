@@ -1,18 +1,40 @@
 // footer style
+.footer {
+	&__body {}
+}
+
 .footer-body {
 	&__logo {}
 	&__nav {}
 	&__list {}
 }
+
 .footer-body-list {
 	&__title {}
 	&__link {}
 	&__email {}
 }
+
 .footer {
-	&__copyright {}
+	&__copyright {
+		display: flex;
+		justify-content: space-between;
+		height: 71px;
+		border-top: 1px solid rgba(31, 32, 65, 0.05);
+		padding-top: 26px;
+	}
 }
+
 .footer-copyright {
-	&__text {}
-	&__socials {}
+	&__text {
+	color: rgba(31, 32, 65, 0.75);
+	font-size: 14px;
+	line-height: 17px;
+	}
+	&__socials {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		max-width: 112px;
+	}
 }
