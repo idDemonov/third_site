@@ -1,1 +1,18 @@
 // footer style
+.footer-body {
+	&__logo {}
+	&__nav {}
+	&__list {}
+}
+.footer-body-list {
+	&__title {}
+	&__link {}
+	&__email {}
+}
+.footer {
+	&__copyright {}
+}
+.footer-copyright {
+	&__text {}
+	&__socials {}
+}
