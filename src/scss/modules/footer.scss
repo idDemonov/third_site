@@ -26,9 +26,6 @@
 	&__img {
 		padding-bottom: 20px;
 	}
-	&__logo {
-		width: 260px;
-	}
 	&__text {
 		padding-bottom: 20px;
 		line-height: 24px;
@@ -46,6 +43,9 @@
 		font-size: 14px;
 		padding-bottom: 20px;
 		color: rgba(31, 32, 65, 0.5);
+	}
+	&__logo {
+		width: 260px;
 	}
 	&__nav {
 		width: 143px;

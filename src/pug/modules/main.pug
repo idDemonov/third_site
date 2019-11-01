@@ -4,12 +4,17 @@ section.body-main__form.form-main
 		.date-form-main__arrival.arrival-date-form
 			h3.arrival-date-for__title Прибытие
 			input.arrival-date-for__calendar.datepicker-here(type='text' placeholder="ДД.ММ.ГГГГ")
+			button.arrival-date-for__dropdown(type='button') 
+				img(src='assets/img/dropdown.svg', alt='')
 		.date-form-main__departure.departure-date-form
 			h3.arrival-date-for__title Выезд
 			input.arrival-date-for__calendar.datepicker-here(type='text' placeholder="ДД.ММ.ГГГГ")
+			button.form-body-footer__arrow(type='button')
+				img(src='assets/img/dropdown.svg', alt='')
 	.form-main__guests.guests-form-main
 		h3.guests-form-main__title Гости
 		input.guests-form-main__input(type='text' value="Сколько гостей")
+		img.guests-form-main__icon(src='assets/img/dropdown.svg', alt='#')
 	.form-main__bottom.bottom-form-main
 		a.bottom-form-main__link(href='#') Подобрать номер
 		img(src="assets/img/arrow_forward.svg", alt="")

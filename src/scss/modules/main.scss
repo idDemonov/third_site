@@ -82,13 +82,20 @@
 	}
 }
 .date-form-main {
-	&__arrival {}
+	&__arrival {
+		position: relative;
+	}
 	&__departure {}
 }
 
 .arrival-date-for {
 	&__title {
 		margin-bottom: 6px;
+	}
+	&__dropdown {
+		background: rgba(0, 0, 0, 0.0);
+		position: absolute;
+		right: 0px;
 	}
 	&__calendar {
 		max-width: 150px;
