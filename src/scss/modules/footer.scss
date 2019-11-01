@@ -11,8 +11,8 @@
 	&__copyright {
 		display: flex;
 		justify-content: space-between;
-		height: 71px;
-		padding-top: 26px;
+		height: 44px;
+		padding-top: 11px;
 	}
 }
 
@@ -26,10 +26,13 @@
 	&__logo {
 		width: 260px;
 	}
-	&__nav {
-		width: 143px;
+	&__text {
+		padding-bottom: 20px;
+		line-height: 24px;
+		color: rgba(31, 32, 65, 0.75);
 	}
 	&__title {
+		padding-bottom: 20px;
 		font-weight: bold;
 		font-size: 12px;
 		text-transform: uppercase;
@@ -38,26 +41,27 @@
 	&__link {
 		display: block;
 		font-size: 14px;
-		padding-top: 20px;
+		padding-bottom: 20px;
 		color: rgba(31, 32, 65, 0.5);
 	}
-	&__subscription {
-		width: 260px;
-	}
-	&__text {
-		padding-bottom: 20px;
-		line-height: 24px;
-		color: rgba(31, 32, 65, 0.75);
-		padding-top: 20px;
+	&__nav {
+		width: 143px;
+		margin-left: 1%;
 	}
 	&__about {
 		width: 108px;
+		margin-left: 1%;
 	}
 	&__support {
 		width: 149px;
+		margin-left: 1%;
+	}
+	&__subscription {
+		width: 260px;
+		margin-left: 1%;
 	}
 	&__form {
-	position: relative;
+		position: relative;
 	}
 }
 .form-body-footer {
@@ -67,6 +71,7 @@
 		width: 100%;
 		max-width: 250px;
 		height: 44px;
+		padding-left: 15px;
 	}
 	&__arrow {
 		background: #FFFFFF;
@@ -90,5 +95,6 @@
 		justify-content: space-between;
 		width: 100%;
 		max-width: 112px;
+		height: 24px;
 	}
 }
