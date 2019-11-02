@@ -4,24 +4,22 @@
 			img(src='assets/img/logo.svg', alt='Логотип')
 	nav.body-header__menu.menu-header
 		ul.menu-header__list
-			li.menu-header__link
-				a(href='#') О нас
-			li.menu-header__link.link-menu-header
-				a(href='#')
-					| Услуги
+			li.menu-header__item
+				a.menu-header__link(href='#') О нас
+			li.menu-header__item
+				a.menu-header__link.link-menu-header(href='#') Услуги
 					img.link-menu-header__icon(src='assets/img/dropdown.svg', alt='#')
-			li.menu-header__link
-				a(href='#') Вакансии
-			li.menu-header__link
-				a(href='#') Новости
-			li.menu-header__link.link-menu-header
-				a(href='#')
-					| Соглашения
+			li.menu-header__item
+				a.menu-header__link(href='#') Вакансии
+			li.menu-header__item
+				a.menu-header__link(href='#') Новости
+			li.menu-header__item
+				a.menu-header__link.link-menu-header(href='#') Соглашения
 					img.link-menu-header__icon(src='assets/img/dropdown.svg', alt='#')
 		ul.menu-header__list.menu-header__list--block
-			li.menu-header__link.identification-header
+			li.menu-header__item.identification-header
 				a.identification-header__login(href='#') Войти
-			li.menu-header__link.identification-header
+			li.menu-header__item.identification-header
 				a.identification-header__register(href='#') Зарегистрироваться
 	//----------------------------Бургер меню-----------------------------------------------------
 	.wrapper-burger
