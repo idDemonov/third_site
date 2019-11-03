@@ -32,6 +32,7 @@
 	&__epigraph {
 		margin-top: auto;
 		margin-left: auto;
+		margin-bottom: 3px;
 		text-align: right;
 		max-width: 297px;
 	}
@@ -107,10 +108,10 @@
 	&__dropdown {
 		background: #FFFFFF;
 		position: absolute;
-		right: 1px;
+		right: 2px;
 		bottom: 1px;
-		width: 43px;
-		height: 42px;
+		width: 44px;
+		height: 41px;
 		border-radius: 4px;
 	}
 	&__calendar {
