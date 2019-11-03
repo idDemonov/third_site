@@ -69,8 +69,6 @@
 		position: relative;
 	}
 	&__bottom {
-		display: flex;
-		justify-content: space-between;
 		color: #FFFFFF;
 		background: linear-gradient(#BC9CFF, #8BA4F9);
 		border-radius: 22px;
@@ -78,8 +76,16 @@
 		text-transform: uppercase;
 		font-weight: bold;
 		font-size: 12px;
-		line-height: 15px;
 		max-width: 320px;
+		width: 100%;
+		position: relative;
+	}
+}
+.bottom-form-main {
+	&__icon {
+		position: absolute;
+		top: 25%;
+		right: 14px;
 	}
 }
 .date-form-main {
@@ -96,9 +102,13 @@
 		margin-bottom: 6px;
 	}
 	&__dropdown {
-		background: rgba(0, 0, 0, 0.0);
+		background: #FFFFFF;
 		position: absolute;
-		right: 0px;
+		right: 1px;
+		bottom: 1px;
+		width: 43px;
+		height: 42px;
+		border-radius: 4px;
 	}
 	&__calendar {
 		max-width: 150px;
@@ -131,8 +141,4 @@
 		margin-bottom: 6px;
 	}
 }
-.bottom-form-main {
-	&__link {
-		
-	}
-}
+
