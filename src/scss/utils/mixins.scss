@@ -22,4 +22,9 @@
 		flex-basis: 320px;
 		display: block;
 	}
+	.footer {
+		&__body {
+			padding-top: 25px;
+		}
+	}
 }
