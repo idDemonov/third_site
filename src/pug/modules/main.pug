@@ -1,22 +1,23 @@
-section.body-main__form.form-main
-	h1.form-main__title Найдём номера под ваши&nbsp;пожелания
-	.form-main__date.date-form-main
-		.date-form-main__arrival.arrival-date-form
-			h3.arrival-date-for__title Прибытие
-			input.arrival-date-for__calendar.datepicker-here(type='text' placeholder="ДД.ММ.ГГГГ")
-			button.arrival-date-for__dropdown(type='button') 
-				img(src='assets/img/dropdown.svg', alt='')
-		.date-form-main__departure.departure-date-form
-			h3.arrival-date-for__title Выезд
-			input.arrival-date-for__calendar.datepicker-here(type='text' placeholder="ДД.ММ.ГГГГ")
+.body-main__form
+	h1.body-main__title Найдём номера под ваши&nbsp;пожелания
+	form.form-main(action='about.html', target='_blank')
+		.form-main__date.date-form-main
+			.date-form-main__arrival.arrival-date-form
+				h3.arrival-date-for__title Прибытие
+				input.arrival-date-for__calendar.datepicker-here(type='text' placeholder="ДД.ММ.ГГГГ")
+				button.arrival-date-for__dropdown(type='button') 
+					img(src='assets/img/dropdown.svg', alt='')
+			.date-form-main__departure.departure-date-form
+				h3.arrival-date-for__title Выезд
+				input.arrival-date-for__calendar.datepicker-here(type='text' placeholder="ДД.ММ.ГГГГ")
+				button.arrival-date-for__dropdown(type='button')
+					img(src='assets/img/dropdown.svg', alt='')
+		.form-main__guests.guests-form-main
+			h3.guests-form-main__title Гости
+			input.guests-form-main__input(type='text' placeholder="Сколько гостей")
 			button.arrival-date-for__dropdown(type='button')
 				img(src='assets/img/dropdown.svg', alt='')
-	.form-main__guests.guests-form-main
-		h3.guests-form-main__title Гости
-		input.guests-form-main__input(type='text' value="Сколько гостей")
-		button.arrival-date-for__dropdown(type='button')
-			img(src='assets/img/dropdown.svg', alt='')
-	button.form-main__bottom.bottom-form-main Подобрать номер
-		img.bottom-form-main__icon(src="assets/img/arrow_forward.svg", alt="")
+		button.form-main__bottom.bottom-form-main Подобрать номер
+			img.bottom-form-main__icon(src="assets/img/arrow_forward.svg", alt="")
 p.body-main__epigraph.epigraph-main
 	em.epigraph-main__text Лучшие номера для вашей работы, отдыха и просто вдохновения
