@@ -1,0 +1,24 @@
+// Кнопки войти и зарегестрироваться
+.identification-header {
+	&__login {
+		color: #BC9CFF;
+		border: 2px solid #BC9CFF; // Нужно сделать градиент
+		border-radius: 22px;
+		padding: 0.5rem 1.125rem;
+		background: #ffffff;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 15px;
+	}
+	&__register {
+		color: #FFFFFF;
+		background: linear-gradient(#BC9CFF, #8BA4F9);
+		border-radius: 22px;
+		padding: 0.625rem 1.25rem;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 15px;
+	}
+}
