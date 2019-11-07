@@ -1,0 +1,37 @@
+.header-UI {
+	&__logo {}
+}
+.container-UI {
+}
+.colors {
+	&__list {}
+	&__item {}
+	&__rectangle {
+		&--dark100 {}
+		&--dark75 {}
+		&--dark50 {}
+		&--dark25 {}
+		&--dark5 {}
+		&--purple {}
+		&--green {}
+	}
+}
+.color {
+	&__text {}
+}
+.type {
+	&__list {}
+	&__item {}
+	&__icon {
+		&--big {}
+		&--mid {}
+		&--small {}
+		&--body {}
+	}
+	&__text {
+		&--big {}
+		&--mid {}
+		&--small {}
+		&--body {}
+	}
+}
