@@ -11,16 +11,25 @@
   padding: 15px 6px;
 }
 
-.container-UI {
-  width: 100%;
-  max-width: 1129px;
-  margin: 0 auto;
-  padding: 67px 15px;
-}
+
+
+// UI
 
 .wrapper-UI {
   width: 100%;
   overflow: hidden;
   margin: 0 auto;
-  max-width: 1332px;
+}
+
+.container-UI {
+  max-width: 1392px;
+  padding: 30px 30px;
+  margin: 0 auto;
+}
+
+.contant-UI {
+  width: 100%;
+  max-width: 1099px;
+  margin: 0 auto;
+  padding-top: 47px;
 }

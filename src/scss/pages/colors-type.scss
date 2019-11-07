@@ -1,37 +1,99 @@
 .header-UI {
 	&__logo {}
 }
-.container-UI {
+.contant-UI {
+	display: flex;
+	justify-content: space-between;
 }
 .colors {
 	&__list {}
-	&__item {}
+	&__item {
+		display: flex; 
+		padding-top: 20px;
+	}
 	&__rectangle {
-		&--dark100 {}
-		&--dark75 {}
-		&--dark50 {}
-		&--dark25 {}
-		&--dark5 {}
-		&--purple {}
-		&--green {}
+		width: 70px;
+		height: 70px;
+		border-radius: 6px;
+		&--dark100 {background: #1F2041;}
+		&--dark75 {background: rgba(31, 32, 65, 0.75);}
+		&--dark50 {background: rgba(31, 32, 65, 0.5);}
+		&--dark25 {background: rgba(31, 32, 65, 0.25);}
+		&--dark5 {background: rgba(31, 32, 65, 0.05);}
+		&--purple {background: #BC9CFF;}
+		&--green {background: #6FCF97;}
 	}
 }
 .color {
-	&__text {}
+	&__text {
+		padding-left: 40px;
+		font-family: Quicksand;
+		font-weight: bold;
+		font-size: 19px;
+		line-height: 29px;
+		display: flex;
+		align-items: center;
+	}
 }
 .type {
-	&__list {}
-	&__item {}
+	&__list {max-width: 403px;}
+	&__item {
+		display: flex;
+		padding-top: 20px;
+	}
 	&__icon {
-		&--big {}
-		&--mid {}
-		&--small {}
-		&--body {}
+		width: 37px;
+		color: rgba(31, 32, 65, 0.25);
+		text-align: right;
+		font-family: Montserrat;
+		&--big {
+			font-size: 24px;
+			line-height: 29px;
+		}
+		&--mid {
+			font-size: 19px;
+			padding-top: 30px;
+			line-height: 24px;
+		}
+		&--small {
+			font-size: 12px;
+			padding-top: 30px;
+			line-height: 15px;
+		}
+		&--body {
+			font-size: 14px;
+			padding-top: 30px;
+			line-height: 24px;
+		}
 	}
 	&__text {
-		&--big {}
-		&--mid {}
-		&--small {}
-		&--body {}
+		margin-left: 30px;
+		font-family: Quicksand;
+		font-style: normal;
+		font-weight: bold;
+		&--big {
+			font-size: 24px;
+			line-height: 30px;
+		}
+		&--mid {
+			padding-top: 30px;
+			font-size: 19px;
+			line-height: 24px;
+		}
+		&--small {
+			font-family: Montserrat;
+			font-weight: bold;
+			font-size: 12px;
+			line-height: 15px;
+			text-transform: uppercase;
+			padding-top: 30px;
+		}
+		&--body {
+			font-family: Montserrat;
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 24px;
+			padding-top: 30px;
+		}
 	}
 }
