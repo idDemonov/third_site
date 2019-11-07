@@ -2,6 +2,6 @@
 import './js/datepicker.min.js'
 
 // SCSS
-import './scss/style.scss'
+import './scss/main.scss'
 // OTHER
 
