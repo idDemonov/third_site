@@ -3,3 +3,28 @@
 		margin-top: 40px;
 	}
 }
+
+.footer-creative {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 367px;
+	&__text{
+		padding-top: 20px;
+		color: rgba(31, 32, 65, 0.75);
+		font-size: 14px;
+		line-height: 17px;
+		max-width: 560px;
+	}
+	&__socials{
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		max-width: 112px;
+		padding-top: 20px;
+	}
+	&__logo {
+		text-align: center;
+	}
+}
