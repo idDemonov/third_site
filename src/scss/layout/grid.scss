@@ -4,6 +4,7 @@
   width: 100%;
   overflow: hidden;
   margin: 0 auto;
+  // background: #F4F4F6;
 }
 
 .container {
@@ -17,21 +18,20 @@
 
 // UI
 
-.wrapper-UI {
+.wrapper-UI { // врапер основной, для теста
   width: 100%;
   overflow: hidden;
   margin: 0 auto;
+  background: #F4F4F6;
 }
 
+.header-UI {
+  max-width: 1440px;
+  margin: 0 auto;
+}
 .container-UI {
-  max-width: 1392px;
-  padding: 30px 30px;
-  margin: 0 auto;
-}
-
-.contant-UI {
   width: 100%;
-  max-width: 1099px;
+  max-width: 1179px;
   margin: 0 auto;
-  padding-top: 47px;
+  padding: 17px 40px;
 }

@@ -1,26 +1,28 @@
-.header__body.body-header
+.header__body.body-header.container
 	.body-header__logo.logo
 		a(href='index.html')
 			img(src='assets/img/logo.svg', alt='Логотип')
 	nav.body-header__menu.menu-header
 		ul.menu-header__list
 			li.menu-header__item
-				a.menu-header__link(href='colors-type.html') О нас
+				a.menu-header__link(href='colors-type.html') Home
 			li.menu-header__item
-				a.menu-header__link.link-menu-header(href='#') Услуги
+				a.menu-header__link(href='colors-type.html') About Us
+			li.menu-header__item
+				a.menu-header__link.link-menu-header(href='#') Services
 					img.link-menu-header__icon(src='assets/img/dropdown.svg', alt='#')
 			li.menu-header__item
-				a.menu-header__link(href='header-footer.html') Вакансии
+				a.menu-header__link(href='header-footer.html') Careers
 			li.menu-header__item
-				a.menu-header__link(href='#') Новости
+				a.menu-header__link(href='#') News
 			li.menu-header__item
-				a.menu-header__link.link-menu-header(href='#') Соглашения
+				a.menu-header__link.link-menu-header(href='#') Documentation
 					img.link-menu-header__icon(src='assets/img/dropdown.svg', alt='#')
 		ul.menu-header__list.menu-header__list--block
 			li.menu-header__item.identification-header
-				a.identification-header__login(href='#') Войти
+				a.identification-header__login(href='#') Login
 			li.menu-header__item.identification-header
-				a.identification-header__register(href='#') Зарегистрироваться
+				a.identification-header__register(href='#') REGISTER
 	//----------------------------Бургер меню-----------------------------------------------------
 	.wrapper-burger
 		input#check-menu(type='checkbox')
@@ -30,11 +32,11 @@
 		.burger-line.burger-line--third
 		.burger-line.burger-line--fourth
 		nav.dropdown-menu
-			a.dropdown-menu__link(href='#') О нас
-			a.dropdown-menu__link(href='#') Услуги
-			a.dropdown-menu__link(href='#') Вакансии
-			a.dropdown-menu__link(href='#') Новости
-			a.dropdown-menu__link(href='#') Соглашения
-			a.dropdown-menu__link(href='#') Войти
-			a.dropdown-menu__link(href='#') Зарегистрироваться
+			a.dropdown-menu__link(href='#') About Us
+			a.dropdown-menu__link(href='#') Services
+			a.dropdown-menu__link(href='#') Careers
+			a.dropdown-menu__link(href='#') News
+			a.dropdown-menu__link(href='#') Documentation
+			a.dropdown-menu__link(href='#') Login
+			a.dropdown-menu__link(href='#') REGISTER
 	//------------------------------------------------------

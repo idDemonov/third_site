@@ -1,7 +1,9 @@
 .header-UI {
-	&__logo {}
+	&__logo {
+		padding: 30px 30px 32px;
+	}
 }
-.contant-UI {
+.container-UI {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;

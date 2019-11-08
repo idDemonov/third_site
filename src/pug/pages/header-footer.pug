@@ -1,0 +1,22 @@
+doctype html
+html(lang='ru')
+	head
+		title Главная
+		meta(http-equiv='Content-type', content='text/html;charset=UTF-8')
+		meta(name='format-detection', content='telephone=no')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0')
+	body.wrapper-UI
+		.header-UI
+			.header-UI__logo
+				img(src="assets/img/UI/logo__grey.svg", alt="")
+		ul.header-footer__list
+			li.header-footer__item
+				header.header
+					include ../modules/UI-kit/header
+			li.header-footer__item
+				header.header
+					include ../modules/UI-kit/header-log
+			li.header-footer__item
+				include ../modules/UI-kit/footer
+			li.header-footer__item
+				include ../modules/UI-kit/footer-creat
