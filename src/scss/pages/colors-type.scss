@@ -4,6 +4,7 @@
 .contant-UI {
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
 }
 .colors {
 	&__list {}
