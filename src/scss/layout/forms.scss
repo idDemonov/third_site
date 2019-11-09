@@ -1,22 +1,3 @@
-// Форма email в footer
-.form-body-footer {
-	&__email {
-		border: 1px solid rgba(31, 32, 65, 0.25);
-		border-radius: 4px;
-		width: 100%;
-		max-width: 250px;
-		height: 44px;
-		padding-left: 15px;
-	}
-	&__arrow {
-		background: #FFFFFF;
-		position: absolute;
-		right: 12px;
-		top: 2px;
-		width: 43px;
-		height: 40px;
-	}
-}
 // Форма подбора отелей в main
 .form-main {
 	&__date {
@@ -107,5 +88,25 @@
 		text-transform: uppercase;
 		color: #1F2041;
 		margin-bottom: 6px;
+	}
+}
+
+// Форма email в footer
+.form-body-footer {
+	&__email {
+		border: 1px solid rgba(31, 32, 65, 0.25);
+		border-radius: 4px;
+		width: 100%;
+		max-width: 250px;
+		height: 44px;
+		padding-left: 15px;
+	}
+	&__arrow {
+		background: #FFFFFF;
+		position: absolute;
+		right: 12px;
+		top: 2px;
+		width: 43px;
+		height: 40px;
 	}
 }
