@@ -9,27 +9,34 @@ html(lang='ru')
 		.header-UI
 			.header-UI__logo
 				img(src="assets/img/UI/logo__grey.svg", alt="")
-		.elements
-			ul.elements_list
-				li.elements_item
-					include ../elements/text-field/text-field
-				li.elements_item
-					include ../elements/text-field/text-field--hover-focus
-				li.elements_item
-					include ../elements/dropdown/guests/guests-dropdown
-				li.elements_item
-					include ../elements/dropdown/date/date-dropdown
-				li.elements_item
-					include ../elements/dropdown/date/date-dropdown--selected
-				li.elements_item
-					include ../elements/dropdown/date/filter-date-dropdown
-				li.elements_item
-					include ../elements/text-field/text-field--subscription
-				li.elements_item
-					include ../elements/dropdown/rooms/rooms-dropdown
-				li.elements_item
-					include ../elements/dropdown/rooms/rooms-dropdown--expanded
-				li.elements_item
-					include ../elements/dropdown/checkbox-list/checkbox-list
-				li.elements_item
-					include ../elements/dropdown/checkbox-list/checkbox-list--expanded
+		.grid
+			.column
+				.elements
+					ul.elements_list
+						li.elements_item
+							include ../elements/text-field/text-field
+						li.elements_item
+							include ../elements/text-field/text-field--hover-focus
+						li.elements_item
+							include ../elements/dropdown/guests/guests-dropdown
+						li.elements_item
+							include ../elements/dropdown/date/date-dropdown
+						li.elements_item
+							include ../elements/dropdown/date/date-dropdown--selected
+						li.elements_item
+							include ../elements/dropdown/date/filter-date-dropdown
+						li.elements_item
+							include ../elements/text-field/text-field--subscription
+						li.elements_item
+							include ../elements/dropdown/rooms/rooms-dropdown
+						li.elements_item
+							include ../elements/dropdown/rooms/rooms-dropdown--expanded
+						li.elements_item
+							include ../elements/dropdown/checkbox-list/checkbox-list
+						li.elements_item
+							include ../elements/dropdown/checkbox-list/checkbox-list--expanded
+			.column
+				.column
+					.column
+					.column
+				.row

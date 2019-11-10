@@ -1,4 +1,8 @@
-
+.grid {
+	margin: 0 auto;
+	max-width: 1160px;
+	padding-left: 10px;// временно
+}
 @import '../elements/text-field/text-field';
 @import '../elements/text-field/text-field--hover-focus';
 @import '../elements/dropdown/guests/guests-dropdown';
