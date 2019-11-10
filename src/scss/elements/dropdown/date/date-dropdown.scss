@@ -1,13 +1,49 @@
-.date-dropdown {max-width: 150px;}
-
 .date-dropdown {
+	max-width: 150px;
+	&__text {
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 5px;
+		font-size: 12px;
+		line-height: 15px;
+		text-transform: uppercase;
+	}
+	&__title {
+		font-weight: bold;
+		color: #1F2041;
+	}
+	&__type {
+		color: rgba(31, 32, 65, 0.5);
+		margin-top: -3px;
+	}
 	&__form {
 		position: relative;
+	}
+	&__input {
+		border: 1px solid rgba(31, 32, 65, 0.25);
+		border-radius: 4px;
+		width: 100%;
+		height: 44px;
+		padding: 0 15px;
+		color: rgba(31, 32, 65, 0.75);
+	}
+	&__input::placeholder {
+		color: rgba(31, 32, 65, 0.25);
+	}
+	&__input:hover {
+		border: 1px solid rgba(31, 32, 65, 0.5);
+	}
+	&__input:focus {
+		border: 1px solid rgba(31, 32, 65, 0.5);
+		outline: none;
+	}
+	&__input:focus::placeholder {
+		color: rgba(31, 32, 65, 0.75);
 	}
 	&__button {
 		background: transparent;
 		position: absolute;
-		right: 1px;
+		right: 0px;
 		bottom: 0px;
 		width: 44px;
 		height: 44px;
