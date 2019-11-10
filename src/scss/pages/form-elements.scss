@@ -3,9 +3,20 @@
 	max-width: 1160px;
 	padding-left: 10px;// временно
 }
+.elements {
+	width: 322px;
+	&_item {
+		padding-bottom: 20px;
+		&--row {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+}
 @import '../elements/text-field/text-field';
 @import '../elements/text-field/text-field--hover-focus';
 @import '../elements/dropdown/guests/guests-dropdown';
+@import '../elements/text-field/text-field--masked';
 @import '../elements/dropdown/date/date-dropdown';
 @import '../elements/dropdown/date/date-dropdown--selected';
 @import '../elements/dropdown/date/filter-date-dropdown';

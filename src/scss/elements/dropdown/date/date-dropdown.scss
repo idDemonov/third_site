@@ -1,0 +1,16 @@
+.date-dropdown {max-width: 150px;}
+
+.date-dropdown {
+	&__form {
+		position: relative;
+	}
+	&__button {
+		background: transparent;
+		position: absolute;
+		right: 1px;
+		bottom: 0px;
+		width: 44px;
+		height: 44px;
+		border-radius: 4px;
+	}
+}
