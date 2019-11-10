@@ -1,0 +1,22 @@
+//- Зарегистрироваться fieldset.register_fields form='register'
+.register
+	h1.register__title Регистрация аккаунта
+	.form-register
+	form(name="register" action='#', target='get')
+		fieldset.full-name
+			input.full-name__first(name='first-name' type='text' placeholder="Имя")
+			input.full-name__last(name='last-name' type='text' placeholder="Фамилия")
+			.gender
+				input.gender__male#male(name='gender' type='checkbox')
+				label(for='male') Мужчина
+				input.gender__female#female(name='gender' type='checkbox')
+				label(for='female') Женщина
+		fieldset.birth
+			h3.birth__title Гости
+			input.birth__person(name='birth' type='text' placeholder="ДД.ММ.ГГГГ")
+		fieldset.data-login
+			h3.birth__title Данные для входа в сервис
+			input.birth__person(name='email' type='text' placeholder="Email")
+			input.birth__person(name='password' type='text' placeholder="Пароль")
+		button.form-main__bottom.bottom-form-main Подобрать номер
+			img.bottom-form-main__icon(src="assets/img/arrow_forward.svg", alt="")
