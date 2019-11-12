@@ -5,11 +5,35 @@
 			img(src='assets/img/dropdown.svg', alt='')
 	.checkbox-dropdown
 		ul.checkbox-dropdown__list
-			li.checkbox-dropdown__item Завтрак
-			li.checkbox-dropdown__item Письменный стол
-			li.checkbox-dropdown__item Стул для кормления
-			li.checkbox-dropdown__item Кроватка
-			li.checkbox-dropdown__item Телевизор
-			li.checkbox-dropdown__item Шампунь
-			li.checkbox-dropdown__item Телевизор
-			li.checkbox-dropdown__item Шампунь
+			li.checkbox-dropdown__item
+				.checkbox
+					input#breakfast(type='checkbox', name='breakfast')
+					label(for='breakfast') Завтрак
+			li.checkbox-dropdown__item
+				.checkbox
+					input#desk(type='checkbox', name='desk' checked)
+					label(for='desk') Письменный стол 
+			li.checkbox-dropdown__item
+				.checkbox
+					input#chair(type='checkbox', name='chair' checked)
+					label(for='chair') Стул для кормления
+			li.checkbox-dropdown__item
+				.checkbox
+					input#crib(type='checkbox', name='crib' checked)
+					label(for='crib') Кроватка
+			li.checkbox-dropdown__item
+				.checkbox
+					input#television(type='checkbox', name='television')
+					label(for='television') Телевизор
+			li.checkbox-dropdown__item
+				.checkbox
+					input#shampoo(type='checkbox', name='shampoo')
+					label(for='shampoo') Шампунь
+			li.checkbox-dropdown__item
+				.checkbox
+					input#television(type='checkbox', name='television')
+					label(for='television') Телевизор
+			li.checkbox-dropdown__item
+				.checkbox
+					input#shampoo(type='checkbox', name='shampoo')
+					label(for='shampoo') Шампунь

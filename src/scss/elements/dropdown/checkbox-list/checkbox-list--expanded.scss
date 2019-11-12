@@ -1,31 +1,5 @@
-.checkbox-list {
-	max-width: 266px; 
-	width: 100%;
-	&__button {
-		height: 44px;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		cursor: pointer;
-	}
-	&__title {
-		font-family: Montserrat;
-		font-weight: bold;
-		font-size: 12px;
-		color: #1F2041;
-		text-transform: uppercase;
-	}
-	&__icon {
-		padding-right: 16px;
-	}
-}
-
 .checkbox-dropdown {
-	&__list {
-		display: none;
-		padding-top: 3px; //Отступ по макету
-	}
-	&__item {
-		padding-top: 10px;
+	&--expanded {
+		display: block;
 	}
 }
