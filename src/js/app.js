@@ -106,26 +106,49 @@
 	// }
 
 // Напишите функцию min(a,b), которая возвращает меньшее из чисел a и b.
-	// function min(a, b) {
-	// 	return a < b ? a : b;
+	// let num1 = prompt('Введите число 1');
+	// let num2 = prompt('Введите число 2');
+	// function min (num1,num2) {
+	// 	if (num1 > num2) {
+	// 		alert (`Число ${num2} меньше`)
+	// 	} else if (num1 == num2) {
+	// 		alert ("Числа равны")
+	// 	} else if (num1 < num2) {
+	// 		alert (`Число ${num1} меньше`)
+	// 	} else {
+	// 		alert ("Ошибка")
+	// 	}
 	// }
+	// min(num1,num2);
 
 // Напишите функцию pow(x,n), которая возвращает x в степени n. Иначе говоря, умножает x на себя n раз и возвращает результат.
-	// function pow(x, n) {
-	// 	let result = x;
-
-	// 	for (let i = 1; i < n; i++) {
-	// 		result *= x;
-	// 	}
-
-	//   return result;
+	// let num1 = prompt('Введите число 1');
+	// let num2 = prompt('Введите число 2');
+	// function pow (num1,num2) {
+	// 	let result = num1 ** num2;
+	// 	alert(`Степень числа ${num1} и ${num2} равна ${sumNum}`)
 	// }
-
-	// let x = prompt("x?", '');
-	// let n = prompt("n?", '');
+	// pow(num1,num2);
 
 	// if (n < 1) {
 	// 	alert(`Степень ${n} не поддерживается, используйте натуральное число`);
 	// } else {
 	// 	alert( pow(x, n) );
 	// }
+
+// Перепишите функцию, используя оператор '?' или '||'
+	// let age = prompt('Введите ваш возраст');
+
+	// function checkAge(age) {
+	// 	(age > 18) ? return true; : return confirm('Родители разрешили?');
+	// }
+	// checkAge(age);
+
+
+	// let age = prompt('Введите ваш возраст');
+
+	// function checkAge(age) {
+	// 	return (age > 18) || confirm('Родители разрешили?');
+	// }
+	// checkAge(age);
+
