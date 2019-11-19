@@ -151,4 +151,17 @@
 	// 	return (age > 18) || confirm('Родители разрешили?');
 	// }
 	// checkAge(age);
+	
+// Задание нашел в интернете, написать угол между минутной и секундной стрелкой
+	// let a = prompt('Часовая 0 - 24');
+	// let b = prompt('Минутная 0 - 60');
 
+	// function getAngleTime ( a,b ) {
+	// 	if (a > 12) {
+	// 		a = a - 12;
+	// 	}
+	// 	let angle = (a * 30) - (b * 6);
+	// 	alert(angle);
+	// }
+
+	// getAngleTime(a,b);
