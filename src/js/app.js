@@ -163,5 +163,9 @@
 	// 	let angle = (a * 30) - (b * 6);
 	// 	alert(angle);
 	// }
-
 	// getAngleTime(a,b);
+
+// Обращение к элементу по id
+	// let div;
+	// div = document.getElementById("out");
+	// div.innerHTML = "Текст поменял";
