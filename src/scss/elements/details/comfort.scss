@@ -1,0 +1,14 @@
+.details {
+	display: flex;
+	&__logo {
+		padding: 4px 10px 24px 4px;
+	}
+	&__text {
+		color: rgba(31, 32, 65, 0.75);
+	}
+	&__title {
+		font-weight: bold;
+	}
+	&__subtitle {
+	}
+}

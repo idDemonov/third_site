@@ -5,6 +5,20 @@
 	&__input {
 		appearance: none;
 	}
+	&__box {
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		border: 1px solid rgba(31, 32, 65, 0.25);
+		border-radius: 4px;
+		margin-left: -30px;
+		margin-top: -1px;
+	}
+}
+
+// States
+
+.check {
 	&__input:checked + .check__box {
 		background-image: url(/../../../assets/img/check.svg);
 		background-repeat: no-repeat;
@@ -21,14 +35,4 @@
 	&__input:focus + .check__box {
 		box-shadow: 0 0 0 0.1em #91bfcc;
 	}
-	&__box {
-		position: absolute;
-		width: 20px;
-		height: 20px;
-		border: 1px solid rgba(31, 32, 65, 0.25);
-		border-radius: 4px;
-		margin-left: -30px;
-		margin-top: -1px;
-	}
 }
-
