@@ -1,0 +1,24 @@
+.check {
+	vertical-align: middle;
+	padding-left: 30px;
+	color: rgba(31, 32, 65, 0.5);
+	&__input {
+		appearance: none;
+	}
+	&__input:checked + .check__box {
+		background-image: url(/../../../assets/img/check.svg);
+		background-repeat: no-repeat;
+		background-position-x: center;
+		background-position-y: 40%;
+	}
+	&__box {
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		border: 1px solid #BC9CFF;
+		border-radius: 4px;
+		margin-left: -30px;
+		margin-top: -1px;
+	}
+}
+

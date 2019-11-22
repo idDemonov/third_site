@@ -171,17 +171,40 @@
 	// div.innerHTML = "Текст поменял";
 
 // FizzBuzz Задача из книги "Выразительный JavaScript"
-// for ( i = 0; i <= 100; i++ ) {
-// 	if (i % 3 == 0 && i % 5 == 0 && i != 0) {
-// 		console.log("FizzBuzz")
+	// let i;
+	// for ( i = 0; i <= 100; i++ ) {
+	// 	if (i % 3 == 0 && i % 5 == 0 && i != 0) {
+	// 		console.log("FizzBuzz")
+	// 	}
+	// 	else if ( i % 3 == 0 ) {
+	// 		console.log('Fizz')
+	// 	}
+	// 	else if ( i % 5 == 0 ) {
+	// 		console.log('Buzz')
+	// 	}
+	// 	else {
+	// 		console.log(i)
+	// 	}
+	// }
+
+// let size = 8;
+
+// let line = ""; // присваиваю "" чтобы убрать undefined
+
+// for (let y = 0; y < size; y++) {
+// 	for (let x = 0; x < size; x++) {
+// 		if ((x + y) % 2 == 0) {
+// 			line += " ";
+// 		} else {
+// 			line += "#";
+// 		}
 // 	}
-// 	else if ( i % 3 == 0 ) {
-// 		console.log('Fizz')
-// 	}
-// 	else if ( i % 5 == 0 ) {
-// 		console.log('Buzz')
-// 	}
-// 	else {
-// 		console.log(i)
-// 	}
+// 	line += "\n";
+// }
+
+// console.log(line);
+
+// let line;
+// for (line = "#"; line.length < 8; line += "#") { // Возвращает длинну строки .length
+// 	console.log(line);
 // }
