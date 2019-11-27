@@ -208,3 +208,14 @@
 // for (line = "#"; line.length < 8; line += "#") { // Возвращает длинну строки .length
 // 	console.log(line);
 // }
+
+let inputIn = document.querySelector(".text-field__input");
+let dropdownInputIn = document.querySelector(".date-dropdown__input");
+let botton = document.querySelector(".text-field-subscription__button");
+
+botton.onclick = function () {
+	console.log('Работает');
+	let b = inputIn.value;
+	dropdownInputIn.value = inputIn.value;
+	console.log(b);
+}
