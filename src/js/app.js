@@ -209,13 +209,80 @@
 // 	console.log(line);
 // }
 
-let inputIn = document.querySelector(".text-field__input");
-let dropdownInputIn = document.querySelector(".date-dropdown__input");
-let botton = document.querySelector(".text-field-subscription__button");
+// let inputIn = document.querySelector(".text-field__input");
+// let dropdownInputIn = document.querySelector(".date-dropdown__input");
+// let botton = document.querySelector(".text-field-subscription__button");
 
-botton.onclick = function () {
-	console.log('Работает');
-	let b = inputIn.value;
-	dropdownInputIn.value = inputIn.value;
-	console.log(b);
-}
+// botton.onclick = function () {
+// 	console.log('Работает');
+// 	let b = inputIn.value;
+// 	dropdownInputIn.value = inputIn.value;
+// 	console.log(b);
+// }
+
+// let output = document.querySelector(".elements_item--script");
+// let k = 10;
+// nextPrime:
+// for (let i = 0; i <= 10; i++) {
+// 	output.innerHTML += i + "_";
+// 	for (; k >= 0;) {
+// 		output.innerHTML += k + "_";
+// 		k--;
+// 		continue nextPrime;
+// 	};
+// };
+
+// let output = document.querySelector(".elements_item--script");
+
+// for (let i = 0; i < 10; i++) {
+// 	for (let k = 0; k < 6; k++) {
+// 		if (k % 2 == 0) {
+// 			output.innerHTML += "1";
+		
+// 		} else {
+// 			output.innerHTML += "0";
+// 		}
+// 	};
+// 	output.innerHTML += "</br>";
+// };
+
+// let output = document.querySelector(".elements_item--script");
+
+// for (let i = 0; i < 5; i++) {
+// 	for (let k = 0; k < i; k++) {
+// 		output.innerHTML += "*";
+// 	};
+// 	output.innerHTML += "</br>";
+// };
+
+// let output = document.querySelector(".elements_item--script");
+
+// for (let i = 0; i < 6; i++) {
+// 	for (let k = 1; k < i; k++) {
+// 		output.innerHTML += k + " ";
+// 	};
+// 	output.innerHTML += "</br>";
+// };
+
+// let output = document.querySelector(".elements_item--script");
+// let number = 0;
+// for (let i = 0; i < 10; i++) {
+// 	for (let k = 0; k < 10; k++) {
+// 		number = number + 1;
+// 		if (number < 10) {
+// 			output.innerHTML += "0" + number + " ";
+// 		} else {
+// 			output.innerHTML += number + " ";
+// 		}
+// 	};
+// 	output.innerHTML += "</br>";
+// };
+
+// let output = document.querySelector(".elements_item--script");
+
+// for (let i = 0; i < 3; i++) {
+// 	for (let k = 0; k < 6; k++) {
+// 		output.innerHTML += "*"
+// 	};
+// 	output.innerHTML += "</br>";
+// };
