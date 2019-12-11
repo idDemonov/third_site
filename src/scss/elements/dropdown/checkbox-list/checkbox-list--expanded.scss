@@ -1,5 +1,6 @@
 .checkbox-dropdown {
 	&--expanded {
+		transition-duration: .5s;
 		display: block;
 	}
 }

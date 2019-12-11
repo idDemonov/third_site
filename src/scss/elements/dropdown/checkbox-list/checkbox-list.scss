@@ -16,18 +16,17 @@
 		text-transform: uppercase;
 	}
 	&__icon {
+		transition-duration: .5s;
 		padding-right: 16px;
 	}
 	&__icon--activ {
 		transition-duration: .5s;
-		// transform: rotate(-180deg);
 		transform: rotateX(180deg);
-		// padding-left: 0px;
-		padding-right: 16px;
 	}
 }
 
 .checkbox-dropdown {
+	transition-duration: .5s;
 	display: none;
 	&__list {
 		padding-top: 3px; //Отступ по макету
