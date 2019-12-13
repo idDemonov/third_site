@@ -3,6 +3,13 @@
 	max-width: 1160px;
 	padding-left: 10px;// временно
 }
+.row {
+	margin-bottom: 100px;
+	display: flex;
+}
+.column {
+	padding-right: 125px;
+}
 .elements {
 	width: 322px;
 	&_item {
@@ -15,6 +22,7 @@
 }
 @import '../elements/text-field/text-field';
 @import '../elements/buttons/checkbox/checkbox';
+@import '../elements/buttons/checkbox/checkbox-buttons-list';
 @import '../elements/text-field/text-field--hover-focus';
 @import '../elements/dropdown/guests/guests-dropdown';
 @import '../elements/text-field/text-field--masked';
