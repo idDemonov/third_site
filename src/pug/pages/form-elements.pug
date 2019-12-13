@@ -10,9 +10,9 @@ html(lang='ru')
 			.header-UI__logo
 				img(src="assets/img/UI/logo__grey.svg", alt="")
 		.grid
-			.column
-				.elements
-					ul.elements_list
+			.row
+				.column
+					ul.elements
 						li.elements_item
 							include ../elements/text-field/text-field
 						li.elements_item
@@ -28,6 +28,11 @@ html(lang='ru')
 							include ../elements/dropdown/date/filter-date-dropdown
 						li.elements_item
 							include ../elements/text-field/text-field--subscription
+				.column
+				.column
+			.row
+				.column
+					ul.elements
 						li.elements_item
 							include ../elements/dropdown/rooms/rooms-dropdown
 						li.elements_item
@@ -41,3 +46,5 @@ html(lang='ru')
 						li.elements_item
 							include ../elements/details/convenience
 						li.elements_item
+				.column
+				.column
