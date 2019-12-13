@@ -28,10 +28,11 @@
 .checkbox-dropdown {
 	transition-duration: .5s;
 	display: none;
+	padding-bottom: 10px;
 	&__list {
 		padding-top: 3px; //Отступ по макету
 	}
 	&__item {
-		padding-top: 10px;
+		padding-bottom: 10px;
 	}
 }
