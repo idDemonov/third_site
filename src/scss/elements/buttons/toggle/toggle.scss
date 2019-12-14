@@ -1,0 +1,44 @@
+.toggle {
+	vertical-align: middle;
+	padding-left: 50px;
+	color: rgba(31, 32, 65, 0.5);
+
+	&__input {
+		appearance: none;
+	}
+	&__box {
+		position: absolute;
+		width: 40px;
+		height: 20px;
+		border: 1px solid rgba(31, 32, 65, 0.25);
+		border-radius: 10px;
+		margin-left: -50px;
+		background-image: url(/../../../assets/img/radio-noCheck.svg);
+		background-repeat: no-repeat;
+		background-position-x: 10%;
+		background-position-y: 50%;
+		transition-duration: .5s;
+	}
+	&__text {
+		display: inline-block;
+		padding-top: 1px;
+	}
+}
+
+// States
+
+.toggle {
+	&__input:checked + .toggle__box {
+		background-image: url(/../../../assets/img/radio-check.svg);
+		background-repeat: no-repeat;
+		background-position-x: 90%;
+		background-position-y: 50%;
+		border: 1px solid #BC9CFF;
+	}
+	&__input:disabled + .toggle__box {
+		border: 1px solid rgba(31, 32, 65, 0.40);
+	}
+	&__input:focus + .toggle__box {
+		box-shadow: 0 0 0 0.1em #91bfcc;
+	}
+}
