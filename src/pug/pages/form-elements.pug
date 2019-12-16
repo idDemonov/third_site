@@ -5,7 +5,7 @@ html(lang='ru')
 		meta(http-equiv='Content-type', content='text/html;charset=UTF-8')
 		meta(name='format-detection', content='telephone=no')
 		meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0')
-	body.wrapper-UI
+	body.wrapper-UI.wrapper-UI--background--write
 		.header-UI
 			.header-UI__logo
 				img(src="assets/img/UI/logo__grey.svg", alt="")
@@ -57,9 +57,18 @@ html(lang='ru')
 							include ../elements/details/convenience
 						li.elements_item
 				.column
-					ul.elements
-						li.elements_item
-							
-						li.elements_item
-							include ../elements/buttons/checkbox/checkbox-buttons-list-rich
-				.column
+					.row
+						.column
+							ul.elements
+								li.elements_item
+									
+								li.elements_item
+									include ../elements/buttons/checkbox/checkbox-buttons-list-rich
+						.column
+							ul.elements
+								li.elements_item
+									
+								li.elements_item
+									include ../elements/buttons/checkbox/checkbox-buttons-list-rich
+					.row
+						
