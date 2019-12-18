@@ -1,0 +1,19 @@
+.bullet {
+	&__item {
+		padding-bottom: 10px;
+	}
+	&__box {
+		margin-top: 7px;
+		position: absolute;
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background: rgba(31, 32, 65, 0.25);
+	}
+	&__text {
+		max-width: 240px;
+		margin-left: 20px;
+		line-height: 24px;
+		color: rgba(31, 32, 65, 0.75);
+	}
+}
