@@ -1,7 +1,8 @@
 'use strict'
+
+
+// Выпадающий список
 showCheckboxList();
-
-
 function showCheckboxList () {
 	let checkClick = document.querySelectorAll(".checkbox-list__button"); // Клик
 	let checkIcon = document.querySelectorAll(".checkbox-list__icon"); // Повесить поворот иконки
@@ -15,17 +16,16 @@ function showCheckboxList () {
 	}
 }
 
-let likes = document.querySelectorAll('.like__box');
-for (let box of likes) {
-	box.onclick = countLike;
-}
 
-function countLike() {
-	for(let like of likes) {
-		if(like.previousElementSibling.checked == true) {
-			like.nextElementSibling.innerText = ++like.nextElementSibling.innerText;
-		} else {
-			like.nextElementSibling.innerText = --like.nextElementSibling.innerText;
-		}
+
+// Работа с лайками
+let likes = document.querySelectorAll('.like__box');
+for(let like of likes) {
+	like.addEventListener("click", liked);
+}
+function liked() {
+	if(this.previousElementSibling.checked == false) {
+		this.nextElementSibling.innerText = ++this.nextElementSibling.innerText;
 	}
+	else this.nextElementSibling.innerText = --this.nextElementSibling.innerText;
 }
