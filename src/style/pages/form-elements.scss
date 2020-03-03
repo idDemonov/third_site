@@ -1,24 +1,32 @@
 .grid {
 	margin: 0 auto;
 	max-width: 1160px;
-	padding-left: 10px;// временно
 }
 .row {
 	margin-bottom: 100px;
 	display: flex;
+	justify-content: space-between;
 }
 .column {
-	padding-right: 125px;
+	max-width: 340px;
+	padding: 0 10px;
+	width: 100%;
 }
-.elements {
-	width: 322px;
-	&_item {
+.column--middle {
+	max-width: 280px;
+	width: 100%;
+}
+.elements__item {
 		padding-bottom: 20px;
-		&--row {
-			display: flex;
-			justify-content: space-between;
-		}
-	}
+}
+
+.elements__item--row {
+	display: flex;
+	justify-content: space-between;
+}
+
+.elements__item--middle{
+	padding-bottom: 40px;
 }
 
 @import '../elements/text-field/text-field';
@@ -35,6 +43,9 @@
 
 @import '../elements/buttons/like/like';
 @import '../elements/buttons/like/like-group';
+
+@import '../elements/buttons/rate/star';
+@import '../elements/buttons/rate/star-group';
 
 @import '../elements/text-field/text-field--hover-focus';
 @import '../elements/text-field/text-field--masked';
