@@ -1,10 +1,10 @@
 const webpack = require('webpack')
 const fs = require('fs')
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin'); // Для работы с html
-const MiniCssExtractPlugin = require('mini-css-extract-plugin'); // Для работы с css
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin'); // Очистка неиспользуемых файлов в папке dist
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const PATHS = {
 	src: path.join(__dirname, 'src'),
