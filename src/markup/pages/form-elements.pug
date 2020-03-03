@@ -8,7 +8,7 @@ html(lang='ru')
 	body.wrapper-UI.wrapper-UI--background--write
 		.header-UI
 			.header-UI__logo
-				img(src="assets/img/UI/logo__grey.svg", alt="")
+				img(src="assets/img/logo/logo__grey.svg", alt="")
 		.grid
 			.row
 				.column
@@ -31,7 +31,7 @@ html(lang='ru')
 				.column
 					ul.elements
 						li.elements_item
-							include ../elements/buttons/checkbox/checkbox-buttons-list
+							include ../elements/buttons/checkbox/checkbox-list
 						li.elements_item
 							include ../elements/buttons/radio/gender
 						li.elements_item
@@ -52,23 +52,21 @@ html(lang='ru')
 						li.elements_item
 							include ../elements/dropdown/checkbox-list/checkbox-list--expanded
 						li.elements_item
-							include ../elements/details/comfort
+							include ../elements/other/comfort
 						li.elements_item
-							include ../elements/details/convenience
+							include ../elements/other/convenience
 						li.elements_item
 				.column
 					.row
 						.column
 							ul.elements
 								li.elements_item
-									
 								li.elements_item
-									include ../elements/buttons/checkbox/checkbox-buttons-list-rich
+									include ../elements/buttons/checkbox/checkbox-list-rich
 						.column
 							ul.elements
-								li.elements_item 
-									include ../elements/bullet-list/bullet-list
 								li.elements_item
-									include ../elements/buttons/checkbox/checkbox-buttons-list-rich
+									include ../elements/other/bullet-list
+								li.elements_item
+									include ../elements/buttons/checkbox/checkbox-list-rich
 					.row
-						

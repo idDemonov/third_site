@@ -20,26 +20,37 @@
 		}
 	}
 }
+
 @import '../elements/text-field/text-field';
+
 @import '../elements/buttons/checkbox/checkbox';
-@import '../elements/buttons/checkbox/checkbox--rich';
-@import '../elements/buttons/checkbox/checkbox-buttons-list';
+@import '../elements/buttons/checkbox/checkbox-rich';
+@import '../elements/buttons/checkbox/checkbox-list';
+
 @import '../elements/buttons/radio/gender';
 @import '../elements/buttons/radio/radio-group';
+
 @import '../elements/buttons/toggle/toggle';
 @import '../elements/buttons/toggle/toggle-group';
+
 @import '../elements/buttons/like/like';
 @import '../elements/buttons/like/like-group';
+
 @import '../elements/text-field/text-field--hover-focus';
-@import '../elements/dropdown/guests/guests-dropdown';
 @import '../elements/text-field/text-field--masked';
+@import '../elements/text-field/text-field--subscription';
+
+@import '../elements/dropdown/guests/guests-dropdown';
+
 @import '../elements/dropdown/date/date-dropdown';
 @import '../elements/dropdown/date/date-dropdown--selected';
 @import '../elements/dropdown/date/filter-date-dropdown';
-@import '../elements/text-field/text-field--subscription';
+
 @import '../elements/dropdown/rooms/rooms-dropdown';
 @import '../elements/dropdown/rooms/rooms-dropdown--expanded';
+
 @import '../elements/dropdown/checkbox-list/checkbox-list';
 @import '../elements/dropdown/checkbox-list/checkbox-list--expanded';
-@import '../elements/details/comfort';
-@import '../elements/bullet-list/bullet-list';
+
+@import '../elements/other/comfort';
+@import '../elements/other/bullet-list';

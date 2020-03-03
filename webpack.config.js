@@ -12,14 +12,14 @@ const PATHS = {
 	assets: 'assets/'
 };
 
-const PAGES_DIR = `${PATHS.src}/pug/pages/`
+const PAGES_DIR = `${PATHS.src}/markup/pages/`
 const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
 
 module.exports = {
 	mode: "production",
 	entry: "./src/index.js",
 	output: {
-		filename: "js/[name].js",
+		filename: "script/[name].js",
 		path: path.resolve(__dirname, 'dist')
 	},
 	module: {
@@ -85,7 +85,7 @@ module.exports = {
 			{ from: `${PATHS.src}/static`, to: '' },
 		]),
 		new MiniCssExtractPlugin({
-		filename: `${PATHS.assets}css/[name].css`,
+		filename: `${PATHS.assets}style/[name].css`,
 		}),
 		new webpack.ProvidePlugin({
 		$: 'jquery',

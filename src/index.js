@@ -1,9 +1,9 @@
 // JS
-import './js/vendors/datepicker.js'
+import './script/vendors/datepicker.js'
 // import './js/stepper.min.js'
-import './js/app.js'
+import './script/app.js'
 
 // SCSS  examples/
-import './scss/main.scss'
+import './style/main.scss'
 // OTHER
 

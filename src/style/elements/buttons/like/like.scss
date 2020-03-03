@@ -12,7 +12,7 @@
 		height: 20px;
 		border: 1px solid rgba(31, 32, 65, 0.25);
 		border-radius: 10px;
-		background-image: url(/../../../assets/img/noLike.svg);
+		background-image: url(/../../../assets/img/button/like.svg);
 		background-repeat: no-repeat;
 		background-position-x: 15%;
 		background-position-y: 50%;
@@ -31,7 +31,7 @@
 
 .like {
 	&__input:checked + .like__box {
-		background-image: url(/../../../assets/img/like.svg);
+		background-image: url(/../../../assets/img/button/like__activ.svg);
 		background-repeat: no-repeat;
 		border: 1px solid #BC9CFF;
 	}
