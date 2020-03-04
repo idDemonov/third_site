@@ -1,27 +1,27 @@
-.rooms-dropdown
-	.rooms-dropdown__text
-		h3.rooms-dropdown__title Dropdown
-	form.rooms-dropdown__form
-		input.rooms-dropdown__input(type='text', value="Сколько гостей", name="local" ).rooms-dropdown__input--expanded
-		button.rooms-dropdown__button(type='button')
+.guests-dropdown
+	.guests-dropdown__text
+		h3.guests-dropdown__title Dropdown
+	form.guests-dropdown__form
+		input.guests-dropdown__input(type='text', value="Сколько гостей", name="local" ).guests-dropdown__input--expanded
+		button.guests-dropdown__button(type='button')
 			img(src='assets/img/button/dropdown.svg', alt='')
-	.rooms-dropdown__box.rooms-select.rooms-dropdown__box--expended
-		ul.rooms-select__list
-			li.rooms-select__item
-				h5.rooms-select__title Взрослые
-				.rooms-select__box.cart-control
+	.guests-dropdown__box.guests-select.guests-dropdown__box--expended
+		ul.guests-select__list
+			li.guests-select__item
+				h5.guests-select__title Взрослые
+				.guests-select__box.cart-control
 					button.cart-control__button.cart-control__button--reduce -
-					input.cart-control__quantity(value="2", name="lowdown", max="3", min="1", readonly, data-type-room="bedroom")
+					input.cart-control__quantity(value="0", name="lowdown", max="3", min="0", readonly, data-type-room="adult")
 					button.cart-control__button.cart-control__button--add +
-			li.rooms-select__item
-				h5.rooms-select__title Дети
-				.rooms-select__box.cart-control
+			li.guests-select__item
+				h5.guests-select__title Дети
+				.guests-select__box.cart-control
 					button.cart-control__button.cart-control__button--reduce -
-					input.cart-control__quantity(value="2", name="lowdown", max="3" min="1", readonly, data-type-room="bed")
+					input.cart-control__quantity(value="0", name="lowdown", max="3" min="0", readonly, data-type-room="children")
 					button.cart-control__button.cart-control__button--add +
-			li.rooms-select__item
-				h5.rooms-select__title Младенцы
-				.rooms-select__box.cart-control
+			li.guests-select__item
+				h5.guests-select__title Младенцы
+				.guests-select__box.cart-control
 					button.cart-control__button.cart-control__button--reduce -
-					input.cart-control__quantity(value="0", name="lowdown", max="3", min="0", readonly, data-type-room="bathroom")
+					input.cart-control__quantity(value="0", name="lowdown", max="3", min="0", readonly, data-type-room="babies")
 					button.cart-control__button.cart-control__button--add +

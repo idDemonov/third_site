@@ -1,5 +1,5 @@
 .guests-dropdown {
-	max-width: 320px;
+	max-width: 266px;
 	&__text {
 		display: flex;
 		justify-content: space-between;
@@ -20,11 +20,13 @@
 		position: relative;
 	}
 	&__input {
+		text-overflow: ellipsis;
+		overflow: hidden;
 		border: 1px solid rgba(31, 32, 65, 0.25);
-		border-radius: 4px;
+		border-radius: 4px 4px 0 0;
 		width: 100%;
 		height: 44px;
-		padding: 0 15px;
+		padding: 0 95px 0 15px;
 		color: rgba(31, 32, 65, 0.75);
 	}
 	&__input::placeholder {
@@ -34,6 +36,7 @@
 		border: 1px solid rgba(31, 32, 65, 0.5);
 	}
 	&__input:focus {
+		padding: 0 44px 0 15px;
 		border: 1px solid rgba(31, 32, 65, 0.5);
 		outline: none;
 	}
@@ -43,10 +46,85 @@
 	&__button {
 		background: transparent;
 		position: absolute;
-		right: 1px;
+		right: 0px;
 		bottom: 0px;
 		width: 44px;
 		height: 44px;
 		border-radius: 4px;
 	}
+}
+
+
+// Бокс
+.guests-dropdown__box {
+	display: none;
+	border: 1px solid rgba(31, 32, 65, 0.5);
+	box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+	border-top: 0;
+	border-radius: 2px;
+	margin-top: -4px;	
+}
+
+.guests-select__list {
+	padding-top: 4px;
+    max-width: 266px; // размер всего бокса
+}
+.guests-select__item {
+	padding: 7px 8px;
+	display: flex;
+	justify-content: space-between;
+}
+.guests-select__title {
+	padding: 9px 7px;
+	font-weight: bold;
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #1F2041;
+}
+
+.cart-control {
+	max-width: 92px;
+	display: flex;
+	margin-bottom: -6px;
+}
+.cart-control__button {
+	font-family: Montserrat;
+	font-size: 18px;
+	color: rgba(31, 32, 65, 0.5);
+	outline: none;
+	border: 1px solid rgba(31, 32, 65, 0.25);
+	background-color: white;
+    border-radius: 50%;
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+}
+
+.cart-control__button:hover {
+	border: 1px solid #BC9CFF;
+	color: #BC9CFF
+}
+.cart-control__button:active {
+	background-color: rgba(151, 150, 150, 0.226);
+	transition: 0.07s;
+}
+.cart-control__button:focus {
+	box-shadow: 0 0 0 0.1em #91bfcc;
+}
+.cart-control__button--reduce {
+	padding-bottom: 3px;
+	margin-right: 2px;
+}
+
+.cart-control__quantity {
+	margin-top: -3px;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+	text-align: center;
+	font-weight: bold;
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #1F2041;
 }
