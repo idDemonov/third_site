@@ -105,8 +105,12 @@
 	background-color: rgba(151, 150, 150, 0.226);
 	transition: 0.07s;
 }
+.cart-control__button:focus {
+	box-shadow: 0 0 0 0.1em #91bfcc;
+}
 .cart-control__button--reduce {
 	padding-bottom: 3px;
+	margin-right: 2px;
 }
 
 .cart-control__quantity {

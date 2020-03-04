@@ -13,60 +13,77 @@ html(lang='ru')
 			.row
 				.column
 					ul.elements
-						li.elements_item
+						li.elements__item
 							include ../elements/text-field/text-field
-						li.elements_item
+						li.elements__item
 							include ../elements/text-field/text-field--hover-focus
-						li.elements_item
+						li.elements__item
 							include ../elements/dropdown/guests/guests-dropdown
-						li.elements_item
+						li.elements__item
 							include ../elements/text-field/text-field--masked
-						li.elements_item.elements_item--row
+						li.elements__item.elements__item--row
 							include ../elements/dropdown/date/date-dropdown
 							include ../elements/dropdown/date/date-dropdown--selected
-						li.elements_item
+						li.elements__item
 							include ../elements/dropdown/date/filter-date-dropdown
-						li.elements_item
+						li.elements__item
 							include ../elements/text-field/text-field--subscription
+				.column.column--middle
+					ul.elements
+						li.elements__item.elements__item--middle
+							include ../elements/buttons/checkbox/checkbox-list
+						li.elements__item.elements__item--middle
+							include ../elements/buttons/radio/gender
+						li.elements__item.elements__item--middle
+							include ../elements/buttons/toggle/toggle-group
+						li.elements__item.elements__item--middle
+							include ../elements/buttons/like/like-group
+						li.elements__item.elements__item--middle
+							include ../elements/buttons/rate/star-group
 				.column
 					ul.elements
-						li.elements_item
-							include ../elements/buttons/checkbox/checkbox-list
-						li.elements_item
-							include ../elements/buttons/radio/gender
-						li.elements_item
-							include ../elements/buttons/toggle/toggle-group
-						li.elements_item
-							include ../elements/buttons/like/like-group
-						li.elements_item
-				.column
+						li.elements__item
+							include ../elements/text-field/text-field
+						li.elements__item
+							include ../elements/text-field/text-field--hover-focus
+						li.elements__item
+							include ../elements/dropdown/guests/guests-dropdown
+						li.elements__item
+							include ../elements/text-field/text-field--masked
+						li.elements__item.elements__item--row
+							include ../elements/dropdown/date/date-dropdown
+							include ../elements/dropdown/date/date-dropdown--selected
+						li.elements__item
+							include ../elements/dropdown/date/filter-date-dropdown
+						li.elements__item
+							include ../elements/text-field/text-field--subscription
 			.row
 				.column
 					ul.elements
-						li.elements_item
+						li.elements__item
 							include ../elements/dropdown/rooms/rooms-dropdown
-						li.elements_item
+						li.elements__item
 							include ../elements/dropdown/rooms/rooms-dropdown--expanded
-						li.elements_item
+						li.elements__item
 							include ../elements/dropdown/checkbox-list/checkbox-list
-						li.elements_item
+						li.elements__item
 							include ../elements/dropdown/checkbox-list/checkbox-list--expanded
-						li.elements_item
+						li.elements__item
 							include ../elements/other/comfort
-						li.elements_item
+						li.elements__item
 							include ../elements/other/convenience
-						li.elements_item
+						li.elements__item
 				.column
 					.row
 						.column
 							ul.elements
-								li.elements_item
-								li.elements_item
+								li.elements__item
+								li.elements__item
 									include ../elements/buttons/checkbox/checkbox-list-rich
 						.column
 							ul.elements
-								li.elements_item
+								li.elements__item
 									include ../elements/other/bullet-list
-								li.elements_item
+								li.elements__item
 									include ../elements/buttons/checkbox/checkbox-list-rich
 					.row
