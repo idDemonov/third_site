@@ -89,15 +89,6 @@ function addRoom() {
 function setInputDropRoomValue(value) {
 	for(let elem of dropInput) {
 		if (elem.dataset.typeRoom == "default" && value.dataset.typeRoom == "default") {
-			switch (value.name) {
-				case "bedroom":
-					elem.value = 
-					break;
-				case "bed":
-					break;
-				case "bathroom":
-					break;
 			}
 		}
-	}
 }

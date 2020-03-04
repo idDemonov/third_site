@@ -3,7 +3,6 @@
     border: none;
 }
 
-
 .rating__group {
     position: relative;
     display: flex;
@@ -13,7 +12,6 @@
     background-size: 20px auto;
     background-repeat: repeat-x;
 }
-
 
 .rating__star {
     position: absolute;
@@ -31,16 +29,14 @@
     outline: none;
 }
 
-.rating__star:hover,
-.rating__star:checked {
+.rating__star:hover, .rating__star:checked {
     background-image: url(/../../../assets/img/button/star__full.svg);
 }
 
 .rating__star:hover ~ .rating__star {
+    transition: 0.3s;
     background-image: url(/../../../assets/img/button/star.svg);
 }
-
-/* Options */
 
 .rating__star:nth-of-type(1) {
     z-index: 5;

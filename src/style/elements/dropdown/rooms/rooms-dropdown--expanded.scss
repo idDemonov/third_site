@@ -4,5 +4,11 @@
 }
 
 .rooms-dropdown__box--expended{
-	display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+.rooms-dropdown__box:active .rooms-dropdown__button{
+    transform: rotateZ(-180deg);
 }
