@@ -73,17 +73,19 @@ html(lang='ru')
 						li.elements__item
 							include ../elements/other/convenience
 						li.elements__item
-				.column
+							
+				.column.column--double
 					.row
 						.column
 							ul.elements
 								li.elements__item
-								li.elements__item
+									include ../elements/dropdown/guests/guests-dropdown--expanded
+								li.elements__item.elements__item--paddTop
 									include ../elements/buttons/checkbox/checkbox-list-rich
 						.column
 							ul.elements
 								li.elements__item
+									include ../elements/dropdown/guests/guests-dropdown--selected
+								li.elements__item.elements__item--paddTop
 									include ../elements/other/bullet-list
-								li.elements__item
-									include ../elements/buttons/checkbox/checkbox-list-rich
 					.row

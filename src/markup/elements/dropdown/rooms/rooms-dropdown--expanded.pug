@@ -3,7 +3,7 @@
 		h3.rooms-dropdown__title Dropdown
 		span.rooms-dropdown__type expanded
 	form.rooms-dropdown__form
-		input.rooms-dropdown__input(type='text', value="2 спальни, 2 кровати, 0 ванных комнат", data-type-room="expanded" ).rooms-dropdown__input--expanded
+		input.rooms-dropdown__input(type='text', value="2 спальни, 2 кровати, без ванных комнат", name="local" ).rooms-dropdown__input--expanded
 		button.rooms-dropdown__button(type='button')
 			img(src='assets/img/button/dropdown.svg', alt='')
 	.rooms-dropdown__box.rooms-select.rooms-dropdown__box--expended
@@ -12,17 +12,17 @@
 				h5.rooms-select__title Спальни
 				.rooms-select__box.cart-control
 					button.cart-control__button.cart-control__button--reduce -
-					input.cart-control__quantity(value="2", name="bedroom", max="3", min="1", readonly, data-type-room="expanded")
+					input.cart-control__quantity(value="2", name="lowdown", max="3", min="1", readonly, data-type-room="bedroom")
 					button.cart-control__button.cart-control__button--add +
 			li.rooms-select__item
 				h5.rooms-select__title Кровати
 				.rooms-select__box.cart-control
 					button.cart-control__button.cart-control__button--reduce -
-					input.cart-control__quantity(value="2", name="bed", max="3" min="1", readonly, data-type-room="expanded")
+					input.cart-control__quantity(value="2", name="lowdown", max="3" min="1", readonly, data-type-room="bed")
 					button.cart-control__button.cart-control__button--add +
 			li.rooms-select__item
 				h5.rooms-select__title Ванные комнаты
 				.rooms-select__box.cart-control
 					button.cart-control__button.cart-control__button--reduce -
-					input.cart-control__quantity(value="0", name="bathroom", max="3", min="0", readonly, data-type-room="expanded")
+					input.cart-control__quantity(value="0", name="lowdown", max="3", min="0", readonly, data-type-room="bathroom")
 					button.cart-control__button.cart-control__button--add +

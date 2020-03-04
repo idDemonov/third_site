@@ -16,6 +16,10 @@
 	max-width: 280px;
 	width: 100%;
 }
+.column--double {
+	max-width: 100%;
+	width: 100%;
+}
 .elements__item {
 		padding-bottom: 20px;
 }
@@ -27,6 +31,10 @@
 
 .elements__item--middle{
 	padding-bottom: 40px;
+}
+
+.elements__item--paddTop {
+	padding-top: 74px;
 }
 
 @import '../elements/text-field/text-field';
