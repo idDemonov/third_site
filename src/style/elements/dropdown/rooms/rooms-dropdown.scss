@@ -20,11 +20,13 @@
 		position: relative;
 	}
 	&__input {
+		text-overflow: ellipsis;
+		overflow: hidden;
 		border: 1px solid rgba(31, 32, 65, 0.25);
 		border-radius: 4px 4px 0 0;
 		width: 100%;
 		height: 44px;
-		padding: 0 15px;
+		padding: 0 95px 0 15px;
 		color: rgba(31, 32, 65, 0.75);
 	}
 	&__input::placeholder {
@@ -34,6 +36,7 @@
 		border: 1px solid rgba(31, 32, 65, 0.5);
 	}
 	&__input:focus {
+		padding: 0 44px 0 15px;
 		border: 1px solid rgba(31, 32, 65, 0.5);
 		outline: none;
 	}
@@ -55,7 +58,6 @@
 // Бокс
 .rooms-dropdown__box {
 	height: 0;
-	width: 0;
   	opacity:0;
  	transition: 0.3s;
 	border: 1px solid rgba(31, 32, 65, 0.5);
