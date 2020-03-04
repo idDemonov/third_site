@@ -33,62 +33,52 @@ function liked() {
 
 
 
-// Выпадающий список rooms, выпадение при нажатие инпут
-const rooms = document.querySelectorAll('.rooms-dropdown__input');
-const dropBox = document.querySelectorAll('.rooms-dropdown__box');
-const dropInput = document.querySelectorAll('.rooms-dropdown__input');
+// События связанные с выпадающим списком комнат
+const calcRoomsDrop = document.querySelectorAll('.rooms-dropdown');
+for(let block of calcRoomsDrop) {
+	
+	block.onclick = (event) => {
+		let target = event.target; 
+		if (target.tagName != 'BUTTON' && target.tagName != 'INPUT') return; 
 
-for (let i = 0; i < rooms.length; i++) {
-	rooms[i].onclick = () => {
-		dropInput[i].classList.add('rooms-dropdown__input--expanded');
-		dropBox[i].classList.add('rooms-dropdown__box--expended');
-	}
-}
-
-
-
-// Выпадающий список rooms, закрытие и выпадение на кнопку
-const dropBoxButton = document.querySelectorAll('.rooms-dropdown__button');
-
-for (let i = 0; i < dropBoxButton.length; i++) {
-	dropBoxButton[i].onclick = () => {
-		dropInput[i].classList.toggle('rooms-dropdown__input--expanded');
-		dropBox[i].classList.toggle('rooms-dropdown__box--expended');
-	}
-}
-
-// Добавление, убавление кроватей
-const buttonReduce = document.querySelectorAll('.cart-control__button--reduce');
-const buttonAdd = document.querySelectorAll('.cart-control__button--add');
-const valueBedroom = document.querySelectorAll('.cart-control__quantity');
-reduceRoom();
-addRoom();
-
-
-function reduceRoom() {
-	for (let i = 0; i < buttonReduce.length; i++) {
-		buttonReduce[i].onclick = () => {
-			valueBedroom[i].value = (valueBedroom[i].value > valueBedroom[i].min) ?
-			--valueBedroom[i].value : valueBedroom[i].value;
-			setInputDropRoomValue(valueBedroom[i]);
-			}
+		if(target.className == 'cart-control__button cart-control__button--reduce') {
+			target.nextElementSibling.value = (target.nextElementSibling.value > target.nextElementSibling.min) ? 
+			--target.nextElementSibling.value : target.nextElementSibling.value; 
+			let input = block.getElementsByTagName('input').local;
+			let lowdown = block.querySelectorAll(".cart-control__quantity");
+			calcRoomsWriteInput(input, lowdown);
+		}
+		if(target.className == 'cart-control__button cart-control__button--add') {
+			target.previousElementSibling.value = (target.previousElementSibling.value < target.previousElementSibling.max) ? 
+			++target.previousElementSibling.value : target.previousElementSibling.value; 
+			let input = block.getElementsByTagName('input').local;
+			let lowdown = block.querySelectorAll(".cart-control__quantity");
+			calcRoomsWriteInput(input, lowdown);
+		}
+		if(target.className == 'rooms-dropdown__input') {
+			target.classList.add('rooms-dropdown__input--expanded');
+			target.parentElement.nextElementSibling.classList.add('rooms-dropdown__box--expended');
+		}
+		if(target.className == 'rooms-dropdown__button') {
+			target.previousElementSibling.classList.toggle('rooms-dropdown__input--expanded');
+			target.parentElement.nextElementSibling.classList.toggle('rooms-dropdown__box--expended');
 		}
 	}
-
-function addRoom() {
-	for (let i = 0; i < buttonAdd.length; i++) {
-		buttonAdd[i].onclick = () => {
-			valueBedroom[i].value = (valueBedroom[i].value < valueBedroom[i].max) ? 
-			++valueBedroom[i].value : valueBedroom[i].value;
-			setInputDropRoomValue(valueBedroom[i]);
-		}
-	}
-
 }
-// dataset.typeRoom="default"
-function setInputDropRoomValue(value) {
-	for(let elem of dropInput) {
-		if (elem.dataset.typeRoom == "default" && value.dataset.typeRoom == "default") {
-			}
-		}
+// Фукнция подсчитывает комнаты и записывает в инпут
+function calcRoomsWriteInput(input, lowdown) {
+	let rooms = {
+		bedroom: 0,
+		bed: 0,
+		bathroom: 0,
+	}
+	for (let type of lowdown) {
+		rooms[type.dataset.typeRoom] = type.value;
+	}
+	let word1 = (rooms.bedroom > 1) ? 'спальни' : 'спальня';
+	let word2 = (rooms.bed > 1) ? 'кровати' : 'кровать';
+	let word3 = (rooms.bathroom > 1) ? 'ванные комнаты' : (rooms.bathroom > 0) ? 'ванная комната' : 'ванных комнат';
+	
+	rooms.bathroom = (rooms.bathroom == 0) ? 'без' : rooms.bathroom;
+	input.value = `${rooms.bedroom} ${word1}, ${rooms.bed} ${word2}, ${rooms.bathroom} ${word3}`
 }
