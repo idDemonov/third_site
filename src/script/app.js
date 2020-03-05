@@ -1,6 +1,5 @@
 'use strict'
 
-
 // Выпадающий список
 showCheckboxList();
 function showCheckboxList () {
@@ -46,7 +45,7 @@ function setEventDropBox(elements, type) {
 	
 		block.onclick = (event) => {
 			let target = event.target;
-			 
+			target = (target.tagName == 'IMG') ? target.parentElement : target;
 			if (target.tagName != 'BUTTON' && target.tagName != 'INPUT') return; 
 
 			if(type == 'guest') {
@@ -73,8 +72,7 @@ function setEventDropBox(elements, type) {
 			if(target.className == 'cart-control__button cart-control__button--reduce') {
 				target.nextElementSibling.value = (target.nextElementSibling.value > target.nextElementSibling.min) ? 
 				--target.nextElementSibling.value : target.nextElementSibling.value; 
-				let input = block.getElementsByTagName('input').local;
-				let lowdown = block.querySelectorAll(".cart-control__quantity");
+				const [input, ...lowdown] = block.getElementsByTagName('input');
 				if(type == 'guest') calcGuestsWriteInput(input, lowdown);
 				else if(type == 'room') calcRoomsWriteInput(input, lowdown);
 				
@@ -82,8 +80,7 @@ function setEventDropBox(elements, type) {
 			if(target.className == 'cart-control__button cart-control__button--add') {
 				target.previousElementSibling.value = (target.previousElementSibling.value < target.previousElementSibling.max) ? 
 				++target.previousElementSibling.value : target.previousElementSibling.value; 
-				let input = block.getElementsByTagName('input').local;
-				let lowdown = block.querySelectorAll(".cart-control__quantity");
+				const [input, ...lowdown] = block.getElementsByTagName('input');
 				if(type == 'guest') calcGuestsWriteInput(input, lowdown);
 				else if(type == 'room') calcRoomsWriteInput(input, lowdown);
 			}
@@ -124,3 +121,4 @@ function calcGuestsWriteInput(input, lowdown) {
 	input.value = `${count} ${word}`
 	if(count == 0) input.value = 'Сколько гостей'
 }
+
