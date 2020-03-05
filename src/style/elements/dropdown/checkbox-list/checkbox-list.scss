@@ -6,7 +6,12 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		cursor: pointer;
+		width: 100%;
+		background-color: inherit;
+		outline: none;
+	}
+	&__button:focus {
+		box-shadow: 0 0 0 0.1em #91bfcc;
 	}
 	&__title {
 		font-family: Montserrat;

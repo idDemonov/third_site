@@ -109,7 +109,7 @@
 	transition: 0.07s;
 }
 .cart-control__button:focus {
-	box-shadow: 0 0 0 0.1em #91bfcc;
+	box-shadow: $mainFocus;
 }
 .cart-control__button--reduce {
 	padding-bottom: 3px;
