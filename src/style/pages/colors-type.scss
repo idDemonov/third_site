@@ -1,18 +1,10 @@
-.header-UI {
-	&__logo {
-		padding: 30px 30px 32px;
-	}
-}
-.container-UI {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-}
 .colors {
-	&__list {}
 	&__item {
 		display: flex; 
-		padding-top: 20px;
+		font-family: Quicksand;
+		padding-bottom: 20px;
+		font-size: 19px;
+		line-height: 29px;
 	}
 	&__rectangle {
 		width: 70px;
@@ -28,75 +20,57 @@
 	}
 }
 .color {
-	&__text {
+	&__title {
 		padding-left: 40px;
-		font-family: Quicksand;
-		font-weight: bold;
-		font-size: 19px;
-		line-height: 29px;
+		@include title-h2;
 		display: flex;
-		align-items: center;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+	&__hex {
+		font-weight: 400;
 	}
 }
+
+
 .type {
-	&__list {max-width: 403px;}
+	max-width: 403px;
+	//&__list {} 
 	&__item {
 		display: flex;
-		padding-top: 20px;
+		padding-bottom: 50px;
+	}
+	&__box {
+		width: 100%;
 	}
 	&__icon {
-		width: 37px;
-		color: rgba(31, 32, 65, 0.25);
-		text-align: right;
-		font-family: Montserrat;
-		&--big {
-			font-size: 24px;
-			line-height: 29px;
-		}
-		&--mid {
-			font-size: 19px;
-			padding-top: 30px;
-			line-height: 24px;
-		}
-		&--small {
-			font-size: 12px;
-			padding-top: 30px;
-			line-height: 15px;
-		}
-		&--body {
-			font-size: 14px;
-			padding-top: 30px;
-			line-height: 24px;
-		}
-	}
-	&__text {
-		margin-left: 30px;
-		font-family: Quicksand;
-		font-style: normal;
-		font-weight: bold;
-		&--big {
+		margin-right: 20px;
+		color: $dark-color-25;
+		text-align: center;
+		width: 30px;
+		height: 30px;
+		&--h1 {
 			font-size: 24px;
 			line-height: 30px;
 		}
-		&--mid {
-			padding-top: 30px;
+		&--h2 {
 			font-size: 19px;
 			line-height: 24px;
 		}
-		&--small {
-			font-family: Montserrat;
-			font-weight: bold;
+		&--h3 {
 			font-size: 12px;
 			line-height: 15px;
-			text-transform: uppercase;
-			padding-top: 30px;
 		}
 		&--body {
-			font-family: Montserrat;
-			font-weight: normal;
 			font-size: 14px;
 			line-height: 24px;
-			padding-top: 30px;
 		}
+	}
+	&__text {
+		max-width: 336px;
+		&--h1 {@include title-h1;}
+		&--h2 {@include title-h2;}
+		&--h3 {@include title-h3;}
+		&--body {@include text-body;}
 	}
 }

@@ -30,11 +30,18 @@
 .header-UI {
   max-width: 1440px;
   margin: 0 auto;
+  &__logo {
+		padding: 30px 30px 32px;
+	}
 }
 
 .container-UI {
   width: 100%;
-  max-width: 1179px;
+  max-width: 1180px;
   margin: 0 auto;
-  padding: 17px 40px;
+  padding: 17px 10px;
+  padding-top: 33px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }

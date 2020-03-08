@@ -89,6 +89,7 @@ module.exports = {
     optimization: optimization(),
     devServer: {  // Автоматическое обновление страницы
         port: 8081, // порт
+        stats: 'errors-only' // выводит только ошибки
     },
     devtool: isDev ? 'source-map' : 'cheap-module-source-map', // Создаю source-map если development
     plugins: plugins(),

@@ -9,61 +9,29 @@ html(lang='ru')
 		.header-UI
 			img.header-UI__logo(src=require('../../assets/img/logo/logo__grey.svg').default, alt="")
 		.container-UI
+			//- .colors__rectangle--dark100 
 			.colors
-				ul.colors__list
+				mixin colorItem(title, hex)
 					li.colors__item
-						.colors__rectangle.colors__rectangle--dark100
-						p.color__text
-							| Dark Shade 100%
-							br
-							| #1F2041
-					li.colors__item
-						.colors__rectangle.colors__rectangle--dark75
-						p.color__text
-							| Dark Shade 75%
-							br
-							| #1F2041
-					li.colors__item
-						.colors__rectangle.colors__rectangle--dark50
-						p.color__text
-							| Dark Shade 50%
-							br
-							| #1F2041
-					li.colors__item
-						.colors__rectangle.colors__rectangle--dark25
-						p.color__text
-							| Dark Shade 25%
-							br
-							| #1F2041
-					li.colors__item
-						.colors__rectangle.colors__rectangle--dark5
-						p.color__text
-							| Dark Shade 5%
-							br
-							| #1F2041
-					li.colors__item
-						.colors__rectangle.colors__rectangle--purple
-						p.color__text
-							| Purple
-							br
-							| #BC9CFF
-					li.colors__item
-						.colors__rectangle.colors__rectangle--green
-						p.color__text
-							| Green
-							br
-							| #6FCF97
+						.colors__rectangle&attributes(attributes)
+						.color__title= title
+							p.color__hex= hex
+				ul
+					+colorItem('Dark Shade 100%', '#1F2041')(class='colors__rectangle--dark100')
+					+colorItem('Dark Shade 75%', '#1F2041')(class='colors__rectangle--dark75')
+					+colorItem('Dark Shade 50%', '#1F2041')(class='colors__rectangle--dark50')
+					+colorItem('Dark Shade 25%', '#1F2041')(class='colors__rectangle--dark25')
+					+colorItem('Dark Shade 5%', '#1F2041')(class='colors__rectangle--dark5')
+					+colorItem('Purple', '#BC9CFF')(class='colors__rectangle--purple')
+					+colorItem('Green', '#6FCF97')(class='colors__rectangle--green')
 			.type
+				mixin titleItem(title, text, modClass)
+					li.type__item
+						div(class='type__icon type__icon--' + modClass)
+							span.type__box= title
+						p(class='type__text type__text--' + modClass)= text
 				ul.type__list
-					li.type__item
-						.type__icon.type__icon--big H1
-						p.type__text.type__text--big This one is the sub-section or widget title
-					li.type__item
-						.type__icon.type__icon--mid H2
-						p.type__text.type__text--mid Next one is the item title inside widgets
-					li.type__item
-						.type__icon.type__icon--small H3
-						p.type__text.type__text--small This is a label or CTA text
-					li.type__item
-						.type__icon.type__icon--body Body
-						p.type__text.type__text--body This is the body text which is used for most of the design, like paragraphs, lists, etc.
+					+titleItem('H1', 'This one is the sub-section or widget title', 'h1')
+					+titleItem('H2', 'Next one is the item title inside widgets', 'h2')
+					+titleItem('H3', 'This is a label or CTA text', 'h3')
+					+titleItem('Body', 'This is the body text which is used for most of the design, like paragraphs, lists, etc.', 'body')
