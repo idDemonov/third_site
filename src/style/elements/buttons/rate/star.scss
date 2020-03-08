@@ -8,7 +8,7 @@
     display: flex;
     width: 100px;
     height: 20px;
-    background-image: url(/../../../assets/img/button/star.svg);
+    background-image: url(../assets/img/button/star.svg);
     background-size: 20px auto;
     background-repeat: repeat-x;
 }
@@ -30,12 +30,12 @@
 }
 
 .rating__star:hover, .rating__star:checked {
-    background-image: url(/../../../assets/img/button/star__full.svg);
+    background-image: url(../assets/img/button/star__full.svg);
 }
 
 .rating__star:hover ~ .rating__star {
     transition: 0.3s;
-    background-image: url(/../../../assets/img/button/star.svg);
+    background-image: url(../assets/img/button/star.svg);
 }
 
 .rating__star:nth-of-type(1) {

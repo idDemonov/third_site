@@ -8,7 +8,7 @@ html(lang='ru')
 	body.wrapper-UI
 		.header-UI
 			.header-UI__logo
-				img(src="assets/img/logo/logo__grey.svg", alt="")
+				img(src=require('../../assets/img/logo/logo__grey.svg').default, alt="")
 		ul.cards__list
 			li.cards__item
 				include ../form/selection

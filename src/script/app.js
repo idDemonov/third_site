@@ -29,7 +29,7 @@ function liked() {
 	else this.nextElementSibling.innerText = --this.nextElementSibling.innerText;
 }
 
-
+console.log("Я тут")
 
 
 
