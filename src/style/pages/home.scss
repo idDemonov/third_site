@@ -10,7 +10,7 @@
 
 .main {
 	&__body {
-		padding-top: 70px;
+		padding-top: -rem(70px);
 		height: 100vh;
 		max-height: 830px;
 		display: flex;
@@ -22,36 +22,29 @@
 	&__form {
 		width: 100%;
 		max-width: 382px;
-		background-color: #fff;
-		padding: 40px 30px 30px;
-		border-radius: 4px;
+		@include padding(40px, 30px, 30px, 30px);
+		border-radius: -rem(4px);
 		box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-		background: #FFFFFF;
-		border: 1px solid rgba(0, 0, 0, 0.12);
+		border: -rem(1px) solid rgba(0, 0, 0, 0.12);
+		background-color: #FFFFFF;
 	}
 	&__epigraph {
 		margin-top: auto;
 		margin-left: auto;
-		margin-bottom: 3px;
+		margin-bottom: -rem(3px);
 		text-align: right;
 		max-width: 297px;
 	}
 		&__title {
-		font-style: normal;
-		font-weight: bold;
-		font-size: 24px;
-		line-height: 30px;
-		color: #1F2041;
-		margin-bottom: 20px;
+		@include font-h1;
+		margin-bottom: -rem(20px);
 	}
 }
 
 .epigraph-main {
 	&__text {
-		font-style: normal;
-		color: rgb(31, 32, 65);
-		font-size: 14px;
-		line-height: 24px;
-		color: rgba(31, 32, 65, 0.75);
+		@include font-body;
 	}
 }
+
+@import 'form/forms';

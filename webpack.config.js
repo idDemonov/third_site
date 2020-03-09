@@ -158,7 +158,7 @@ module.exports = {
                 loader: 'file-loader', 
                 options:{
                     name: filename('[name]','[ext]'),
-                    outputPath :  'images/',
+                    // outputPath :  'images/', // Столкнулся с проблемой, проект собирается через раз
                 }
             },
             {

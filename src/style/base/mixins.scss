@@ -1,5 +1,8 @@
 @function -rem($size) {
-	@return $size / 16px * 1rem;
+	@if $size > 0 {
+		@return $size / 16px * 1rem;
+	}
+	@return $size;
 }
 
 @mixin fontSize($size) {
@@ -7,30 +10,48 @@
 	font-size: -rem($size);
 }
 
-@mixin lineHeight($f-size, $l-height) {
-	line-height: $l-height / $f-size * 1;
+@function -lineHeight($f-size, $l-height) {
+	@return $l-height / $f-size * 1;
 }
 
+@mixin padding($top: 0, $right: 0, $bottom: 0, $left: 0) {
+	padding: {
+		top: -rem($top);
+		right: -rem($right);
+		bottom: -rem($bottom);
+		left: -rem($left);
+	}
+}
+
+@mixin margin($top: 0, $right: 0, $bottom: 0, $left: 0) {
+	margin: {
+		top: -rem($top);
+		right: -rem($right);
+		bottom: -rem($bottom);
+		left: -rem($left);
+	}
+}
 
 @mixin font-h1($f-size: 24px, $weight: 700, $l-height: 30px) {
 	font: {
-	  family: Quicksand;
+	  family: $mainFont;
 	  weight: $weight;
 	}
 	@include fontSize($f-size);
-	@include lineHeight($f-size, $l-height);
+	line-height: -lineHeight($f-size, $l-height);
 	color: $dark-color-100;
+	font-style: normal;
 }
 			
 @mixin font-h2($f-size: 19px, $weight: 700, $l-height: 24px) {
 	font: {
-	  family: Quicksand;
+	  family: $mainFont;
 	  weight: $weight;
 	}
 	@include fontSize($f-size);
-	@include lineHeight($f-size, $l-height);
+	line-height: -lineHeight($f-size, $l-height);
 	color: $dark-color-100;
-	
+	font-style: normal;	
 }
 
 @mixin font-h3($f-size: 12px, $weight: 700, $l-height: 15px) {
@@ -39,9 +60,10 @@
 	  weight: $weight;
 	}
 	@include fontSize($f-size);
-	@include lineHeight($f-size, $l-height);
+	line-height: -lineHeight($f-size, $l-height);
 	color: $dark-color-100;
 	text-transform: uppercase;
+	font-style: normal;
 }
 
 @mixin font-body($f-size: 14px, $weight: 400, $l-height: 24px) {
@@ -50,8 +72,9 @@
 	  weight: $weight;
 	}
 	@include fontSize($f-size);
-	@include lineHeight($f-size, $l-height);
+	line-height: -lineHeight($f-size, $l-height);
 	color: $dark-color-75;
+	font-style: normal;
 }
 
 

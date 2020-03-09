@@ -81,3 +81,22 @@
 		height: 24px;
 	}
 }
+
+.form-body-footer {
+	&__email {
+		border: 1px solid rgba(31, 32, 65, 0.25);
+		border-radius: 4px;
+		width: 100%;
+		max-width: 250px;
+		height: 44px;
+		padding-left: 15px;
+	}
+	&__arrow {
+		position: absolute;
+		right: 12px;
+		top: 2px;
+		width: 43px;
+		height: 40px;
+		background: #FFFFFF;
+	}
+}
