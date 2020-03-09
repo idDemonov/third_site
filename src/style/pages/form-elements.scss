@@ -3,7 +3,7 @@
 	max-width: 1160px;
 }
 .row {
-	margin-bottom: 100px;
+	margin-bottom: -rem(100px);
 	display: flex;
 	justify-content: space-between;
 }
@@ -21,7 +21,7 @@
 	width: 100%;
 }
 .elements__item {
-		padding-bottom: 20px;
+		padding-bottom: -rem(20px);
 }
 
 .elements__item--row {
@@ -30,11 +30,11 @@
 }
 
 .elements__item--middle{
-	padding-bottom: 40px;
+	padding-bottom: -rem(40px);
 }
 
 .elements__item--paddTop {
-	padding-top: 74px;
+	padding-top: -rem(74px);
 }
 
 .component {
@@ -50,7 +50,6 @@
 @import '../elements/buttons/checkbox/checkbox--rich';
 @import '../components/checkbox-list.scss';
 
-@import '../components/gender';
 @import '../components/radio-group';
 
 @import '../elements/buttons/toggle';

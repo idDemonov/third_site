@@ -3,7 +3,7 @@
 	&__register {
 		color: #FFFFFF;
 		background: linear-gradient(#BC9CFF, #8BA4F9);
-		border-radius: 22px;
+		border-radius: -rem(22px);
 		padding: 0.625rem 1.25rem;
 	}
 }

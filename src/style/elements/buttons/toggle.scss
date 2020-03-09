@@ -1,44 +1,45 @@
 .toggle {
-	vertical-align: middle;
-	padding-left: 50px;
-	color: rgba(31, 32, 65, 0.5);
+	@include font-body;
+	width: 300px;
 	cursor: pointer;
 	&__input {
 		appearance: none;
 	}
 	&__box {
-		position: absolute;
+		vertical-align: middle;
+		display: inline-block;
+		margin-right: -rem(10px);
 		width: 40px;
 		height: 20px;
 		border: 1px solid rgba(31, 32, 65, 0.25);
-		border-radius: 10px;
-		margin-left: -50px;
-		background-image: url(../assets/img/button/radio.svg);
-		background-repeat: no-repeat;
-		background-position-x: 10%;
-		background-position-y: 50%;
+		border-radius: -rem(10px);
+		background: {
+			image: url(../assets/img/button/radio.svg);
+			repeat: no-repeat;
+			position-x: 10%;
+			position-y: center;
+		}
 		transition-duration: .5s;
 	}
-	&__text {
-		display: inline-block;
-		padding-top: 1px;
-	}
+	// &__text {}
 }
 
 // States
 
 .toggle {
 	&__input:checked + .toggle__box {
-		background-image: url(../assets/img/button/radio__check.svg);
-		background-repeat: no-repeat;
-		background-position-x: 90%;
-		background-position-y: 50%;
-		border: 1px solid #BC9CFF;
+		background: {
+			image: url(../assets/img/button/radio__check.svg);
+			repeat: no-repeat;
+			position-x: 90%;
+			position-y: center;
+		}
+		border: 1px solid rgb(188, 156, 255);
 	}
 	&__input:disabled + .toggle__box {
 		border: 1px solid rgba(31, 32, 65, 0.40);
 	}
 	&__input:focus + .toggle__box {
-		box-shadow: 0 0 0 0.1em #91bfcc;
+		box-shadow: 0 0 0 0.1em rgb(145, 191, 204);
 	}
 }
