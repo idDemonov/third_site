@@ -1,11 +1,5 @@
-label.like
-	input.like__input(type='checkbox', value='value-toggle' checked)
-	span.like__box
-	span.like__text
-		| 12
-
-label.like
-	input.like__input(type='checkbox', value='value-toggle')
-	span.like__box
-	span.like__text
-		| 2
+mixin article(text, chec)
+	label.like
+		input.like__input(type='checkbox', value='value-toggle' checked= chec)
+		span.like__box
+		span.like__text= text

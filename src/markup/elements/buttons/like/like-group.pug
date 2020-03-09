@@ -1,16 +1,9 @@
+include like.pug
 .like-group
 	h3.like-group__title
 		| like Buttons
 	ul.like-group__list
 		li.like-group__item
-			label.like
-				input.like__input(type='checkbox', value='value-toggle', checked)
-				span.like__box
-				span.like__text
-					| 12
+			+article(2, false)
 		li.like-group__item
-			label.like
-				input.like__input(type='checkbox', value='value-toggle')
-				span.like__box
-				span.like__text
-					| 2
+			+article(12, true)
