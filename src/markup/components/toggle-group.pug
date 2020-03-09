@@ -1,0 +1,9 @@
+include ../elements/buttons/toggle.pug
+.component.subscription-toggle
+	h3.component__title
+		| Toggle
+	ul.subscription-toggle__list
+		li.subscription-toggle__item
+			+toggle('Получать спецпредложения', true)
+		li.subscription-toggle__item
+			+toggle('Получать спецпредложения', false)

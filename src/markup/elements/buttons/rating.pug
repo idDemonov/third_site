@@ -1,0 +1,8 @@
+mixin rating(name='rating', num=0)
+	.rating
+		.rating__group
+			input.rating__star(type='radio', name=name, value='1', aria-label='Ужасно', checked= (num == 1) ? true : false)
+			input.rating__star(type='radio', name=name, value='2', aria-label='Сносно', checked= (num == 2) ? true : false)
+			input.rating__star(type='radio', name=name, value='3', aria-label='Нормально', checked= (num == 3) ? true : false)
+			input.rating__star(type='radio', name=name, value='4', aria-label='Хорошо', checked= (num == 4) ? true : false)
+			input.rating__star(type='radio', name=name, value='5', aria-label='Отлично', checked= (num == 5) ? true : false)

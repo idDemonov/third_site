@@ -1,6 +1,6 @@
-.checkbox
-	label.check.option
-		input.check__input(type='checkbox', name='breakfast' checked)
-		span.check__box
-		.check__text
-			| Завтрак
+mixin checkbox(text, check)
+	.checkbox
+		label.check.option
+			input.check__input(type='checkbox', name='breakfast' checked= check)
+			span.check__box
+			.check__text= text

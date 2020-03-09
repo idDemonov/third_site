@@ -37,23 +37,30 @@
 	padding-top: 74px;
 }
 
+.component {
+	&__title {
+		@include font-h3;
+	}
+	
+}
+
 @import '../elements/text-field/text-field';
 
 @import '../elements/buttons/checkbox/checkbox';
-@import '../elements/buttons/checkbox/checkbox-rich';
-@import '../elements/buttons/checkbox/checkbox-list';
+@import '../elements/buttons/checkbox/checkbox--rich';
+@import '../components/checkbox-list.scss';
 
-@import '../elements/buttons/radio/gender';
-@import '../elements/buttons/radio/radio-group';
+@import '../components/gender';
+@import '../components/radio-group';
 
-@import '../elements/buttons/toggle/toggle';
-@import '../elements/buttons/toggle/toggle-group';
+@import '../elements/buttons/toggle';
+@import '..//components/toggle-group';
 
-@import '../elements/buttons/like/like';
-@import '../elements/buttons/like/like-group';
+@import '../elements/buttons/like';
+@import '../components/like-group';
 
-@import '../elements/buttons/rate/star';
-@import '../elements/buttons/rate/star-group';
+@import '../elements/buttons/rating';
+@import '../components/rating-group';
 
 @import '../elements/text-field/text-field--hover-focus';
 @import '../elements/text-field/text-field--masked';
