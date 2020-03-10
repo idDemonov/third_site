@@ -1,7 +1,7 @@
-mixin checkboxRich(title, text, check)
+mixin checkboxRich(title= 'title', text= 'text', name='breakfast', check= false, disabled= false)  
 	.checkbox.checkbox--rich
 		label.check.option
-			input.check__input(type='checkbox', name='breakfast' checked= check)
+			input.check__input(type='checkbox', name= name, checked= check, disabled= disabled)
 			span.check__box
-			.check__title= title 
+			h5.check__title= title 
 			.check__text.check__text--rich= text

@@ -1,28 +1,22 @@
 .bullet {
 	&__title {
-		font-weight: bold;
-		font-size: 12px;
-		text-transform: uppercase;
-		padding-bottom: 6px;
+		@include font-h3;
 	}
-	&__list {
-		padding-top: 10px;
-	}
-	&__item {
-		padding-bottom: 10px;
-	}
+	// &__list {}
+	// &__item {}
 	&__box {
-		margin-top: 7px;
-		position: absolute;
+		vertical-align: top;
+		display: inline-block;
+		margin-top: -rem(7px);
 		width: 10px;
 		height: 10px;
 		border-radius: 50%;
 		background: rgba(31, 32, 65, 0.25);
 	}
 	&__text {
+		display: inline-block;
+		margin-left: -rem(10px);
 		max-width: 240px;
-		margin-left: 20px;
-		line-height: 24px;
-		color: rgba(31, 32, 65, 0.75);
+		@include font-body;
 	}
 }

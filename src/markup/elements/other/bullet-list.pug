@@ -1,15 +1,8 @@
-.bullet
-	h3.bullet__title bullet list
-	ul.bullet__list
-		li.bullet__item
-			span.bullet__box
-			.bullet__text
-				| Нельзя с питомцами
-		li.bullet__item
-			span.bullet__box
-			.bullet__text
-				| Без вечеринок и мероприятий
-		li.bullet__item
-			span.bullet__box
-			.bullet__text
-				| Время прибытия — после 13:00, а выезд до 12:00
+mixin bullet(list)
+	.bullet
+		ul.bullet__list
+			each item in list
+				li.bullet__item
+					span.bullet__box
+					span.bullet__text= item.text
+						
