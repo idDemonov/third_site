@@ -12,6 +12,7 @@ html(lang='ru')
 		.grid
 			.row
 				.column
+					include ../elements/component
 					ul.elements
 						li.elements__item
 							include ../elements/text-field/text-field
@@ -66,9 +67,9 @@ html(lang='ru')
 							include ../components/dropdown/rooms/rooms-dropdown--expanded
 						li.elements__item
 							include ../elements/buttons/checkbox/checkbox-drop-list
-							+checkbox-list(true)
-						li.elements__item
 							+checkbox-list(false)
+						li.elements__item
+							+checkbox-list(true)
 						li.elements__item
 							include ../elements/other/details.pug
 							+details('Комфорт', 'Шумопоглощающие стены', 'comfort.svg')

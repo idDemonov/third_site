@@ -1,0 +1,11 @@
+mixin radio(text1='Мужчина', text2='Женщина')
+	.radio-group
+		.radio-group__list
+			label.radio-group__item.radio
+				input.radio__input(type='radio', name='gender' value='male' checked)
+				span.radio__box
+				span.radio__text= text1
+			label.radio-group__item.radio
+				input.radio__input(type='radio', name='gender' value='female')
+				span.radio__box
+				span.radio__text= text2

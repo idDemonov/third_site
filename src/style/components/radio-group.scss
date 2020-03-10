@@ -1,11 +1,14 @@
 .radio-group{
-	@include font-body;
-	color: rgba(31, 32, 65, 0.5);
-	max-width: 220px;
-	display: flex;
-	justify-content: space-between;
+	&__list {
+		max-width: 220px;
+		display: flex;
+		justify-content: space-between;
+	}
+	//&__item{}
 }
 .radio {
+	@include font-body;
+	color: rgba(31, 32, 65, 0.5);
 	width: 105px;
 	cursor: pointer;
 	&__input {
