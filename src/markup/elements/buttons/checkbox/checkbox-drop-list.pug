@@ -1,0 +1,24 @@
+mixin checkbox-list(expand= false)
+	.checkbox-list
+		button.checkbox-list__button
+			h3.checkbox-list__title expandable checkbox list
+			div(class= expand ? 'checkbox-list__icon checkbox-list__icon--activ' : 'checkbox-list__icon' )
+				img(src=require('../../assets/img/button/dropdown.svg').default, alt='') 
+		div(class= expand ? 'checkbox-dropdown checkbox-dropdown--expanded' : 'checkbox-dropdown' )
+			ul.checkbox-dropdown__list
+				li.checkbox-dropdown__item
+					+checkbox('Завтрак', false, 'breakfast')
+				li.checkbox-dropdown__item
+					+checkbox('Письменный стол', true, 'desk')
+				li.checkbox-dropdown__item
+					+checkbox('Стул для кормления', true, 'chair')
+				li.checkbox-dropdown__item
+					+checkbox('Кроватка', true, 'crib')
+				li.checkbox-dropdown__item
+					+checkbox('Телевизор', false, 'television')
+				li.checkbox-dropdown__item
+					+checkbox('Шампунь', false, 'shampoo')
+				li.checkbox-dropdown__item
+					+checkbox('Disabled', false, 'television', true)
+				li.checkbox-dropdown__item
+					+checkbox('Checked Disabled', true, 'shampoo', true)

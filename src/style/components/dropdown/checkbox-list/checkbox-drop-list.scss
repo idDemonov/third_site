@@ -31,7 +31,6 @@
 }
 
 .checkbox-dropdown {
-	transition-duration: .5s;
 	display: none;
 	padding-bottom: 10px;
 	&__list {
@@ -39,5 +38,8 @@
 	}
 	&__item {
 		padding-bottom: 10px;
+	}
+	&--expanded {
+		display: block;
 	}
 }
