@@ -65,7 +65,10 @@ html(lang='ru')
 						li.elements__item
 							include ../components/dropdown/rooms/rooms-dropdown--expanded
 						li.elements__item
-							include ../components/dropdown/checkbox-drop-list
+							include ../elements/buttons/checkbox/checkbox-drop-list
+							+checkbox-list(true)
+						li.elements__item
+							+checkbox-list(false)
 						li.elements__item
 							include ../elements/other/comfort
 						li.elements__item
