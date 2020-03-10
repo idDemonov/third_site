@@ -2,7 +2,7 @@
 
 // Выпадающий список
 showCheckboxList();
-function showCheckboxList () {
+function showCheckboxList() {
 	const checkClick = document.querySelectorAll(".checkbox-list__button"); // Клик
 	const checkIcon = document.querySelectorAll(".checkbox-list__icon"); // Повесить поворот иконки
 	const checkDrop = document.querySelectorAll(".checkbox-dropdown"); // Повесить раскрытие
@@ -14,8 +14,6 @@ function showCheckboxList () {
 		}
 	}
 }
-
-
 
 // Работа с лайками
 const likes = document.querySelectorAll('.like__box');

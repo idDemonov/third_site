@@ -18,14 +18,14 @@ html(lang='ru')
 						li.elements__item
 							include ../elements/text-field/text-field--hover-focus
 						li.elements__item
-							include ../elements/dropdown/guests/guests-dropdown
+							include ../components/dropdown/guests/guests-dropdown
 						li.elements__item
 							include ../elements/text-field/text-field--masked
 						li.elements__item.elements__item--row
-							include ../elements/dropdown/date/date-dropdown
-							include ../elements/dropdown/date/date-dropdown--selected
+							include ../components/dropdown/date/date-dropdown
+							include ../components/dropdown/date/date-dropdown--selected
 						li.elements__item
-							include ../elements/dropdown/date/filter-date-dropdown
+							include ../components/dropdown/date/filter-date-dropdown
 						li.elements__item
 							include ../elements/text-field/text-field--subscription
 				.column.column--middle
@@ -33,7 +33,7 @@ html(lang='ru')
 						li.elements__item.elements__item--middle
 							include ../components/checkbox/checkbox-list
 						li.elements__item.elements__item--middle
-							include ../components/gender
+							include ../components/radio-group
 						li.elements__item.elements__item--middle
 							include ../components/toggle-group
 						li.elements__item.elements__item--middle
@@ -47,27 +47,27 @@ html(lang='ru')
 						li.elements__item
 							include ../elements/text-field/text-field--hover-focus
 						li.elements__item
-							include ../elements/dropdown/guests/guests-dropdown
+							include ../components/dropdown/guests/guests-dropdown
 						li.elements__item
 							include ../elements/text-field/text-field--masked
 						li.elements__item.elements__item--row
-							include ../elements/dropdown/date/date-dropdown
-							include ../elements/dropdown/date/date-dropdown--selected
+							include ../components/dropdown/date/date-dropdown
+							include ../components/dropdown/date/date-dropdown--selected
 						li.elements__item
-							include ../elements/dropdown/date/filter-date-dropdown
+							include ../components/dropdown/date/filter-date-dropdown
 						li.elements__item
 							include ../elements/text-field/text-field--subscription
 			.row
 				.column
 					ul.elements
 						li.elements__item
-							include ../elements/dropdown/rooms/rooms-dropdown
+							include ../components/dropdown/rooms/rooms-dropdown
 						li.elements__item
-							include ../elements/dropdown/rooms/rooms-dropdown--expanded
+							include ../components/dropdown/rooms/rooms-dropdown--expanded
 						li.elements__item
-							include ../elements/dropdown/checkbox-list/checkbox-list
+							include ../components/dropdown/checkbox-list/checkbox-drop-list
 						li.elements__item
-							include ../elements/dropdown/checkbox-list/checkbox-list--expanded
+							include ../components/dropdown/checkbox-list/checkbox-drop-list--expanded
 						li.elements__item
 							include ../elements/other/comfort
 						li.elements__item
@@ -81,13 +81,13 @@ html(lang='ru')
 						.column
 							ul.elements
 								li.elements__item
-									include ../elements/dropdown/guests/guests-dropdown--expanded
+									include ../components/dropdown/guests/guests-dropdown--expanded
 								li.elements__item.elements__item--paddTop
 									include ../components/checkbox/checkbox-list--rich
 						.column
 							ul.elements
 								li.elements__item
-									include ../elements/dropdown/guests/guests-dropdown--selected
+									include ../components/dropdown/guests/guests-dropdown--selected
 								li.elements__item.elements__item--paddTop
 									include ../elements/other/bullet-list
 					.row

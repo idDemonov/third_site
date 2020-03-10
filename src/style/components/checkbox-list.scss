@@ -1,5 +1,7 @@
-// .checkbox-buttons {
-// 	&__title {}
-// 	&__item {}
-// 	&__list {}
-// }
+.checkbox-buttons {
+	// &__title {}
+	&__item {
+        padding-top: 12px;;
+    }
+	// &__list {}
+}

@@ -1,27 +1,25 @@
 .checkbox {
 	max-width: 222px;
+	@include font-body($l-height: 18px);
+	color: rgba(31, 32, 65, 0.5);
 }
 .check {
-	vertical-align: middle;
-	padding-left: 30px;
-	color: rgba(31, 32, 65, 0.5);
 	cursor: pointer;
 	&__input {
 		appearance: none;
 	}
 	&__box {
-		position: absolute;
+		vertical-align: top;
+		display: inline-block;
+		margin-right: -rem(10px);
 		width: 20px;
 		height: 20px;
 		border: 1px solid rgba(31, 32, 65, 0.25);
-		border-radius: 4px;
-		margin-left: -30px;
-		margin-top: -1px;
+		border-radius: -rem(4px);
 	}
 	&__text {
-		max-width: 192px;
-		margin-top: -15px;
-		margin-left: 30px;
+		display: inline-block;
+		width: 192px;
 	}
 }
 
@@ -29,10 +27,12 @@
 
 .check {
 	&__input:checked + .check__box {
-		background-image: url(../assets/img/button/check.svg);
-		background-repeat: no-repeat;
-		background-position-x: center;
-		background-position-y: 40%;
+		background: {
+			image: url(../assets/img/button/check.svg);
+			repeat: no-repeat;
+			position-x: center;
+			position-y: 40%;
+		}
 		border: 1px solid #BC9CFF;
 	}
 	&__input:disabled + .check__box {

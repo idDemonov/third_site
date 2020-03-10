@@ -1,7 +1,7 @@
 .like-group {
-	// &__title {}
 	&__list {
-		width: 82px;
+		max-width: 82px;
+		padding-top: -rem(11px);
 		display: flex;
 		justify-content: space-between;
 	}

@@ -1,6 +1,6 @@
-mixin checkbox(text, check)
+mixin checkbox(text= 'text', check= false, name='breakfast', disabled= false)
 	.checkbox
 		label.check.option
-			input.check__input(type='checkbox', name='breakfast' checked= check)
+			input.check__input(type='checkbox', name= name, checked= check, disabled= disabled)
 			span.check__box
-			.check__text= text
+			span.check__text= text

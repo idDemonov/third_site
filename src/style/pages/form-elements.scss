@@ -21,7 +21,7 @@
 	width: 100%;
 }
 .elements__item {
-		padding-bottom: -rem(20px);
+	padding-bottom: -rem(20px);
 }
 
 .elements__item--row {
@@ -40,6 +40,7 @@
 .component {
 	&__title {
 		@include font-h3;
+		padding-bottom: -rem(5px);
 	}
 	
 }
@@ -65,18 +66,18 @@
 @import '../elements/text-field/text-field--masked';
 @import '../elements/text-field/text-field--subscription';
 
-@import '../elements/dropdown/guests/guests-dropdown';
-@import '../elements/dropdown/guests/guests-dropdown--expanded';
+@import '../components/dropdown/guests/guests-dropdown';
+@import '../components/dropdown/guests/guests-dropdown--expanded';
 
-@import '../elements/dropdown/date/date-dropdown';
-@import '../elements/dropdown/date/date-dropdown--selected';
-@import '../elements/dropdown/date/filter-date-dropdown';
+@import '../components/dropdown/date/date-dropdown';
+@import '../components/dropdown/date/date-dropdown--selected';
+@import '../components/dropdown/date/filter-date-dropdown';
 
-@import '../elements/dropdown/rooms/rooms-dropdown';
-@import '../elements/dropdown/rooms/rooms-dropdown--expanded';
+@import '../components/dropdown/rooms/rooms-dropdown';
+@import '../components/dropdown/rooms/rooms-dropdown--expanded';
 
-@import '../elements/dropdown/checkbox-list/checkbox-list';
-@import '../elements/dropdown/checkbox-list/checkbox-list--expanded';
+@import '../components/dropdown/checkbox-list/checkbox-drop-list';
+@import '../components/dropdown/checkbox-list/checkbox-drop-list--expanded';
 
 @import '../elements/other/comfort';
 @import '../elements/other/bullet-list';
