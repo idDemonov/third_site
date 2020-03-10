@@ -1,0 +1,6 @@
+mixin details(title='Комфорт', text= 'Шумопоглощающие стены', url= 'comfort.svg')
+	.details
+		img.details__logo(src= require('../../assets/img/other/' + url).default, alt="")
+		.details__text
+			h3.details__title= title
+			.details__subtitle= text
