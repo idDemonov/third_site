@@ -12,16 +12,21 @@ html(lang='ru')
 		.grid
 			.row
 				.column
+					//- Mixins
 					include ../elements/component
+					include ../elements/text-field/text-field 
 					ul.elements
 						li.elements__item
-							include ../elements/text-field/text-field
+							+component('Text Field', 'Default')
+							+text-field('text', 'Email')
 						li.elements__item
-							include ../elements/text-field/text-field--hover-focus
+							+component('Text Field', 'Hover / Focus')
+							+text-field('text', 'Просто текст', 'This is pretty awesome', 'text-field__input--active')
 						li.elements__item
 							include ../components/dropdown/guests/guests-dropdown
 						li.elements__item
-							include ../elements/text-field/text-field--masked
+							+component('masked text field', 'Default')
+							+text-field('text', 'ДД.ММ.ГГГГ')
 						li.elements__item.elements__item--row
 							include ../components/dropdown/date/date-dropdown
 							include ../components/dropdown/date/date-dropdown--selected
@@ -44,9 +49,7 @@ html(lang='ru')
 				.column
 					ul.elements
 						li.elements__item
-							include ../elements/text-field/text-field
 						li.elements__item
-							include ../elements/text-field/text-field--hover-focus
 						li.elements__item
 							include ../components/dropdown/guests/guests-dropdown
 						li.elements__item

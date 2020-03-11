@@ -1,27 +1,26 @@
-.guests-dropdown
-	.guests-dropdown__text
-		h3.guests-dropdown__title Dropdown
-	form.guests-dropdown__form
-		input.guests-dropdown__input(type='text', value="Сколько гостей", name="local" )
-		button.guests-dropdown__button(type='button')
-			img(src=require('../../../../assets/img/button/dropdown.svg').default, alt='')
-	.guests-dropdown__box.guests-select
-		ul.guests-select__list
-			li.guests-select__item
-				h5.guests-select__title Взрослые
-				.guests-select__box.cart-control
-					button.cart-control__button.cart-control__button--reduce -
-					input.cart-control__quantity(value="0", name="lowdown", max="3", min="0", readonly, data-type-room="adult")
-					button.cart-control__button.cart-control__button--add +
-			li.guests-select__item
-				h5.guests-select__title Дети
-				.guests-select__box.cart-control
-					button.cart-control__button.cart-control__button--reduce -
-					input.cart-control__quantity(value="0", name="lowdown", max="3" min="0", readonly, data-type-room="children")
-					button.cart-control__button.cart-control__button--add +
-			li.guests-select__item
-				h5.guests-select__title Младенцы
-				.guests-select__box.cart-control
-					button.cart-control__button.cart-control__button--reduce -
-					input.cart-control__quantity(value="0", name="lowdown", max="3", min="0", readonly, data-type-room="babies")
-					button.cart-control__button.cart-control__button--add +
+mixin dropdown(type= 'guest', value= "value", expanded= false)
+	.guests-dropdown
+		form.guests-dropdown__form
+			input.guests-dropdown__input(type='text', value= value, name="local" )
+			button.guests-dropdown__button(type='button')
+				img(src=require('../../../../assets/img/button/dropdown.svg').default, alt='')
+		.guests-dropdown__box.guests-select
+			ul.guests-select__list
+				li.guests-select__item
+					h5.guests-select__title= (type == 'guest') ? 'Взрослые' : 'Спальни'
+					.guests-select__box.cart-control
+						button.cart-control__button.cart-control__button--reduce -
+						input.cart-control__quantity(value="0", name="lowdown", max="3", min="0", readonly, data-type-room= (type == 'guest') ? 'adult' : 'bedroom')
+						button.cart-control__button.cart-control__button--add +
+				li.guests-select__item
+					h5.guests-select__title= (type == 'guest') ? 'Дети' : 'Кровати'
+					.guests-select__box.cart-control
+						button.cart-control__button.cart-control__button--reduce -
+						input.cart-control__quantity(value="0", name="lowdown", max="3" min="0", readonly, data-type-room= (type == 'guest') ? 'children' : 'bed')
+						button.cart-control__button.cart-control__button--add +
+				li.guests-select__item
+					h5.guests-select__title= (type == 'guest') ?  'Младенцы' : 'Ванные комнаты'
+					.guests-select__box.cart-control
+						button.cart-control__button.cart-control__button--reduce -
+						input.cart-control__quantity(value="0", name="lowdown", max="3", min="0", readonly, data-type-room= (type == 'guest') ? 'babies' : "bathroom")
+						button.cart-control__button.cart-control__button--add +

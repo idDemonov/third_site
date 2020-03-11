@@ -15,6 +15,10 @@
 	&__type {
 		color: rgba(31, 32, 65, 0.5);
 		margin-top: -3px;
+		&--active {
+			color: rgba(31, 32, 65, 0.5);
+			margin-top: 0px;
+		}
 	}
 	&__input {
 		border: 1px solid rgba(31, 32, 65, 0.25);
@@ -23,6 +27,12 @@
 		height: 44px;
 		padding: 0 15px;
 		color: rgba(31, 32, 65, 0.75);
+		&--active {
+			border: 1px solid rgba(31, 32, 65, 0.5);
+		}
+		&--active::placeholder {
+			color: rgba(31, 32, 65, 0.75);
+		}
 	}
 	&__input::placeholder {
 		color: rgba(31, 32, 65, 0.25);

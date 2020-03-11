@@ -38,9 +38,15 @@
 }
 
 .component {
+	display: flex;
+	justify-content: space-between;
+	@include font-h3;
 	&__title {
-		@include font-h3;
 		padding-bottom: -rem(5px);
+	}
+	&__subtitle {
+		font-weight: 400;
+		color: rgba(31, 32, 65, 0.5);
 	}
 	
 }
@@ -62,7 +68,6 @@
 @import '../elements/buttons/rating';
 @import '../components/rating-group';
 
-@import '../elements/text-field/text-field--hover-focus';
 @import '../elements/text-field/text-field--masked';
 @import '../elements/text-field/text-field--subscription';
 
