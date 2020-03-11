@@ -1,28 +1,28 @@
-.rooms-dropdown
-	.rooms-dropdown__text
-		h3.rooms-dropdown__title Dropdown
-		span.rooms-dropdown__type Default
-	form.rooms-dropdown__form
-		input.rooms-dropdown__input(type='text', value="2 спальни, 2 кровати, без ванных комнат", name="local" )
-		button.rooms-dropdown__button(type='button')
-			img(src=require('../../../../assets/img/button/dropdown.svg').default, alt='')
-	.rooms-dropdown__box.rooms-select
-		ul.rooms-select__list
-			li.rooms-select__item
-				h5.rooms-select__title Спальни
-				.rooms-select__box.cart-control
-					button.cart-control__button.cart-control__button--reduce -
-					input.cart-control__quantity(value="2", name="lowdown", max="3", min="1", readonly, data-type-room="bedroom")
-					button.cart-control__button.cart-control__button--add +
-			li.rooms-select__item
-				h5.rooms-select__title Кровати
-				.rooms-select__box.cart-control
-					button.cart-control__button.cart-control__button--reduce -
-					input.cart-control__quantity(value="2", name="lowdown", max="3" min="1", readonly, data-type-room="bed")
-					button.cart-control__button.cart-control__button--add +
-			li.rooms-select__item
-				h5.rooms-select__title Ванные комнаты
-				.rooms-select__box.cart-control
-					button.cart-control__button.cart-control__button--reduce -
-					input.cart-control__quantity(value="0", name="lowdown", max="3", min="0", readonly, data-type-room="bathroom")
-					button.cart-control__button.cart-control__button--add +
+mixin dropdownRoom(value= ['2 спальни, 2 кровати, без ванных комнат', 2, 2, 0], expanded= false)
+	- let addClassInput = (expanded) ? 'rooms-dropdown__input--expanded' : '';
+	- let addClassBox = (expanded) ? 'rooms-dropdown__box--expended' : '';
+	.rooms-dropdown
+		form.rooms-dropdown__form
+			input(class=['rooms-dropdown__input', addClassInput],type='text', value= value[0], name="local" )
+			button.rooms-dropdown__button(type='button')
+				img(src=require('../../assets/img/button/dropdown.svg').default, alt='')
+		div(class=['rooms-dropdown__box', 'rooms-select', addClassBox])
+			ul.rooms-select__list
+				li.rooms-select__item
+					h5.rooms-select__title Спальни
+					.rooms-select__box.cart-control
+						button.cart-control__button.cart-control__button--reduce -
+						input.cart-control__quantity(value= value[1], name="lowdown", max="3", min="1", readonly, data-type-room="bedroom")
+						button.cart-control__button.cart-control__button--add +
+				li.rooms-select__item
+					h5.rooms-select__title Кровати
+					.rooms-select__box.cart-control
+						button.cart-control__button.cart-control__button--reduce -
+						input.cart-control__quantity(value= value[2], name="lowdown", max="3" min="1", readonly, data-type-room="bed")
+						button.cart-control__button.cart-control__button--add +
+				li.rooms-select__item
+					h5.rooms-select__title Ванные комнаты
+					.rooms-select__box.cart-control
+						button.cart-control__button.cart-control__button--reduce -
+						input.cart-control__quantity(value= value[3], name="lowdown", max="3", min="0", readonly, data-type-room="bathroom")
+						button.cart-control__button.cart-control__button--add +

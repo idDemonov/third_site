@@ -14,7 +14,9 @@ html(lang='ru')
 				.column
 					//- Mixins
 					include ../elements/component
+					include ../elements/other/details.pug
 					include ../elements/text-field/text-field 
+					include ../components/dropdown/rooms/rooms-dropdown
 					include ../components/dropdown/guests/guests-dropdown
 					ul.elements
 						li.elements__item
@@ -25,7 +27,7 @@ html(lang='ru')
 							+text-field('text', 'Просто текст', 'This is pretty awesome', 'text-field__input--active')
 						li.elements__item
 							+component('Dropdown') 
-							+dropdown('guest', ['Сколько гостей', 0, 0, 0], false)
+							+dropdownGuest(['Сколько гостей', 0, 0, 0], false)
 						li.elements__item
 							+component('masked text field', 'Default')
 							+text-field('text', 'ДД.ММ.ГГГГ')
@@ -54,7 +56,7 @@ html(lang='ru')
 						li.elements__item
 						li.elements__item
 							+component('Dropdown') 
-							+dropdown('guest', ['Сколько гостей', 0, 0, 0], false)
+							+dropdownGuest(['Сколько гостей', 0, 0, 0], false)
 						li.elements__item
 							include ../elements/text-field/text-field--masked
 						li.elements__item.elements__item--row
@@ -68,21 +70,21 @@ html(lang='ru')
 				.column
 					ul.elements
 						li.elements__item
-							include ../components/dropdown/rooms/rooms-dropdown
+							+component('dropdown', 'Default', 'max-width: 266px')
+							+dropdownRoom(['2 спальни, 2 кровати, без ванных комнат', 2, 2, 0], false)
 						li.elements__item
-							include ../components/dropdown/rooms/rooms-dropdown--expanded
+							+component('dropdown', 'Default', 'max-width: 266px')
+							+dropdownRoom(['2 спальни, 2 кровати, без ванных комнат', 2, 2, 0], true)
 						li.elements__item
 							include ../elements/buttons/checkbox/checkbox-drop-list
 							+checkbox-list(false)
 						li.elements__item
 							+checkbox-list(true)
 						li.elements__item
-							include ../elements/other/details.pug
 							+details('Комфорт', 'Шумопоглощающие стены', 'comfort.svg')
 						li.elements__item
 							+details('Удобство', 'Окно в каждой из спален', 'convenience.svg')
 						li.elements__item
-							div#slider
 							
 							
 				.column.column--double
@@ -91,14 +93,14 @@ html(lang='ru')
 							ul.elements
 								li.elements__item
 									+component('Dropdown') 
-									+dropdown('guest', ['Сколько гостей', 0, 0, 0], true)
+									+dropdownGuest(['Сколько гостей', 0, 0, 0], true)
 								li.elements__item.elements__item--paddTop
 									include ../components/checkbox/checkbox-list--rich
 						.column
 							ul.elements
 								li.elements__item
 									+component('Dropdown') 
-									+dropdown('guest', ['3 Гостя', 2, 1, 0], true)
+									+dropdownGuest(['3 Гостя', 2, 1, 0], true)
 								li.elements__item.elements__item--paddTop
 									include ../components/bullet-list
 					.row
