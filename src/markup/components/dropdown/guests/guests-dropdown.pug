@@ -1,26 +1,28 @@
-mixin dropdown(type= 'guest', value= "value", expanded= false)
+mixin dropdown(type= 'guest', value= ['Сколько гостей', 0, 0, 0], expanded= false)
+	- let addClassInput = (expanded) ? 'guests-dropdown__input--expanded' : '';
+	- let addClassBox = (expanded) ? 'guests-dropdown__box--expended' : '';
 	.guests-dropdown
 		form.guests-dropdown__form
-			input.guests-dropdown__input(type='text', value= value, name="local" )
+			input(class=['guests-dropdown__input', addClassInput], type='text', value= value[0], name="local" )
 			button.guests-dropdown__button(type='button')
-				img(src=require('../../../../assets/img/button/dropdown.svg').default, alt='')
-		.guests-dropdown__box.guests-select
+				img(src=require('../../assets/img/button/dropdown.svg').default, alt='')
+		div(class= ['guests-dropdown__box', 'guests-select', addClassBox])
 			ul.guests-select__list
 				li.guests-select__item
-					h5.guests-select__title= (type == 'guest') ? 'Взрослые' : 'Спальни'
+					h5.guests-select__title Взрослые
 					.guests-select__box.cart-control
 						button.cart-control__button.cart-control__button--reduce -
-						input.cart-control__quantity(value="0", name="lowdown", max="3", min="0", readonly, data-type-room= (type == 'guest') ? 'adult' : 'bedroom')
+						input.cart-control__quantity(value= value[1], name="lowdown", max="3", min="0", readonly, data-type-room='adult')
 						button.cart-control__button.cart-control__button--add +
 				li.guests-select__item
-					h5.guests-select__title= (type == 'guest') ? 'Дети' : 'Кровати'
+					h5.guests-select__title Дети
 					.guests-select__box.cart-control
 						button.cart-control__button.cart-control__button--reduce -
-						input.cart-control__quantity(value="0", name="lowdown", max="3" min="0", readonly, data-type-room= (type == 'guest') ? 'children' : 'bed')
+						input.cart-control__quantity(value= value[2], name="lowdown", max="3" min="0", readonly, data-type-room='children')
 						button.cart-control__button.cart-control__button--add +
 				li.guests-select__item
-					h5.guests-select__title= (type == 'guest') ?  'Младенцы' : 'Ванные комнаты'
-					.guests-select__box.cart-control
+					h5.guests-select__title Младенцы
+					.guests-select__box.cart-control 
 						button.cart-control__button.cart-control__button--reduce -
-						input.cart-control__quantity(value="0", name="lowdown", max="3", min="0", readonly, data-type-room= (type == 'guest') ? 'babies' : "bathroom")
+						input.cart-control__quantity(value= value[3], name="lowdown", max="3", min="0", readonly, data-type-room='babies')
 						button.cart-control__button.cart-control__button--add +

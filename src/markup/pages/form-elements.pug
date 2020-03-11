@@ -15,6 +15,7 @@ html(lang='ru')
 					//- Mixins
 					include ../elements/component
 					include ../elements/text-field/text-field 
+					include ../components/dropdown/guests/guests-dropdown
 					ul.elements
 						li.elements__item
 							+component('Text Field', 'Default')
@@ -23,7 +24,8 @@ html(lang='ru')
 							+component('Text Field', 'Hover / Focus')
 							+text-field('text', 'Просто текст', 'This is pretty awesome', 'text-field__input--active')
 						li.elements__item
-							include ../components/dropdown/guests/guests-dropdown
+							+component('Dropdown') 
+							+dropdown('guest', ['Сколько гостей', 0, 0, 0], false)
 						li.elements__item
 							+component('masked text field', 'Default')
 							+text-field('text', 'ДД.ММ.ГГГГ')
@@ -51,7 +53,8 @@ html(lang='ru')
 						li.elements__item
 						li.elements__item
 						li.elements__item
-							include ../components/dropdown/guests/guests-dropdown
+							+component('Dropdown') 
+							+dropdown('guest', ['Сколько гостей', 0, 0, 0], false)
 						li.elements__item
 							include ../elements/text-field/text-field--masked
 						li.elements__item.elements__item--row
@@ -87,13 +90,15 @@ html(lang='ru')
 						.column
 							ul.elements
 								li.elements__item
-									include ../components/dropdown/guests/guests-dropdown--expanded
+									+component('Dropdown') 
+									+dropdown('guest', ['Сколько гостей', 0, 0, 0], true)
 								li.elements__item.elements__item--paddTop
 									include ../components/checkbox/checkbox-list--rich
 						.column
 							ul.elements
 								li.elements__item
-									include ../components/dropdown/guests/guests-dropdown--selected
+									+component('Dropdown') 
+									+dropdown('guest', ['3 Гостя', 2, 1, 0], true)
 								li.elements__item.elements__item--paddTop
 									include ../components/bullet-list
 					.row

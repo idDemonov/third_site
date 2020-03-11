@@ -1,27 +1,2 @@
-.guests-dropdown
-	.guests-dropdown__text
-		h3.guests-dropdown__title Dropdown
-	form.guests-dropdown__form
-		input.guests-dropdown__input(type='text', value="Сколько гостей", name="local" ).guests-dropdown__input--expanded
-		button.guests-dropdown__button(type='button')
-			img(src=require('../../../../assets/img/button/dropdown.svg').default, alt='')
-	.guests-dropdown__box.guests-select.guests-dropdown__box--expended
-		ul.guests-select__list
-			li.guests-select__item
-				h5.guests-select__title Взрослые
-				.guests-select__box.cart-control
-					button.cart-control__button.cart-control__button--reduce -
-					input.cart-control__quantity(value="0", name="lowdown", max="3", min="0", readonly, data-type-room="adult")
-					button.cart-control__button.cart-control__button--add +
-			li.guests-select__item
-				h5.guests-select__title Дети
-				.guests-select__box.cart-control
-					button.cart-control__button.cart-control__button--reduce -
-					input.cart-control__quantity(value="0", name="lowdown", max="3" min="0", readonly, data-type-room="children")
-					button.cart-control__button.cart-control__button--add +
-			li.guests-select__item
-				h5.guests-select__title Младенцы
-				.guests-select__box.cart-control
-					button.cart-control__button.cart-control__button--reduce -
-					input.cart-control__quantity(value="0", name="lowdown", max="3", min="0", readonly, data-type-room="babies")
-					button.cart-control__button.cart-control__button--add +
++component('Dropdown') 
++dropdown('guest', ['3 Гостя', 2, 1, 0], true)
