@@ -5,7 +5,7 @@
 		margin-bottom: 20px;
 		display: flex;
 		justify-content: space-between;
-		@include font-h3;
+		@extend .font-h3;
 	}
 	&__guests {
 		position: relative;
@@ -18,8 +18,8 @@
 		max-width: 320px;
 		background: linear-gradient(#BC9CFF, #8BA4F9);
 		border-radius: 22px;		
-		@include font-h3; //1
-		color: #FFFFFF; //2
+		@extend .font-h3; //1
+		color: rgb(255, 255, 255); //2
 	}
 }
 .bottom-form-main {
@@ -44,7 +44,6 @@
 		margin-bottom: 6px;
 	}
 	&__dropdown {
-		background-color: transparent;
 		position: absolute;
 		right: 0px;
 		width: 44px;
@@ -58,7 +57,7 @@
 		border: 1px solid rgba(31, 32, 65, 0.25);
 		border-radius: 4px;
 		padding-left: 15px;
-		@include font-body;
+		@extend .font-body;
 	}
 }
 .guests-form-main {
@@ -69,10 +68,10 @@
 		border: 1px solid rgba(31, 32, 65, 0.25);
 		border-radius: 4px;
 		padding-left: 15px;
-		@include font-body;
+		@extend .font-body;
 	}
 	&__title {
 		margin-bottom: 6px;
-		@include font-h3;
+		@extend .font-h3;
 	}
 }

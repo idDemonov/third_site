@@ -36,14 +36,14 @@
 		max-width: 297px;
 	}
 		&__title {
-		@include font-h1;
+			@extend .font-h1;
 		margin-bottom: -rem(20px);
 	}
 }
 
 .epigraph-main {
 	&__text {
-		@include font-body;
+		@extend .font-body;
 	}
 }
 

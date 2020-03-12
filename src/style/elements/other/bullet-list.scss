@@ -1,6 +1,6 @@
 .bullet {
 	&__title {
-		@include font-h3;
+		@extend .font-h3;
 	}
 	// &__list {}
 	// &__item {}
@@ -17,6 +17,6 @@
 		display: inline-block;
 		margin-left: -rem(10px);
 		max-width: 240px;
-		@include font-body;
+		@extend .font-body;
 	}
 }

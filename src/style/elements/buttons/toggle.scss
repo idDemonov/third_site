@@ -1,5 +1,5 @@
 .toggle {
-	@include font-body;
+	@extend .font-body;
 	width: 300px;
 	cursor: pointer;
 	&__input {

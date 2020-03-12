@@ -40,7 +40,7 @@
 .component {
 	display: flex;
 	justify-content: space-between;
-	@include font-h3;
+	@extend .font-h3;
 	&__title {
 		padding-bottom: -rem(5px);
 	}

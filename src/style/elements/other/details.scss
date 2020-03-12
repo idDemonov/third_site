@@ -10,7 +10,7 @@
         margin-bottom: 20px;
 	}
 	&__text {
-        @include font-body;
+        @extend .font-body;
 	}
 	&__title {
 		font-weight: 700;

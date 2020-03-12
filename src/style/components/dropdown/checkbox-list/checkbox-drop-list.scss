@@ -18,7 +18,7 @@
 		background-color: rgba(245, 245, 245, 0.39);
 	}
 	&__title {
-		@include font-h3;
+		@extend .font-h3;
 		align-self: center;
 	}
 	&__icon {

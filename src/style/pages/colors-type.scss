@@ -1,6 +1,6 @@
 .colors {
 	&__item {
-		@include font-h2;
+		@extend .font-h2;
 		display: flex; 
 		padding-bottom: -rem(20px);
 	}
@@ -45,23 +45,23 @@
 		width: 30px;
 
 		&--h1 {
-			@include font-h1;
+			@extend .font-h1;
 		}
 		&--h2 {
-			@include font-h2;;
+			@extend .font-h2;
 		}
 		&--h3 {
-			@include font-h3;
+			@extend .font-h3;
 		}
 		&--body {
-			@include font-body;
+			@extend .font-body;
 		}
 	}
 	&__text {
 		max-width: 336px;
-		&--h1 {@include font-h1;}
-		&--h2 {@include font-h2;}
-		&--h3 {@include font-h3;}
-		&--body {@include font-body;}
+		&--h1 {@extend .font-h1;}
+		&--h2 {@extend .font-h2;}
+		&--h3 {@extend .font-h3;}
+		&--body {@extend .font-body;}
 	}
 }

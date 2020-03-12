@@ -80,3 +80,9 @@
 	color: $dark-color-75;
 	font-style: normal;
 }
+
+@mixin button-focus($radius: 0px) {
+	outline: none;
+	box-shadow: $mainFocus;
+	border-radius: -rem($radius);
+}
