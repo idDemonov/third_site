@@ -11,30 +11,30 @@
 	max-width: 340px;
 	padding: 0 10px;
 	width: 100%;
-}
-.column--middle {
-	max-width: 280px;
-	width: 100%;
-}
-.column--double {
-	max-width: 100%;
-	width: 100%;
-}
-.elements__item {
-	padding-bottom: -rem(20px);
+	&--middle {
+		max-width: 280px;
+		width: 100%;
+	}
+	&--double {
+		max-width: 100%;
+		width: 100%;
+	}
 }
 
-.elements__item--row {
-	display: flex;
-	justify-content: space-between;
-}
-
-.elements__item--middle{
-	padding-bottom: -rem(40px);
-}
-
-.elements__item--paddTop {
-	padding-top: -rem(74px);
+.elements {
+	&__item {
+		padding-bottom: -rem(20px);
+		&--row {
+			display: flex;
+			justify-content: space-between;
+		}
+		&--middle{
+			padding-bottom: -rem(40px);
+		}
+		&--paddTop {
+			padding-top: -rem(74px);
+		}
+	}
 }
 
 .component {

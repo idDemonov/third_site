@@ -1,13 +1,14 @@
 mixin dropdownChoose(type= 'rooms', value= ['2 спальни, 2 кровати, без ванных комнат', 2, 2, 0], expanded= false)
 	- let addClassType = (type == 'rooms') ? 'dropdown-choose--rooms' : '';
+	- let addClassClearButton = (value[1] + value[2] + value[3] > 0) ? 'dropdown-selection__clear--activ' : '';
 	- let addClassInput = (expanded) ? 'dropdown-choose__input--expanded' : '';
 	- let addClassBox = (expanded) ? 'dropdown-choose__box--expended' : '';
 	div(class=['dropdown-choose', addClassType], data-type= (type == 'rooms') ? 'room' : 'guest')
 		form.dropdown-choose__form
-			input(class=['dropdown-choose__input', addClassInput], type='text', value= value[0], name="local" )
+			input(class= ['dropdown-choose__input', addClassInput], type='text', value= value[0], name="local" )
 			button.dropdown-choose__button(type='button')
-				img(src=require('../../assets/img/button/dropdown.svg').default, alt='')
-		div(class= ['dropdown-choose__box', 'dropdown-selection', addClassBox])
+				img(src= require('../../assets/img/button/dropdown.svg').default, alt='')
+		div(class= ['dropdown-choose__box', addClassBox, 'dropdown-selection'])
 			ul.dropdown-selection__list
 				li.dropdown-selection__item
 					h5.dropdown-selection__label= (type == 'rooms') ? 'Спальни' : 'Взрослые'
@@ -44,5 +45,5 @@ mixin dropdownChoose(type= 'rooms', value= ['2 спальни, 2 кровати,
 							button.dropdown-item-control__button(data-action='button-add', data-type='room') +
 			if type == 'guests'
 				.dropdown-selection__buttons
-					button.dropdown-selection__clear Очистить
+					button(class= ['dropdown-selection__clear', addClassClearButton]) Очистить
 					button.dropdown-selection__apply Применить
