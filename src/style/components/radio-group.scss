@@ -8,7 +8,7 @@
 }
 .radio {
 	@extend .font-body;
-	color: rgba(31, 32, 65, 0.5);
+	color: $dark-color-50;
 	width: 105px;
 	cursor: pointer;
 	&__input {
@@ -19,7 +19,7 @@
 		display: inline-block;
 		width: 20px;
 		height: 20px;
-		border: 1px solid rgba(31, 32, 65, 0.25);
+		border: 1px solid $dark-color-25;
 		border-radius: 50%;
 		margin-right: 10px;
 	}
@@ -35,15 +35,15 @@
 			position-x: center;
 			position-y: center;
 		}
-		border: 1px solid rgb(189, 158, 255);
+		border: 1px solid $purple-color;
 	}
 	&__input:checked + .radio__box + .radio__text {
-		color: rgba(31, 32, 65, 0.75);
+		color: $dark-color-75 ;
 	}
 	&__input:disabled + .radio__box {
-		border: 1px solid rgba(31, 32, 65, 0.40);
+		border: 1px solid $dark-color-50;
 	}
 	&__input:focus + .radio__box {
-		box-shadow: 0 0 0 0.1em rgb(145, 191, 204);
+		box-shadow: 0 0 0 0.1em $focus-color;
 	}
 }

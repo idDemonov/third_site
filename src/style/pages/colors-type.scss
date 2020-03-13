@@ -8,13 +8,13 @@
 		width: 70px;
 		height: 70px;
 		border-radius: -rem(6px);
-		&--dark100 {background: #1F2041;}
-		&--dark75 {background: rgba(31, 32, 65, 0.75);}
-		&--dark50 {background: rgba(31, 32, 65, 0.5);}
-		&--dark25 {background: rgba(31, 32, 65, 0.25);}
-		&--dark5 {background: rgba(31, 32, 65, 0.05);}
-		&--purple {background: #BC9CFF;}
-		&--green {background: #6FCF97;}
+		&--dark100 {background: $dark-color-100;}
+		&--dark75  {background: $dark-color-75;}
+		&--dark50  {background: $dark-color-50;}
+		&--dark25  {background: $dark-color-25;}
+		&--dark5   {background: $dark-color-5;}
+		&--purple  {background: $purple-color;}
+		&--green   {background: $green-color;}
 	}
 }
 .color {

@@ -7,7 +7,7 @@
 		position: absolute;
 		width: 40px;
 		height: 20px;
-		border: 1px solid rgba(31, 32, 65, 0.25);
+		border: 1px solid $dark-color-25;
 		border-radius: -rem(10px);
 		background-image: url(../assets/img/button/like.svg);
 		background-repeat: no-repeat;
@@ -21,7 +21,7 @@
 		width: 10px;
 		padding-left: -rem(22px);
 		font-size: -rem(10px);
-		color: rgba(31, 32, 65, 0.25);
+		color: $dark-color-25;
 		transition-duration: .5s;
 	}
 }
@@ -32,15 +32,15 @@
 	&__input:checked + .like__box {
 		background-image: url(../assets/img/button/like__activ.svg);
 		background-repeat: no-repeat;
-		border: 1px solid #BC9CFF;
+		border: 1px solid $purple-color;
 	}
 	&__input:checked + .like__box + .like__text {
-		color: #BC9CFF;
+		color: $purple-color;
 	}
 	&__input:disabled + .like__box {
-		border: 1px solid rgba(31, 32, 65, 0.40);
+		border: 1px solid $dark-color-50;
 	}
 	&__input:focus + .like__box {
-		box-shadow: 0 0 0 0.1em #91bfcc;
+		box-shadow: 0 0 0 0.1em $focus-color;
 	}
 }

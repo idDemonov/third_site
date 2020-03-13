@@ -1,6 +1,6 @@
 .wrapper-burger{
 	margin-left: 20px;
-	background: linear-gradient(#BC9CFF, #8BA4F9);
+	background: $gradient-color;
 	border-radius: 22px;
 	position: relative;
 	color: white;
@@ -68,10 +68,10 @@
 		border-top: 1px solid rgba(255,255,255,.3);
 		background-color: #000;
 		font-size: 0.9rem;
-		background: linear-gradient(#BC9CFF, #8BA4F9);
+		background: $gradient-color;
 	}
 	&__link:hover{
-		background: #313c8f;
+		background: rgb(49, 60, 143);
 	}
 }
 

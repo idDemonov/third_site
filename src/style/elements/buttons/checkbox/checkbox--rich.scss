@@ -13,7 +13,7 @@
 			width: 230px;
 			margin-left: 35px;
 			@include font-body($f-size: 12px, $l-height: 14px);
-			color: rgba(31, 32, 65, 0.5);
+			color: $dark-color-50;
 		}
 	}
 	
