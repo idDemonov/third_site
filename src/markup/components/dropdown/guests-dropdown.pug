@@ -12,19 +12,19 @@ mixin dropdownGuest(value= ['Сколько гостей', 0, 0, 0], expanded= f
 					h5.guests-select__title Взрослые
 					.guests-select__box.cart-control
 						button.cart-control__button.cart-control__button--reduce -
-						input.cart-control__quantity(value= value[1], name="lowdown", max="3", min="0", readonly, data-type-room='adult')
+						input.cart-control__quantity(value= value[1], name="lowdown", max="3", min="0", readonly, data-type-room='adult' tabindex='-1')
 						button.cart-control__button.cart-control__button--add +
 				li.guests-select__item
 					h5.guests-select__title Дети
 					.guests-select__box.cart-control
 						button.cart-control__button.cart-control__button--reduce -
-						input.cart-control__quantity(value= value[2], name="lowdown", max="3" min="0", readonly, data-type-room='children')
+						input.cart-control__quantity(value= value[2], name="lowdown", max="3" min="0", readonly, data-type-room='children' tabindex='-1')
 						button.cart-control__button.cart-control__button--add +
 				li.guests-select__item
 					h5.guests-select__title Младенцы
 					.guests-select__box.cart-control 
 						button.cart-control__button.cart-control__button--reduce -
-						input.cart-control__quantity(value= value[3], name="lowdown", max="3", min="0", readonly, data-type-room='babies')
+						input.cart-control__quantity(value= value[3], name="lowdown", max="3", min="0", readonly, data-type-room='babies' tabindex='-1')
 						button.cart-control__button.cart-control__button--add +
 			.guests-select__buttons
 				button.guests-select__clear Очистить

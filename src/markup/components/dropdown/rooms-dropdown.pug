@@ -12,17 +12,17 @@ mixin dropdownRoom(value= ['2 спальни, 2 кровати, без ванн�
 					h5.rooms-select__title Спальни
 					.rooms-select__box.cart-control
 						button.cart-control__button.cart-control__button--reduce -
-						input.cart-control__quantity(value= value[1], name="lowdown", max="3", min="1", readonly, data-type-room="bedroom")
+						input.cart-control__quantity(value= value[1], name="lowdown", max="3", min="1", readonly, data-type-room="bedroom" tabindex='-1')
 						button.cart-control__button.cart-control__button--add +
 				li.rooms-select__item
 					h5.rooms-select__title Кровати
 					.rooms-select__box.cart-control
 						button.cart-control__button.cart-control__button--reduce -
-						input.cart-control__quantity(value= value[2], name="lowdown", max="3" min="1", readonly, data-type-room="bed")
+						input.cart-control__quantity(value= value[2], name="lowdown", max="3" min="1", readonly, data-type-room="bed" tabindex='-1')
 						button.cart-control__button.cart-control__button--add +
 				li.rooms-select__item
 					h5.rooms-select__title Ванные комнаты
 					.rooms-select__box.cart-control
 						button.cart-control__button.cart-control__button--reduce -
-						input.cart-control__quantity(value= value[3], name="lowdown", max="3", min="0", readonly, data-type-room="bathroom")
+						input.cart-control__quantity(value= value[3], name="lowdown", max="3", min="0", readonly, data-type-room="bathroom" tabindex='-1')
 						button.cart-control__button.cart-control__button--add +
