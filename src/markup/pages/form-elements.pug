@@ -16,8 +16,7 @@ html(lang='ru')
 					include ../elements/component
 					include ../elements/other/details.pug
 					include ../elements/text-field/text-field 
-					include ../components/dropdown/rooms-dropdown
-					include ../components/dropdown/guests-dropdown
+					include ../components/dropdown/dropdown-choose
 					ul.elements
 						li.elements__item
 							+component('Text Field', 'Default')
@@ -27,7 +26,7 @@ html(lang='ru')
 							+text-field('text', 'Просто текст', 'This is pretty awesome', 'text-field__input--active')
 						li.elements__item
 							+component('Dropdown') 
-							+dropdownGuest(['Сколько гостей', 0, 0, 0], false)
+							+dropdownChoose('guests', ['Сколько гостей', 0, 0, 0], false)
 						li.elements__item
 							+component('masked text field', 'Default')
 							+text-field('text', 'ДД.ММ.ГГГГ')
@@ -56,7 +55,7 @@ html(lang='ru')
 						li.elements__item
 						li.elements__item
 							+component('Dropdown') 
-							+dropdownGuest(['Сколько гостей', 0, 0, 0], false)
+							+dropdownChoose('guests', ['Сколько гостей', 0, 0, 0], false)
 						li.elements__item
 							include ../elements/text-field/text-field--masked
 						li.elements__item.elements__item--row
@@ -71,10 +70,10 @@ html(lang='ru')
 					ul.elements
 						li.elements__item
 							+component('dropdown', 'Default', 'max-width: 266px')
-							+dropdownRoom(['2 спальни, 2 кровати, без ванных комнат', 2, 2, 0], false)
+							+dropdownChoose('rooms', ['2 спальни, 2 кровати, без ванных комнат', 2, 2, 0], false)
 						li.elements__item
 							+component('dropdown', 'Default', 'max-width: 266px')
-							+dropdownRoom(['2 спальни, 2 кровати, без ванных комнат', 2, 2, 0], true)
+							+dropdownChoose('rooms', ['2 спальни, 2 кровати, без ванных комнат', 2, 2, 0], true)
 						li.elements__item
 							include ../elements/buttons/checkbox/checkbox-drop-list
 							+checkbox-list(false)
@@ -93,14 +92,14 @@ html(lang='ru')
 							ul.elements
 								li.elements__item
 									+component('Dropdown') 
-									+dropdownGuest(['Сколько гостей', 0, 0, 0], true)
+									+dropdownChoose('guests', ['Сколько гостей', 0, 0, 0], true)
 								li.elements__item.elements__item--paddTop
 									include ../components/checkbox/checkbox-list--rich
 						.column
 							ul.elements
 								li.elements__item
 									+component('Dropdown') 
-									+dropdownGuest(['3 Гостя', 2, 1, 0], true)
+									+dropdownChoose('guests', ['3 Гостя', 2, 1, 0], true)
 								li.elements__item.elements__item--paddTop
 									include ../components/bullet-list
 					.row

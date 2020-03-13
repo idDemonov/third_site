@@ -1,0 +1,48 @@
+mixin dropdownChoose(type= 'rooms', value= ['2 спальни, 2 кровати, без ванных комнат', 2, 2, 0], expanded= false)
+	- let addClassType = (type == 'rooms') ? 'dropdown-choose--rooms' : '';
+	- let addClassInput = (expanded) ? 'dropdown-choose__input--expanded' : '';
+	- let addClassBox = (expanded) ? 'dropdown-choose__box--expended' : '';
+	div(class=['dropdown-choose', addClassType], data-type= (type == 'rooms') ? 'room' : 'guest')
+		form.dropdown-choose__form
+			input(class=['dropdown-choose__input', addClassInput], type='text', value= value[0], name="local" )
+			button.dropdown-choose__button(type='button')
+				img(src=require('../../assets/img/button/dropdown.svg').default, alt='')
+		div(class= ['dropdown-choose__box', 'dropdown-selection', addClassBox])
+			ul.dropdown-selection__list
+				li.dropdown-selection__item
+					h5.dropdown-selection__label= (type == 'rooms') ? 'Спальни' : 'Взрослые'
+					.dropdown-selection__controls.dropdown-item-control
+						if type == 'guests'
+							button.dropdown-item-control__button(data-action='button-reduce', data-type='guest') -
+							input.dropdown-item-control__quantity(value= value[1], name="lowdown", max="3", min='0', readonly, data-type-room='adult', tabindex='-1')
+							button.dropdown-item-control__button(data-action='button-add', data-type= 'guest') +
+						if type == 'rooms'
+							button.dropdown-item-control__button(data-action='button-reduce', data-type='room') -
+							input.dropdown-item-control__quantity(value= value[1], name="lowdown", max="3", min='1', readonly, data-type-room='bedroom', tabindex='-1')
+							button.dropdown-item-control__button(data-action='button-add', data-type='room') +
+				li.dropdown-selection__item
+					h5.dropdown-selection__label= (type == 'rooms') ? 'Кровати' : 'Дети' 
+					.dropdown-selection__controls.dropdown-item-control
+						if type == 'guests'
+							button.dropdown-item-control__button(data-action='button-reduce', data-type='guest') -
+							input.dropdown-item-control__quantity(value= value[2], name="lowdown", max="3" min='0', readonly, data-type-room='children',  tabindex='-1')
+							button.dropdown-item-control__button(data-action='button-add', data-type='guest') +
+						if type == 'rooms'
+							button.dropdown-item-control__button(data-action='button-reduce', data-type='room') -
+							input.dropdown-item-control__quantity(value= value[2], name="lowdown", max="3" min='1', readonly, data-type-room='bed',  tabindex='-1')
+							button.dropdown-item-control__button(data-action='button-add', data-type='room') +
+				li.dropdown-selection__item
+					h5.dropdown-selection__label= (type == 'rooms') ? 'Ванные комнаты' : 'Младенцы'  
+					.dropdown-selection__controls.dropdown-item-control
+						if type == 'guests'
+							button.dropdown-item-control__button(data-action='button-reduce', data-type='guest') -
+							input.dropdown-item-control__quantity(value= value[3], name="lowdown", max="3", min="0", readonly, data-type-room= 'babies', tabindex='-1')
+							button.dropdown-item-control__button(data-action='button-add', data-type='guest') +
+						if type == 'rooms'
+							button.dropdown-item-control__button(data-action='button-reduce', data-type='room') -
+							input.dropdown-item-control__quantity(value= value[3], name="lowdown", max="3", min="0", readonly, data-type-room='bathroom', tabindex='-1')
+							button.dropdown-item-control__button(data-action='button-add', data-type='room') +
+			if type == 'guests'
+				.dropdown-selection__buttons
+					button.dropdown-selection__clear Очистить
+					button.dropdown-selection__apply Применить

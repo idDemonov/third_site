@@ -1,5 +1,9 @@
-.guests-dropdown {
+.dropdown-choose {
 	max-width: 320px;
+	min-width: 220px;
+	&--rooms{
+		max-width: 266px;
+	}
 	&__form {
 		position: relative;
 	}
@@ -10,11 +14,11 @@
 		border-radius: 4px 4px 0 0;
 		width: 100%;
 		height: 44px;
-		padding-right: 95px;
-		padding-left: 15px;
+		padding-right: -rem(95px);
+		padding-left: -rem(15px);
 		color: $dark-color-75;
 		&--expanded {
-			border: 1px solid $dark-color-50;
+			border: -rem(1px) solid $dark-color-50;
 			box-shadow: 0px -5px 20px $dark-color-5;
 			border-radius: 4px 4px 0px 0px;
 		}
@@ -23,11 +27,12 @@
 		color: $dark-color-25;
 	}
 	&__input:hover {
-		border: 1px solid $dark-color-50;
+		border: -rem(1px) solid $dark-color-50;
 	}
 	&__input:focus {
-		padding: 0 44px 0 15px;
-		border: 1px solid $dark-color-50;
+		padding-right: -rem(44px);
+		padding-left: -rem(15px);
+		border: -rem(1px) solid $dark-color-50;
 		outline: none;
 	}
 	&__input:focus::placeholder {
@@ -54,9 +59,9 @@
 		}
 	}
 }
-.guests-select {
+.dropdown-selection {
 	@extend .font-h3;
-	border: 1px solid $dark-color-50 ;
+	border: -rem(1px) solid $dark-color-50 ;
 	border-top: 0;
 	box-shadow: 0px 10px 20px $dark-color-5;
 	border-radius: -rem(2px);
@@ -66,7 +71,7 @@
 		display: flex;
 		justify-content: space-between;
 	}
-	&__title {
+	&__label {
 		align-self: center;
 	}
 	// &__box {}
@@ -76,21 +81,25 @@
 		padding-top: -rem(13px);
 	}
 	&__clear {
-		color: $dark-color-50 ;
-		text-transform: uppercase;
+		@extend .font-h3;
+		color: $dark-color-50;
 	}
 	&__apply {
 		@extend .font-h3;
-		color: $purple-color ;
-		text-transform: uppercase;
+		color: $purple-color;
+	}
+	&__apply:active {
+		@include button-activ;
 	}
 }
 
-.cart-control {
+.dropdown-item-control {
 	&__button {
-		@include font-body($f-size: 18px, $l-height: 22px);
+		@extend .font-body;
+		@include fontSize(18px);
+		line-height: -lineHeight($f-size: 18px, $l-height: 22px);
 		color: $dark-color-50;
-		border: 1px solid $dark-color-25;
+		border: -rem(1px) solid $dark-color-25;
 		outline: none;
 		border-radius: 50%;
 		width: 30px;
