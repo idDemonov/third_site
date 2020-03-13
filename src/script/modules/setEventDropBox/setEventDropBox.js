@@ -3,12 +3,12 @@ import {calcGuestsWriteInput} from './calcGuestsWriteInput.js';
 // Фукнция подсчитывает комнаты и записывает в инпут
 import {calcRoomsWriteInput} from './calcRoomsWriteInput.js';
 
-setEventDropBox(document.querySelectorAll('.dropdown-choose--rooms'), 'room');
-setEventDropBox(document.querySelectorAll('.dropdown-choose'), 'guest');
+// setEventDropBox(document.querySelectorAll('.dropdown-choose--rooms'), 'room');
+setEventDropBox(document.querySelectorAll('.dropdown-choose'));
 
 
 // Функции навешивает события связанные с выпадающим списком комнат и гостей
-function setEventDropBox(elements, type) {
+function setEventDropBox(elements) {
 	for(let block of elements) {
 	
 		block.onclick = (event) => {
@@ -37,8 +37,8 @@ function setEventDropBox(elements, type) {
 					++target.previousElementSibling.value : target.previousElementSibling.value; 
 				}
 				const [input, ...lowdown] = block.getElementsByTagName('input');
-				if(type == 'guest') calcGuestsWriteInput(input, lowdown);
-				else if(type == 'room') calcRoomsWriteInput(input, lowdown);
+				if(target.dataset.type == 'guest') calcGuestsWriteInput(input, lowdown);
+				else if(target.dataset.type == 'room') calcRoomsWriteInput(input, lowdown);
 				
 			}
 		}
