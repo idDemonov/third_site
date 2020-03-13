@@ -1,6 +1,6 @@
 // Фукнция подсчитывает гостей и записывает в инпут
 
-export const calcGuestsWriteInput = (input, lowdown) => {
+export const calcGuestsWriteInput = (input, lowdown, buttonClear) => {
 		let people = {
 			adult: 0,
 			children: 0,
@@ -11,6 +11,13 @@ export const calcGuestsWriteInput = (input, lowdown) => {
 		}
 		let count = Object.values(people).reduce((a, b) => +a + +b, 0);
 		let word = (count == 1) ? 'гость' : (count < 5) ? 'гостя' : 'гостей';
-		input.value = `${count} ${word}`
-		if(count == 0) input.value = 'Сколько гостей'
+		
+		if(count > 0) {
+			input.value = `${count} ${word}`
+			buttonClear.classList.add('dropdown-selection__clear--activ');
+		}
+		else if(count == 0) {
+			buttonClear.classList.remove('dropdown-selection__clear--activ');
+			input.value = 'Сколько гостей'
+		} 
 	}

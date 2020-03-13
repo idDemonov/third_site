@@ -13,17 +13,21 @@ function setEventDropBox(elements) {
 	
 		block.onclick = (event) => {
 			let target = event.target;
+		
 			target = (target.tagName == 'IMG') ? target.parentElement : target;
 			if (target.tagName != 'BUTTON' && target.tagName != 'INPUT') return; 
 
+			const buttonClear = event.currentTarget.querySelector('.dropdown-selection__clear');
+			const input = event.currentTarget.querySelector('.dropdown-choose__input');
+			const box = event.currentTarget.querySelector('.dropdown-choose__box')
 
 			if(target.className == 'dropdown-choose__input') {
 				target.classList.add('dropdown-choose__input--expanded');
-				target.parentElement.nextElementSibling.classList.add('dropdown-choose__box--expended');
+				box.classList.add('dropdown-choose__box--expended');
 			}
 			else if(target.className == 'dropdown-choose__button') {
-				target.previousElementSibling.classList.toggle('dropdown-choose__input--expanded');
-				target.parentElement.nextElementSibling.classList.toggle('dropdown-choose__box--expended');
+				input.classList.toggle('dropdown-choose__input--expanded');
+				box.classList.toggle('dropdown-choose__box--expended');
 			}
 
 
@@ -36,8 +40,9 @@ function setEventDropBox(elements) {
 					target.previousElementSibling.value = (target.previousElementSibling.value < target.previousElementSibling.max) ? 
 					++target.previousElementSibling.value : target.previousElementSibling.value; 
 				}
+				
 				const [input, ...lowdown] = block.getElementsByTagName('input');
-				if(target.dataset.type == 'guest') calcGuestsWriteInput(input, lowdown);
+				if(target.dataset.type == 'guest') calcGuestsWriteInput(input, lowdown, buttonClear);
 				else if(target.dataset.type == 'room') calcRoomsWriteInput(input, lowdown);
 				
 			}
