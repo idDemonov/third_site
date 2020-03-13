@@ -46,6 +46,14 @@ function setEventDropBox(elements) {
 				else if(target.dataset.type == 'room') calcRoomsWriteInput(input, lowdown);
 				
 			}
+
+			if(target.className == 'dropdown-selection__clear dropdown-selection__clear--activ') {
+				for (let input of event.currentTarget.querySelectorAll('.dropdown-item-control__quantity')) {
+					buttonClear.classList.remove('dropdown-selection__clear--activ');
+					input.value = 0
+				}
+				input.value = 'Сколько гостей'
+			}
 		}
 	}
 }
