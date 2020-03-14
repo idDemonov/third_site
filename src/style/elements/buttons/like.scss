@@ -17,8 +17,11 @@
 		background-position-x: 15%;
 		background-position-y: 50%;
 		transition-duration: .5s;
+		border: solid 1px $dark-color-25;
+
 	}
 	&__text {
+		position: relative;
 		display: block;
 		margin-top: -rem(-16px);
 		padding-left: -rem(22px);
@@ -35,7 +38,19 @@
 	&__input:checked + .like__box {
 		background-image: url(../assets/img/button/like__activ.svg);
 		background-repeat: no-repeat;
-		border: 1px solid $purple-color;
+		border: solid 0px transparent;
+		background-color: white; 
+		border-radius: -rem(16px);
+		&:before {
+			width: 42px;
+			height: 22px;
+			content: '';
+			position: absolute;
+			top: -1px; right: 0; bottom: 0; left: -1px;
+			z-index: -1;
+			border-radius: inherit;
+			background: $gradient-color;
+		 }
 	}
 	&__input:checked + .like__box + .like__text {
 		color: $purple-color;
