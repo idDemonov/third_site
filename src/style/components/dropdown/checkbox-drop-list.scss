@@ -10,7 +10,6 @@
 		background-color: inherit;	
 	}
 	&__button:focus {
-		box-shadow: 0 0 0 0.1em $focus-color;
 		border-radius: -rem(5px);
 	}
 	&__button:hover {

@@ -44,6 +44,6 @@
 		border: -rem(1px) solid $dark-color-50;
 	}
 	&__input:focus + .radio__box {
-		box-shadow: 0 0 0 0.1em $focus-color;
+		box-shadow: $mainFocus;
 	}
 }

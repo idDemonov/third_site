@@ -41,6 +41,6 @@
 		border: 1px solid $dark-color-50;
 	}
 	&__input:focus + .like__box {
-		box-shadow: 0 0 0 0.1em $focus-color;
+		box-shadow: $mainFocus;
 	}
 }
