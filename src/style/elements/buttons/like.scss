@@ -20,7 +20,7 @@
 	}
 	&__text {
 		display: block;
-		margin-top: -rem(-17px);
+		margin-top: -rem(-16px);
 		padding-left: -rem(22px);
 		@include fontSize($size: 10px);
 		line-height: -lineHeight($f-size: 10px, $l-height: 12px);
