@@ -8,6 +8,7 @@
 	&__box {
 		vertical-align: middle;
 		display: inline-block;
+		position: relative;
 		margin-right: -rem(10px);
 		width: 40px;
 		height: 20px;
@@ -34,7 +35,19 @@
 			position-x: 90%;
 			position-y: center;
 		}
-		border: 1px solid $purple-color;
+		border: solid 0px transparent;
+		background-color: white; 
+		border-radius: -rem(16px);
+		&:before {
+			width: 42px;
+			height: 22px;
+			content: '';
+			position: absolute;
+			top: -1px; right: 0; bottom: 0; left: -1px;
+			z-index: -1;
+			border-radius: inherit; /* !importanté */
+			background: $gradient-color;
+		 }
 	}
 	&__input:disabled + .toggle__box {
 		border: 1px solid $dark-color-50;
