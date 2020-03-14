@@ -1,0 +1,11 @@
+mixin comment(name= 'Мурад Сарафанов', time= '5 дней назад', urlLogo='../src/assets/img/author-logo/author-man.png', valLike= '12', like= true, descr='Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
+    article.comment
+        .comment__author.author
+            .author__thumbnail
+                img(src= urlLogo, width='48px', height='48px')
+            h5.author__name= name
+            .author__last-time= time
+        .comment__content.content
+            .comment__liked
+                +like(valLike, like)
+            span.content__text= descr

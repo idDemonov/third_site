@@ -100,11 +100,10 @@
 	&__apply {
 		@extend .font-h3;
 		color: $purple-color;
-		// outline: none;
 		height: 16px; // Кнопка скачет
 	}
 	&__apply:active {
-		@extend .dropdown-selection__clear:active;
+		@extend .dropdown-selection__clear:active
 	}
 	&__apply:focus {
 		@extend .dropdown-selection__clear:focus

@@ -1,0 +1,35 @@
+.comment {
+    &__author {
+        min-width: 200px;
+    }
+    &__liked {
+        padding-left: -rem(4px);
+    }
+    &__content {
+        display: flex;
+        max-width: 710px;
+        margin-top: -rem(10px);
+    }
+}
+.author {
+    @extend .font-body;
+    &__thumbnail {
+        box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.1);
+        border-radius: 32px;
+        width: 48px;
+        height: 48px;
+        overflow: hidden;
+        float: left;
+        margin-right: 10px;
+    }
+    &__name {
+        font-weight: 700;        
+    }
+    // &__last-time{}
+}
+.content {
+    &__text {
+        @extend .font-body;
+        margin-left: 13px;
+    }
+}
