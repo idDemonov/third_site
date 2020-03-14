@@ -1,11 +1,15 @@
 // Работа с лайками
-const likes = document.querySelectorAll('.like__box');
-for(let like of likes) {
-	like.addEventListener("click", liked);
-}
-function liked() {
-	if(this.previousElementSibling.checked == false) {
-		this.nextElementSibling.innerText = ++this.nextElementSibling.innerText;
-	}
-	else this.nextElementSibling.innerText = --this.nextElementSibling.innerText;
+for(let like of document.querySelectorAll('.like')) {
+	like.addEventListener("click", (event) => {
+		let text = event.currentTarget.querySelector('.like__text');
+		let input = event.target.closest('.like__input');;
+		if(!input) return;
+		
+		if(input.checked == true) {
+			text.innerText = ++text.innerText;
+		}
+		else if (input.checked == false) {
+			text.innerText = --text.innerText;
+		} 
+	});
 }
