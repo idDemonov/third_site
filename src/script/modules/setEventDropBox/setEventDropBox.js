@@ -21,17 +21,17 @@ function setEventDropBox(elements) {
 			const input = event.currentTarget.querySelector('.dropdown-choose__input');
 			const box = event.currentTarget.querySelector('.dropdown-choose__box')
 
-			if(target.className == 'dropdown-choose__input') {
+			if(target.className == 'dropdown-choose__input') { // Проверять атрибутами
 				target.classList.add('dropdown-choose__input--expanded');
 				box.classList.add('dropdown-choose__box--expended');
 			}
-			else if(target.className == 'dropdown-choose__button') {
+			else if(target.className == 'dropdown-choose__button') { // Проверять атрибутами
 				input.classList.toggle('dropdown-choose__input--expanded');
 				box.classList.toggle('dropdown-choose__box--expended');
 			}
 
 
-			if(target.className == 'dropdown-item-control__button') {
+			if(target.className == 'dropdown-item-control__button') { // Проверять атрибутами
 				if(target.dataset.action == 'button-reduce') {
 					target.nextElementSibling.value = (target.nextElementSibling.value > target.nextElementSibling.min) ? 
 					--target.nextElementSibling.value : target.nextElementSibling.value; 
@@ -47,7 +47,7 @@ function setEventDropBox(elements) {
 				
 			}
 
-			if(target.className == 'dropdown-selection__clear dropdown-selection__clear--activ') {
+			if(target.dataset.action == 'clear') {
 				for (let input of event.currentTarget.querySelectorAll('.dropdown-item-control__quantity')) {
 					buttonClear.classList.remove('dropdown-selection__clear--activ');
 					input.value = 0
