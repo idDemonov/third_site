@@ -81,32 +81,11 @@
 		padding-bottom: -rem(13px);		
 	}
 	&__clear {
-		@extend .font-h3;
 		color: $dark-color-50;
 		visibility: hidden;
-		outline: none;
-		height: 16px; // Кнопка скачет
 		&--activ {
 			visibility: visible;
 		}
-	}
-	&__clear:active {
-		@include button-activ;	
-	}
-	&__clear:focus {
-		outline: none;
-		border-radius: -rem(2px);
-	}
-	&__apply {
-		@extend .font-h3;
-		color: $purple-color;
-		height: 16px; // Кнопка скачет
-	}
-	&__apply:active {
-		@extend .dropdown-selection__clear:active
-	}
-	&__apply:focus {
-		@extend .dropdown-selection__clear:focus
 	}
 }
 

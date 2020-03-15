@@ -45,5 +45,5 @@ mixin dropdownChoose(type= 'rooms', value= ['2 спальни, 2 кровати,
 							button.dropdown-item-control__button(data-action='button-add', data-type='room') +
 			if type == 'guests'
 				.dropdown-selection__buttons
-					button(class= ['dropdown-selection__clear', addClassClearButton]) Очистить
-					button.dropdown-selection__apply Применить
+					+button-text('Очистить', 'dropdown-selection__clear', addClassClearButton, action='clear')
+					+button-text('Применить', 'dropdown-selection__apply')
