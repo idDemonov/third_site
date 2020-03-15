@@ -17,6 +17,11 @@ html(lang='ru')
 					include ../elements/other/details.pug
 					include ../elements/text-field/text-field 
 					include ../components/dropdown/dropdown-choose
+					include ../elements/buttons/button/button--elongated
+					include ../elements/buttons/button/button--filled-color
+					include ../elements/buttons/button/button--white
+					include ../elements/buttons/button/button--pagination
+					include ../elements/buttons/button/button--text
 					ul.elements
 						li.elements__item
 							+component('Text Field', 'Default')
@@ -51,20 +56,14 @@ html(lang='ru')
 							include ../components/rating-group
 				.column
 					ul.elements
+						
+						li.elements__item Слайдер
 						li.elements__item
+							include ../components/buttons
 						li.elements__item
+							+component('pagination') 
+							+button-pagination()
 						li.elements__item
-							+component('Dropdown') 
-							+dropdownChoose('guests', ['Сколько гостей', 0, 0, 0], false)
-						li.elements__item
-							include ../elements/text-field/text-field--masked
-						li.elements__item.elements__item--row
-							include ../components/dropdown/date/date-dropdown
-							include ../components/dropdown/date/date-dropdown--selected
-						li.elements__item
-							include ../components/dropdown/date/filter-date-dropdown
-						li.elements__item
-							include ../elements/text-field/text-field--subscription
 			.row
 				.column
 					ul.elements

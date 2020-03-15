@@ -1,0 +1,20 @@
++component('Buttons') 
+.buttons
+    ul.buttons__list
+        li.buttons__item.buttons__item--middle
+            +button-filled-color()
+            +button-filled-color('CLICK ME', addClassB='button--click')
+        li.buttons__item.buttons__item--middle
+            +button-white()
+            +button-white('CLICK ME', addClassB='button--click--gradient')
+        li.buttons__item.buttons__item--small
+            +button-text()
+            +button-text('CLICK ME', addClassB='button--click--text')
+        li.buttons__item
+           +button-elongated()
+
+
+
+
+
+
