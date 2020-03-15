@@ -20,7 +20,7 @@ html(lang='ru')
 					include ../elements/buttons/button/button--elongated
 					include ../elements/buttons/button/button--filled-color
 					include ../elements/buttons/button/button--white
-					include ../elements/buttons/button/button--pagination
+					include ../components/pagination
 					include ../elements/buttons/button/button--text
 					ul.elements
 						li.elements__item
@@ -61,8 +61,8 @@ html(lang='ru')
 						li.elements__item
 							include ../components/buttons
 						li.elements__item
-							+component('pagination') 
-							+button-pagination()
+							+component('pagination')
+							+pagination 
 						li.elements__item
 			.row
 				.column
