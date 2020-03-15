@@ -50,6 +50,10 @@
 		background: rgb(255, 255, 255);
 		color: $purple-color;
 
+		&:focus {
+			box-shadow: none;
+			border-bottom: 2px solid $focus-color;
+		}
 		&:active {
 			color: $dark-color-50;
 		}
