@@ -16,7 +16,6 @@
 		background-repeat: no-repeat;
 		background-position-x: 15%;
 		background-position-y: 50%;
-		transition-duration: .5s;
 		border: solid 1px $dark-color-25;
 
 	}
@@ -28,7 +27,8 @@
 		@include fontSize($size: 10px);
 		line-height: -lineHeight($f-size: 10px, $l-height: 12px);
 		color: $dark-color-25;
-		transition-duration: .5s;
+		transition-duration: .1s;
+		user-select: none;
 	}
 }
 

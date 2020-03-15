@@ -20,7 +20,7 @@
 			position-x: 10%;
 			position-y: center;
 		}
-		transition-duration: .5s;
+		transition-duration: .3s;
 	}
 	// &__text {}
 }
@@ -44,7 +44,7 @@
 			content: '';
 			position: absolute;
 			top: -1px; right: 0; bottom: 0; left: -1px;
-			z-index: -1;
+			z-index: -3;
 			border-radius: inherit; /* !importanté */
 			background: $gradient-color;
 		 }
