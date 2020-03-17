@@ -8,7 +8,9 @@
 		width: 70px;
 		height: 70px;
 		border-radius: -rem(6px);
-		&--dark100 {background: $dark-color-100;}
+		&--dark100 {
+			background: $dark-color-100;
+		}
 		&--dark75  {background: $dark-color-75;}
 		&--dark50  {background: $dark-color-50;}
 		&--dark25  {background: $dark-color-25;}

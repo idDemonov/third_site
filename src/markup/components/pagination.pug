@@ -2,17 +2,14 @@ mixin pagination()
     .pagination
         ul.pagination__list
             li.pagination__item
-                button.pagination__button.pagination__button--start(url='#')
+                button.pagination__button.pagination__button--previous(url='#', data-action='previous')
             li.pagination__item.pagination__page
-                button.pagination__button.pagination__button--activ(url='#') 1
-            li.pagination__item.pagination__page
-                button.pagination__button(url='#') 2
-            li.pagination__item.pagination__page
-                button.pagination__button(url='#') 3
+                button.pagination__button.pagination__button--first.pagination__button--active(url='#', data-action='start') 1
+                button.pagination__button(url='#', data-point='left') ...
+                button.pagination__button.pagination__button--main(url='#', data-link='2') 2
+                button.pagination__button.pagination__button--after(url='#', data-link='3') 3
+                button.pagination__button(url='#', data-point='right') ...
+                button.pagination__button.pagination__button--end(url='#', data-action='end') 15
             li.pagination__item
-                button.pagination__button(url='#') ...
-            li.pagination__item.pagination__page
-                button.pagination__button.pagination__button--end(url='#') 15
-            li.pagination__item
-                button.pagination__button.pagination__button--next(url='#')
+                button.pagination__button.pagination__button--next(url='#', data-action='next')
         span.pagination__quantity 1 – 12 из 100+ вариантов аренды
