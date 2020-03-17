@@ -42,7 +42,6 @@ const nextPage = () => {
 		next.style.display = 'none';
 		main.classList.remove('pagination__button--active')
 		after.classList.add('pagination__button--active')
-		console.log(+main.innerHTML + 'Finisf')
 		correctQuantity(15);
 	}
 	
@@ -72,13 +71,12 @@ const previousPage = () => {
 		first.classList.add('pagination__button--active')
 		correctQuantity(1);
 	}
-	// correctQuantity();
 }
 
 const correctQuantity = (pageCount) => {
-	console.log(pageCount)
 	const value = pageCount * 12;
-	quantity.innerText = (value >= 100) ? 
-	`${value+1 - 12} – ${value} из 180 вариантов аренды`
-	: `${value+1 - 12} – ${value} из 100+ вариантов аренды`
+	quantity.innerText = (value <= 100) ? 
+	`${value+1 - 12} – ${value} из 100+ вариантов аренды`
+	: (value == 180) ? `${value} из 180 вариантов аренды`
+	: `${value+1 - 12} – ${value} из 180 вариантов аренды`
 }
