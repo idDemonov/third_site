@@ -9,6 +9,8 @@ import './modules/undoUnMouseDown'
 
 // Посчитать лайки
 import './modules/liked'
+// Работа с пагинацией
+import './modules/pagination'
 
 // Функции навешивает события связанные с выпадающим списком комнат и гостей
 import './modules/setEventDropBox/setEventDropBox'
