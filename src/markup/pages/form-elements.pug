@@ -22,6 +22,7 @@ html(lang='ru')
 					include ../elements/buttons/button/button--white
 					include ../components/pagination
 					include ../elements/buttons/button/button--text
+					include ../components/slider
 					ul.elements
 						li.elements__item
 							+component('Text Field', 'Default')
@@ -56,8 +57,8 @@ html(lang='ru')
 							include ../components/rating-group
 				.column
 					ul.elements
-						
-						li.elements__item Слайдер
+						li.elements__item
+							+slider
 						li.elements__item
 							include ../components/buttons
 						li.elements__item
@@ -105,3 +106,4 @@ html(lang='ru')
 						.elements__item
 							include ../components/comment
 							+comment()
+							

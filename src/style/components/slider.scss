@@ -1,0 +1,13 @@
+.slider {
+    max-width: 266px;
+    &__text {
+        @extend .font-h3;
+        padding-bottom: -rem(20px);
+        display: flex;
+        justify-content: space-between;
+    }
+    &__value {
+        color: $dark-color-50;
+        font-weight: 400;
+    }
+}
