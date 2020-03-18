@@ -5,20 +5,18 @@
         window.noUiSlider = factory();
         var snapSlider = document.getElementById('slider');
         noUiSlider.create(snapSlider, {
-            start: [5000, 10000],
+            start: [5, 10],
             connect: true,
-            step: 100,
+            step: 1,
             range: {
                 'min': 0,
-                'max': 15000
+                'max': 15
             }
         });
-        var snapValues = document.querySelector('.slider__lower');
-        
+        var valueSlider = document.querySelector('.slider__value');
+
         snapSlider.noUiSlider.on('update', function (values, handle) {
-
-
-            console.log(values)
+            valueSlider.innerText = Math.floor(values[0]) + ' 000₽ - ' + Math.floor(values[1]) + ' 000₽';
         });
 
 
