@@ -1,4 +1,6 @@
 'use strict'
+import './vendors/nouislider'
+
 
 // Выпадающий список checkbox
 import './modules/showCheckboxList'
