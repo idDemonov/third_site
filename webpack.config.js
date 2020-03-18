@@ -27,9 +27,9 @@ const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.p
 // Функция которая сжимает css если isProd true
 const optimization = () => {
     const config = { // если скрипты используют одну и туже библиотеку
-        splitChunks: { // webpack вынесет её в отдельный скрипт и подключит
-            chunks: "all"
-        }
+        // splitChunks: { // webpack вынесет её в отдельный скрипт и подключит
+        //     chunks: "all"
+        // }
     }
     if (isProd) { // Если production то сжимает javascript код
         config.minimizer = [
@@ -75,6 +75,7 @@ const filename = (name, ext) => isDev ? `${name}.${ext}` : `${name}.[hash].${ext
 module.exports = {
     entry: { // точки входа - объект
         index: ['@babel/polyfill', './src/index.js'], // точки входа 1 + полифил
+        // index: ['./src/script/vendors/nouislider.js'], // точки входа 1 + полифил
     },
     output: {
         filename: filename('[name]','js'), // Имя файлов js на выходе
