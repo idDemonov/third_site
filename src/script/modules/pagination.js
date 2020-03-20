@@ -1,82 +1,80 @@
-let previous = document.querySelector(".pagination__button--previous");
-let active = document.querySelector(".pagination__button--active");
+// let previous = document.querySelector(".pagination__button--previous");
+// let active = document.querySelector(".pagination__button--active");
 let first = document.querySelector(".pagination__button--first");
-let main = document.querySelector(".pagination__button--main");
-let after = document.querySelector(".pagination__button--after");
-let end = document.querySelector(".pagination__button--end");
-let next = document.querySelector(".pagination__button--next");
-let quantity = document.querySelector(".pagination__quantity");
-let pointR = document.querySelector('button[data-point="right"]');
-let pointL = document.querySelector('button[data-point="left"]');
+// let main = document.querySelector(".pagination__button--main");
+// let after = document.querySelector(".pagination__button--after");
+// let end = document.querySelector(".pagination__button--end");
+// let next = document.querySelector(".pagination__button--next");
+// let quantity = document.querySelector(".pagination__quantity");
+// let pointR = document.querySelector('button[data-point="right"]');
+// let pointL = document.querySelector('button[data-point="left"]');
 
-pointL.style.display = 'none';
-document.querySelector(".pagination")
-	.addEventListener("click", event => {
+class Pagination {
+	constructor(quantity) {
+		this.pagination = document.querySelector('.pagination');
+		this.createPaginationNumPage(quantity, this.pagination.querySelector('.pagination__page'));
+		this.addAllEvent();
 
-		if (event.target.dataset.action == "next") nextPage();
-		if (event.target.dataset.action == "previous") previousPage();
-		if (event.target.dataset.action == "start") {
-			if(first.classList.contains('pagination__button--active')) return;
-		}
+		this.activPage = this.pagination.querySelector('button[data-num-page="1"]');
+		this.nextPage = this.activPage;
+		this.previousPage = this.nextPage;
+		this.endPage = this.pagination.querySelector(`button[data-num-page="${quantity}"]`);
+	}
+
+	// -->
+	nextPagef() {
+		const count = +this.nextPage.dataset.numPage + 1;
+		this.nextPage = this.pagination.querySelector(`button[data-num-page="${count}"]`) || this.pagination.querySelector(`button[data-num-page="15"]`)
+
+		// Переназначаю активную и следующую страницу
+		this.reassignmentActiv(count, this.nextPage)
+		console.log('nextPage - Следующая страница')
+	}
+
+
+	// <--
+	previousPagef() {
+		console.log('previousPage - Предыдущая страница')
+	}
+
+	// Смена активной кнопки
+	reassignmentActiv(currentPage, numPage) {
+		numPage = numPage || event.target;
+
+		if(currentPage <= +this.endPage.dataset.numPage) {
+			this.previousPage = this.activPage;
+			this.previousPage.classList.remove('pagination__button--active')
+
+			this.activPage = numPage; 
+			this.activPage.classList.add('pagination__button--active')
+
+			this.nextPage = this.pagination.querySelector(`button[data-num-page="${currentPage}"]`) || this.pagination.querySelector(`button[data-num-page="15"]`);
+		} 
 		
+	}
 
-});
+	// Навесить события
+	addAllEvent() {
+		this.pagination.addEventListener("click", event => {
+			if (event.target.dataset.action == "next") this.nextPagef();
+			else if (event.target.dataset.action == "start") this.startPagef(event.target);
+			else if (event.target.dataset.action == "previous") this.previousPagef(event.target);
+			else if (event.target.dataset.action == "end") this.endPagef(event.target);
+			else if (event.target.dataset.numPage) this.reassignmentActiv(event.target.dataset.numPage)
+		});
+	}
 
-const nextPage = () => {
-	
-	if(active.classList.contains('pagination__button--active')) {
-		previous.style.display = 'block';
-		active.classList.remove('pagination__button--active')
-		main.classList.add('pagination__button--active')
-		correctQuantity(+main.innerHTML);		
-	}
-	else if (after.innerHTML <= end.innerHTML - 1) {
-		after.innerHTML = ++after.innerHTML
-		main.innerHTML = ++main.innerHTML
-		if(main.innerHTML > 3) pointL.style.display = 'block';
-		if(after.innerHTML == 14) pointR.style.display = 'none';
-		if(after.innerHTML == 15) end.style.display = 'none';
-		correctQuantity(+main.innerHTML);
-	}
-	else if (+main.innerHTML == 14) {
-		next.style.display = 'none';
-		main.classList.remove('pagination__button--active')
-		after.classList.add('pagination__button--active')
-		correctQuantity(15);
-	}
-	
-	// correctQuantity();
-}
-
-
-const previousPage = () => {
-	
-	if(after.classList.contains('pagination__button--active')) {
-		next.style.display = 'block';
-		after.classList.remove('pagination__button--active')
-		main.classList.add('pagination__button--active')
-		correctQuantity(+main.innerHTML);
-	}
-	else if (main.innerHTML > +first.innerHTML + 1) {
-		after.innerHTML = --after.innerHTML
-		main.innerHTML = --main.innerHTML
-		if(main.innerHTML < 3) pointL.style.display = 'none';
-		if(after.innerHTML == 13) pointR.style.display = 'block';
-		if(after.innerHTML == 14) end.style.display = 'block';
-		correctQuantity(+main.innerHTML);
-	}
-	else if (+main.innerHTML == 2) {
-		previous.style.display = 'none';
-		main.classList.remove('pagination__button--active')
-		first.classList.add('pagination__button--active')
-		correctQuantity(1);
+	// Создание узлов кнопок страниц 
+	createPaginationNumPage(value, buttons) {
+		for(let i = 1; i <= value; i++) {
+			const button = document.createElement('button');
+			const text = document.createTextNode(`${i}`); 
+			button.appendChild(text);
+			button.dataset.numPage = i;
+			button.className = (i == 1) ? 'pagination__button pagination__button--active' : 'pagination__button';
+			buttons.append(button)
+		}
 	}
 }
 
-const correctQuantity = (pageCount) => {
-	const value = pageCount * 12;
-	quantity.innerText = (value <= 100) ? 
-	`${value+1 - 12} – ${value} из 100+ вариантов аренды`
-	: (value == 180) ? `${value} из 180 вариантов аренды`
-	: `${value+1 - 12} – ${value} из 180 вариантов аренды`
-}
+new Pagination(15);

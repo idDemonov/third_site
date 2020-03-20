@@ -1,13 +1,13 @@
 .buttons {
     &__list {
-        padding-top: 10px;
+        padding-top: -rem(10px);
     }
 
     &__item {
         max-width: 320px;
         display: flex;
         justify-content: space-between;
-        padding-bottom: 30px;
+        padding-bottom: -rem(30px);
 
         &--middle {
             max-width: 220px;
