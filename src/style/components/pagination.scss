@@ -13,7 +13,7 @@
 	}
 
 	&__button {
-		// display: none;
+		display: none;
 		width: 40px;
 		height: 40px;
 		color: $dark-color-50;
@@ -22,7 +22,7 @@
 		@extend .font-h3;
 
 		&--previous {
-			// display: block;
+			display: block;
 			border-radius: 50%;
 			position: relative;
 			background: $gradient-color-pagination;
@@ -50,6 +50,8 @@
 			}
 		}
 
+		
+
 		&--active {
 			// display: block;
 			border-radius: 50%;
@@ -63,7 +65,7 @@
 			}
 		}
 		&--next {
-			// display: block;
+			display: block;
 			border-radius: 50%;
 			position: relative;
 			background: $gradient-color-pagination;
@@ -89,5 +91,9 @@
 				background-position-y: center;
 			}
 		}
+	}
+	&__point {
+		@extend .pagination__button; 
+		cursor: default;
 	}
 }

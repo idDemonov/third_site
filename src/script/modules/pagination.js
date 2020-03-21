@@ -3,11 +3,21 @@ class Pagination {
 		this.maxNumberPage = quantity;
 
 		this.pagination = document.querySelector('.pagination');
+		this.numberIcons = this.pagination.querySelector('.pagination__quantity');
 		this.createPaginationNumPage(this.maxNumberPage, this.pagination.querySelector('.pagination__page'));
 		this.addAllEvent();
+		
 
 		this.activPage = this.pagination.querySelector('button[data-number-page="1"]');
 		this.nextPage = this.activPage;
+
+		this.hideButtons(this.activPage.dataset.numberPage)
+
+		this.createMultipoint(2)
+		this.createMultipoint(this.maxNumberPage)
+
+		this.hideMultipoint(this.activPage)
+		
 	}
 
 
@@ -24,15 +34,18 @@ class Pagination {
 
 	// Смена активной кнопки
 	reassignmentActiv(currentPage, newActivPage) {
-		this.hideButtons(currentPage);
-		if(currentPage <= +this.maxNumberPage) {
+		this.hideButtons(currentPage)
+		this.hideMultipoint(newActivPage)
+		this.editText(newActivPage);
+
+		if (currentPage <= +this.maxNumberPage) {
 			this.activPage.classList.remove('pagination__button--active')
-			this.activPage = newActivPage; 
+			this.activPage = newActivPage;
 			this.activPage.classList.add('pagination__button--active')
 
 			this.nextPage = this.pagination.querySelector(`button[data-number-page="${currentPage}"]`);
-		} 
-		
+		}
+
 	}
 
 	// Навесить события
@@ -47,16 +60,16 @@ class Pagination {
 				this.togglePage(action);
 			} else if (number) {
 				this.reassignmentActiv(number, event.target)
-			} 
+			}
 		});
 	}
 
 	// Создание кнопок-узлов страниц 
 	createPaginationNumPage(value, buttons) {
-		for(let i = 1; i <= value; i++) {
+		for (let i = 1; i <= value; i++) {
 			const button = document.createElement('button');
-			const text = document.createTextNode(i); 
-			
+			const text = document.createTextNode(i);
+
 			button.appendChild(text);
 			button.dataset.numberPage = i;
 			button.className = (i != 1) ? 'pagination__button' : 'pagination__button pagination__button--active';
@@ -65,10 +78,62 @@ class Pagination {
 	}
 
 	// Скрытие лишних кнопок
-	hideButtons() {
-		// Всегда показывать первую и последнюю
-		// Показывать 2 страницы на перёд и две страницы назад
-		// активные страницы, а также первая и последняя должны разделяться троеточием 
+	hideButtons(activButton) {
+		activButton = activButton || 1;
+		// Массив кнопок, которые не надо скрывать
+		const arr = [
+			1, // Первая
+			+activButton - 2, // До предыдущей
+			+activButton - 1, // Предыдущая
+			+activButton, // Активная
+			+activButton + 1, // Следующая
+			+activButton + 2, // После следующей
+			this.maxNumberPage, // Последняя
+		];
+
+		for (let i = 1; i <= this.maxNumberPage; i++) {			
+			const button = this.pagination.querySelector(`button[data-number-page="${i}"]`);
+			button.style.display = 'none';
+
+			if(arr.includes(i)) {
+				button.style.display = 'block';
+			}
+		}
+	}
+
+	createMultipoint(number) {
+		const place = this.pagination.querySelector(`button[data-number-page="${number}"]`);
+		const button = document.createElement('button');
+		const text = document.createTextNode('...');
+		button.appendChild(text);
+		button.className = 'pagination__point';
+		button.style.display = 'block';
+		place.before(button)
+	}
+
+	hideMultipoint(activPage) {
+		const number = activPage.dataset.numberPage;
+		const [start, end] = this.pagination.querySelectorAll('.pagination__point');
+
+		if(number <= 4) {
+			start.style.display = 'none';
+		} else if(number >= 4) {
+			start.style.display = 'block';
+		}
+
+		if(number >= 12) {
+			end.style.display = 'none';
+		}else if(number <= 12) {
+			end.style.display = 'block';
+		}
+	}
+	editText(activPage) {
+		const number = activPage.dataset.numberPage;
+		const from = number * 12 - 11; 
+		const to = from + 12 - 1;
+		if(to > 100) this.numberIcons.innerText = `${from} – ${to} из 180 вариантов аренды`
+		else this.numberIcons.innerText = `${from} – ${to} из 100+ вариантов аренды`
+		
 	}
 }
 
