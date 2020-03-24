@@ -1,18 +1,1 @@
-.text-field-subscription {
-	max-width: 266px;
-	&__form {
-		position: relative;
-	}
-	&__button {
-		position: absolute;
-		right: 0px;
-		top: 0px;
-		width: 44px;
-		height: 44px;
-	}
-	&__test { // Я не знаю как решить, проблему со стрелкой, она не выравнивалась по вертикали
-		position: relative;
-		top: 1px; 
-	}
-}
 

@@ -9,101 +9,104 @@ html(lang='ru')
 		.header-UI
 			.header-UI__logo
 				img(src=require('../../assets/img/logo/logo__grey.svg').default, alt="")
-		.grid
-			.row
-				.column
-					//- Mixins
-					include ../elements/component
-					include ../elements/other/details.pug
-					include ../elements/text-field/text-field 
-					include ../components/dropdown/dropdown-choose
-					include ../elements/buttons/button/button--elongated
-					include ../elements/buttons/button/button--filled-color
-					include ../elements/buttons/button/button--white
-					include ../components/pagination
-					include ../elements/buttons/button/button--text
-					include ../components/slider
-					ul.elements
-						li.elements__item
-							+component('Text Field', 'Default')
-							+text-field('text', 'Email')
-						li.elements__item
-							+component('Text Field', 'Hover / Focus')
-							+text-field('text', 'Просто текст', 'This is pretty awesome', 'text-field__input--active')
-						li.elements__item
-							+component('Dropdown') 
-							+dropdownChoose('guests', ['Сколько гостей', 0, 0, 0], false)
-						li.elements__item
-							+component('masked text field', 'Default')
-							+text-field('text', 'ДД.ММ.ГГГГ')
-						li.elements__item.elements__item--row
-							include ../components/dropdown/date/date-dropdown
-							include ../components/dropdown/date/date-dropdown--selected
-						li.elements__item
-							include ../components/dropdown/date/filter-date-dropdown
-						li.elements__item
-							include ../elements/text-field/text-field--subscription
-				.column.column--middle
-					ul.elements
-						li.elements__item.elements__item--middle
-							include ../components/checkbox/checkbox-list
-						li.elements__item.elements__item--middle
-							include ../components/radio-group
-						li.elements__item.elements__item--middle
-							include ../components/toggle-group
-						li.elements__item.elements__item--middle
-							include ../components/like-group
-						li.elements__item.elements__item--middle
-							include ../components/rating-group
-				.column
-					ul.elements
-						li.elements__item.elements__item--middle
-							+slider
-						li.elements__item
-							include ../components/buttons
-						li.elements__item
-							+component('pagination')
-							+pagination 
-						li.elements__item
-			.row
-				.column
-					ul.elements
-						li.elements__item
-							+component('dropdown', 'Default', 'max-width: 266px')
-							+dropdownChoose('rooms', ['2 спальни, 2 кровати, без ванных комнат', 2, 2, 0], false)
-						li.elements__item
-							+component('dropdown', 'Default', 'max-width: 266px')
-							+dropdownChoose('rooms', ['2 спальни, 2 кровати, без ванных комнат', 2, 2, 0], true)
-						li.elements__item
-							include ../elements/buttons/checkbox/checkbox-drop-list
-							+checkbox-list(false)
-						li.elements__item
-							+checkbox-list(true)
-						li.elements__item
-							+details('Комфорт', 'Шумопоглощающие стены', 'comfort.svg')
-						li.elements__item
-							+details('Удобство', 'Окно в каждой из спален', 'convenience.svg')
-						li.elements__item
-							
-							
-				.column.column--double
-					.row.row--double
-						.column
-							ul.elements
-								li.elements__item
-									+component('Dropdown') 
-									+dropdownChoose('guests', ['Сколько гостей', 0, 0, 0], true)
-								li.elements__item.elements__item--paddTop
-									include ../components/checkbox/checkbox-list--rich
-						.column
-							ul.elements
-								li.elements__item
-									+component('Dropdown') 
-									+dropdownChoose('guests', ['3 Гостя', 2, 1, 0], true)
-								li.elements__item.elements__item--paddTop
-									include ../components/bullet-list
-					.row.row--bottom
-						.elements__item
-							include ../components/comment
-							+comment()
-							
+		form
+			.grid
+				.row
+					.column
+						//- Mixins
+						include ../elements/component
+						include ../elements/other/details.pug
+						include ../elements/text-field/basic
+						include ../components/dropdown/dropdown-choose
+						include ../elements/buttons/button/button--elongated
+						include ../elements/buttons/button/button--filled-color
+						include ../elements/buttons/button/button--white
+						include ../components/pagination
+						include ../elements/buttons/button/button--text
+						include ../components/slider
+						ul.elements
+							li.elements__item
+								+component('Text Field', 'Default')
+								//- +text-field-basic('text', 'Email')
+								
+							li.elements__item
+								+component('Text Field', 'Hover / Focus')
+								+text-field-basic('text', 'Просто текст', 'This is pretty awesome', 'text-field__input--active')
+							li.elements__item
+								+component('Dropdown') 
+								+dropdownChoose('guests', ['Сколько гостей', 0, 0, 0], false)
+							li.elements__item
+								+component('masked text field', 'Default')
+								+text-field-basic('text', 'ДД.ММ.ГГГГ', '')
+							li.elements__item.elements__item--row
+								include ../components/dropdown/date/date-dropdown
+								+calendar()
+								include ../components/dropdown/date/date-dropdown--selected
+							li.elements__item
+								include ../components/dropdown/date/filter-date-dropdown 
+							li.elements__item
+								//- include ../elements/text-field/text-field--subscription
+					.column.column--middle
+						ul.elements
+							li.elements__item.elements__item--middle
+								include ../components/checkbox/checkbox-list
+							li.elements__item.elements__item--middle
+								include ../components/radio-group
+							li.elements__item.elements__item--middle
+								include ../components/toggle-group
+							li.elements__item.elements__item--middle
+								include ../components/like-group
+							li.elements__item.elements__item--middle
+								include ../components/rating-group
+					.column
+						ul.elements
+							li.elements__item.elements__item--middle
+								+slider
+							li.elements__item
+								include ../components/buttons
+							li.elements__item
+								+component('pagination')
+								+pagination 
+							li.elements__item
+				.row
+					.column
+						ul.elements
+							li.elements__item
+								+component('dropdown', 'Default', 'max-width: 266px')
+								+dropdownChoose('rooms', ['2 спальни, 2 кровати, без ванных комнат', 2, 2, 0], false)
+							li.elements__item
+								+component('dropdown', 'Default', 'max-width: 266px')
+								+dropdownChoose('rooms', ['2 спальни, 2 кровати, без ванных комнат', 2, 2, 0], true)
+							li.elements__item
+								include ../elements/buttons/checkbox/checkbox-drop-list
+								+checkbox-list(false)
+							li.elements__item
+								+checkbox-list(true)
+							li.elements__item
+								+details('Комфорт', 'Шумопоглощающие стены', 'comfort.svg')
+							li.elements__item
+								+details('Удобство', 'Окно в каждой из спален', 'convenience.svg')
+							li.elements__item
+								
+								
+					.column.column--double
+						.row.row--double
+							.column
+								ul.elements
+									li.elements__item
+										+component('Dropdown') 
+										+dropdownChoose('guests', ['Сколько гостей', 0, 0, 0], true)
+									li.elements__item.elements__item--paddTop
+										include ../components/checkbox/checkbox-list--rich
+							.column
+								ul.elements
+									li.elements__item
+										+component('Dropdown') 
+										+dropdownChoose('guests', ['3 Гостя', 2, 1, 0], true)
+									li.elements__item.elements__item--paddTop
+										include ../components/bullet-list
+						.row.row--bottom
+							.elements__item
+								include ../components/comment
+								+comment()
+			

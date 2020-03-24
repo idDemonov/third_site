@@ -2,7 +2,7 @@
 
 // import './js/stepper.min.js'
 import './script/app.js'
-
+// import {bouncer} from './vendors/bouncer'
 
 // SCSS  examples/
 import './style/main.scss'

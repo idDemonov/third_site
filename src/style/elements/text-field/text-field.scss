@@ -1,50 +1,62 @@
 .text-field {
-	max-width: 320px;
-	&__text {
-		display: flex;
-		justify-content: space-between;
-		padding-bottom: 5px;
-		font-size: 12px;
-		line-height: 15px;
-		text-transform: uppercase;
-	}
-	&__title {
-		font-weight: bold;
-		color: $dark-color-100;
-	}
-	&__type {
-		color: $dark-color-50;
-		margin-top: -3px;
-		&--active {
-			color: $dark-color-50;
-			margin-top: 0px;
-		}
-	}
 	&__input {
-		border: 1px solid $dark-color-25;
-		border-radius: 4px;
+		max-width: 320px;
 		width: 100%;
 		height: 44px;
-		padding: 0 15px;
+		padding: 0 -rem(15px);
+
 		color: $dark-color-75;
-		&--active {
-			border: 1px solid $dark-color-50;
-		}
-		&--active::placeholder {
-			color: $dark-color-75;
-		}
+		border-radius: -rem(4px);
+		border: -rem(1px) solid $dark-color-25;
 	}
 	&__input::placeholder {
 		color: $dark-color-25;
 	}
 	&__input:hover {
-		border: 1px solid $dark-color-50;
+		border: -rem(1px) solid $dark-color-50;
 	}
 	&__input:focus {
-		border: 1px solid $dark-color-50;
-		outline: none;
+		@include focus(2px)
 	}
 	&__input:focus::placeholder {
 		color: $dark-color-75;
 	}
 }
+
+// .text-field-subscription {
+// 	max-width: 266px;
+// 	&__form {
+// 		position: relative;
+// 	}
+// 	&__button {
+// 		position: absolute;
+// 		right: 0px;
+// 		top: 0px;
+// 		width: 44px;
+// 		height: 44px;
+// 	}
+// 	&__test { // Я не знаю как решить, проблему со стрелкой, она не выравнивалась по вертикали
+// 		position: relative;
+// 		top: 1px; 
+// 	}
+// }
+	// &__text {
+	// 	display: flex;
+	// 	justify-content: space-between;
+	// 	padding-bottom: 5px;
+	// 	font-size: 12px;
+	// 	line-height: 15px;
+	// 	text-transform: uppercase;
+	// }
+	// &__title {
+	// 	font-weight: bold;
+	// 	color: $dark-color-100;
+	// }
+	// &__type {
+	// 	color: $dark-color-50;
+	// 	margin-top: -3px;
+	// 	&--active {
+	// 		color: $dark-color-50;
+	// 		margin-top: 0px;
+	// 	}
+	// }
