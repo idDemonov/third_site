@@ -1,0 +1,9 @@
+.error {
+    box-shadow: 0 0 0 0.1em $error-color;
+}
+
+.error-message {
+    @extend .font-body;
+    color: $error-color;
+    @include fontSize(12px)
+}
