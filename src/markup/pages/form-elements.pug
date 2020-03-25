@@ -22,28 +22,31 @@ html(lang='ru')
 						include ../elements/buttons/button/button--filled-color
 						include ../elements/buttons/button/button--white
 						include ../components/pagination
+						include ../components/dropdown/date/filter-date-dropdown 
 						include ../elements/buttons/button/button--text
 						include ../components/slider
 						ul.elements
 							li.elements__item
 								+component('Text Field', 'Default')
-								//- +text-field-basic('text', 'Email')
+								+text-field-basic('Email', 'Email')
 								
 							li.elements__item
 								+component('Text Field', 'Hover / Focus')
 								+text-field-basic('text', 'Просто текст', 'This is pretty awesome', 'text-field__input--active')
 							li.elements__item
-								+component('Dropdown') 
+								+component('Dropdown', 'Default') 
 								+dropdownChoose('guests', ['Сколько гостей', 0, 0, 0], false)
 							li.elements__item
 								+component('masked text field', 'Default')
-								+text-field-basic('text', 'ДД.ММ.ГГГГ', '')
+								+text-field-basic('text', 'ДД.ММ.ГГГГ', '', '', '', '(?:19|20)[0-9]{2}\\.(?:(?:0[1-9]|1[0-2])\\.(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])\\.(?:30))|(?:(?:0[13578]|1[02])-31))', 'Пожалуйста, используйте формат ДД.ММ.ГГГГ')
 							li.elements__item.elements__item--row
 								include ../components/dropdown/date/date-dropdown
 								+calendar()
 								include ../components/dropdown/date/date-dropdown--selected
 							li.elements__item
-								include ../components/dropdown/date/filter-date-dropdown 
+								+component('filter date dropdown')
+								+date-filter()
+								
 							li.elements__item
 								//- include ../elements/text-field/text-field--subscription
 					.column.column--middle

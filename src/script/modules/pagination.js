@@ -53,7 +53,7 @@ class Pagination {
 		this.pagination.addEventListener("click", event => {
 			const action = event.target.dataset.action;
 			const number = event.target.dataset.numberPage;
-
+			
 			if (action == "next") {
 				this.togglePage(action);
 			} else if (action == "previous") {
