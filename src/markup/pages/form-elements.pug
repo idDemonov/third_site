@@ -16,15 +16,23 @@ html(lang='ru')
 						//- Mixins
 						include ../elements/component
 						include ../elements/other/details.pug
+
 						include ../elements/text-field/basic
-						include ../components/dropdown/dropdown-choose
+						include ../elements/text-field/email
+
 						include ../elements/buttons/button/button--elongated
 						include ../elements/buttons/button/button--filled-color
 						include ../elements/buttons/button/button--white
-						include ../components/pagination
-						include ../components/dropdown/date/filter-date-dropdown 
 						include ../elements/buttons/button/button--text
+						include ../elements/buttons/checkbox/checkbox-drop-list
+
+						include ../components/dropdown/dropdown-choose
+						include ../components/pagination
+						include ../components/dropdown/date/filter-date-dropdown
+						include ../components/dropdown/date/date-dropdown
+						include ../components/dropdown/date/date-dropdown--selected
 						include ../components/slider
+						include ../components/comment
 						ul.elements
 							li.elements__item
 								+component('Text Field', 'Default')
@@ -40,15 +48,13 @@ html(lang='ru')
 								+component('masked text field', 'Default')
 								+text-field-basic('text', 'ДД.ММ.ГГГГ', '', '', '', '(?:19|20)[0-9]{2}\\.(?:(?:0[1-9]|1[0-2])\\.(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])\\.(?:30))|(?:(?:0[13578]|1[02])-31))', 'Пожалуйста, используйте формат ДД.ММ.ГГГГ')
 							li.elements__item.elements__item--row
-								include ../components/dropdown/date/date-dropdown
 								+calendar()
-								include ../components/dropdown/date/date-dropdown--selected
 							li.elements__item
 								+component('filter date dropdown')
 								+date-filter()
-								
 							li.elements__item
-								//- include ../elements/text-field/text-field--subscription
+								+component('subscription text field')
+								+text-field-subscribe()
 					.column.column--middle
 						ul.elements
 							li.elements__item.elements__item--middle
@@ -81,7 +87,6 @@ html(lang='ru')
 								+component('dropdown', 'Default', 'max-width: 266px')
 								+dropdownChoose('rooms', ['2 спальни, 2 кровати, без ванных комнат', 2, 2, 0], true)
 							li.elements__item
-								include ../elements/buttons/checkbox/checkbox-drop-list
 								+checkbox-list(false)
 							li.elements__item
 								+checkbox-list(true)
@@ -110,6 +115,5 @@ html(lang='ru')
 										include ../components/bullet-list
 						.row.row--bottom
 							.elements__item
-								include ../components/comment
-								+comment()
+								+comment
 			

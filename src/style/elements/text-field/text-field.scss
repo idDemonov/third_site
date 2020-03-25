@@ -23,40 +23,18 @@
 	}
 }
 
-// .text-field-subscription {
-// 	max-width: 266px;
-// 	&__form {
-// 		position: relative;
-// 	}
-// 	&__button {
-// 		position: absolute;
-// 		right: 0px;
-// 		top: 0px;
-// 		width: 44px;
-// 		height: 44px;
-// 	}
-// 	&__test { // Я не знаю как решить, проблему со стрелкой, она не выравнивалась по вертикали
-// 		position: relative;
-// 		top: 1px; 
-// 	}
-// }
-	// &__text {
-	// 	display: flex;
-	// 	justify-content: space-between;
-	// 	padding-bottom: 5px;
-	// 	font-size: 12px;
-	// 	line-height: 15px;
-	// 	text-transform: uppercase;
-	// }
-	// &__title {
-	// 	font-weight: bold;
-	// 	color: $dark-color-100;
-	// }
-	// &__type {
-	// 	color: $dark-color-50;
-	// 	margin-top: -3px;
-	// 	&--active {
-	// 		color: $dark-color-50;
-	// 		margin-top: 0px;
-	// 	}
-	// }
+.text-field-subscribe {
+	max-width: 267px;
+	position: relative;
+	&__button {
+		width: 44px;
+		height: 44px;
+		border-radius: 10%;
+		position: absolute;
+		right: 0px;
+		background-image: url(../assets/img/button/arrow.svg);
+		background-repeat: no-repeat;
+		background-position-x: center;
+		background-position-y: center;
+	}
+}
