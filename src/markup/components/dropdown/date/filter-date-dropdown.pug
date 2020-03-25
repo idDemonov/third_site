@@ -1,7 +1,8 @@
 .date-dropdown.date-dropdown--filter
 	.date-dropdown__text
 		h3.date-dropdown__title filter date dropdown
-	form.date-dropdown-filter__form
-		input.date-dropdown__input(type='text' value="19 авг - 23 авг")
+	.date-dropdown-filter__form
 		button.date-dropdown__button(type='button')
-			img(src= require('../../../../assets/img/button/dropdown.svg').default, alt='')
+				img(src= require('../../../../assets/img/button/dropdown.svg').default, alt='')
+		input.date-dropdown__input(type='text' value="19 авг - 23 авг", pattern='[0-9]{2}\\s[а-я]{1,3}\\s-\\s[0-9]{2}\\s[а-я]{1,3}')
+		
