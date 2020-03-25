@@ -8,6 +8,9 @@
 		color: $dark-color-75;
 		border-radius: -rem(4px);
 		border: -rem(1px) solid $dark-color-25;
+		&--active {
+			border: -rem(1px) solid $dark-color-50;
+		}
 	}
 	&__input::placeholder {
 		color: $dark-color-25;
