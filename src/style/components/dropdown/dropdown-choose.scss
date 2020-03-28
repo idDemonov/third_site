@@ -41,7 +41,7 @@
 		padding-right: -rem(44px);
 		padding-left: -rem(15px);
 		border: -rem(1px) solid $dark-color-50;
-		outline: none;
+		@include focus
 	}
 
 	&__input:focus::placeholder {
@@ -109,6 +109,11 @@
 }
 
 .dropdown-item-control {
+	max-width: 92px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+
 	&__button {
 		@extend .font-body;
 		@include fontSize(18px);
@@ -131,7 +136,7 @@
 	}
 
 	&__quantity {
-		width: 30px;
+		width: 18px;
 		height: 30px;
 		outline: none;
 		text-align: center;

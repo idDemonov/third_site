@@ -1,5 +1,6 @@
 .checkbox-list {
-	max-width: 266px; 
+	max-width: 266px;
+
 	&__button {
 		width: 100%;
 		max-height: 44px;
@@ -7,36 +8,43 @@
 		display: flex;
 		justify-content: space-between;
 		outline: none;
-		background-color: inherit;	
+		background-color: inherit;
 	}
+
 	&__button:focus {
 		border-radius: -rem(5px);
 	}
+
 	&__button:hover {
 		border-radius: -rem(5px);
 		background-color: rgba(245, 245, 245, 0.39);
 	}
+
 	&__title {
 		@extend .font-h3;
 		align-self: center;
 	}
+
 	&__icon {
 		display: inline-block;
 		padding: 18px 16px;
-		transition-duration: .5s;
+		// transition-duration: .5s;
 	}
+
 	&__icon--activ {
-		transition-duration: .5s;
+		// transition-duration: .5s;
 		transform: rotateX(180deg);
 	}
 }
 
 .checkbox-dropdown {
-		display: none;
+	display: none;
+
 	// &__list {}
 	&__item {
 		padding-bottom: -rem(10px);
 	}
+
 	&--expanded {
 		display: block;
 	}

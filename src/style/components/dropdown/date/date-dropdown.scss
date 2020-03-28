@@ -1,5 +1,6 @@
 .date-dropdown {
 	max-width: 150px;
+
 	&__text {
 		display: flex;
 		justify-content: space-between;
@@ -8,17 +9,21 @@
 		line-height: 15px;
 		text-transform: uppercase;
 	}
+
 	&__title {
 		font-weight: bold;
 		color: $dark-color-100;
 	}
+
 	&__type {
 		color: $dark-color-50;
 		margin-top: -3px;
 	}
+
 	&__form {
 		position: relative;
 	}
+
 	&__input {
 		border: 1px solid $dark-color-25;
 		border-radius: 4px;
@@ -27,19 +32,23 @@
 		padding: 0 15px;
 		color: $dark-color-75;
 	}
+
 	&__input::placeholder {
 		color: $dark-color-25;
 	}
+
 	&__input:hover {
 		border: 1px solid $dark-color-50;
 	}
+
 	&__input:focus {
-		border: 1px solid $dark-color-50;
-		outline: none;
+		@include focus
 	}
+
 	&__input:focus::placeholder {
 		color: $dark-color-75;
 	}
+
 	&__button {
 		position: absolute;
 		right: 0px;
