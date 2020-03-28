@@ -1,11 +1,15 @@
 const path = require('path');
 const fs = require('fs'); // Модуль для управления файлами
 const HTMLWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const {
+	CleanWebpackPlugin
+} = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
-const {	BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const {
+	BundleAnalyzerPlugin
+} = require('webpack-bundle-analyzer');
 
 // Режим сборки необходимо задавать через консоль после каждой перезагрузки консоли:
 // export NODE_ENV=development     // Заданно автамотически через cross-env
@@ -67,7 +71,7 @@ const plugins = () => {
 }
 
 // Функция собирает имя для файлов в зависимости от мода сборки
-const filename = (name, ext) => isDev ? `${name}.${ext}` : `${name}.[hash].${ext}`;
+const filename = (name, ext) => isDev ? `${name}.${ext}` : `${name}.${ext}`;
 
 
 
@@ -89,7 +93,7 @@ module.exports = {
 	},
 	optimization: optimization(),
 	devServer: { // Автоматическое обновление страницы
-		port: 8081, // порт
+		port: 8080, // порт
 		stats: 'errors-only' // выводит только ошибки
 	},
 	devtool: isDev ? 'inline-source-map' : 'cheap-module-source-map', // Создаю source-map если development
@@ -127,22 +131,22 @@ module.exports = {
 			{
 				test: /\.s[ac]ss$/, // Обработка файлов scss и sass
 				use: [{
-						loader: MiniCssExtractPlugin.loader,
-						options: {
-							hmr: isDev,
-							reloadAll: true
-						},
+					loader: MiniCssExtractPlugin.loader,
+					options: {
+						hmr: isDev,
+						reloadAll: true
 					},
+				},
 					'css-loader',
-					{ // Постcss настроил отдельным файлом
-						loader: 'postcss-loader',
-						options: {
-							sourceMap: true,
-							config: {
-								path: './postcss.config.js'
-							}
+				{ // Постcss настроил отдельным файлом
+					loader: 'postcss-loader',
+					options: {
+						sourceMap: true,
+						config: {
+							path: './postcss.config.js'
 						}
-					},
+					}
+				},
 					'sass-loader'
 				]
 			},
