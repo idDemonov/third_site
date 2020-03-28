@@ -1,20 +1,4 @@
 (function () {
-  Datepicker.locales.ru = {
-    days: ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"],
-    daysShort: ["Вск", "Пнд", "Втр", "Срд", "Чтв", "Птн", "Суб"],
-    daysMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
-    months: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
-    monthsShort: ["Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"],
-    today: "Сегодня",
-    clear: "Очистить",
-    format: "dd.mm.yyyy",
-    weekStart: 1,
-    monthsTitle: 'Месяцы'
-  };
-}());
-
-
-(function () {
   'use strict';
 
   function hasProperty(obj, prop) {
@@ -68,9 +52,9 @@
     html += `<${openTagSrc}></${tagName}>`;
 
     const next = index + 1;
-    return next < repeat
-      ? createTagRepeat(tagName, repeat, attributes, next, html)
-      : html;
+    return next < repeat ?
+      createTagRepeat(tagName, repeat, attributes, next, html) :
+      html;
   }
 
   // Remove the spacing surrounding tags for HTML parser not to create text nodes
@@ -173,7 +157,7 @@
     y(date, year) {
       return new Date(date).setFullYear(parseInt(year, 10));
     },
-    M: undefined,  // placeholder to maintain the key order
+    M: undefined, // placeholder to maintain the key order
     m(date, month, locale) {
       const newDate = new Date(date);
       let monthIndex = parseInt(month, 10) - 1;
@@ -195,15 +179,15 @@
       }
 
       newDate.setMonth(monthIndex);
-      return newDate.getMonth() !== normalizeMonth(monthIndex)
-        ? newDate.setDate(0)
-        : newDate.getTime();
+      return newDate.getMonth() !== normalizeMonth(monthIndex) ?
+        newDate.setDate(0) :
+        newDate.getTime();
     },
     d(date, day) {
       return new Date(date).setDate(parseInt(day, 10));
     },
   };
-  parseFns.M = parseFns.m;  // make "M" an alias of "m"
+  parseFns.M = parseFns.m; // make "M" an alias of "m"
   // format functions for date parts
   const formatFns = {
     d(date) {
@@ -346,7 +330,10 @@
   }
 
   const listenerRegistry = new WeakMap();
-  const {addEventListener, removeEventListener} = EventTarget.prototype;
+  const {
+    addEventListener,
+    removeEventListener
+  } = EventTarget.prototype;
 
   // Register event listeners to a key object
   // listeners: array of listener definitions;
@@ -386,7 +373,7 @@
         parent = node.parentNode;
       } else if (node.host) { // ShadowRoot
         parent = node.host;
-      } else if (node.defaultView) {  // Document
+      } else if (node.defaultView) { // Document
         parent = node.defaultView;
       }
       return parent ? getComposedPath(parent, path) : path;
@@ -417,16 +404,29 @@
   // default locales
   const locales = {
     en: {
-      days: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      daysShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-      daysMin: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
-      months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-      monthsShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-      today: "Today",
-      clear: "Clear",
+      days: ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"],
+      daysShort: ["Вск", "Пнд", "Втр", "Срд", "Чтв", "Птн", "Суб"],
+      daysMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+      months: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+      monthsShort: ["Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"],
+      today: "Сегодня",
+      clear: "Очистить",
+      format: "dd.mm.yyyy",
+      // weekStart: 1,
       titleFormat: "MM y"
     }
   };
+
+  // days: ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"],
+  //   daysShort: ["Вск", "Пнд", "Втр", "Срд", "Чтв", "Птн", "Суб"],
+  //   daysMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+  //   months: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+  //   monthsShort: ["Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"],
+  //   today: "Сегодня",
+  //   clear: "Очистить",
+  //   format: "dd.mm.yyyy",
+  //   weekStart: 1,
+  //   monthsTitle: 'Месяцы'
 
   // config options updatable by setOptions() and their default values
   const defaultOptions = {
@@ -443,8 +443,8 @@
     daysOfWeekHighlighted: [],
     defaultViewDate: undefined, // placeholder, defaults to today() by the program
     disableTouchKeyboard: false,
-    format: 'mm/dd/yyyy',
-    language: 'ru',
+    format: 'dd.mm.yyyy',
+    language: 'en',
     maxDate: null,
     maxNumberOfDates: 1,
     maxView: 3,
@@ -520,9 +520,9 @@
 
   // Reducer function to filter out invalid day-of-week from the input
   function sanitizeDOW(dow, day) {
-    return dow.length < 6 && day >= 0 && day < 7
-      ? pushUnique(dow, day)
-      : dow;
+    return dow.length < 6 && day >= 0 && day < 7 ?
+      pushUnique(dow, day) :
+      dow;
   }
 
   function calcEndOfWeek(startOfWeek) {
@@ -615,15 +615,16 @@
     let minDt = minDate;
     let maxDt = maxDate;
     if (inOpts.minDate !== undefined) {
-      minDt = inOpts.minDate === null
-        ? dateValue(0, 0, 1)  // set 0000-01-01 to prevent negative values for year
-        : validateDate(inOpts.minDate, format, locale, minDt);
+      minDt = inOpts.minDate === null ?
+        dateValue(0, 0, 1) // set 0000-01-01 to prevent negative values for year
+        :
+        validateDate(inOpts.minDate, format, locale, minDt);
       delete inOpts.minDate;
     }
     if (inOpts.maxDate !== undefined) {
-      maxDt = inOpts.maxDate === null
-        ? undefined
-        : validateDate(inOpts.maxDate, format, locale, maxDt);
+      maxDt = inOpts.maxDate === null ?
+        undefined :
+        validateDate(inOpts.maxDate, format, locale, maxDt);
       delete inOpts.maxDate;
     }
     if (maxDt < minDt) {
@@ -732,7 +733,7 @@
       delete inOpts.orientation;
     }
     if (inOpts.todayBtnMode !== undefined) {
-      switch(inOpts.todayBtnMode) {
+      switch (inOpts.todayBtnMode) {
         case 0:
         case 1:
           config.todayBtnMode = inOpts.todayBtnMode;
@@ -771,13 +772,13 @@
 </div>`);
 
   const daysTemplate = optimizeTemplateHTML(`<div class="days">
-  <div class="days-of-week">${createTagRepeat('span', 7, {class: 'dow'})}</div>
+  <div class="days-of-week">${createTagRepeat('span', 7, { class: 'dow' })}</div>
   <div class="datepicker-grid">${createTagRepeat('span', 42)}</div>
 </div>`);
 
   const calendarWeeksTemplate = optimizeTemplateHTML(`<div class="calendar-weeks">
   <div class="days-of-week"><span class="dow"></span></div>
-  <div class="weeks">${createTagRepeat('span', 6, {class: 'week'})}</div>
+  <div class="weeks">${createTagRepeat('span', 6, { class: 'week' })}</div>
 </div>`);
 
   // Base class of the view classes
@@ -805,10 +806,14 @@
       let result = this.beforeShow(new Date(timeValue));
       switch (typeof result) {
         case 'boolean':
-          result = {enabled: result};
+          result = {
+            enabled: result
+          };
           break;
         case 'string':
-          result = {classes: result};
+          result = {
+            classes: result
+          };
       }
 
       if (result) {
@@ -884,9 +889,9 @@
         updateDOW = true;
       }
       if (options.beforeShowDay !== undefined) {
-        this.beforeShow = typeof options.beforeShowDay === 'function'
-          ? options.beforeShowDay
-          : undefined;
+        this.beforeShow = typeof options.beforeShowDay === 'function' ?
+          options.beforeShowDay :
+          undefined;
       }
 
       if (options.calendarWeeks !== undefined) {
@@ -945,12 +950,15 @@
 
     // Apply update on the selected dates to view's settings
     updateSelection() {
-      const {dates, range} = this.picker.datepicker;
+      const {
+        dates,
+        range
+      } = this.picker.datepicker;
       this.selected = dates;
       this.range = range;
     }
 
-     // Update the entire view UI
+    // Update the entire view UI
     render() {
       // update today marker on ever render
       this.today = this.todayHighlight ? today() : undefined;
@@ -997,7 +1005,7 @@
         if (this.daysOfWeekHighlighted.includes(day)) {
           classList.add('highlighted');
         }
-        if (this.range){
+        if (this.range) {
           const [rangeStart, rangeEnd] = this.range;
           if (current > rangeStart && current < rangeEnd) {
             classList.add('range');
@@ -1074,7 +1082,9 @@
       if (onConstruction) {
         this.grid = this.element;
         this.element.classList.add('months', 'datepicker-grid');
-        this.grid.appendChild(parseHTML(createTagRepeat('span', 12, {'data-month': ix => ix})));
+        this.grid.appendChild(parseHTML(createTagRepeat('span', 12, {
+          'data-month': ix => ix
+        })));
       }
       super.init(options);
     }
@@ -1104,9 +1114,9 @@
         }
       }
       if (options.beforeShowMonth !== undefined) {
-        this.beforeShow = typeof options.beforeShowMonth === 'function'
-          ? options.beforeShowMonth
-          : undefined;
+        this.beforeShow = typeof options.beforeShowMonth === 'function' ?
+          options.beforeShowMonth :
+          undefined;
       }
     }
 
@@ -1156,9 +1166,9 @@
         el.textContent = this.monthNames[index];
 
         if (
-          yrOutOfRange
-          || isMinYear && index < this.minMonth
-          || isMaxYear && index > this.maxMonth
+          yrOutOfRange ||
+          isMinYear && index < this.minMonth ||
+          isMaxYear && index > this.maxMonth
         ) {
           classList.add('disabled');
         }
@@ -1337,13 +1347,21 @@
       viewId: datepicker.picker.currentView.id,
       datepicker,
     };
-    datepicker.element.dispatchEvent(new CustomEvent(type, {detail}));
+    datepicker.element.dispatchEvent(new CustomEvent(type, {
+      detail
+    }));
   }
 
   // direction: -1 (to previous), 1 (to next)
   function goToPrevOrNext(datepicker, direction) {
-    const {minDate, maxDate} = datepicker.config;
-    const {currentView, viewDate} = datepicker.picker;
+    const {
+      minDate,
+      maxDate
+    } = datepicker.config;
+    const {
+      currentView,
+      viewDate
+    } = datepicker.picker;
     let newViewDate;
     switch (currentView.id) {
       case 0:
@@ -1371,9 +1389,9 @@
     const picker = datepicker.picker;
     const viewDate = new Date(picker.viewDate);
     const viewId = picker.currentView.id;
-    const newDate = viewId === 1
-      ? addMonths(viewDate, selection - viewDate.getMonth())
-      : addYears(viewDate, selection - viewDate.getFullYear());
+    const newDate = viewId === 1 ?
+      addMonths(viewDate, selection - viewDate.getMonth()) :
+      addYears(viewDate, selection - viewDate.getFullYear());
 
     picker.changeFocus(newDate).changeView(viewId - 1).render();
   }
@@ -1381,7 +1399,9 @@
   function onClickTodayBtn(datepicker) {
     const picker = datepicker.picker;
     if (datepicker.config.todayBtnMode === 1) {
-      datepicker.setDate(today(), {render: false});
+      datepicker.setDate(today(), {
+        render: false
+      });
       if (datepicker.config.autohide) {
         datepicker.hide();
         return;
@@ -1393,7 +1413,9 @@
   }
 
   function onClickClearBtn(datepicker) {
-    datepicker.setDate({clear: true});
+    datepicker.setDate({
+      clear: true
+    });
   }
 
   function onClickViewSwitch(datepicker) {
@@ -1476,7 +1498,10 @@
       }
     }
     if (hasProperty(options, 'minDate') || hasProperty(options, 'maxDate')) {
-      const {minDate, maxDate} = picker.datepicker.config;
+      const {
+        minDate,
+        maxDate
+      } = picker.datepicker.config;
       picker.controls.todayBtn.disabled = !isInRange(today(), minDate, maxDate);
     }
     if (options.clearBtn !== undefined) {
@@ -1492,7 +1517,10 @@
   // - the last item of the selected dates or defaultViewDate if no selection
   // - limitted to minDate or maxDate if it exceeds the range
   function computeResetViewDate(datepicker) {
-    const {dates, config} = datepicker;
+    const {
+      dates,
+      config
+    } = datepicker;
     const viewDate = dates.length > 0 ? lastItemOf(dates) : config.defaultViewDate;
     return limitToRange(viewDate, config.minDate, config.maxDate);
   }
@@ -1501,7 +1529,12 @@
   function setViewDate(picker, newDate) {
     const oldViewDate = new Date(picker.viewDate);
     const newViewDate = new Date(newDate);
-    const {id, year, first, last} = picker.currentView;
+    const {
+      id,
+      year,
+      first,
+      last
+    } = picker.currentView;
     const viewYear = newViewDate.getFullYear();
 
     picker.viewDate = newDate;
@@ -1572,8 +1605,18 @@
       this.views = [
         new DaysView(this),
         new MonthsView(this),
-        new YearsView(this, {id: 2, name: 'years', cellClass: 'year', step: 1}),
-        new YearsView(this, {id: 3, name: 'decades', cellClass: 'decade', step: 10}),
+        new YearsView(this, {
+          id: 2,
+          name: 'years',
+          cellClass: 'year',
+          step: 1
+        }),
+        new YearsView(this, {
+          id: 3,
+          name: 'decades',
+          cellClass: 'decade',
+          step: 10
+        }),
       ];
       this.currentView = this.views[datepicker.config.startView];
 
@@ -1590,7 +1633,7 @@
       this.currentView.render();
     }
 
-    detach(){
+    detach() {
       this.datepicker.config.container.removeChild(this.element);
     }
 
@@ -1630,8 +1673,14 @@
     }
 
     place() {
-      const {classList, style} = this.element;
-      const {config, inputField} = this.datepicker;
+      const {
+        classList,
+        style
+      } = this.element;
+      const {
+        config,
+        inputField
+      } = this.datepicker;
       const container = config.container;
       const {
         width: calendarWidth,
@@ -1648,7 +1697,10 @@
         width: inputWidth,
         height: inputHeight
       } = inputField.getBoundingClientRect();
-      let {x: orientX, y: orientY} = config.orientation;
+      let {
+        x: orientX,
+        y: orientY
+      } = config.orientation;
       let scrollTop;
       let left;
       let top;
@@ -1697,7 +1749,7 @@
       classList.add(`datepicker-orient-${orientY}`, `datepicker-orient-${orientX}`);
 
       style.top = top ? `${top}px` : top;
-      style.left = left ? `${left}px` : left;
+      style.left = left ? `${left}px` : left; // Сделать свой расчет
     }
 
     setViewSwitchLabel(labelText) {
@@ -1714,7 +1766,7 @@
 
     changeView(viewId) {
       const oldView = this.currentView;
-      const newView =  this.views[viewId];
+      const newView = this.views[viewId];
       if (newView.id !== oldView.id) {
         this.currentView = newView;
         this._renderMethod = 'render';
@@ -1796,7 +1848,10 @@
         addFn = addMonths;
         testFn = (date) => {
           const dt = new Date(date);
-          const {year, disabled} = currentView;
+          const {
+            year,
+            disabled
+          } = currentView;
           return dt.getFullYear() === year && disabled.includes(dt.getMonth());
         };
         break;
@@ -1844,7 +1899,10 @@
           datepicker.exitEditMode();
           break;
         case 'Enter':
-          datepicker.exitEditMode({update: true, autohide: datepicker.config.autohide});
+          datepicker.exitEditMode({
+            update: true,
+            autohide: datepicker.config.autohide
+          });
           break;
         default:
           return;
@@ -1968,11 +2026,11 @@
     let newDates = inputDates.reduce((dates, dt) => {
       const date = parseDate(dt, config.format, config.locale);
       if (
-        date !== undefined
-        && isInRange(date, config.minDate, config.maxDate)
-        && !dates.includes(date)
-        && !config.datesDisabled.includes(date)
-        && !config.daysOfWeekDisabled.includes(new Date(date).getDay())
+        date !== undefined &&
+        isInRange(date, config.minDate, config.maxDate) &&
+        !dates.includes(date) &&
+        !config.datesDisabled.includes(date) &&
+        !config.daysOfWeekDisabled.includes(new Date(date).getDay())
       ) {
         dates.push(date);
       }
@@ -1991,9 +2049,9 @@
       }, origDates.filter(date => !newDates.includes(date)));
     }
     // do length check always because user can input multiple dates regardless of the mode
-    return config.maxNumberOfDates && newDates.length > config.maxNumberOfDates
-      ? newDates.slice(config.maxNumberOfDates * -1)
-      : newDates;
+    return config.maxNumberOfDates && newDates.length > config.maxNumberOfDates ?
+      newDates.slice(config.maxNumberOfDates * -1) :
+      newDates;
   }
 
   /**
@@ -2142,9 +2200,9 @@
       if (newOptions.maxView < currentViewId) {
         picker.changeView(newOptions.maxView);
       } else if (
-        newOptions.startView !== undefined
-        && !picker.active
-        && newOptions.startView !== currentViewId
+        newOptions.startView !== undefined &&
+        !picker.active &&
+        newOptions.startView !== currentViewId
       ) {
         picker.changeView(newOptions.startView);
       }
@@ -2201,9 +2259,9 @@
      * selected, empty array in multidate mode and untitled in sigledate mode
      */
     getDate(format = undefined) {
-      const callback = format
-        ? date => formatDate(date, format, this.config.locale)
-        : date => new Date(date);
+      const callback = format ?
+        date => formatDate(date, format, this.config.locale) :
+        date => new Date(date);
 
       if (this.config.multidate) {
         return this.dates.map(callback);
@@ -2254,12 +2312,16 @@
      */
     setDate(...args) {
       const dates = [...args];
-      const opts = {clear: false, render: true, autohide: this.config.autohide};
+      const opts = {
+        clear: false,
+        render: true,
+        autohide: this.config.autohide
+      };
       const lastArg = lastItemOf(args);
       if (
-        typeof lastArg === 'object'
-        && !Array.isArray(lastArg)
-        && !(lastArg instanceof Date)
+        typeof lastArg === 'object' &&
+        !Array.isArray(lastArg) &&
+        !(lastArg instanceof Date)
       ) {
         Object.assign(opts, dates.pop());
       }
@@ -2298,7 +2360,9 @@
         return;
       }
 
-      const opts = Object.assign({autohide: false}, options);
+      const opts = Object.assign({
+        autohide: false
+      }, options);
       const inputDates = stringToArray(this.inputField.value, this.config.dateDelimiter);
       const newDates = processInputDates(inputDates, this.config);
       if (!newDates) {
@@ -2359,7 +2423,9 @@
       if (this.inline || !this.editMode) {
         return;
       }
-      const opts = Object.assign({update: false}, options);
+      const opts = Object.assign({
+        update: false
+      }, options);
       delete this.editMode;
       this.inputField.classList.remove('in-edit');
       if (opts.update) {
@@ -2401,7 +2467,9 @@
     }
 
     const datepickers = rangepicker.datepickers;
-    const setDateOptions = {render: false};
+    const setDateOptions = {
+      render: false
+    };
     const changedSide = rangepicker.inputs.indexOf(target);
     const otherSide = changedSide === 0 ? 1 : 0;
     const changedDate = datepickers[changedSide].dates[0];
@@ -2432,16 +2500,16 @@
   /**
    * Class representing a date range picker
    */
-  class DateRangePicker  {
+  class DateRangePicker {
     /**
      * Create a date range picker
      * @param  {Element} element - element to bind a date range picker
      * @param  {Object} [options] - config options
      */
     constructor(element, options = {}) {
-      const inputs = Array.isArray(options.inputs)
-        ? options.inputs
-        : Array.from(element.querySelectorAll('input'));
+      const inputs = Array.isArray(options.inputs) ?
+        options.inputs :
+        Array.from(element.querySelectorAll('input'));
       if (inputs.length < 2) {
         return;
       }
@@ -2459,9 +2527,13 @@
       ];
       // normalize the range if inital dates are given
       if (this.dates[0] !== undefined) {
-        onChangeDate(this, {target: this.inputs[0]});
+        onChangeDate(this, {
+          target: this.inputs[0]
+        });
       } else if (this.dates[1] !== undefined) {
-        onChangeDate(this, {target: this.inputs[1]});
+        onChangeDate(this, {
+          target: this.inputs[1]
+        });
       }
     }
 
@@ -2515,9 +2587,9 @@
      * @return {Array} - Start and end dates
      */
     getDates(format = undefined) {
-      const callback = format
-        ? date => formatDate(date, format, this.datepickers[0].config.locale)
-        : date => new Date(date);
+      const callback = format ?
+        date => formatDate(date, format, this.datepickers[0].config.locale) :
+        date => new Date(date);
 
       return this.dates.map(date => date === undefined ? date : callback(date));
     }
@@ -2527,10 +2599,3 @@
   window.DateRangePicker = DateRangePicker;
 
 }());
-
-const elem = document.getElementById('foo');
-const rangepicker = new DateRangePicker(elem, {
-  // ...options
-  format: 'dd/mm/yyyy',
-});
-

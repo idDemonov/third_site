@@ -6,7 +6,7 @@ class Pagination {
 		this.numberIcons = this.pagination.querySelector('.pagination__quantity');
 		this.createPaginationNumPage(this.maxNumberPage, this.pagination.querySelector('.pagination__page'));
 		this.addAllEvent();
-		
+
 
 		this.activPage = this.pagination.querySelector('button[data-number-page="1"]');
 		this.nextPage = this.activPage;
@@ -17,7 +17,7 @@ class Pagination {
 		this.createMultipoint(this.maxNumberPage)
 
 		this.hideMultipoint(this.activPage)
-		
+
 	}
 
 
@@ -53,7 +53,7 @@ class Pagination {
 		this.pagination.addEventListener("click", event => {
 			const action = event.target.dataset.action;
 			const number = event.target.dataset.numberPage;
-			
+
 			if (action == "next") {
 				this.togglePage(action);
 			} else if (action == "previous") {
@@ -64,7 +64,7 @@ class Pagination {
 		});
 	}
 
-	// Создание кнопок-узлов страниц 
+	// Создание кнопок-узлов страниц
 	createPaginationNumPage(value, buttons) {
 		for (let i = 1; i <= value; i++) {
 			const button = document.createElement('button');
@@ -91,11 +91,11 @@ class Pagination {
 			this.maxNumberPage, // Последняя
 		];
 
-		for (let i = 1; i <= this.maxNumberPage; i++) {			
+		for (let i = 1; i <= this.maxNumberPage; i++) {
 			const button = this.pagination.querySelector(`button[data-number-page="${i}"]`);
 			button.style.display = 'none';
 
-			if(arr.includes(i)) {
+			if (arr.includes(i)) {
 				button.style.display = 'block';
 			}
 		}
@@ -115,25 +115,25 @@ class Pagination {
 		const number = activPage.dataset.numberPage;
 		const [start, end] = this.pagination.querySelectorAll('.pagination__point');
 
-		if(number <= 4) {
+		if (number <= 4) {
 			start.style.display = 'none';
-		} else if(number >= 4) {
+		} else if (number >= 4) {
 			start.style.display = 'block';
 		}
 
-		if(number >= 12) {
+		if (number >= 12) {
 			end.style.display = 'none';
-		}else if(number <= 12) {
+		} else if (number <= 12) {
 			end.style.display = 'block';
 		}
 	}
 	editText(activPage) {
 		const number = activPage.dataset.numberPage;
-		const from = number * 12 - 11; 
+		const from = number * 12 - 11;
 		const to = from + 12 - 1;
-		if(to > 100) this.numberIcons.innerText = `${from} – ${to} из 180 вариантов аренды`
+		if (to > 100) this.numberIcons.innerText = `${from} – ${to} из 180 вариантов аренды`
 		else this.numberIcons.innerText = `${from} – ${to} из 100+ вариантов аренды`
-		
+
 	}
 }
 

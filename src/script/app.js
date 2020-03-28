@@ -1,26 +1,52 @@
 'use strict'
 // Слайдер
-import {nouislider} from './vendors/nouislider'
+import {
+	nouislider
+} from './vendors/nouislider'
 
 // Валидация форм
 import Bouncer from './vendors/bouncer'
 var validate = new Bouncer('form');
 
 // Выпадающий список checkbox
-import {showCheckboxList} from './modules/showCheckboxList'
+// import {showCheckboxList} from './modules/showCheckboxList'
+import {
+	showCheckboxList
+} from './modules/showCheckboxList'
 
 // Отменить коппирование двойным кликом
-import {undoUnMouseDown} from './modules/undoUnMouseDown'
+import {
+	undoUnMouseDown
+} from './modules/undoUnMouseDown'
 
 // Посчитать лайки
-import {liked} from './modules/liked'
+import {
+	liked
+} from './modules/liked'
 
 // Работа с пагинацией
-import {pagination} from './modules/pagination'
+import {
+	pagination
+} from './modules/pagination'
 
 // Функции навешивает события связанные с выпадающим списком комнат и гостей
-import {setEventDropBox} from './modules/setEventDropBox/setEventDropBox'
+import {
+	setEventDropBox
+} from './modules/setEventDropBox/setEventDropBox'
 
 // Календарь
-// import './vendors/calendar-full'
-// var validate = new Bouncer('form');
+import {
+	Datepickers
+} from './vendors/datepicker-full'
+const elem = document.getElementById('foo');
+const datepicker = new DateRangePicker(elem, {
+	// ...options
+});
+// const corectElemLeft = document.querySelectorAll('.datepicker')
+// const calendar = document.querySelector('.calendar')
+// const input = document.querySelector('.datepicker-input')
+// calendar.addEventListener('click', () => {
+// 	if (corectElemLeft[1].style.left) {
+// 		corectElemLeft[1].style.left = corectElemLeft[0].style.left
+// 	}
+// })
