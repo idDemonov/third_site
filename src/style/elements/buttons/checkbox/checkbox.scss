@@ -1,20 +1,19 @@
 .checkbox {
-	max-width: 222px;
-	min-width: 222px;
+	min-width: 260px;
 	@include font-body($l-height: 18px);
 	color: $dark-color-50;
 }
 
 .check {
 	cursor: pointer;
+	display: flex;
+	flex-wrap: wrap;
 
 	&__input {
 		appearance: none;
 	}
 
 	&__box {
-		vertical-align: top;
-		display: inline-block;
 		margin-right: -rem(10px);
 		width: 20px;
 		height: 20px;
@@ -23,8 +22,8 @@
 	}
 
 	&__text {
-		display: inline-block;
-		width: 192px;
+		align-self: center;
+		max-width: 230px;
 	}
 }
 

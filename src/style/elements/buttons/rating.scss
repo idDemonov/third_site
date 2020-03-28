@@ -8,12 +8,13 @@
     display: flex;
     width: 100px;
     height: 20px;
+
     background: {
         image: url(../assets/img/button/star.svg);
         size: 20px auto;
         repeat: repeat-x;
     }
-    
+
 }
 
 .rating__star {
@@ -24,23 +25,25 @@
     height: 20px;
     font-size: inherit;
     appearance: none;
+
     background: {
         size: 20px auto;
         repeat: repeat-x;
     }
-    
+
 }
 
 .rating__star:focus {
     outline: none;
 }
 
-.rating__star:hover, .rating__star:checked {
+.rating__star:hover,
+.rating__star:checked {
     background-image: url(../assets/img/button/star__full.svg);
 }
 
-.rating__star:hover ~ .rating__star {
-    transition: 0.3s;
+.rating__star:hover~.rating__star {
+    // transition: 0.3s;
     background-image: url(../assets/img/button/star.svg);
 }
 

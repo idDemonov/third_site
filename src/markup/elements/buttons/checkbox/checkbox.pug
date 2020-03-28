@@ -3,4 +3,4 @@ mixin checkbox(text= 'text', check= false, name='breakfast', disabled= false)
 		label.check.option.No-onmousedown
 			input.check__input(type='checkbox', name= name, checked= check, disabled= disabled)
 			span.check__box
-			span.check__text= text
+			span.check__text!= text

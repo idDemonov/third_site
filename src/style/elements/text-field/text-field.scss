@@ -8,19 +8,24 @@
 		color: $dark-color-75;
 		border-radius: -rem(4px);
 		border: -rem(1px) solid $dark-color-25;
+
 		&--active {
 			border: -rem(1px) solid $dark-color-50;
 		}
 	}
+
 	&__input::placeholder {
 		color: $dark-color-25;
 	}
+
 	&__input:hover {
 		border: -rem(1px) solid $dark-color-50;
 	}
+
 	&__input:focus {
-		@include focus(2px)
+		@include focus
 	}
+
 	&__input:focus::placeholder {
 		color: $dark-color-75;
 	}
@@ -29,6 +34,7 @@
 .text-field-subscribe {
 	max-width: 267px;
 	position: relative;
+
 	&__button {
 		width: 44px;
 		height: 44px;

@@ -2,9 +2,11 @@
 	@extend .font-body;
 	width: 300px;
 	cursor: pointer;
+
 	&__input {
 		appearance: none;
 	}
+
 	&__box {
 		vertical-align: middle;
 		display: inline-block;
@@ -14,45 +16,56 @@
 		height: 20px;
 		border: 1px solid $dark-color-25;
 		border-radius: -rem(10px);
+
 		background: {
 			image: url(../assets/img/button/radio.svg);
 			repeat: no-repeat;
 			position-x: 10%;
 			position-y: center;
 		}
-		transition-duration: .3s;
+
+		transition-duration: .1s
 	}
+
 	// &__text {}
 }
 
 // States
 
 .toggle {
-	&__input:checked + .toggle__box {
+	&__input:checked+.toggle__box {
 		background: {
 			image: url(../assets/img/button/radio__check.svg);
 			repeat: no-repeat;
 			position-x: 90%;
 			position-y: center;
 		}
+
 		border: solid 0px transparent;
-		background-color: white; 
+		background-color: white;
 		border-radius: -rem(16px);
+
 		&:before {
 			width: 42px;
 			height: 22px;
 			content: '';
 			position: absolute;
-			top: -1px; right: 0; bottom: 0; left: -1px;
+			top: -1px;
+			right: 0;
+			bottom: 0;
+			left: -1px;
 			z-index: -3;
-			border-radius: inherit; /* !importanté */
+			border-radius: inherit;
+			/* !importanté */
 			background: $gradient-color;
-		 }
+		}
 	}
-	&__input:disabled + .toggle__box {
+
+	&__input:disabled+.toggle__box {
 		border: 1px solid $dark-color-50;
 	}
-	&__input:focus + .toggle__box {
+
+	&__input:focus+.toggle__box {
 		box-shadow: $mainFocus;
 	}
 }

@@ -1,20 +1,19 @@
 .checkbox {
 	&--rich {
-		max-width: 266px;
+		max-width: 300px;
 	}
 }
+
 .check {
+	min-width: 205px;
+
+	&__text {
+		@include font-body($f-size: 12px, $l-height: 14px);
+		color: $dark-color-50;
+	}
+
 	&__title {
 		display: inline-block;
 		@include font-body($f-size: 14px, $weight: 700, $l-height: 18px);
 	}
-	&__text {
-		&--rich {
-			width: 230px;
-			margin-left: 35px;
-			@include font-body($f-size: 12px, $l-height: 14px);
-			color: $dark-color-50;
-		}
-	}
-	
 }

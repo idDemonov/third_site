@@ -1,4 +1,4 @@
-.wrapper-burger{
+.wrapper-burger {
 	margin-left: 20px;
 	background: $gradient-color;
 	border-radius: 22px;
@@ -10,11 +10,11 @@
 	font-size: 16px;
 }
 
-#check-menu{
+#check-menu {
 	display: none;
 }
 
-.checkbox-label{
+.checkbox-label {
 	display: block;
 	position: absolute;
 	top: 0;
@@ -27,25 +27,26 @@
 	color: white;
 }
 
-.burger-line{
+.burger-line {
 	position: absolute;
 	top: 8px;
 	right: 10px;
 	width: 35px;
 	height: 2px;
 	background-color: #fff;
-	transition: .5s all;
+	// transition: .5s all;
 }
 
-.burger-line--second, .burger-line--third {
+.burger-line--second,
+.burger-line--third {
 	top: 18px;
 }
 
-.burger-line--fourth{
+.burger-line--fourth {
 	top: 28px;
 }
 
-.dropdown-menu{
+.dropdown-menu {
 	display: block;
 	position: absolute;
 	width: 100%;
@@ -55,7 +56,7 @@
 	max-height: 0;
 	font-size: 0;
 	overflow: hidden;
-	transition: .5s all;
+	// transition: .5s all;
 }
 
 .dropdown-menu {
@@ -65,33 +66,34 @@
 		padding: 2vw;
 		color: white;
 		text-decoration: none;
-		border-top: 1px solid rgba(255,255,255,.3);
+		border-top: 1px solid rgba(255, 255, 255, .3);
 		background-color: #000;
 		font-size: 0.9rem;
 		background: $gradient-color;
 	}
-	&__link:hover{
+
+	&__link:hover {
 		background: rgb(49, 60, 143);
 	}
 }
 
-#check-menu:checked ~ .dropdown-menu{
+#check-menu:checked~.dropdown-menu {
 	max-height: 500px;
 }
 
-#check-menu:checked ~ .burger-line--first{
+#check-menu:checked~.burger-line--first {
 	display: none;
 }
 
-#check-menu:checked ~ .burger-line--second{
+#check-menu:checked~.burger-line--second {
 	transform: rotate(45deg);
 }
 
-#check-menu:checked ~ .burger-line--third{
+#check-menu:checked~.burger-line--third {
 	transform: rotate(-45deg);
 }
 
-#check-menu:checked ~ .burger-line--fourth{
+#check-menu:checked~.burger-line--fourth {
 	display: none;
 }
 

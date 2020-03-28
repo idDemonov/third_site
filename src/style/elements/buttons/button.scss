@@ -5,10 +5,12 @@
 	border-radius: -rem(22px);
 	height: 44px;
 	user-select: none;
-	transition-duration: .1s;
+
+	// transition-duration: .1s;
 	&--filled-color {
 		width: 102px;
 		color: rgb(255, 255, 255);
+
 		&:active {
 			background: $gradient-color-click;
 		}
@@ -22,7 +24,7 @@
 		background: rgb(255, 255, 255);
 		border: solid 0px transparent;
 		border-radius: -rem(22px);
-		
+
 		&:before {
 			width: 106px;
 			height: 48px;
@@ -35,7 +37,7 @@
 			z-index: -1;
 			border-radius: -rem(23px);
 			background: $gradient-color;
-			
+
 		}
 
 		&:active:before {
@@ -54,6 +56,7 @@
 			box-shadow: none;
 			border-bottom: 2px solid $focus-color;
 		}
+
 		&:active {
 			color: $dark-color-50;
 		}
@@ -64,7 +67,7 @@
 		width: 100%;
 		color: rgb(255, 255, 255);
 		position: relative;
-		
+
 		&:active {
 			background: $gradient-color-click;
 		}
@@ -87,10 +90,11 @@
 
 	&--click {
 		background: $gradient-color-click;
-		
-		&--gradient:before {				
-			background:$gradient-color-click;
+
+		&--gradient:before {
+			background: $gradient-color-click;
 		}
+
 		&--text {
 			color: $dark-color-50;
 		}
