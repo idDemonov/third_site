@@ -37,18 +37,23 @@ html(lang='ru')
 							li.elements__item
 								+component('Text Field', 'Default')
 								+text-field-basic('Email', 'Email')
-								
+
 							li.elements__item
 								+component('Text Field', 'Hover / Focus')
 								+text-field-basic('text', 'Просто текст', 'This is pretty awesome', 'text-field__input--active')
 							li.elements__item
-								+component('Dropdown', 'Default') 
+								+component('Dropdown', 'Default')
 								+dropdownChoose('guests', ['Сколько гостей', 0, 0, 0], false)
 							li.elements__item
 								+component('masked text field', 'Default')
 								+text-field-basic('text', 'ДД.ММ.ГГГГ', '', '', '', '(?:19|20)[0-9]{2}\\.(?:(?:0[1-9]|1[0-2])\\.(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])\\.(?:30))|(?:(?:0[13578]|1[02])-31))', 'Пожалуйста, используйте формат ДД.ММ.ГГГГ')
 							li.elements__item.elements__item--row
 								+calendar()
+								//- <div id="foo">
+								//- 	<input type="text" name="start">
+								//- 	<span>to</span>
+								//- 	<input type="text" name="end">
+								//- </div>
 							li.elements__item
 								+component('filter date dropdown')
 								+date-filter()
@@ -75,7 +80,7 @@ html(lang='ru')
 								include ../components/buttons
 							li.elements__item
 								+component('pagination')
-								+pagination 
+								+pagination
 							li.elements__item
 				.row
 					.column
@@ -95,25 +100,24 @@ html(lang='ru')
 							li.elements__item
 								+details('Удобство', 'Окно в каждой из спален', 'convenience.svg')
 							li.elements__item
-								
-								
+
+
 					.column.column--double
 						.row.row--double
 							.column
 								ul.elements
 									li.elements__item
-										+component('Dropdown') 
+										+component('Dropdown')
 										+dropdownChoose('guests', ['Сколько гостей', 0, 0, 0], true)
 									li.elements__item.elements__item--paddTop
 										include ../components/checkbox/checkbox-list--rich
 							.column
 								ul.elements
 									li.elements__item
-										+component('Dropdown') 
+										+component('Dropdown')
 										+dropdownChoose('guests', ['3 Гостя', 2, 1, 0], true)
 									li.elements__item.elements__item--paddTop
 										include ../components/bullet-list
 						.row.row--bottom
 							.elements__item
 								+comment
-			

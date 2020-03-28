@@ -2,16 +2,26 @@
   padding: 0px;
   margin: 0px;
   border: 0px;
+  -webkit-tap-highlight-color: transparent;
 }
 
-*,*:before,*:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
 
-aside,nav,footer,header,section{display: block;}
+aside,
+nav,
+footer,
+header,
+section {
+  display: block;
+}
 
-html,body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -28,15 +38,52 @@ body {
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
-input,button,textarea{font-family: $mainFont;}
-input::-ms-clear{display: none;}
-button{cursor: pointer; background: transparent; font: inherit; outline: none;}
-button:focus {box-shadow: $mainFocus;}
-button::-moz-focus-inner {padding:0;border:0;}
-a, a:visited{text-decoration: none;}
-a:hover{text-decoration: none;}
-ul li{list-style: none;}
-h1,h2,h3,h4,h5,h6 {
+
+input,
+button,
+textarea {
+  font-family: $mainFont;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+  background: transparent;
+  font: inherit;
+  outline: none;
+}
+
+button:focus {
+  box-shadow: $mainFocus;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: inherit;
   font-size: inherit;
 }
