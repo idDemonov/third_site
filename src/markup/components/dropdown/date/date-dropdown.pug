@@ -1,12 +1,9 @@
 mixin calendar(value='', mode='single')
-	.calendar
-		//- input.calendar__input.calendar__input--from(type='text' placeholder="ДД.ММ.ГГГГ")
-		//- button.calendar__button(type='button')
-		//- 	img(src= require('../../assets/img/button/dropdown.svg').default, alt='')
-		<div id="foo">
-			<input type="text" name="start">
-			<span>to</span>
-			<input type="text" name="end">  
-		</div>
-		//- button.calendar__button(type='button')
-		//- 	img(src= require('../../assets/img/button/dropdown.svg').default, alt='')
+	div#datepicker.calendar
+		.one
+			+component()
+			input(type="text" name="start")
+
+		.two
+			+component()
+			input(type="text" name="end")

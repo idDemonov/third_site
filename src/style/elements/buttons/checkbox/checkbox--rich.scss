@@ -13,7 +13,7 @@
 	}
 
 	&__title {
-		display: inline-block;
 		@include font-body($f-size: 14px, $weight: 700, $l-height: 18px);
+		padding-bottom: -rem(5px);
 	}
 }
