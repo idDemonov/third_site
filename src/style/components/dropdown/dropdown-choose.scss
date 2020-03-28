@@ -1,12 +1,16 @@
 .dropdown-choose {
 	max-width: 320px;
 	min-width: 220px;
+
 	&--rooms {
 		max-width: 266px;
+		min-width: 256px;
 	}
+
 	&__form {
 		position: relative;
 	}
+
 	&__input {
 		text-overflow: ellipsis;
 		overflow: hidden;
@@ -17,27 +21,33 @@
 		padding-right: -rem(95px);
 		padding-left: -rem(15px);
 		color: $dark-color-75;
+
 		&--expanded {
 			border: -rem(1px) solid $dark-color-50;
 			border-radius: -rem(2px) -rem(2px) 0 0;
 			box-shadow: 0px -5px 20px $dark-color-5;
 		}
 	}
+
 	&__input::placeholder {
 		color: $dark-color-25;
 	}
+
 	&__input:hover {
 		border: -rem(1px) solid $dark-color-50;
 	}
+
 	&__input:focus {
 		padding-right: -rem(44px);
 		padding-left: -rem(15px);
 		border: -rem(1px) solid $dark-color-50;
 		outline: none;
 	}
+
 	&__input:focus::placeholder {
 		color: $dark-color-75;
 	}
+
 	&__button {
 		position: absolute;
 		right: 0px;
@@ -46,43 +56,52 @@
 		height: 44px;
 		border-radius: -rem(4px);
 	}
+
 	&__box {
 		display: none;
 		border-radius: 0 0 -rem(2px) -rem(2px);
+
 		padding: {
 			top: -rem(7px);
-			right:-rem(7px);
+			right: -rem(7px);
 			left: -rem(15px);
-		} 
-		&--expended{
+		}
+
+		&--expended {
 			display: block;
 		}
 	}
 }
+
 .dropdown-selection {
 	@extend .font-h3;
-	border: -rem(1px) solid $dark-color-50 ;
+	border: -rem(1px) solid $dark-color-50;
 	border-top: 0;
 	box-shadow: 0px 10px 20px $dark-color-5;
+
 	// &__list {}
 	&__item {
 		padding-bottom: -rem(7px);
 		display: flex;
 		justify-content: space-between;
 	}
+
 	&__label {
 		align-self: center;
 	}
+
 	// &__box {}
 	&__buttons {
 		display: flex;
 		justify-content: space-between;
 		padding-top: -rem(13px);
-		padding-bottom: -rem(13px);		
+		padding-bottom: -rem(13px);
 	}
+
 	&__clear {
 		color: $dark-color-50;
 		visibility: hidden;
+
 		&--activ {
 			visibility: visible;
 		}
@@ -101,13 +120,16 @@
 		width: 30px;
 		height: 30px;
 	}
+
 	&__button:hover {
 		border: -rem(1px) solid $purple-color;
 		color: $purple-color;
 	}
+
 	&__button:active {
 		@include button-activ;
 	}
+
 	&__quantity {
 		width: 30px;
 		height: 30px;
@@ -115,5 +137,6 @@
 		text-align: center;
 		font: inherit;
 	}
+
 	// &__button--reduce {}
 }

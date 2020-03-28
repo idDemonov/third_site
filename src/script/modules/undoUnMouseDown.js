@@ -1,4 +1,4 @@
- // Отменить коппирование двойным кликом
+// Отменить коппирование двойным кликом
 undoOnMouseDown()
 function undoOnMouseDown() {
 	const elemUse = document.querySelectorAll(".No-onmousedown");

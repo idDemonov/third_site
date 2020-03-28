@@ -1,13 +1,17 @@
 .checkbox {
 	max-width: 222px;
+	min-width: 222px;
 	@include font-body($l-height: 18px);
 	color: $dark-color-50;
 }
+
 .check {
 	cursor: pointer;
+
 	&__input {
 		appearance: none;
 	}
+
 	&__box {
 		vertical-align: top;
 		display: inline-block;
@@ -17,6 +21,7 @@
 		border: 1px solid $dark-color-25;
 		border-radius: -rem(4px);
 	}
+
 	&__text {
 		display: inline-block;
 		width: 192px;
@@ -26,22 +31,26 @@
 // States
 
 .check {
-	&__input:checked + .check__box {
+	&__input:checked+.check__box {
 		background: {
 			image: url(../assets/img/button/check.svg);
 			repeat: no-repeat;
 			position-x: center;
 			position-y: 40%;
 		}
+
 		border: 1px solid #BC9CFF;
 	}
-	&__input:disabled + .check__box {
+
+	&__input:disabled+.check__box {
 		border: 1px solid $dark-color-50;
 	}
-	&__input:checked:disabled + .check__box {
+
+	&__input:checked:disabled+.check__box {
 		border: 1px solid $dark-color-50;
 	}
-	&__input:focus + .check__box {
+
+	&__input:focus+.check__box {
 		box-shadow: $mainFocus;
 	}
 }
