@@ -38,9 +38,16 @@ import {
 import {
 	Datepickers
 } from './vendors/datepicker-full'
-const elem = document.getElementById('foo');
+const elem = document.getElementById('datepicker');
 const datepicker = new DateRangePicker(elem, {
-	// ...options
+	orientation: 'bottom left',
+	buttonClass: 'button-pick',
+	weekStart: 1,
+	todayHighlight: true,
+	clearBtn: true,
+	todayBtn: true,
+	prevArrow: '',
+	nextArrow: '',
 });
 // const corectElemLeft = document.querySelectorAll('.datepicker')
 // const calendar = document.querySelector('.calendar')

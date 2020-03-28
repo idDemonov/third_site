@@ -1677,6 +1677,7 @@
         classList,
         style
       } = this.element;
+
       const {
         config,
         inputField
@@ -1691,12 +1692,18 @@
         top: containerTop,
         width: containerWidth,
       } = container.getBoundingClientRect();
+
+      // Выравниваю всегда по первому input
+      const myInputField = document.querySelector('input[name="start"]')
+
+
       const {
         left: inputLeft,
         top: inputTop,
         width: inputWidth,
         height: inputHeight
-      } = inputField.getBoundingClientRect();
+      } = myInputField.getBoundingClientRect();
+
       let {
         x: orientX,
         y: orientY
@@ -1704,6 +1711,7 @@
       let scrollTop;
       let left;
       let top;
+
 
       if (container === document.body) {
         scrollTop = window.scrollY;
