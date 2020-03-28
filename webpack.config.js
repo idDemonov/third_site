@@ -64,9 +64,9 @@ const plugins = () => {
 			}
 		})),
 	];
-	if (isProd) { // Если production то показывает карту размеров зависимостей
-		base.push(new BundleAnalyzerPlugin())
-	}
+	// if (isProd) { // Если production то показывает карту размеров зависимостей
+	// 	base.push(new BundleAnalyzerPlugin())
+	// }
 	return base;
 }
 
