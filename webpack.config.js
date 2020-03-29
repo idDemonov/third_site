@@ -13,24 +13,24 @@ const {
 
 // Режим сборки необходимо задавать через консоль после каждой перезагрузки консоли:
 // export NODE_ENV=development     // Заданно автамотически через cross-env
-const isDev = process.env.NODE_ENV === 'development'; // определяем в каком режиме сбоки мы находимся
+const isDev = process.env.NODE_ENV === 'development'; // Определяем в каком режиме сборки мы находимся
 const isProd = !isDev; // Для удобства, переменная определяет находимся ли мы в production
-console.log('Development mode:', isDev) // Вывожу в консоль чтобы видеть в каком режиме я нахожусь
+console.log('Development mode:', isDev) // Вывожу в консоль, чтобы видеть в каком режиме я нахожусь
 
 // Объект для быстрого обращения к путям
-const PATHS = {
-	src: path.resolve(__dirname, "src"),
-	dist: path.resolve(__dirname, "dist") // Куда ложить: __dirname - корневая директория, dist - папка куда все сложить
+const PATHS = { // __dirname - корневая директория
+	src: path.resolve(__dirname, "src"), // src - папка откуда брать
+	dist: path.resolve(__dirname, "dist") // dist - папка куда все сложить
 };
 
-// Путm к страницам, чтобы взять все страницы в формате pug
-const PAGES_DIR = `${PATHS.src}/markup/pages/`
-const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
+// Путь к страницам, чтобы взять все страницы в формате pug
+const PAGES_DIR = `${PATHS.src}/markup/pages/`;
+const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'));
 
 
-// Функция которая сжимает css если isProd true
+// Функция, которая сжимает css если isProd true
 const optimization = () => {
-	const config = { // если скрипты используют одну и туже библиотеку
+	const config = { // Если скрипты используют одну и туже библиотеку
 		// splitChunks: { // webpack вынесет её в отдельный скрипт и подключит
 		//     chunks: "all"
 		// }
@@ -46,18 +46,18 @@ const optimization = () => {
 // Функция генерирует плагины
 const plugins = () => {
 	const base = [ // Базовые Плагины
-		new CleanWebpackPlugin(), // чистит в папке dist файлы
-		new CopyWebpackPlugin([ // просто копирует файлы
+		new CleanWebpackPlugin(), // Чистит в папке dist файлы
+		new CopyWebpackPlugin([ // Просто копирует файлы
 			{
-				from: `${PATHS.src}/assets/img/favicon.ico`, // что - откуда
+				from: `${PATHS.src}/assets/img/favicon.ico`, // Что — откуда
 				to: `${PATHS.dist}/favicon.ico` // куда
 			}
 		]),
-		new MiniCssExtractPlugin({ // работа с файлами css
+		new MiniCssExtractPlugin({ // Работа с файлами css
 			filename: filename('[name]', 'css')
 		}),
-		...PAGES.map(page => new HTMLWebpackPlugin({ // для работы с html и pug перебираю все страницы и пропускаю через HTMLWebpackPlugin
-			template: `${PAGES_DIR}/${page}`, // точка входа, для HTML и PUG файлов
+		...PAGES.map(page => new HTMLWebpackPlugin({ // Для работы с html и pug перебираю все страницы и пропускаю через HTMLWebpackPlugin
+			template: `${PAGES_DIR}/${page}`, // Точка входа, для HTML и PUG файлов
 			filename: filename(`${page.replace(/\.pug/, '')}`, 'html'), // костыль - имя, для HTML и PUG файлов
 			minify: {
 				collapseWhitespace: isProd // Опция сжимает html, если мод сборки production
@@ -86,7 +86,7 @@ module.exports = {
 		path: PATHS.dist
 	},
 	resolve: {
-		extensions: ['.js', '.css', '.scss', '.json'], // extension это окончания файлов, здесь мы говорим если не указан тип расширения при импорте, ищи с таким расширением
+		extensions: ['.js', '.ts', '.css', '.scss', '.json'], // extension это окончания файлов, здесь мы говорим если не указан тип расширения при импорте, ищи с таким расширением
 		alias: { // Это пути, которые можно записать в переменные, дабы сократить количество кода
 			'@': PATHS.src
 		}
@@ -114,6 +114,11 @@ module.exports = {
 						]
 					}
 				}
+			},
+			{
+				test: /\.tsx?$/,
+				use: 'ts-loader',
+				exclude: /node_modules/,
 			},
 			{
 				test: /\.css$/, // если встретит файлы с расширением .css

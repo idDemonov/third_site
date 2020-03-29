@@ -1,33 +1,36 @@
 // Font
-$mainFont                : 'Quicksand', 'Montserrat', Arial;
+$mainFont : 'Quicksand',
+'Montserrat',
+Arial;
 // Size
-$mainFontColor           : rgba(31, 32, 65, 0.5);;
-$mainFontSize            : 14px;
-$mainFontWeight          : 400;
-$mainLineHeight          : 24px;
-$mainFocus               : 0 0 0 0.1em rgb(145, 191, 204);
+$mainFontColor : rgba(31, 32, 65, 0.5);
+;
+$mainFontSize : 14px;
+$mainFontWeight : 400;
+$mainLineHeight : 24px;
+$mainFocus : 0 0 0 0.1em rgb(145, 191, 204);
 
-$desktopWidth            : 1280px;
-$smDesktopWidth          : 980px;
-$tableWidth              : 768px;
-$phoneWidth              : 480px;
-$smPhoneWidth            : 320px;
+$desktopWidth : 1280px;
+$smDesktopWidth : 980px;
+$tableWidth : 768px;
+$phoneWidth : 480px;
+$smPhoneWidth : 320px;
 
 // Main color
-$dark-color-100          : rgb(31, 32, 65);
-$dark-color-75           : rgba(31, 32, 65, 0.75);
-$dark-color-50           : rgba(31, 32, 65, 0.5);
-$dark-color-25           : rgba(31, 32, 65, 0.25);
-$dark-color-5            : rgba(31, 32, 65, 0.05);
+$dark-color-100 : rgb(31, 32, 65);
+$dark-color-75 : rgba(31, 32, 65, 0.75);
+$dark-color-50 : rgba(31, 32, 65, 0.5);
+$dark-color-25 : rgba(31, 32, 65, 0.25);
+$dark-color-5 : rgba(31, 32, 65, 0.05);
 
-$purple-color            : rgb(188, 156, 255);
-$green-color             : rgb(111, 207, 151);
-$error-color             : rgb(251, 84, 43);
+$purple-color : rgb(188, 156, 255);
+$green-color : rgb(111, 207, 151);
+$error-color : rgb(251, 84, 43);
 
-$focus-color             : rgb(145, 191, 204);
-$activ-color             : rgba(151, 150, 150, 0.226);
+$focus-color : rgb(145, 191, 204);
+$activ-color : rgba(151, 150, 150, 0.226);
 
-$gradient-color          : linear-gradient(180deg, rgb(189, 158, 255) 0%, rgb(139, 164, 249) 100%);
-$gradient-color-click    : linear-gradient(180deg, rgba(189, 158, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
+$gradient-color : linear-gradient(180deg, rgb(189, 158, 255) 0%, rgb(139, 164, 249) 100%);
+$gradient-color-click : linear-gradient(180deg, rgba(189, 158, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
 $gradient-color-pagination: linear-gradient(180deg, rgb(111, 207, 151) 0%, rgb(102, 210, 234) 100%);
 $gradient-color-pagination-click: linear-gradient(180deg, rgba(111, 207, 151, 0.5) 0%, rgba(102, 210, 234, 0.5) 100%);

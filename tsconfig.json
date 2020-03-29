@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/script",
+    "module": "es6",
+    "sourceMap": true,
+    "target": "es6",
+    "declaration": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/node_modules/*", "src/methods.ts", "tests"]
+}

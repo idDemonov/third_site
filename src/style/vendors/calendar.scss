@@ -274,13 +274,7 @@
     box-shadow: 0 0 0.25em 0.25em rgba(35, 102, 209, 0.2);
 }
 
-.datepicker-input {
-    width: 150px;
-    height: 44px;
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    box-sizing: border-box;
-    border-radius: 4px;
-}
+
 
 .datepicker-picker {
     width: 320px;
@@ -403,6 +397,33 @@
     background-position-x: center;
     background-position-y: center;
     transform: rotate(180deg)
+}
+
+.datepicker-input {
+    max-width: 140px;
+    width: 100%;
+    height: 44px;
+    padding: 0 -rem(15px);
+    color: $dark-color-75;
+    border-radius: -rem(4px);
+    border: -rem(1px) solid $dark-color-25;
+    box-sizing: border-box;
+
+    &::placeholder {
+        color: $dark-color-25;
+    }
+
+    &:hover {
+        border: -rem(1px) solid $dark-color-50;
+    }
+
+    &:focus {
+        @include focus
+    }
+
+    &:focus::placeholder {
+        color: $dark-color-75;
+    }
 }
 
 // =================================

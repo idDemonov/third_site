@@ -6,8 +6,8 @@
 	@return $size;
 }
 
+
 @mixin fontSize($size) {
-	font-size: $size;
 	font-size: -rem($size);
 }
 
