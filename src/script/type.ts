@@ -1,8 +1,8 @@
 "use strict";
-
 // Выпадающий список checkbox
 // import {showCheckboxList} from './modules/showCheckboxList'
 import { showCheckboxList } from "./modules/showCheckboxList";
+
 showCheckboxList();
 
 // Отменить коппирование двойным кликом
@@ -15,7 +15,8 @@ liked();
 
 // Работа с пагинацией
 import { Pagination } from "./modules/pagination";
-new Pagination(15);
+const pagination = document.querySelector(".pagination");
+if (pagination) new Pagination(15);
 
 // Функции навешивает события связанные с выпадающим списком комнат и гостей
 import { setEventDropBox } from "./modules/setEventDropBox/setEventDropBox";
