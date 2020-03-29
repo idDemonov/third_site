@@ -1,9 +1,9 @@
-mixin calendar(value='', mode='single')
+mixin calendar(text1='date Dropdown', text2='date Dropdown')
 	div#datepicker.calendar
 		.one
-			+component('date Dropdown')
+			+component(text1)
 			input(type="text" name="start", placeholder='ДД.ММ.ГГГГ')
 
 		.two
-			+component('date Dropdown')
+			+component(text2)
 			input(type="text" name="end", placeholder='ДД.ММ.ГГГГ')

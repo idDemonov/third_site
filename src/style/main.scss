@@ -11,14 +11,7 @@
 @import 'vendors/nouislider.css';
 @import 'vendors/calendar.scss';
 
-@import 'form/register';
-@import 'form/login';
-
-
-
-@import 'form/burger';
-@import 'form/navigation';
-
+@import 'form/forms';
 
 
 @import 'modules/grid';
@@ -33,6 +26,7 @@
 @import 'pages/cards';
 @import 'pages/form-elements';
 
-@import 'base/media';
 
+
+@import 'base/media';
 @import 'base/validation';

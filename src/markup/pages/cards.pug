@@ -9,18 +9,47 @@ html(lang='ru')
 		.header-UI
 			.header-UI__logo
 				img(src=require('../../assets/img/logo/logo__grey.svg').default, alt="")
+		include ../form/cards/search
+		include ../form/cards/register
+		include ../form/cards/login
+		include ../form/cards/reservation
+
+
+		include ../elements/component
+		include ../elements/component
+		include ../elements/other/details
+		include ../elements/text-field/basic
+		include ../elements/text-field/email
+		include ../elements/buttons/radio.pug
+		include ../elements/buttons/toggle.pug
+		include ../elements/buttons/button/button--elongated
+		include ../elements/buttons/button/button--filled-color
+		include ../elements/buttons/button/button--white
+		include ../elements/buttons/button/button--text
+		include ../elements/buttons/checkbox/checkbox-drop-list
+
+		include ../components/dropdown/date/date-dropdown.pug
+		include ../components/dropdown/dropdown-choose
+		include ../components/pagination
+		include ../components/dropdown/date/filter-date-dropdown
+		include ../components/dropdown/date/date-dropdown
+		include ../components/dropdown/date/date-dropdown--selected
+		include ../components/slider
+		include ../components/comment
 		ul.cards__list
 			li.cards__item
-				include ../form/selection
+				+search()
 			li.cards__item
-				include ../form/register
+				+register()
+		ul.cards__list
 			li.cards__item
-				include ../form/reservation
+				//- include ../form/reservation
 			li.cards__item
-				include ../form/login
+				//- include ../form/login
+		ul.cards__list
 			li.cards__item
-				include ../form/calendar
+				//- include ../form/calendar
 			li.cards__item
-				include ../form/suite-luxury
+				//- include ../form/suite-luxury
 			li.cards__item
-				include ../form/suite
+				//- include ../form/suite

@@ -18,33 +18,8 @@
 	}
 }
 
-.body-main {
-	&__form {
-		width: 100%;
-		max-width: 382px;
-		@include padding(40px, 30px, 30px, 30px);
-		border-radius: -rem(4px);
-		box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-		border: -rem(1px) solid rgba(0, 0, 0, 0.12);
-		background-color: #FFFFFF;
-	}
-	&__epigraph {
-		margin-top: auto;
-		margin-left: auto;
-		margin-bottom: -rem(3px);
-		text-align: right;
-		max-width: 297px;
-	}
-		&__title {
-			@extend .font-h1;
-		margin-bottom: -rem(20px);
-	}
-}
-
 .epigraph-main {
 	&__text {
 		@extend .font-body;
 	}
 }
-
-@import 'form/forms';

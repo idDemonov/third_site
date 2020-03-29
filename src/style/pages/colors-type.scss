@@ -1,24 +1,45 @@
 .colors {
 	&__item {
 		@extend .font-h2;
-		display: flex; 
+		display: flex;
 		padding-bottom: -rem(20px);
 	}
+
 	&__rectangle {
 		width: 70px;
 		height: 70px;
 		border-radius: -rem(6px);
+
 		&--dark100 {
 			background: $dark-color-100;
 		}
-		&--dark75  {background: $dark-color-75;}
-		&--dark50  {background: $dark-color-50;}
-		&--dark25  {background: $dark-color-25;}
-		&--dark5   {background: $dark-color-5;}
-		&--purple  {background: $purple-color;}
-		&--green   {background: $green-color;}
+
+		&--dark75 {
+			background: $dark-color-75;
+		}
+
+		&--dark50 {
+			background: $dark-color-50;
+		}
+
+		&--dark25 {
+			background: $dark-color-25;
+		}
+
+		&--dark5 {
+			background: $dark-color-5;
+		}
+
+		&--purple {
+			background: $purple-color;
+		}
+
+		&--green {
+			background: $green-color;
+		}
 	}
 }
+
 .color {
 	&__title {
 		padding-left: -rem(40px);
@@ -26,6 +47,7 @@
 		flex-direction: column;
 		justify-content: space-around;
 	}
+
 	&__hex {
 		font-weight: 400;
 	}
@@ -34,11 +56,13 @@
 
 .type {
 	max-width: 403px;
-	// &__list {} 
+
+	// &__list {}
 	&__item {
 		display: flex;
 		padding-bottom: -rem(50px);
 	}
+
 	// &__box {}
 	&__icon {
 		margin-right: -rem(30px);
@@ -49,21 +73,37 @@
 		&--h1 {
 			@extend .font-h1;
 		}
+
 		&--h2 {
 			@extend .font-h2;
 		}
+
 		&--h3 {
 			@extend .font-h3;
 		}
+
 		&--body {
 			@extend .font-body;
 		}
 	}
+
 	&__text {
 		max-width: 336px;
-		&--h1 {@extend .font-h1;}
-		&--h2 {@extend .font-h2;}
-		&--h3 {@extend .font-h3;}
-		&--body {@extend .font-body;}
+
+		&--h1 {
+			@extend .font-h1;
+		}
+
+		&--h2 {
+			@extend .font-h2;
+		}
+
+		&--h3 {
+			@extend .font-h3;
+		}
+
+		&--body {
+			@extend .font-body;
+		}
 	}
 }

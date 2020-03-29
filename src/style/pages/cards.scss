@@ -1,13 +1,15 @@
-.cards { //  Перенести в grid'ы
+.cards {
 	&__list {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
+		margin: 40px;
+		// display: flex;
+		// flex-wrap: wrap;
+		// justify-content: space-between;
 		max-width: 1220px; // изменить на 1160 при построении всех табличек
 		margin: 0 auto;
 
 	}
+
 	&__item {
-		padding-top: 40px;
+		// margin-bottom: 40px;
 	}
 }

@@ -2,29 +2,35 @@
 	margin: 0 auto;
 	max-width: 1160px;
 }
+
 .row {
 	margin-bottom: -rem(100px);
 	display: flex;
 	justify-content: space-between;
+
 	&--bottom {
 		margin-bottom: -rem(20px);
 	}
+
 	&--double {
 		max-width: 720px;
 		width: 100%;
 		justify-content: space-between;
-		
+
 		// margin-left: -rem(20px);
 	}
 }
+
 .column {
 	max-width: 340px;
 	padding: 0 10px;
 	width: 100%;
+
 	&--middle {
 		max-width: 280px;
 		width: 100%;
 	}
+
 	&--double {
 		max-width: 100%;
 		width: 100%;
@@ -38,13 +44,16 @@
 .elements {
 	&__item {
 		padding-bottom: -rem(20px);
+
 		&--row {
 			display: flex;
 			justify-content: space-between;
 		}
-		&--middle{
+
+		&--middle {
 			padding-bottom: -rem(40px);
 		}
+
 		&--paddTop {
 			padding-top: -rem(74px);
 		}
@@ -55,14 +64,16 @@
 	display: flex;
 	justify-content: space-between;
 	@extend .font-h3;
+
 	&__title {
 		padding-bottom: -rem(5px);
 	}
+
 	&__subtitle {
 		font-weight: 400;
 		color: $dark-color-50;
 	}
-	
+
 }
 
 @import '../elements/text-field/text-field';
