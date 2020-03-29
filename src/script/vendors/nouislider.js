@@ -4,20 +4,23 @@
     // Browser globals
     window.noUiSlider = factory();
     var snapSlider = document.getElementById('slider');
-    noUiSlider.create(snapSlider, {
-        start: [5, 10],
-        connect: true,
-        step: 1,
-        range: {
-            'min': 0,
-            'max': 15
-        }
-    });
-    var valueSlider = document.querySelector('.slider__value');
+    if (snapSlider) {
+        noUiSlider.create(snapSlider, {
+            start: [5, 10],
+            connect: true,
+            step: 1,
+            range: {
+                'min': 0,
+                'max': 15
+            }
+        });
+        var valueSlider = document.querySelector('.slider__value');
 
-    snapSlider.noUiSlider.on('update', function (values, handle) {
-        valueSlider.innerText = Math.floor(values[0]) + ' 000₽ - ' + Math.floor(values[1]) + ' 000₽';
-    });
+        snapSlider.noUiSlider.on('update', function (values, handle) {
+            valueSlider.innerText = Math.floor(values[0]) + ' 000₽ - ' + Math.floor(values[1]) + ' 000₽';
+        });
+    }
+
 
 
 })(function () {

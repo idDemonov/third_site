@@ -1,6 +1,6 @@
 "use strict";
 // Слайдер
-// import { nouislider } from "./vendors/nouislider";
+import { nouislider } from "./vendors/nouislider";
 
 // Валидация форм
 import Bouncer from "./vendors/bouncer";
