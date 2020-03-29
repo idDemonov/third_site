@@ -1,15 +1,13 @@
 const path = require('path');
 const fs = require('fs'); // Модуль для управления файлами
 const HTMLWebpackPlugin = require('html-webpack-plugin');
-const {
-	CleanWebpackPlugin
-} = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 const {
-	BundleAnalyzerPlugin
-} = require('webpack-bundle-analyzer');
+	CleanWebpackPlugin
+} = require('clean-webpack-plugin');
+
 
 // Режим сборки необходимо задавать через консоль после каждой перезагрузки консоли:
 // export NODE_ENV=development     // Заданно автамотически через cross-env
@@ -54,7 +52,7 @@ const plugins = () => {
 			}
 		]),
 		new MiniCssExtractPlugin({ // Работа с файлами css
-			filename: filename('[name]', 'css')
+			filename: '[name].css'
 		}),
 		...PAGES.map(page => new HTMLWebpackPlugin({ // Для работы с html и pug перебираю все страницы и пропускаю через HTMLWebpackPlugin
 			template: `${PAGES_DIR}/${page}`, // Точка входа, для HTML и PUG файлов
@@ -64,9 +62,6 @@ const plugins = () => {
 			}
 		})),
 	];
-	// if (isProd) { // Если production то показывает карту размеров зависимостей
-	// 	base.push(new BundleAnalyzerPlugin())
-	// }
 	return base;
 }
 
@@ -82,14 +77,11 @@ module.exports = {
 		// index: ['./src/script/vendors/nouislider.js'], // точки входа 1 + полифил
 	},
 	output: {
-		filename: filename('[name]', 'js'), // Имя файлов js на выходе
+		filename: '[name].js',// Имя файлов js на выходе
 		path: PATHS.dist
 	},
 	resolve: {
 		extensions: ['.js', '.ts', '.css', '.scss', '.json'], // extension это окончания файлов, здесь мы говорим если не указан тип расширения при импорте, ищи с таким расширением
-		alias: { // Это пути, которые можно записать в переменные, дабы сократить количество кода
-			'@': PATHS.src
-		}
 	},
 	optimization: optimization(),
 	devServer: { // Автоматическое обновление страницы

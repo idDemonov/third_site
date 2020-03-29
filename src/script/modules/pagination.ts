@@ -6,7 +6,7 @@ export class Pagination {
   private maxNumberPage: number;
   private pagination: HTMLDivElement;
   private numberIcons: HTMLSpanElement;
-  private activPage: HTMLButtonElement;
+  private activePage: HTMLButtonElement;
   private nextPage: HTMLButtonElement;
 
   constructor(quantity: number) {
@@ -21,17 +21,17 @@ export class Pagination {
 
     this.addAllEvent();
 
-    this.activPage = this.pagination.querySelector(
+    this.activePage = this.pagination.querySelector(
       'button[data-number-page="1"]'
     );
-    this.nextPage = this.activPage;
+    this.nextPage = this.activePage;
 
-    this.hideButtons(this.activPage.dataset.numberPage);
+    this.hideButtons(this.activePage.dataset.numberPage);
 
     this.createMultipoint(2);
     this.createMultipoint(this.maxNumberPage);
 
-    this.hideMultipoint(this.activPage);
+    this.hideMultipoint(this.activePage);
   }
 
   // <-- -->
@@ -47,19 +47,19 @@ export class Pagination {
     this.nextPage = this.pagination.querySelector(
       `button[data-number-page="${count}"]`
     );
-    this.reassignmentActiv(count, this.nextPage);
+    this.reassignmentActive(count, this.nextPage);
   }
 
   // Смена активной кнопки
-  reassignmentActiv(currentPage: number, newActivPage: HTMLButtonElement) {
+  reassignmentActive(currentPage: number, newActivePage: HTMLButtonElement) {
     this.hideButtons(currentPage);
-    this.hideMultipoint(newActivPage);
-    this.editText(newActivPage);
+    this.hideMultipoint(newActivePage);
+    this.editText(newActivePage);
 
     if (currentPage <= +this.maxNumberPage) {
-      this.activPage.classList.remove("pagination__button--active");
-      this.activPage = newActivPage;
-      this.activPage.classList.add("pagination__button--active");
+      this.activePage.classList.remove("pagination__button--active");
+      this.activePage = newActivePage;
+      this.activePage.classList.add("pagination__button--active");
 
       this.nextPage = this.pagination.querySelector(
         `button[data-number-page="${currentPage}"]`
@@ -78,7 +78,7 @@ export class Pagination {
       } else if (action == "previous") {
         this.togglePage(action);
       } else if (number) {
-        this.reassignmentActiv(number, event.target);
+        this.reassignmentActive(number, event.target);
       }
     });
   }
@@ -100,16 +100,16 @@ export class Pagination {
   }
 
   // Скрытие лишних кнопок
-  hideButtons(activButton) {
-    activButton = activButton || 1;
+  hideButtons(activeButton) {
+    activeButton = activeButton || 1;
     // Массив кнопок, которые не надо скрывать
     const arr = [
       1, // Первая
-      +activButton - 2, // До предыдущей
-      +activButton - 1, // Предыдущая
-      +activButton, // Активная
-      +activButton + 1, // Следующая
-      +activButton + 2, // После следующей
+      +activeButton - 2, // До предыдущей
+      +activeButton - 1, // Предыдущая
+      +activeButton, // Активная
+      +activeButton + 1, // Следующая
+      +activeButton + 2, // После следующей
       this.maxNumberPage // Последняя
     ];
 
@@ -137,8 +137,8 @@ export class Pagination {
     place.before(button);
   }
   // Скрытие точек
-  hideMultipoint(activPage: HTMLButtonElement) {
-    const number = activPage.dataset.numberPage;
+  hideMultipoint(activePage: HTMLButtonElement) {
+    const number = activePage.dataset.numberPage;
     const [start, end]: any = this.pagination.querySelectorAll(
       ".pagination__point"
     );
@@ -155,8 +155,8 @@ export class Pagination {
       end.style.display = "block";
     }
   }
-  editText(activPage) {
-    const number = activPage.dataset.numberPage;
+  editText(activePage) {
+    const number = activePage.dataset.numberPage;
     const from = number * 12 - 11;
     const to = from + 12 - 1;
     if (to > 100)

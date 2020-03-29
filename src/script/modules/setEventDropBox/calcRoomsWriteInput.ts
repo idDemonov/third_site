@@ -19,4 +19,4 @@ export const calcRoomsWriteInput = (input, lowdown) => {
   const answer = rooms.bathroom == 0 ? "без" : rooms.bathroom;
   input.value = `${answer} ${word1}, ${rooms.bed} ${word2}, ${rooms.bathroom} ${word3}`;
 };
-// Фукнция подсчитывает комнаты и записывает в инпут
+// Функция подсчитывает комнаты и записывает в инпут

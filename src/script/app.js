@@ -15,7 +15,7 @@ const datepicker = new DateRangePicker(elem, {
   weekStart: 1,
   todayHighlight: true,
   clearBtn: true,
-  todayBtn: true,
+  // todayBtn: true,
   prevArrow: "",
   nextArrow: "",
   minDate: 12

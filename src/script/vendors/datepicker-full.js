@@ -417,17 +417,6 @@
     }
   };
 
-  // days: ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"],
-  //   daysShort: ["Вск", "Пнд", "Втр", "Срд", "Чтв", "Птн", "Суб"],
-  //   daysMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
-  //   months: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
-  //   monthsShort: ["Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"],
-  //   today: "Сегодня",
-  //   clear: "Очистить",
-  //   format: "dd.mm.yyyy",
-  //   weekStart: 1,
-  //   monthsTitle: 'Месяцы'
-
   // config options updatable by setOptions() and their default values
   const defaultOptions = {
     autohide: false,
@@ -765,7 +754,8 @@
     <div class="datepicker-footer">
       <div class="datepicker-controls">
         <button class="%buttonClass% today-btn"></button>
-        <button class="%buttonClass% clear-btn"></button>
+        <button class="%buttonClass% clear-btn button button--text"></button>
+        <button class="%buttonClass% accept-btn button button--text">Применить</button>
       </div>
     </div>
   </div>
@@ -1395,7 +1385,10 @@
 
     picker.changeFocus(newDate).changeView(viewId - 1).render();
   }
+  function onClickAcceptBtn(datepicker) {
+    if (datepicker.dates.length != 0) datepicker.hide();
 
+  }
   function onClickTodayBtn(datepicker) {
     const picker = datepicker.picker;
     if (datepicker.config.todayBtnMode === 1) {
@@ -1572,7 +1565,8 @@
       const [header, main, footer] = element.firstChild.children;
       const title = header.firstElementChild;
       const [prevBtn, viewSwitch, nextBtn] = header.lastElementChild.children;
-      const [todayBtn, clearBtn] = footer.firstChild.children;
+      const [todayBtn, clearBtn, acceptBtn] = footer.firstChild.children;
+
       const controls = {
         title,
         prevBtn,
@@ -1580,6 +1574,7 @@
         nextBtn,
         todayBtn,
         clearBtn,
+        acceptBtn,
       };
       this.main = main;
       this.controls = controls;
@@ -1599,6 +1594,7 @@
         [controls.nextBtn, 'click', onClickNextBtn.bind(null, datepicker)],
         [controls.todayBtn, 'click', onClickTodayBtn.bind(null, datepicker)],
         [controls.clearBtn, 'click', onClickClearBtn.bind(null, datepicker)],
+        [controls.acceptBtn, 'click', onClickAcceptBtn.bind(null, datepicker)],
       ]);
 
       // set up views

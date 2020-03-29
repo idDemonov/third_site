@@ -32,7 +32,6 @@
 }
 
 .datepicker-picker span {
-    // display: block;
     flex: 1;
     border: 0;
     border-radius: 4px;
@@ -50,8 +49,8 @@
 }
 
 .datepicker-footer {
-    box-shadow: inset 0 1px 1px rgba(10, 10, 10, 0.1);
-    background-color: whitesmoke;
+    margin: 0 30px;
+    padding-bottom: 20px;
 }
 
 .datepicker-controls,
@@ -79,7 +78,6 @@
 .datepicker-view .week,
 .datepicker-cell {
     height: 2.25rem;
-    // line-height: 2.25rem;
 }
 
 .datepicker-title {
@@ -123,10 +121,14 @@
 }
 
 .datepicker-footer .datepicker-controls .button-pick {
-    margin: calc(0.375rem - 1px) 0.375rem;
-    border-radius: 2px;
-    width: 100%;
-    font-size: 0.75rem;
+    text-transform: uppercase;
+
+}
+
+.datepicker-footer .datepicker-controls {
+    display: flex;
+    justify-content: space-between;
+
 }
 
 .datepicker-controls .view-switch {
@@ -145,11 +147,6 @@
     visibility: hidden;
 }
 
-.datepicker-view .dow {
-    // height: 1.5rem;
-    // line-height: 1.5rem;
-    // font-size: 0.875rem;
-}
 
 .datepicker-view .week {
     width: 2.25rem;
@@ -163,9 +160,6 @@
     }
 }
 
-.datepicker-grid {
-    // width: 15.75rem;
-}
 
 @media (max-width: 22.5rem) {
     .calendar-weeks+.days .datepicker-grid {
@@ -193,10 +187,6 @@
     color: #dbdbdb;
 }
 
-.datepicker-cell.prev:not(.disabled),
-.datepicker-cell.next:not(.disabled) {
-    // color: #7a7a7a;
-}
 
 .datepicker-cell.highlighted:not(.selected):not(.range):not(.today) {
     border-radius: 0;
@@ -247,9 +237,6 @@
     background-color: #dbdbdb;
 }
 
-// .datepicker-cell.range:not(.disabled):not(.focused):not(.today):hover {
-//     background-color: #d5d5d5;
-// }
 
 .datepicker-cell.range.disabled {
     color: #c2c2c2;
@@ -288,7 +275,6 @@
     justify-content: space-between;
 }
 
-// #datepicker {}
 
 .button-pick {
     height: 24px;
@@ -303,7 +289,7 @@
 
 .days {
     margin: 0 auto;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     @extend .font-h3;
     font-weight: 400;
     max-width: 280px;
@@ -424,6 +410,10 @@
     &:focus::placeholder {
         color: $dark-color-75;
     }
+}
+
+.datepicker-footer .datepicker-controls .button-pick.clear-btn {
+    color: $dark-color-50;
 }
 
 // =================================
