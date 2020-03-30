@@ -1,0 +1,22 @@
+mixin register(title='Регистрация аккаунта')
+	.register-card
+		h1.register-card__title= title
+		form.register-card__fotm.register-data(name="register" action='#', target='get')
+			ul.register-data__list
+				li.register-data__item.register-data__item--high-150
+					+text-field-basic('text', 'Имя', 'first-name', false, '', '', '')
+					+text-field-basic('text', 'Фамилия', 'last-name', false, '', '', 'text-field--register')
+					+radio()
+				li.register-data__item
+					+component('Дата Рождения')
+					+text-field-basic('text', 'ДД.ММ.ГГГГ', 'date-birth', true, 'Пожалуйста, используйте формат ДД.ММ.ГГГГ', '', '')
+				li.register-data__item
+					+component('данные для входа в сервис')
+					+text-field-basic('email', 'Email', 'email', false, '', '', '')
+					+text-field-basic('password', 'Пароль', 'password', false, '', '', 'text-field--register')
+					+toggle('Получать спецпредложения', false)
+				li.register-data__item
+					+button-elongated('перейти к оплате')
+		.register-card__footer.card-footer
+			p.card-footer__text Уже есть аккаунт на Toxin
+			+button-white('Войти', '')

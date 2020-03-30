@@ -1,0 +1,61 @@
+.register-card {
+	max-width: 380px;
+	width: 100%;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: -rem(4px);
+
+	&__fotm {
+		max-width: 320px;
+		width: 100%;
+		margin-bottom: -rem(30px);
+	}
+
+	&__title {
+		margin-top: -rem(40px);
+		max-width: 320px;
+		@extend .font-h1;
+	}
+
+	&__footer {
+		padding-bottom: -rem(30px);
+	}
+}
+
+.text-field--register {
+	margin: 10px 0;
+}
+
+.register-data {
+
+	// &__list {}
+
+	&__item {
+		padding-top: -rem(20px);
+
+		// &--high-150 {
+		// 	height: 150px;
+		// 	display: flex;
+		// 	flex-direction: column;
+		// 	justify-content: space-between;
+
+		// }
+	}
+}
+
+.card-footer {
+	max-width: 320px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	z-index: 1;
+
+	&__text {
+		padding-top: -rem(10px);
+		@extend .font-body;
+		color: rgb(0, 0, 0);
+	}
+}

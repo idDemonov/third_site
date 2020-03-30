@@ -2,6 +2,8 @@
 	@extend .font-body;
 	width: 300px;
 	cursor: pointer;
+	position: relative;
+	z-index: 1;
 
 	&__input {
 		appearance: none;
