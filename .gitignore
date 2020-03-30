@@ -16,10 +16,11 @@ dist
 *.sqlite
 
 # Other
+stats.json
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-yarn.lock
+# yarn.lock
 
 # Special
 Thumbs.db
