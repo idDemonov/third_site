@@ -17,6 +17,7 @@
 	&__title {
 		margin-top: -rem(40px);
 		max-width: 320px;
+		width: 100%;
 		@extend .font-h1;
 	}
 }

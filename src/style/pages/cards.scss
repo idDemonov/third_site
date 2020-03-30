@@ -1,15 +1,23 @@
 .cards {
+	margin: 0 auto;
+	max-width: 1220px;
+
 	&__list {
-		margin: 40px;
+		width: 100%;
+		margin-right: 40px;
 		// display: flex;
 		// flex-wrap: wrap;
 		// justify-content: space-between;
-		max-width: 1220px; // изменить на 1160 при построении всех табличек
-		margin: 0 auto;
+		// изменить на 1160 при построении всех табличек
+
 
 	}
 
 	&__item {
-		// margin-bottom: 40px;
+		margin-bottom: 40px;
 	}
+}
+
+.cards__column {
+	display: flex;
 }

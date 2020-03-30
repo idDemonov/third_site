@@ -36,20 +36,22 @@ html(lang='ru')
 		include ../components/dropdown/date/date-dropdown--selected
 		include ../components/slider
 		include ../components/comment
-		ul.cards__list
-			li.cards__item
-				+search()
-			li.cards__item
-				+register()
-		ul.cards__list
-			li.cards__item
-				//- include ../form/reservation
-			li.cards__item
-				//- include ../form/login
-		ul.cards__list
-			li.cards__item
-				//- include ../form/calendar
-			li.cards__item
-				//- include ../form/suite-luxury
-			li.cards__item
-				//- include ../form/suite
+		.cards
+			.cards__column
+				ul.cards__list
+					li.cards__item
+						+search()
+					li.cards__item
+						+register()
+				ul.cards__list
+					li.cards__item
+						+register()
+					li.cards__item
+						+login()
+				ul.cards__list
+					li.cards__item
+						+register()
+					li.cards__item
+						+register()
+					li.cards__item
+						+register()

@@ -1,10 +1,39 @@
-// Кнопка войти
-.identification-header {
-	&__login {
-		color: #BC9CFF;
-		border: 2px solid #BC9CFF; // Нужно сделать градиент
-		border-radius: -rem(22px);
-		padding: 0.5rem 1.125rem;
-		background: #ffffff;
+.login-card {
+	max-width: 380px;
+	width: 100%;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: -rem(4px);
+
+	&__fotm {
+		max-width: 320px;
+		width: 100%;
+		margin-bottom: -rem(30px);
+	}
+
+	&__title {
+		margin-top: -rem(40px);
+		max-width: 320px;
+		width: 100%;
+		@extend .font-h1;
+	}
+
+	&__footer {
+		padding-bottom: -rem(30px);
+	}
+}
+
+.text-field--login {
+	margin: 10px 0;
+}
+
+.login-data {
+
+	// &__list{}
+	&__item {
+		padding-top: 20px;
 	}
 }
