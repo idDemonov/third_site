@@ -1690,7 +1690,7 @@
       } = container.getBoundingClientRect();
 
       // Выравниваю всегда по первому input
-      const myInputField = document.querySelector('input[name="start"]')
+      const myInputField = this.datepicker.rangepicker.element.firstElementChild;
 
 
       const {
