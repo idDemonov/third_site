@@ -1,1 +1,30 @@
-//- Бронирование
+mixin reservation()
+	.reservation-card
+		.reservation-card__room.reservation-card-room
+			.reservation-card-room__type 888
+			.reservation-card-room__price.reservation-card-room-price
+				span.reservation-card-room-price__sum 9 990₽
+		form.reservation-card__form.reservation-data(name="reservation" action='#', target='get')
+			ul.reservation-data__list
+				li.reservation-data__item
+					+calendar('Прибытие', 'Выезд', '19.08.2019', '23.08.2019')
+				li.reservation-data__item
+					+component('Гости')
+					+dropdownChoose('guests', ['3 гостя', 2, 1, 0], false)
+				li.reservation-data__item
+					ul.reservation-data-price
+						li.reservation-data-price__day
+							.reservation-data-price__description 9 990₽ х 4 суток
+							.reservation-data-price__price 39 960₽
+						li.reservation-data-price__service
+							.reservation-data-price__description Сбор за услуги: скидка 2 179₽
+							.reservation-data-price__price 0₽
+						li.reservation-data-price__additional-service
+							.reservation-data-price__description Сбор за дополнительные услуги
+							.reservation-data-price__price 300₽
+				li.reservation-data__item
+					.sum-total
+						h2.sum-total__title Итого
+						span.sum-total__sum 38 081₽
+				li.reservation-data__item
+					+button-elongated('Забронировать')

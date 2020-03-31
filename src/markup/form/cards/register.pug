@@ -1,7 +1,7 @@
 mixin register(title='Регистрация аккаунта')
 	.register-card
 		h1.register-card__title= title
-		form.register-card__fotm.register-data(name="register" action='#', target='get')
+		form.register-card__form.register-data(name="register" action='#', target='get')
 			ul.register-data__list
 				li.register-data__item.register-data__item--high-150
 					+text-field-basic('text', 'Имя', 'first-name', false, '', '', '')
