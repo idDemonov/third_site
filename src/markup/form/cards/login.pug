@@ -1,7 +1,7 @@
 mixin login(title='Войти')
 	.login-card
 		h1.login-card__title= title
-		form.login-card__fotm.login-data(name="login" action='#', target='get')
+		form.login-card__form.login-data(name="login" action='#', target='get')
 			ul.login-data__list
 				li.login-data__item
 					+text-field-basic('email', 'Email', 'email', false, '', '', '')

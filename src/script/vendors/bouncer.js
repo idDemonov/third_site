@@ -7,12 +7,12 @@
  */
 
 (function (root, factory) {
-	
-	if ( typeof define === 'function' && define.amd ) {
+
+	if (typeof define === 'function' && define.amd) {
 		define([], (function () {
 			return factory(root);
 		}));
-	} else if ( typeof exports === 'object' ) {
+	} else if (typeof exports === 'object') {
 		module.exports = factory(root);
 	} else {
 		root.Bouncer = factory(root);
@@ -81,7 +81,7 @@
 		},
 
 		// Form Submission
-		disableSubmit: true,
+		disableSubmit: false, // Управляет отправкой форм, еще не понял как это работает
 
 		// Custom Events
 		emitEvents: true
@@ -304,7 +304,7 @@
 	var getErrors = function (field, settings) {
 
 		// Get standard validation errors
-		var errors = runValidations(field,settings);
+		var errors = runValidations(field, settings);
 
 		// Check for custom validations
 		errors = customValidations(field, errors, settings.customValidations, settings);
@@ -775,7 +775,7 @@
 			// If there are errors, focus on the first one
 			if (errors.length > 0) {
 				errors[0].focus();
-				emitEvent(event.target, 'bouncerFormInvalid', {errors: errors});
+				emitEvent(event.target, 'bouncerFormInvalid', { errors: errors });
 				return;
 			}
 

@@ -1,2 +1,2 @@
-mixin button-elongated(text= 'Перейти к оплате', addClassB='')
-    button(class= ['button', 'button--elongated', addClassB])= text
+mixin button-elongated(text= 'Перейти к оплате', idForm, typeBtn='button', addClass='')
+    button(class= ['button', 'button--elongated', addClass], form= idForm, type= typeBtn)= text
