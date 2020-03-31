@@ -8,18 +8,19 @@ var validate = new Bouncer("form");
 
 // Календарь
 import { Datepickers } from "./vendors/datepicker-full";
-const elem = document.getElementById("datepicker");
+const elem = document.querySelectorAll(".datepicker");
 if (elem) {
-  const datepicker = new DateRangePicker(elem, {
-    orientation: "bottom left",
-    buttonClass: "button-pick",
-    weekStart: 1,
-    todayHighlight: true,
-    clearBtn: true,
-    // todayBtn: true,
-    prevArrow: "",
-    nextArrow: "",
-    minDate: 12
+  elem.forEach(element => {
+    new DateRangePicker(element, {
+      orientation: "bottom left",
+      buttonClass: "button-pick",
+      weekStart: 1,
+      todayHighlight: true,
+      clearBtn: true,
+      prevArrow: "",
+      nextArrow: "",
+      minDate: 12
+    });
   });
 }
 
