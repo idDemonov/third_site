@@ -31,6 +31,39 @@
 			background: $gradient-color-pagination;
 			margin: -rem(1px);
 
+		}
+
+
+
+		&--active {
+			border-radius: 50%;
+			background: $gradient-color;
+			color: rgb(255, 255, 255);
+			font-weight: 700;
+		}
+
+		&--next {
+			display: block;
+			border-radius: 50%;
+			position: relative;
+			background: $gradient-color-pagination;
+			transition-duration: .1s;
+			margin: -rem(1px);
+		}
+	}
+
+	&__point {
+		@extend .pagination__button;
+		cursor: default;
+	}
+}
+
+
+// ==States==
+
+.pagination {
+	&__button {
+		&--previous {
 			&:active {
 				background: $gradient-color-pagination-click;
 			}
@@ -55,24 +88,12 @@
 
 
 		&--active {
-			border-radius: 50%;
-			background: $gradient-color;
-			color: rgb(255, 255, 255);
-			font-weight: 700;
-
 			&:active {
 				background: $gradient-color-click;
 			}
 		}
 
 		&--next {
-			display: block;
-			border-radius: 50%;
-			position: relative;
-			background: $gradient-color-pagination;
-			transition-duration: .1s;
-			margin: -rem(1px);
-
 			&:active {
 				background: $gradient-color-pagination-click;
 			}
@@ -92,10 +113,5 @@
 				background-position-y: center;
 			}
 		}
-	}
-
-	&__point {
-		@extend .pagination__button;
-		cursor: default;
 	}
 }

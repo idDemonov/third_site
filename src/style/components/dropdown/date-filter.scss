@@ -11,6 +11,19 @@
 		color: $dark-color-75;
 	}
 
+	&__button {
+		position: absolute;
+		right: 0px;
+		width: 44px;
+		height: 44px;
+		border-radius: 4px;
+	}
+}
+
+// ==States==
+
+.date-filter {
+
 	&__input::placeholder {
 		color: $dark-color-25;
 	}
@@ -25,13 +38,5 @@
 
 	&__input:focus::placeholder {
 		color: $dark-color-75;
-	}
-
-	&__button {
-		position: absolute;
-		right: 0px;
-		width: 44px;
-		height: 44px;
-		border-radius: 4px;
 	}
 }

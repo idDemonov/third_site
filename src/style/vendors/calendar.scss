@@ -269,6 +269,16 @@
 }
 
 // =============--option 28.03.2020--====================
+.one {
+    max-width: 150px;
+    width: 100%;
+}
+
+.two {
+    max-width: 150px;
+    width: 100%;
+}
+
 .calendar {
     width: 100%;
     max-width: 320px;
@@ -416,5 +426,3 @@
 .datepicker-footer .datepicker-controls .button-pick.clear-btn {
     color: $dark-color-50;
 }
-
-// =================================

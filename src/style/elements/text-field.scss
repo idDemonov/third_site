@@ -14,21 +14,6 @@
 		}
 	}
 
-	&__input::placeholder {
-		color: $dark-color-25;
-	}
-
-	&__input:hover {
-		border: -rem(1px) solid $dark-color-50;
-	}
-
-	&__input:focus {
-		@include focus
-	}
-
-	&__input:focus::placeholder {
-		color: $dark-color-75;
-	}
 }
 
 .text-field-subscribe {
@@ -45,5 +30,26 @@
 		background-repeat: no-repeat;
 		background-position-x: center;
 		background-position-y: center;
+	}
+}
+
+
+// ==States==
+
+.text-field {
+	&__input::placeholder {
+		color: $dark-color-25;
+	}
+
+	&__input:hover {
+		border: -rem(1px) solid $dark-color-50;
+	}
+
+	&__input:focus {
+		@include focus
+	}
+
+	&__input:focus::placeholder {
+		color: $dark-color-75;
 	}
 }

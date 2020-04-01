@@ -24,17 +24,16 @@
 	&__text {
 		position: relative;
 		display: block;
-		margin-top: -rem(-16px);
+		margin-top: -(-rem(16px));
 		padding-left: -rem(22px);
 		@include fontSize($size: 10px);
 		line-height: -lineHeight($f-size: 10px, $l-height: 12px);
 		color: $dark-color-25;
-		// transition-duration: .1s;
 		user-select: none;
 	}
 }
 
-// States
+// ==States==
 
 .like {
 	&__input:checked+.like__box {

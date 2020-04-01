@@ -19,19 +19,6 @@
     }
 }
 
-.rating__star:focus {
-    outline: none;
-}
-
-.rating__star:hover,
-.rating__star:checked {
-    background-image: url(../assets/img/button/star__full.svg);
-}
-
-.rating__star:hover~.rating__star {
-    background-image: url(../assets/img/button/star.svg);
-}
-
 .rating__star:nth-of-type(1) {
     z-index: 5;
     width: 20px;
@@ -55,4 +42,20 @@
 .rating__star:nth-of-type(5) {
     z-index: 1;
     width: 100px;
+}
+
+// ==States==
+
+
+.rating__star:focus {
+    outline: none;
+}
+
+.rating__star:hover,
+.rating__star:checked {
+    background-image: url(../assets/img/button/star__full.svg);
+}
+
+.rating__star:hover~.rating__star {
+    background-image: url(../assets/img/button/star.svg);
 }

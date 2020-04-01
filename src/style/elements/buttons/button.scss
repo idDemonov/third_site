@@ -9,10 +9,6 @@
 	&--filled-color {
 		width: 102px;
 		color: rgb(255, 255, 255);
-
-		&:active {
-			background: $gradient-color-click;
-		}
 	}
 
 	&--white {
@@ -23,7 +19,43 @@
 		background: rgb(255, 255, 255);
 		border: solid 0px transparent;
 		border-radius: 22px;
+	}
 
+	&--text {
+		padding: 0;
+		height: 15px;
+		border-radius: 1px;
+		background: rgb(255, 255, 255);
+		color: $purple-color;
+	}
+
+	&--elongated {
+		max-width: 320px;
+		width: 100%;
+		color: rgb(255, 255, 255);
+		position: relative;
+	}
+
+	&--click {
+		background: $gradient-color-click;
+
+		&--text {
+			color: $dark-color-50;
+		}
+	}
+}
+
+
+// ==States==
+
+.button {
+	&--filled-color {
+		&:active {
+			background: $gradient-color-click;
+		}
+	}
+
+	&--white {
 		&:before {
 			width: 106px;
 			height: 48px;
@@ -45,12 +77,6 @@
 	}
 
 	&--text {
-		padding: 0;
-		height: 15px;
-		border-radius: 1px;
-		background: rgb(255, 255, 255);
-		color: $purple-color;
-
 		&:focus {
 			box-shadow: none;
 			border-bottom: -rem(2px) solid $focus-color;
@@ -62,10 +88,6 @@
 	}
 
 	&--elongated {
-		max-width: 320px;
-		width: 100%;
-		color: rgb(255, 255, 255);
-		position: relative;
 
 		&:active {
 			background: $gradient-color-click;
@@ -88,14 +110,9 @@
 	}
 
 	&--click {
-		background: $gradient-color-click;
-
 		&--gradient:before {
 			background: $gradient-color-click;
 		}
 
-		&--text {
-			color: $dark-color-50;
-		}
 	}
 }
