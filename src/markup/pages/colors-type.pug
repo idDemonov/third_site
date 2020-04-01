@@ -11,11 +11,7 @@ mixin titleItem(title, text, modClass)
 		p(class='type__text type__text--' + modClass)= text
 doctype html
 html(lang='ru')
-	head
-		title Colors and Type
-		meta(http-equiv='Content-type', content='text/html;charset=UTF-8')
-		meta(name='format-detection', content='telephone=no')
-		meta(name='viewport', content='width=device-width, initial-scale=1')
+	include ../modules/head
 	body.wrapper-UI.wrapper-UI--background--write
 		.header-UI
 			img.header-UI__logo(src=require('../../assets/img/logo/logo__grey.svg').default, alt="")
