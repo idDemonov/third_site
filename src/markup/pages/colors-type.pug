@@ -1,3 +1,14 @@
+mixin colorItem(title, hex)
+	li.colors__item
+		.colors__rectangle&attributes(attributes)
+		.color__title= title
+			p.color__hex= hex
+
+mixin titleItem(title, text, modClass)
+	li.type__item
+		div(class='type__icon type__icon--' + modClass)
+			span.type__box= title
+		p(class='type__text type__text--' + modClass)= text
 doctype html
 html(lang='ru')
 	head
@@ -9,13 +20,7 @@ html(lang='ru')
 		.header-UI
 			img.header-UI__logo(src=require('../../assets/img/logo/logo__grey.svg').default, alt="")
 		.container-UI
-			//- .colors__rectangle--dark100
 			.colors
-				mixin colorItem(title, hex)
-					li.colors__item
-						.colors__rectangle&attributes(attributes)
-						.color__title= title
-							p.color__hex= hex
 				ul
 					+colorItem('Dark Shade 100%', '#1F2041')(class='colors__rectangle--dark100')
 					+colorItem('Dark Shade 75%', '#1F2041')(class='colors__rectangle--dark75')
@@ -25,11 +30,6 @@ html(lang='ru')
 					+colorItem('Purple', '#BC9CFF')(class='colors__rectangle--purple')
 					+colorItem('Green', '#6FCF97')(class='colors__rectangle--green')
 			.type
-				mixin titleItem(title, text, modClass)
-					li.type__item
-						div(class='type__icon type__icon--' + modClass)
-							span.type__box= title
-						p(class='type__text type__text--' + modClass)= text
 				ul.type__list
 					+titleItem('H1', 'This one is the sub-section or widget title', 'h1')
 					+titleItem('H2', 'Next one is the item title inside widgets', 'h2')
