@@ -60,52 +60,82 @@
 	}
 }
 
-.component {
-	display: flex;
-	justify-content: space-between;
-	@extend .font-h3;
 
-	&__title {
-		padding-bottom: -rem(5px);
+
+.like-group {
+	&__list {
+		max-width: 90px;
+		padding-top: -rem(11px);
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.radio-group {
+	&__list {
+		max-width: 220px;
+		display: flex;
+		justify-content: space-between;
 	}
 
-	&__subtitle {
-		font-weight: 400;
-		color: $dark-color-50;
+	//&__item{}
+}
+
+.subscription-toggle {
+	width: 260px;
+
+	&__item {
+		padding-top: -rem(10px);
+	}
+}
+
+.rate-group__list {
+	display: flex;
+	justify-content: space-between;
+	padding-top: -rem(11px);
+}
+
+.rating__group {
+	position: relative;
+	display: flex;
+	width: 100px;
+	height: 20px;
+
+	background: {
+		image: url(../assets/img/button/star.svg);
+		size: 20px auto;
+		repeat: repeat-x;
 	}
 
 }
 
-@import '../elements/text-field/text-field';
+.checkbox-buttons {
 
-@import '../elements/buttons/checkbox/checkbox';
-@import '../elements/buttons/checkbox/checkbox--rich';
-@import '../components/checkbox-list.scss';
+	// &__title {}
+	&__item {
+		padding-top: 12px;
+	}
 
-@import '../components/radio-group';
+	// &__list {}
+}
 
-@import '../elements/buttons/toggle';
-@import '..//components/toggle-group';
+.buttons {
+	&__list {
+		padding-top: -rem(10px);
+	}
 
-@import '../elements/buttons/like';
-@import '../components/like-group';
+	&__item {
+		max-width: 320px;
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: -rem(30px);
 
-@import '../elements/buttons/rating';
-@import '../components/rating-group';
+		&--middle {
+			max-width: 220px;
+		}
 
-@import '../components/buttons';
-@import '../elements/buttons/button.scss';
-
-@import '../components/dropdown/dropdown-choose';
-
-@import '../components/dropdown/date/date-dropdown';
-@import '../components/dropdown/date/date-dropdown--selected';
-@import '../components/dropdown/date/filter-date-dropdown';
-
-@import '../components/dropdown/checkbox-drop-list';
-@import '../components/comment';
-@import '../components/pagination';
-@import '../components/slider';
-
-@import '../elements/other/details';
-@import '../elements/other/bullet-list';
+		&--small {
+			max-width: 142px;
+		}
+	}
+}

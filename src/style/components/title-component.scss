@@ -1,0 +1,14 @@
+.component {
+	display: flex;
+	justify-content: space-between;
+	@extend .font-h3;
+
+	&__title {
+		padding-bottom: -rem(5px);
+	}
+
+	&__subtitle {
+		font-weight: 400;
+		color: $dark-color-50;
+	}
+}

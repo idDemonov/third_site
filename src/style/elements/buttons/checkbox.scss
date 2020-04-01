@@ -1,4 +1,8 @@
 .checkbox {
+	&--rich {
+		max-width: 300px;
+	}
+
 	min-width: 260px;
 	@include font-body($l-height: 18px);
 	color: $dark-color-50;
@@ -8,6 +12,7 @@
 	cursor: pointer;
 	display: flex;
 	flex-wrap: wrap;
+	min-width: 205px;
 
 	&__input {
 		appearance: none;
@@ -24,6 +29,16 @@
 	&__text {
 		align-self: center;
 		max-width: 230px;
+	}
+
+	&__text {
+		@include font-body($f-size: 12px, $l-height: 14px);
+		color: $dark-color-50;
+	}
+
+	&__title {
+		@include font-body($f-size: 14px, $weight: 700, $l-height: 18px);
+		padding-bottom: -rem(5px);
 	}
 }
 

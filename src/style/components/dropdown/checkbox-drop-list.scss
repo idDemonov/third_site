@@ -28,11 +28,9 @@
 	&__icon {
 		display: inline-block;
 		padding: 18px 16px;
-		// transition-duration: .5s;
 	}
 
 	&__icon--activ {
-		// transition-duration: .5s;
 		transform: rotateX(180deg);
 	}
 }

@@ -1,32 +1,14 @@
-@import "base/fonts";
+@import 'base/fonts';
 @import 'base/variables';
 @import 'base/mixins';
 @import 'base/reset';
 @import 'base/expansion';
 
-
-
-
-
-@import 'vendors/nouislider.css';
-@import 'vendors/calendar.scss';
-
-@import 'form/forms';
-
-
-@import 'modules/grid';
-@import 'modules/header';
-@import 'modules/footer';
-
-
-
-@import 'pages/home';
-@import 'pages/colors-type';
-@import 'pages/header-footer';
-@import 'pages/cards';
-@import 'pages/form-elements';
-
-
+@import 'components/component-import';
+@import 'elements/element-import';
+@import 'modules/modules-import';
+@import 'pages/page-import.scss';
+@import 'vendors/vendor-import';
 
 @import 'base/media';
 @import 'base/validation';

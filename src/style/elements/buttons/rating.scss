@@ -1,36 +1,22 @@
 .rating {
     padding: 0;
     border: none;
-}
 
-.rating__group {
-    position: relative;
-    display: flex;
-    width: 100px;
-    height: 20px;
+    &__star {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        height: 20px;
+        font-size: inherit;
+        appearance: none;
 
-    background: {
-        image: url(../assets/img/button/star.svg);
-        size: 20px auto;
-        repeat: repeat-x;
+        background: {
+            size: 20px auto;
+            repeat: repeat-x;
+        }
+
     }
-
-}
-
-.rating__star {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 0;
-    height: 20px;
-    font-size: inherit;
-    appearance: none;
-
-    background: {
-        size: 20px auto;
-        repeat: repeat-x;
-    }
-
 }
 
 .rating__star:focus {
@@ -43,7 +29,6 @@
 }
 
 .rating__star:hover~.rating__star {
-    // transition: 0.3s;
     background-image: url(../assets/img/button/star.svg);
 }
 
