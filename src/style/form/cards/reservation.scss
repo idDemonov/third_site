@@ -58,7 +58,6 @@
 	&__sum {
 		@include font-body($f-size: 14px, $weight: 400, $l-height: 18px);
 		color: $dark-color-50;
-
 		font-weight: 700;
 
 		&:after {
@@ -73,7 +72,7 @@
 		padding-top: -rem(20px);
 	}
 
-	&__list {}
+	// &__list {}
 }
 
 .sum-total-reservation {
@@ -97,7 +96,7 @@
 		}
 	}
 
-	&__sum {}
+	// &__sum {}
 }
 
 

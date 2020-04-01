@@ -960,6 +960,7 @@
       this.picker.setPrevBtnDisabled(this.first <= this.minDate);
       this.picker.setNextBtnDisabled(this.last >= this.maxDate);
 
+
       if (this.calendarWeeks) {
         // start of the UTC week (Monday) of the 1st of the month
         const startOfWeek = dayOfTheWeekOf(this.first, 1, 1);
@@ -1018,6 +1019,17 @@
           this.performBeforeHook(el, current, current);
         }
       });
+
+      // const exsam = this.picker.element;
+
+      // const nextDay = [...exsam.querySelectorAll('.next')]
+      // if (nextDay.length >= 7) {
+      //   nextDay.reverse();
+      //   for (let i = 0; i < 7; i++) {
+      //     nextDay[i].style.display = 'none';
+      //   }
+      // }
+
     }
 
     // Update the view UI by applying the changes of selected and focused items

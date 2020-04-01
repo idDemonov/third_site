@@ -6,7 +6,7 @@ html(lang='ru')
 		meta(name='format-detection', content='telephone=no')
 		meta(name='viewport', content='width=device-width, initial-scale=1')
 	body.wrapper-UI
-		.header-UI
+		header.header-UI
 			.header-UI__logo
 				img(src=require('../../assets/img/logo/logo__grey.svg').default, alt="")
 		include ../form/cards/search
@@ -50,7 +50,11 @@ html(lang='ru')
 						+login()
 				ul.cards__list
 					li.cards__item
-						+register()
+						.cards__calendar
+							.one()
+								input(type="text" name="start", placeholder='ДД.ММ.ГГГГ', value='19.04.2020',)
+							.two()
+								input(type="text" name="end", placeholder='ДД.ММ.ГГГГ', value='23.04.2020')
 					li.cards__item
 						+register()
 					li.cards__item
