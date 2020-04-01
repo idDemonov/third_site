@@ -22,7 +22,7 @@
 		margin-right: -rem(10px);
 		width: 20px;
 		height: 20px;
-		border: 1px solid $dark-color-25;
+		border: -rem(1px) solid $dark-color-25;
 		border-radius: -rem(4px);
 	}
 
@@ -53,15 +53,15 @@
 			position-y: 40%;
 		}
 
-		border: 1px solid #BC9CFF;
+		border: -rem(1px) solid #BC9CFF;
 	}
 
 	&__input:disabled+.check__box {
-		border: 1px solid $dark-color-50;
+		border: -rem(1px) solid $dark-color-50;
 	}
 
 	&__input:checked:disabled+.check__box {
-		border: 1px solid $dark-color-50;
+		border: -rem(1px) solid $dark-color-50;
 	}
 
 	&__input:focus+.check__box {

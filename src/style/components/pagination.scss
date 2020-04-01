@@ -29,8 +29,7 @@
 			border-radius: 50%;
 			position: relative;
 			background: $gradient-color-pagination;
-			// transition-duration: .1s;
-			margin: 1px;
+			margin: -rem(1px);
 
 			&:active {
 				background: $gradient-color-pagination-click;
@@ -56,12 +55,10 @@
 
 
 		&--active {
-			// display: block;
 			border-radius: 50%;
 			background: $gradient-color;
 			color: rgb(255, 255, 255);
 			font-weight: 700;
-			// transition-duration: .1s;
 
 			&:active {
 				background: $gradient-color-click;
@@ -74,7 +71,7 @@
 			position: relative;
 			background: $gradient-color-pagination;
 			transition-duration: .1s;
-			margin: 1px;
+			margin: -rem(1px);
 
 			&:active {
 				background: $gradient-color-pagination-click;

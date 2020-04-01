@@ -27,13 +27,13 @@
 }
 
 .text-field--login {
-	margin: 10px 0;
+	margin: -rem(10px) 0;
 }
 
 .login-data {
 
 	// &__list{}
 	&__item {
-		padding-top: 20px;
+		padding-top: -rem(20px);
 	}
 }

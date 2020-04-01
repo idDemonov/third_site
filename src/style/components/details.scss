@@ -1,19 +1,23 @@
 .details {
-    max-width: 280px;
-    display: flex;
-	border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+	max-width: 280px;
+	display: flex;
+	border-bottom: -rem(1px) solid rgba(31, 32, 65, 0.1);
+
 	&__logo {
-        width: 40px;
-        height: 40px;
-        padding: 4px 4px;
-        margin-right: 10px;
-        margin-bottom: 20px;
+		width: 40px;
+		height: 40px;
+		padding: -rem(4px) -rem(4px);
+		margin-right: -rem(10px);
+		margin-bottom: -rem(20px);
 	}
+
 	&__text {
-        @extend .font-body;
+		@extend .font-body;
 	}
+
 	&__title {
 		font-weight: 700;
 	}
+
 	// &__subtitle {}
 }

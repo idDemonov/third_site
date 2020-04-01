@@ -1,33 +1,6 @@
-.date-dropdown {
-	max-width: 150px;
-
-	&--filter {
-		position: relative;
-		max-width: 266px;
-	}
-
-	&__text {
-		display: flex;
-		justify-content: space-between;
-		padding-bottom: -rem(5px);
-		font-size: 12px;
-		line-height: 15px;
-		text-transform: uppercase;
-	}
-
-	&__title {
-		font-weight: bold;
-		color: $dark-color-100;
-	}
-
-	&__type {
-		color: $dark-color-50;
-		margin-top: -rem(-3px);
-	}
-
-	&__form {
-		position: relative;
-	}
+.date-filter {
+	max-width: 266px;
+	position: relative;
 
 	&__input {
 		border: -rem(1px) solid $dark-color-25;
@@ -47,7 +20,7 @@
 	}
 
 	&__input:focus {
-		@include focus
+		@include focus;
 	}
 
 	&__input:focus::placeholder {
