@@ -8,10 +8,10 @@ mixin register(title='Регистрация аккаунта')
 					+text-field-basic('text', 'Фамилия', 'last-name', false, '', '', 'text-field--register')
 					+radio()
 				li.register-data__item
-					+component('Дата Рождения')
+					+title-component('Дата Рождения')
 					+text-field-basic('text', 'ДД.ММ.ГГГГ', 'date-birth', true, 'Пожалуйста, используйте формат ДД.ММ.ГГГГ', '', '')
 				li.register-data__item
-					+component('данные для входа в сервис')
+					+title-component('данные для входа в сервис')
 					+text-field-basic('email', 'Email', 'email', false, '', '', '')
 					+text-field-basic('password', 'Пароль', 'password', false, '', '', 'text-field--register')
 					+toggle('Получать спецпредложения', false)

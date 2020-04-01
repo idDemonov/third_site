@@ -1,0 +1,19 @@
+//- include ../../elements/buttons/checkbox/checkbox.pug
+mixin checkbox-list(typeCheck='default')
+	.checkbox-buttons
+		ul.checkbox-buttons__list
+			case typeCheck
+				when 'default'
+					li.checkbox-buttons__item
+						+checkbox('Можно курить', false)
+					li.checkbox-buttons__item
+						+checkbox('Можно с питомцами', true)
+					li.checkbox-buttons__item
+						+checkbox('Можно пригласить гостей (до&nbsp;10&nbsp;человек)', true)
+				when 'rich'
+					li.checkbox-buttons__item
+						+checkboxRich('Широкий коридор', 'Ширина коридоров в&nbsp;номере не&nbsp;менее 91&nbsp;см.', 'corridor',  false, false)
+					li.checkbox-buttons__item
+						+checkboxRich('Помощник для инвалидов', 'На&nbsp;1 этаже вас встретит специалист и&nbsp;проводит до&nbsp;номера.', 'assistant', false, false)
+				default
+					p Не выбран вид checkbox, у checkbox-list

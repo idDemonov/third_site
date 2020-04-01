@@ -13,82 +13,98 @@ html(lang='ru')
 				.row
 					form.column
 						//- Mixins
-						include ../elements/component
-						include ../elements/other/details.pug
+						include ../elements/element-list
+						include ../components/component-list
 
-						include ../elements/text-field/basic
-						include ../elements/text-field/email
-
-						include ../elements/buttons/button/button--elongated
-						include ../elements/buttons/button/button--filled-color
-						include ../elements/buttons/button/button--white
-						include ../elements/buttons/button/button--text
-						include ../elements/buttons/checkbox/checkbox-drop-list
-
-						include ../components/dropdown/dropdown-choose
-						include ../components/pagination
-						include ../components/dropdown/date/filter-date-dropdown
-						include ../components/dropdown/date/date-dropdown
-						include ../components/dropdown/date/date-dropdown--selected
-						include ../components/slider
-						include ../components/comment
 						ul.elements
 							li.elements__item
-								+component('Text Field', 'Default')
+								+title-component('Text Field', 'Default')
 								+text-field-basic('Email', 'Email', 'email')
 							li.elements__item
-								+component('Text Field', 'Hover / Focus')
+								+title-component('Text Field', 'Hover / Focus')
 								+text-field-basic('text', 'Просто текст', 'text', false, '', 'This is pretty awesome', 'text-field__input--active')
 							li.elements__item
-								+component('Dropdown', 'Default')
+								+title-component('Dropdown', 'Default')
 								+dropdownChoose('guests', ['Сколько гостей', 0, 0, 0], false)
 							li.elements__item
-								+component('masked text field', 'Default')
+								+title-component('masked text field', 'Default')
 								+text-field-basic('text', 'ДД.ММ.ГГГГ', 'date', true, 'Пожалуйста, используйте формат ДД.ММ.ГГГГ', '', '')
-
 							li.elements__item.elements__item--row
 								+calendar()
 							li.elements__item
-								+component('filter date dropdown')
+								+title-component('filter date dropdown')
 								+date-filter()
 							li.elements__item
-								+component('subscription text field')
+								+title-component('subscription text field')
 								+text-field-subscribe()
 					.column.column--middle
 						ul.elements
 							li.elements__item.elements__item--middle
-								include ../components/checkbox/checkbox-list
+								+title-component('Checkbox Buttons')
+								+checkbox-list()
 							li.elements__item.elements__item--middle
-								include ../components/radio-group
+								+title-component('Radio Buttons')
+								+radio('Мужчина', 'Женщина')
 							li.elements__item.elements__item--middle
-								include ../components/toggle-group
+								+title-component('Toggle')
+								.subscription-toggle
+									ul.subscription-toggle__list
+										li.subscription-toggle__item
+											+toggle('Получать спецпредложения', true)
+										li.subscription-toggle__item
+											+toggle('Получать спецпредложения', false)
 							li.elements__item.elements__item--middle
-								include ../components/like-group
+								+title-component('like Buttons')
+								.like-group
+									ul.like-group__list
+										li.like-group__item
+											+like(2, false)
+										li.like-group__item
+											+like(12, true)
 							li.elements__item.elements__item--middle
-								include ../components/rating-group
+								+title-component('rate button')
+								.rate-group
+									ul.rate-group__list
+										li.rate-group__item
+											+rating('first', 4)
+										li.rate-group__item
+											+rating('second', 5)
 					.column
 						ul.elements
 							li.elements__item.elements__item--middle
 								+slider
 							li.elements__item
-								include ../components/buttons
+								+title-component('Buttons')
+								.buttons
+									ul.buttons__list
+										li.buttons__item.buttons__item--middle
+											+button-filled-color()
+											+button-filled-color('CLICK ME', 'button--click')
+										li.buttons__item.buttons__item--middle
+											+button-white()
+											+button-white('CLICK ME', 'button--click--gradient')
+										li.buttons__item.buttons__item--small
+											+button-text()
+											+button-text('CLICK ME', 'button--click--text')
+										li.buttons__item
+										+button-elongated()
 							li.elements__item
-								+component('pagination')
+								+title-component('pagination')
 								+pagination
 							li.elements__item
 				.row
 					.column
 						ul.elements
 							li.elements__item
-								+component('dropdown', 'Default', 'max-width: 266px')
+								+title-component('dropdown', 'Default', 'max-width: 266px')
 								+dropdownChoose('rooms', ['2 спальни, 2 кровати, без ванных комнат', 2, 2, 0], false)
 							li.elements__item
-								+component('dropdown', 'Default', 'max-width: 266px')
+								+title-component('dropdown', 'Default', 'max-width: 266px')
 								+dropdownChoose('rooms', ['2 спальни, 2 кровати, без ванных комнат', 2, 2, 0], true)
 							li.elements__item
-								+checkbox-list(false)
+								+checkbox-drop-list(false)
 							li.elements__item
-								+checkbox-list(true)
+								+checkbox-drop-list(true)
 							li.elements__item
 								+details('Комфорт', 'Шумопоглощающие стены', 'comfort.svg')
 							li.elements__item
@@ -101,17 +117,20 @@ html(lang='ru')
 							.column
 								ul.elements
 									li.elements__item
-										+component('Dropdown')
+										+title-component('Dropdown')
 										+dropdownChoose('guests', ['Сколько гостей', 0, 0, 0], true)
 									li.elements__item.elements__item--paddTop
-										include ../components/checkbox/checkbox-list--rich
+										+title-component('Rich Checkbox Buttons')
+										+checkbox-list('rich')
+
 							.column
 								ul.elements
 									li.elements__item
-										+component('Dropdown')
+										+title-component('Dropdown')
 										+dropdownChoose('guests', ['3 Гостя', 2, 1, 0], true)
 									li.elements__item.elements__item--paddTop
-										include ../components/bullet-list
+										+title-component('bullet list')
+										+bullet([{text: 'Нельзя с питомцами'}, {text: 'Без вечеринок и мероприятий'},{text: 'Время прибытия — после 13:00, а выезд до 12:00'}])
 						.row.row--bottom
 							.elements__item
 								+comment

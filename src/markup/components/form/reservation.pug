@@ -8,7 +8,7 @@ mixin reservation()
 				li.reservation-data__item
 					+calendar('Прибытие', 'Выезд', '19.08.2019', '23.08.2019')
 				li.reservation-data__item
-					+component('Гости')
+					+title-component('Гости')
 					+dropdownChoose('guests', ['3 гостя', 2, 1, 0], false)
 		.reservation-data-price
 			dl(data-price='day').reservation-data-price__item

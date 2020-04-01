@@ -1,5 +1,8 @@
-include ../elements/other/bullet-list.pug
-+component('bullet list')
-+bullet([{text: 'Нельзя с питомцами'}, 
-         {text: 'Без вечеринок и мероприятий'}, 
-         {text: 'Время прибытия — после 13:00, а выезд до 12:00'}])
+mixin bullet(list)
+	.bullet
+		ul.bullet__list
+			each item in list
+				li.bullet__item
+					span.bullet__box
+					span.bullet__text= item.text
+						

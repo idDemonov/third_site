@@ -6,7 +6,7 @@ mixin search(text='Найдём номера под ваши пожелания'
 				li.search-data__item
 					+calendar('Прибытие', 'Выезд')
 				li.search-data__item
-					+component('Гости')
+					+title-component('Гости')
 					+dropdownChoose('guests', ['Сколько гостей', 0, 0, 0], false)
 				li.search-data__item.search-data__item--additional-padding
 					+button-elongated('Подобрать номер')
