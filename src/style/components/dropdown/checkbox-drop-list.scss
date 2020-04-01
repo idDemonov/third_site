@@ -12,11 +12,11 @@
 	}
 
 	&__button:focus {
-		border-radius: -rem(5px);
+		border-radius: 5px;
 	}
 
 	&__button:hover {
-		border-radius: -rem(5px);
+		border-radius: 5px;
 		background-color: rgba(245, 245, 245, 0.39);
 	}
 

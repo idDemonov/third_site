@@ -17,7 +17,7 @@
 		width: 40px;
 		height: 20px;
 		border: 1px solid $dark-color-25;
-		border-radius: -rem(10px);
+		border-radius: 10px;
 
 		background: {
 			image: url(../assets/img/button/radio.svg);
@@ -45,7 +45,7 @@
 
 		border: solid 0px transparent;
 		background-color: white;
-		border-radius: -rem(16px);
+		border-radius: 16px;
 
 		&:before {
 			width: 42px;
