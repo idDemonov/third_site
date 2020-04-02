@@ -6,10 +6,35 @@ import { nouislider } from "./vendors/nouislider";
 
 
 
-
 //                    ================ Валидация форм ================
 import Bouncer from "./vendors/bouncer";
 var validate = new Bouncer("form");
+
+
+
+
+
+//                    ================ Слайдер, для прокрутки картинок ================
+import { tns } from "./vendors/tiny-slider";
+
+const sliders = document.querySelectorAll('.my-slider')
+if (sliders) {
+  sliders.forEach((slider) => {
+    tns({
+      container: slider,
+      items: 1,
+      controls: true,
+      controlsPosition: 'bottom',
+      slideBy: 'page',
+      "mouseDrag": true,
+      navAsThumbnails: true,
+      autoplay: false,
+      "speed": 400,
+      controlsText: ['', '']
+    });
+  })
+}
+
 
 
 
