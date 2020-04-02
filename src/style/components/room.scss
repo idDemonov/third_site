@@ -1,0 +1,38 @@
+.card-room {
+	background: rgb(255, 255, 255);
+	// &__slider {}
+
+	// &__details {}
+
+}
+
+.room-details {
+	max-width: 234px;
+	margin: 0 auto;
+
+	&__property {
+		border-top: 1px solid rgba(31, 32, 65, 0.1);
+		padding: -rem(10px) 0 -rem(20px) 0;
+		display: flex;
+		justify-content: space-between;
+	}
+
+
+
+	// &__rating {}
+
+	&__title {
+		padding: -rem(20px) 0 -rem(10px) 0;
+	}
+
+	&__review {
+		@include font-body($f-size: 14px, $weight: 400, $l-height: 18px);
+		color: $dark-color-50;
+		font-weight: 700;
+
+		&:after {
+			content: ' в сутки';
+			font-weight: 400;
+		}
+	}
+}

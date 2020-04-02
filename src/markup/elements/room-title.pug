@@ -1,0 +1,5 @@
+mixin room-title(numRoom='888', suite= true, price='9 990')
+	- const addClass = suite ? 'room-title__number--suite' : '';
+	h3.room-title
+		div(class=['room-title__number', addClass])= numRoom
+		.room-title__price= price + '₽'

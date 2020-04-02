@@ -1,21 +1,18 @@
-mixin room(addClass='numbers-room__type--suite', one='one', two='two', three='three', four='four')
+mixin room(numRoom= '888', price= '9 990', urlImg= ['one', 'two', 'three', 'four'], rating= 5, numReview= 145, suite= true)
 	.card-room
-		ul.my-slider
+		ul.card-room__slider.room-slider
 			li.slide
-				img(src= require('../../assets/img/rooms/'+ one +'.png').default, alt="")
+				img(src= require('../../assets/img/rooms/'+ urlImg[0] +'.png').default, alt="")
 			li.slide
-				img(src= require('../../assets/img/rooms/' + two + '.png').default, alt="")
+				img(src= require('../../assets/img/rooms/' + urlImg[1] + '.png').default, alt="")
 			li.slide
-				img(src= require('../../assets/img/rooms/' + three + '.png').default, alt="")
+				img(src= require('../../assets/img/rooms/' + urlImg[2] + '.png').default, alt="")
 			li.slide
-				img(src= require('../../assets/img/rooms/' + four + '.png').default, alt="")
-		.room-details
-			.room-details__room-number
-				.numbers-room
-					div(class=['numbers-room__type', addClass ]) 888
-					.numbers-room__price 9 990₽
+				img(src= require('../../assets/img/rooms/' + urlImg[3] + '.png').default, alt="")
+		.card-room__details.room-details
+			.room-details__title
+				+room-title(numRoom, suite, price)
 			.room-details__property
-				.room-property
-					.room-property__rating
-						+rating('first', 4)
-					.room-property__review 145
+					.room-details__rating
+						+rating(numRoom, rating)
+					.room-details__review= numReview

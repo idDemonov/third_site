@@ -17,7 +17,7 @@ var validate = new Bouncer("form");
 //                    ================ Слайдер, для прокрутки картинок ================
 import { tns } from "./vendors/tiny-slider";
 
-const sliders = document.querySelectorAll('.my-slider')
+const sliders = document.querySelectorAll('.room-slider')
 if (sliders) {
   sliders.forEach((slider) => {
     tns({
