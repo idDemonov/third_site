@@ -1,8 +1,9 @@
 mixin reservation()
 	.reservation-card
-		.reservation-card__room.reservation-card-room
-			.reservation-card-room__type 888
-			.reservation-card-room__sum 9 990₽
+		.reservation-card__room
+			.numbers-room
+				.numbers-room__type.numbers-room__type--suite 888
+				.numbers-room__price 9 990₽
 		form#reservation.reservation-card__form.reservation-data(name="reservation" action='#')
 			ul.reservation-data__list
 				li.reservation-data__item

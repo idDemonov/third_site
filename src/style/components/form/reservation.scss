@@ -10,6 +10,8 @@
 
 	&__room {
 		margin-top: -rem(40px);
+		max-width: 320px;
+		width: 100%;
 	}
 
 	&__form {
@@ -34,10 +36,10 @@
 	align-self: flex-start;
 }
 
-.reservation-card-room {
+.numbers-room {
 	display: flex;
 	justify-content: space-between;
-	max-width: 320px;
+	align-items: flex-end;
 	width: 100%;
 
 	&__type {
@@ -48,14 +50,18 @@
 			@include fontSize(14px);
 		}
 
-		&:after {
-			content: ' люкс';
-			@extend .font-h3;
-			color: $purple-color;
+		&--suite {
+			&:after {
+				content: ' люкс';
+				@extend .font-h3;
+				color: $purple-color;
+			}
 		}
+
+
 	}
 
-	&__sum {
+	&__price {
 		@include font-body($f-size: 14px, $weight: 400, $l-height: 18px);
 		color: $dark-color-50;
 		font-weight: 700;
