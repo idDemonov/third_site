@@ -1,0 +1,21 @@
+mixin room(addClass='numbers-room__type--suite', one='one', two='two', three='three', four='four')
+	.card-room
+		ul.my-slider
+			li.slide
+				img(src= require('../../assets/img/rooms/'+ one +'.png').default, alt="")
+			li.slide
+				img(src= require('../../assets/img/rooms/' + two + '.png').default, alt="")
+			li.slide
+				img(src= require('../../assets/img/rooms/' + three + '.png').default, alt="")
+			li.slide
+				img(src= require('../../assets/img/rooms/' + four + '.png').default, alt="")
+		.room-details
+			.room-details__room-number
+				.numbers-room
+					div(class=['numbers-room__type', addClass ]) 888
+					.numbers-room__price 9 990₽
+			.room-details__property
+				.room-property
+					.room-property__rating
+						+rating('first', 4)
+					.room-property__review 145
