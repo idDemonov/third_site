@@ -2141,7 +2141,7 @@
           [inputField, 'mousedown', onMousedown.bind(null, this)],
           [inputField, 'click', onClickInput.bind(null, this)],
           [inputField, 'paste', onPaste.bind(null, this)],
-          [document, 'mousedown', onMousedownDocument],
+          [document, 'click', onMousedownDocument], // было mousedown, изменил из-за .calendar__button
           [document, 'touchstart', onMousedownDocument],
           [window, 'resize', picker.place.bind(picker)]
         ];

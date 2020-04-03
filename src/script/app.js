@@ -57,8 +57,34 @@ if (calendars) {
       nextArrow: "",
       minDate: 12
     });
+    // Кнопки у input
+    prim.element.querySelectorAll(".calendar__button")[0]
+      .addEventListener('click', (e) => {
+        e.stopPropagation()
+        if (prim.datepickers[0].picker.active) {
+          prim.datepickers[0].picker.hide()
+        } else {
+          prim.datepickers[0].picker.show()
+        }
+        if (prim.datepickers[1].picker.active) {
+          prim.datepickers[1].picker.hide()
+        }
+      })
+    prim.element.querySelectorAll(".calendar__button")[1]
+      .addEventListener('click', (e) => {
+        e.stopPropagation()
+        if (prim.datepickers[1].picker.active) {
+          prim.datepickers[1].picker.hide()
+        } else {
+          prim.datepickers[1].picker.show()
+        }
+        if (prim.datepickers[0].picker.active) {
+          prim.datepickers[0].picker.hide()
+        }
+      })
   });
-  [...document.querySelectorAll(".datepicker-dropdown")]
+
+  document.querySelectorAll(".datepicker-dropdown")
     .forEach((calen) => hiddenNextDay(calen))
 }
 
@@ -94,7 +120,7 @@ if (calendarUIPage) {
 }
 
 // По умолчанию календарь показывает на 7 дней больше, даже там где это не надо
-[...document.querySelectorAll('.datepicker-controls')]
+document.querySelectorAll('.datepicker-controls')
   .forEach((control) => {
     control.addEventListener('click', (event) => {
       if (event.target.classList.contains('next-btn')) {
@@ -108,7 +134,7 @@ if (calendarUIPage) {
 
 
 function hiddenNextDay(container) {
-  [...container.querySelectorAll('.day')]
+  container.querySelectorAll('.day')
     .forEach((day) => {
       day.style.display = null;
     })
