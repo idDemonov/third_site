@@ -421,6 +421,27 @@
     &:focus::placeholder {
         color: $dark-color-75;
     }
+
+
+}
+
+.one {
+    position: relative;
+}
+
+.two {
+    position: relative;
+}
+
+.calendar__button {
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    right: 1px;
+    border-radius: 4px;
+    background-image: url(../assets/img/button/dropdown.svg);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .datepicker-footer .datepicker-controls .button-pick.clear-btn {
