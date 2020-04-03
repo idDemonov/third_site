@@ -1,8 +1,15 @@
-mixin rating(name='rating', num=0)
-	.rating
-		.rating__group
-			input.rating__star(type='radio', name=name, value='1', aria-label='Ужасно', checked= (num == 1) ? true : false)
-			input.rating__star(type='radio', name=name, value='2', aria-label='Сносно', checked= (num == 2) ? true : false)
-			input.rating__star(type='radio', name=name, value='3', aria-label='Нормально', checked= (num == 3) ? true : false)
-			input.rating__star(type='radio', name=name, value='4', aria-label='Хорошо', checked= (num == 4) ? true : false)
-			input.rating__star(type='radio', name=name, value='5', aria-label='Отлично', checked= (num == 5) ? true : false)
+mixin rating(name='rating', num=1)
+	.rating-area
+		input.input-rating(id='star-'+name+'-5', type='radio', name= name, value='5', checked= (num == 5) ? true : false)
+		label.label-rating(for='star-'+name+'-5',title='Оценка «5»')
+		input.input-rating(id='star-'+name+'-4', type='radio', name= name, value='4', checked= (num == 4) ? true : false)
+		label.label-rating(for='star-'+name+'-4', title='Оценка «4»')
+		input.input-rating(id='star-'+name+'-3', type='radio', name= name, value='3', checked= (num == 3) ? true : false)
+		label.label-rating(for='star-'+name+'-3',title='Оценка «3»')
+		input.input-rating(id='star-'+name+'-2', type='radio', name= name, value='2', checked= (num == 2) ? true : false)
+		label.label-rating(for='star-'+name+'-2',title='Оценка «2»')
+		input.input-rating(id='star-'+name+'-1', type='radio', name= name, value='1', checked= (num == 1) ? true : false)
+		label.label-rating(for='star-'+name+'-1',title='Оценка «1»')
+
+//-
+	Значение id, назначается при вызове миксина по номеру комнаты.
