@@ -1,17 +1,17 @@
 doctype html
 html(lang='ru')
-	include ../modules/head
+	//- Mixins
+	include ../elements/element-import
+	include ../components/component-import
+	include ../modules/module-import
+	+head()
 	body.wrapper-UI.wrapper-UI--background--write
 		.header-UI
 			.header-UI__logo
-				img(src=require('../../assets/img/logo/logo__grey.svg').default, alt="")
+				+logo('grey')
 			.grid
 				.row
 					form.column
-						//- Mixins
-						include ../elements/element-import
-						include ../components/component-import
-
 						ul.elements
 							li.elements__item
 								+title-component('Text Field', 'Default')

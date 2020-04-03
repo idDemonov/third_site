@@ -1,0 +1,38 @@
+mixin footer-en()
+	section.footer__body.body-footer.container
+		ul.body-footer__list
+			li.body-footer__logo
+				img.body-footer__img(src=require('../../../assets/img/logo/logo.svg').default, alt="#")
+				p.body-footer__text  Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+			li.body-footer__nav
+				h2.body-footer__title Navigation
+				a.body-footer__link(href="") About Us
+				a.body-footer__link(href="") News
+				a.body-footer__link(href="") Support
+				a.body-footer__link(href="") Products
+			li.body-footer__about
+				h2.body-footer__title ABOUT US
+				a.body-footer__link(href="") Who we are
+				a.body-footer__link(href="") Our team
+				a.body-footer__link(href="") Careers
+				a.body-footer__link(href="") Investors
+			li.body-footer__support
+				h2.body-footer__title Support
+				a.body-footer__link(href="") Documentation
+				a.body-footer__link(href="") Community
+				a.body-footer__link(href="") Get in Touch
+			li.body-footer__subscription
+				h2.body-footer__title Subscribe to our newsletter
+				p.body-footer__text Receive our latest news and promotions in your inbox!
+				form.body-footer__form.form-body-footer(action="#")
+					input.form-body-footer__email(type='text' placeholder="Your email address")
+					button.form-body-footer__arrow(type='button')
+						img(src=require('../../../assets/img/button/arrow.svg').default, alt='')
+	.footer__border
+		.container
+			section.footer__copyright.copyright-footer
+				p.copyright-footer__text Copyright © 2018 Toxin UI&nbsp;Kit. All&nbsp;rights&nbsp;reserved.
+				.copyright-footer__socials
+					img(src=require('../../../assets/img/social/twiter.svg').default, alt="")
+					img(src=require('../../../assets/img/social/facebook.svg').default, alt="")
+					img(src=require('../../../assets/img/social/instagram.svg').default, alt="")

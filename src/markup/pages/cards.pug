@@ -1,13 +1,14 @@
 doctype html
 html(lang='ru')
-	include ../modules/head
+	//- Mixins
+	include ../elements/element-import
+	include ../components/component-import
+	include ../modules/module-import
+	+head()
 	body.wrapper-UI
 		header.header-UI
 			.header-UI__logo
-				img(src=require('../../assets/img/logo/logo__grey.svg').default, alt="")
-		//- Mixins
-		include ../elements/element-import
-		include ../components/component-import
+				+logo('grey')
 		.cards
 			.cards__column
 				ul.cards__list

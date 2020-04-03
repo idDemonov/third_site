@@ -1,12 +1,19 @@
 doctype html
 html(lang='ru')
-	include ../modules/head
+	//- Mixins
+	include ../elements/element-import
+	include ../components/component-import
+	include ../modules/module-import
+	+head()
 	body
 		.wrapper
 			header.header.container
-				include ../modules/header/header
+				+header()
 			main.main.main--wrapper-background
-				div.main__body.body-main.container
-					include ../modules/main
+				div.main__body.body-main
+					.body-main__form
+						+search()
+					p.body-main__epigraph.epigraph-main
+						em.epigraph-main__text Лучшие номера для вашей работы, отдыха и просто вдохновения
 			footer.footer
-				include ../modules/footer/footer
+				+footer()

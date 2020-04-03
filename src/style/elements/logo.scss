@@ -1,0 +1,14 @@
+.logo {
+	display: flex;
+
+	&--grey {
+		display: block;
+	}
+
+	&__icon {}
+
+	&__text {
+		align-self: center;
+		margin-left: -rem(12px);
+	}
+}

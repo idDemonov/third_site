@@ -1,0 +1,21 @@
+mixin header-log()
+	.header__body.body-header.container
+		.body-header__logo.logo
+			a(href='index.html')
+				img(src=require('../../../assets/img/logo/logo.svg').default, alt='Логотип')
+		nav.body-header__menu.menu-header
+			ul.menu-header__list
+				li.menu-header__item
+					a.menu-header__link(href='colors-type.html') About Us
+				li.menu-header__item
+					a.menu-header__link.link-menu-header(href='#') Services
+						img.link-menu-header__icon(src=require('../../../assets/img/button/dropdown.svg').default, alt='#')
+				li.menu-header__item
+					a.menu-header__link(href='header-footer.html') Careers
+				li.menu-header__item
+					a.menu-header__link(href='#') News
+				li.menu-header__item
+					a.menu-header__link.link-menu-header(href='#') Documentation
+						img.link-menu-header__icon(src=require('../../../assets/img/button/dropdown.svg').default, alt='#')
+				li.menu-header__item.menu-header__account
+					a.menu-header__link(href='#') Cosmin Negoita
