@@ -4,13 +4,39 @@
 		background-color: white;
 
 	}
+
+	&__list {
+		margin-top: 70px;
+		margin-bottom: 130px;
+	}
 }
 
-.footer-creative {
+.footer-simple {
+	padding-top: -rem(100px);
+	padding-bottom: -rem(100px);
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	@extend .font-body;
+	color: $dark-color-75;
 
-	&__text {}
+	&__text {
+		max-width: 520px;
+		margin-top: -rem(20px);
 
-	&__socials {}
+	}
 
-	&__logo {}
+	&__socials {
+		align-self: center;
+		width: 100%;
+		max-width: 100px;
+		margin-top: -rem(25px);
+	}
+
+	&__logo {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-self: center;
+	}
 }
