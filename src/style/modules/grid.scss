@@ -4,47 +4,58 @@
   width: 100%;
   overflow: hidden;
   margin: 0 auto;
-  // background: #F4F4F6;
+  background: #F4F4F6;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap
 }
 
 .container {
   width: 100%;
-  max-width: 1172px;
-  margin: 0 auto;
-  padding: 0.938rem 0.375rem;
-}
-
-
-
-// UI
-
-.wrapper-UI {
-  // врапер основной, для теста
-  width: 100%;
-  margin: 0 auto;
-  background: #F4F4F6;
-
-  &--background--write {
-    background: #FFFFFF;
-  }
-}
-
-.header-UI {
-  max-width: 1440px;
-  margin: 0 auto;
-
-  &__logo {
-    padding: 1.875rem 1.875rem 2.000rem;
-  }
-}
-
-.container-UI {
-  width: 100%;
   max-width: 1180px;
-  margin: 0 auto;
-  padding: 1.063rem 0.625rem;
-  padding-top: 33px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  height: 100%;
+
+  margin-right: auto;
+  margin-left: auto;
+
+  padding-right: 10px;
+  padding-left: 10px;
 }
+
+
+
+// // UI
+
+// .wrapper-UI {
+//   // врапер основной, для теста
+//   width: 100%;
+//   margin: 0 auto;
+//   background: #F4F4F6;
+
+//   &--background--write {
+//     background: #FFFFFF;
+//   }
+// }
+
+// .header-UI {
+//   max-width: 1440px;
+//   margin: 0 auto;
+
+//   &__logo {
+//     padding: 1.875rem 1.875rem 2.000rem;
+//   }
+// }
+
+// .container-UI {
+//   width: 100%;
+//   max-width: 1180px;
+//   margin: 0 auto;
+//   padding: 1.063rem 0.625rem;
+//   padding-top: 33px;
+//   display: flex;
+//   justify-content: space-between;
+//   flex-wrap: wrap;
+// }

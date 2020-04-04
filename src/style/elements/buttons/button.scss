@@ -12,12 +12,10 @@
 	}
 
 	&--white {
-		width: 102px;
+		width: 100px;
 		margin: -rem(2px);
 		position: relative;
 		color: $purple-color;
-		background: rgb(255, 255, 255);
-		border: solid 0px transparent;
 		border-radius: 22px;
 	}
 
@@ -56,23 +54,46 @@
 	}
 
 	&--white {
+		z-index: 500;
+
 		&:before {
-			width: 106px;
-			height: 48px;
+			width: 100px;
+			height: 46px;
 			content: '';
 			position: absolute;
-			top: -2px;
+			top: 0px;
 			right: 0;
 			bottom: 0;
-			left: -2px;
-			z-index: -1;
+			left: 0px;
+			z-index: -2;
 			border-radius: 23px;
 			background: $gradient-color;
 
 		}
 
+		&:after {
+			width: 96px;
+			height: 42px;
+			content: '';
+			position: absolute;
+			top: 2px;
+			bottom: 0;
+			right: 0;
+			left: 2px;
+			z-index: -1;
+			border-radius: 23px;
+			background: rgb(255, 255, 255);
+
+		}
+
 		&:active:before {
-			background: $gradient-color-click;
+			// background: $gradient-color-click;
+			// Не знаю почему, но это работает лучше
+			background: rgb(255, 255, 255);
+		}
+
+		&:focus:before {
+			@include focus();
 		}
 	}
 

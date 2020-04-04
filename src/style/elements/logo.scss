@@ -1,11 +1,19 @@
 .logo {
+	align-self: center;
 	display: flex;
 
 	&--grey {
 		display: block;
+		padding-top: 30px;
+		margin: 0 auto;
+		max-width: 96.3vw;
+
+		@media (max-width: 1212px) {
+			max-width: 98vw;
+		}
 	}
 
-	&__icon {}
+	// &__icon {}
 
 	&__text {
 		align-self: center;

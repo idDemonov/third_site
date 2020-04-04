@@ -1,0 +1,46 @@
+.header {
+	background-color: rgb(255, 255, 255);
+	height: 70px;
+	@extend .font-body;
+	color: rgba(31, 32, 65, 0.5);
+
+	&__navigation {
+		align-self: center;
+	}
+}
+
+.navigation-header {
+
+	&__list {
+		display: flex;
+
+	}
+
+	&__item {
+		padding-left: 25px;
+		align-self: center;
+
+		&--user {
+			position: relative;
+
+			&:before {
+				content: '';
+				position: absolute;
+				width: 1px;
+				height: 30px;
+				background: rgba(31, 32, 65, 0.1);
+				left: 12px;
+				top: 0;
+				right: 0;
+				bottom: 5px;
+			}
+		}
+	}
+
+	&__link {
+		&--active {
+			font-weight: 700;
+			color: rgba(31, 32, 65, 0.75);
+		}
+	}
+}

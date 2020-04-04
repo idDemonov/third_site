@@ -1,21 +1,19 @@
 mixin header-log()
-	.header__body.body-header.container
-		.body-header__logo.logo
-			a(href='index.html')
-				img(src=require('../../../assets/img/logo/logo.svg').default, alt='Логотип')
-		nav.body-header__menu.menu-header
-			ul.menu-header__list
-				li.menu-header__item
-					a.menu-header__link(href='colors-type.html') About Us
-				li.menu-header__item
-					a.menu-header__link.link-menu-header(href='#') Services
-						img.link-menu-header__icon(src=require('../../../assets/img/button/dropdown.svg').default, alt='#')
-				li.menu-header__item
-					a.menu-header__link(href='header-footer.html') Careers
-				li.menu-header__item
-					a.menu-header__link(href='#') News
-				li.menu-header__item
-					a.menu-header__link.link-menu-header(href='#') Documentation
-						img.link-menu-header__icon(src=require('../../../assets/img/button/dropdown.svg').default, alt='#')
-				li.menu-header__item.menu-header__account
-					a.menu-header__link(href='#') Cosmin Negoita
+	.container.flex
+		+logo('default')
+		nav.header__navigation.navigation-header
+			ul.navigation-header__list
+				li.navigation-header__item
+					a.navigation-header__link.navigation-header__link--active(href='colors-type.html') Home
+				li.navigation-header__item
+					a.navigation-header__link(href='colors-type.html') About Us
+				li.navigation-header__item
+					a.navigation-header__link.link-menu-header(href='#') Services
+				li.navigation-header__item
+					a.navigation-header__link(href='header-footer.html') Careers
+				li.navigation-header__item
+					a.navigation-header__link(href='cards.html') News
+				li.navigation-header__item
+					a.navigation-header__link.link-menu-header(href='form-elements.html') Documentation
+				li.navigation-header__item.navigation-header__item--user Cosmin Negoita
+
