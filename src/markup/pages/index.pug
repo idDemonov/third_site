@@ -5,15 +5,13 @@ html(lang='ru')
 	include ../components/component-import
 	include ../modules/module-import
 	+head()
-	body
-		.wrapper
-			header.header
-				+header()
+	body.wrapper
+		.inner
+			+header()
 			main.main.main--wrapper-background
-				div.main__body.body-main
-					.body-main__form
+				.main__body.body-main.container
+					form.body-main__form
 						+search()
-					p.body-main__epigraph.epigraph-main
-						em.epigraph-main__text Лучшие номера для вашей работы, отдыха и просто вдохновения
-			footer.footer
-				+footer()
+					p.body-main__epigraph.epigraph-main Лучшие номера для вашей работы, отдыха и просто вдохновения
+			+footer()
+			+footer-copyright('Copyright © 2018 Toxin отель. Все права зачищены.')

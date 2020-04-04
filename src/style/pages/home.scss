@@ -6,20 +6,29 @@
 		width: 100%;
 		min-height: 500px;
 	}
-}
 
-.main {
 	&__body {
 		padding-top: -rem(70px);
 		height: 100vh;
 		max-height: 830px;
 		display: flex;
 		flex-direction: column;
+		justify-content: space-between;
 	}
 }
 
-.epigraph-main {
-	&__text {
-		@extend .font-body;
+.body-main {
+	@extend .font-body;
+	color: rgba(31, 32, 65, 0.75);
+
+	&__form {
+		height: 100%;
+	}
+
+	&__epigraph {
+		margin-bottom: 15px;
+		align-self: end;
+		max-width: 297px;
+		text-align: right;
 	}
 }

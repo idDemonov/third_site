@@ -9,7 +9,6 @@
 	border-radius: 4px;
 
 	&__form {
-		max-width: 320px;
 		width: 100%;
 		margin-bottom: -rem(30px);
 	}
@@ -31,5 +30,9 @@
 		}
 	}
 
-	// &__list {}
+	&__list {
+		max-width: 320px;
+		width: 100%;
+		padding-bottom: -rem(30px);
+	}
 }
