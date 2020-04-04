@@ -1,20 +1,15 @@
 .cards {
 	margin: 0 auto;
 	max-width: 1220px;
+	padding-top: -rem(72px);
 
 	&__list {
 		width: 100%;
-		margin-right: 40px;
-		// display: flex;
-		// flex-wrap: wrap;
-		// justify-content: space-between;
-		// изменить на 1160 при построении всех табличек
-
-
+		margin-right: -rem(40px);
 	}
 
 	&__item {
-		margin-bottom: 40px;
+		margin-bottom: -rem(40px);
 	}
 }
 

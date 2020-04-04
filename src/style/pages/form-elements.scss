@@ -1,6 +1,7 @@
 .grid {
 	margin: 0 auto;
 	max-width: 1160px;
+	padding-top: -rem(60px);
 }
 
 .row {
@@ -10,6 +11,7 @@
 
 	&--bottom {
 		margin-bottom: -rem(20px);
+		max-height: 180px;
 	}
 
 	&--double {
@@ -23,7 +25,7 @@
 
 .column {
 	max-width: 340px;
-	padding: 0 10px;
+	padding: 0 -rem(10px);
 	width: 100%;
 
 	&--middle {
@@ -56,6 +58,10 @@
 
 		&--paddTop {
 			padding-top: -rem(74px);
+		}
+
+		&--width {
+			max-width: 250px;
 		}
 	}
 }
@@ -100,7 +106,7 @@
 
 	// &__title {}
 	&__item {
-		padding-top: 12px;
+		padding-top: -rem(12px);
 	}
 
 	// &__list {}

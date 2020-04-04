@@ -23,7 +23,7 @@
 	}
 
 	&__item {
-		padding-left: 25px;
+		padding-left: -rem(25px);
 		align-self: center;
 
 		&--user {

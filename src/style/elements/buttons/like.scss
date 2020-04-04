@@ -63,7 +63,7 @@
 	}
 
 	&__input:disabled+.like__box {
-		border: 1px solid $dark-color-50;
+		border: -rem(1px) solid $dark-color-50;
 	}
 
 	&__input:focus+.like__box {
