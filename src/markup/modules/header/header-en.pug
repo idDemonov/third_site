@@ -1,21 +1,22 @@
 mixin header-en()
-	header.header.container.flex
-		+logo('default')
-		nav.header__navigation.navigation-header
-			ul.navigation-header__list
-				li.navigation-header__item
-					a.navigation-header__link.navigation-header__link--active(href='colors-type.html') Home
-				li.navigation-header__item
-					a.navigation-header__link(href='colors-type.html') About Us
-				li.navigation-header__item
-					a.navigation-header__link.link-menu-header(href='#') Services
-				li.navigation-header__item
-					a.navigation-header__link(href='header-footer.html') Careers
-				li.navigation-header__item
-					a.navigation-header__link(href='cards.html') News
-				li.navigation-header__item
-					a.navigation-header__link.link-menu-header(href='form-elements.html') Documentation
-				li.navigation-header__item
-					+button-white('Login')
-				li.navigation-header__item
-					+button-filled-color('REGISTER')
+	.inner-header
+		header.header.container.flex
+			+logo('default')
+			nav.header__navigation.navigation-header
+				ul.navigation-header__list
+					li.navigation-header__item
+						a.navigation-header__link.navigation-header__link--active(href='colors-type.html') Home
+					li.navigation-header__item
+						a.navigation-header__link(href='colors-type.html') About Us
+					li.navigation-header__item
+						a.navigation-header__link.link-menu-header(href='#') Services
+					li.navigation-header__item
+						a.navigation-header__link(href='header-footer.html') Careers
+					li.navigation-header__item
+						a.navigation-header__link(href='cards.html') News
+					li.navigation-header__item
+						a.navigation-header__link.link-menu-header(href='form-elements.html') Documentation
+					li.navigation-header__item
+						+button-white('Login')
+					li.navigation-header__item
+						+button-filled-color('REGISTER')
