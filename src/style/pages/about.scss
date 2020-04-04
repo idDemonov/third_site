@@ -1,0 +1,35 @@
+.content {
+	margin-top: -rem(30px);
+
+	&__title {
+		@extend .font-h1;
+	}
+
+	&__footer {
+		display: flex;
+		justify-content: center;
+		margin-top: 40px;
+	}
+}
+
+.aside {
+	max-width: 266px;
+	width: 100%;
+	margin-right: -rem(60px);
+	margin-top: -rem(30px);
+
+	&__item {
+		padding-bottom: -rem(30px);
+	}
+}
+
+.result {
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	&__room {
+		padding-top: 20px;
+	}
+}

@@ -1,13 +1,21 @@
 .slider {
     max-width: 266px;
+
     &__text {
         @extend .font-h3;
         padding-bottom: -rem(20px);
         display: flex;
         justify-content: space-between;
     }
+
     &__value {
         color: $dark-color-50;
         font-weight: 400;
+    }
+
+    &__desc {
+        margin-top: 10px;
+        @include font-body($f-size: 12px, $weight: 400, $l-height: 14px);
+        color: $dark-color-50;
     }
 }

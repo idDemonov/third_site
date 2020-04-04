@@ -1,16 +1,64 @@
-//- doctype html
-//- html(lang='ru')
-//- 	head
-//- 		title Главная
-//- 		meta(http-equiv='Content-type', content='text/html;charset=UTF-8')
-//- 		meta(name='format-detection', content='telephone=no')
-//- 		meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0')
-//- 	body
-//- 		.wrapper
-//- 			header.header.container
-//- 				include ../modules/header
-//- 			main.main
-//- 				div.container
-//- 					include ../modules/main-about
-//- 			footer.footer
-//- 				include ../modules/footer
+doctype html
+html(lang='ru')
+	//- Mixins
+	include ../elements/element-import
+	include ../components/component-import
+	include ../modules/module-import
+	+head()
+	body.wrapper
+		.inner
+			+header()
+			main.main.container.flex
+				aside.aside
+					ul.aside__list
+						li.aside__item
+							+title-component('даты пребывания в отеле')
+							+date-filter()
+						li.aside__item
+							+title-component('гости')
+							+dropdownChoose('guests', ['3 гостя, 1 младенец ', 3, 0, 1], false)
+						li.aside__item
+							+slider('диапазон цены')
+							em.slider__desc Стоимость за сутки пребывания в номере
+						li.aside__item
+							+title-component('Checkbox Buttons')
+							+checkbox-list()
+						li.aside__item
+							+title-component('Checkbox Buttons')
+							+checkbox-list('rich')
+						li.aside__item
+							+title-component('Удобства номера')
+							+dropdownChoose('rooms', ['2 спальни, 2 кровати, без ванных комнат', 2, 2, 0], false)
+						li.aside__item
+							+checkbox-drop-list(false, 'дополнительные удобства')
+				.content
+					.content__title Номера, которые мы для вас подобрали
+					ul.result
+						li.result__room
+							+room('888', '9 990', ['one', 'three', 'six', 'nine'], 5, 145, true)
+						li.result__room
+							+room('840', '9 900', ['two', 'ten', 'one', 'seven'], 4, 65, false)
+						li.result__room
+							+room('980', '8 500', ['three', 'ten', 'six', 'one'], 3, 35, true)
+						li.result__room
+							+room('856', '7 300', ['four', 'one', 'three', 'five'], 5, 19, false)
+						li.result__room
+							+room('740', '6 000', ['five', 'one', 'six', 'four'], 4, 44, false)
+						li.result__room
+							+room('982', '5 800', ['six', 'ten', 'two', 'three'], 3, 56, false)
+						li.result__room
+							+room('678', '5 500', ['seven', 'two', 'three', 'eight'], 5, 45, false)
+						li.result__room
+							+room('450', '5 300', ['eight', 'four', 'one', 'ten'], 4, 39, false)
+						li.result__room
+							+room('350', '5 000', ['nine', 'two', 'three', 'ten'], 3, 77, false)
+						li.result__room
+							+room('666', '5 000', ['ten', 'one', 'five', 'nine'], 5, 25, false)
+						li.result__room
+							+room('444', '5 000', ['eleven', 'two', 'ten', 'seven'], 3, 15, false)
+						li.result__room
+							+room('352', '5 000', ['twelve', 'three', 'five', 'two'], 3, 55, false)
+					.content__footer
+						+pagination
+			+footer()
+			+footer-copyright('Copyright © 2018 Toxin отель. Все права зачищены.')

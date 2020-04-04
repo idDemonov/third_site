@@ -1,7 +1,7 @@
-mixin checkbox-drop-list(expand= false)
+mixin checkbox-drop-list(expand= false, title='expandable checkbox list')
 	.checkbox-list
 		button.checkbox-list__button
-			h3.checkbox-list__title expandable checkbox list
+			h3.checkbox-list__title= title
 			img(src=require('../../assets/img/button/dropdown.svg').default, alt=''
 				class= expand ? 'checkbox-list__icon checkbox-list__icon--activ' : 'checkbox-list__icon' )
 		div(class= expand ? 'checkbox-dropdown checkbox-dropdown--expanded' : 'checkbox-dropdown' )

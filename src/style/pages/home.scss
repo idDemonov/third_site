@@ -1,4 +1,6 @@
 .main {
+	flex-wrap: nowrap;
+
 	&--wrapper-background {
 		background-image: url(../assets/img/background/image-1.jpg);
 		background-size: cover;
