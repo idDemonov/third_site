@@ -1,4 +1,5 @@
 .pagination {
+	text-align: center;
 
 	&__list {
 		display: flex;
@@ -24,7 +25,7 @@
 		@extend .font-h3;
 
 		&--previous {
-			display: block;
+			// display: none;
 			border-radius: 50%;
 			position: relative;
 			background: $gradient-color-pagination;

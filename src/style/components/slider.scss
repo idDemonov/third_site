@@ -14,8 +14,9 @@
     }
 
     &__desc {
-        margin-top: 10px;
         @include font-body($f-size: 12px, $weight: 400, $l-height: 14px);
         color: $dark-color-50;
+        display: inline-block;
+        margin-top: 10px;
     }
 }
