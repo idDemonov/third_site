@@ -13,8 +13,12 @@
 	}
 
 	&--white {
-		width: 100px;
-		margin: -rem(2px);
+		z-index: 500;
+		// margin: -rem(2px);
+		height: 44px;
+		padding: 0;
+		text-align: center;
+		width: 101px;
 		position: relative;
 		color: $purple-color;
 		border-radius: 22px;
@@ -55,11 +59,11 @@
 	}
 
 	&--white {
-		z-index: 500;
+
 
 		&:before {
 			width: 100px;
-			height: 46px;
+			height: 44px;
 			content: '';
 			position: absolute;
 			top: 0px;
@@ -74,7 +78,7 @@
 
 		&:after {
 			width: 96px;
-			height: 42px;
+			height: 40px;
 			content: '';
 			position: absolute;
 			top: 2px;

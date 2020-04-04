@@ -16,22 +16,22 @@ html(lang='ru')
 	include ../components/component-import
 	include ../modules/module-import
 	+head()
-	body.wrapper-UI.wrapper-UI--background--write
-		.header-UI
+	body.wrapper
+		.inner
 			+logo('grey')
-		.container-UI
-			.colors
-				ul
-					+colorItem('Dark Shade 100%', '#1F2041')(class='colors__rectangle--dark100')
-					+colorItem('Dark Shade 75%', '#1F2041')(class='colors__rectangle--dark75')
-					+colorItem('Dark Shade 50%', '#1F2041')(class='colors__rectangle--dark50')
-					+colorItem('Dark Shade 25%', '#1F2041')(class='colors__rectangle--dark25')
-					+colorItem('Dark Shade 5%', '#1F2041')(class='colors__rectangle--dark5')
-					+colorItem('Purple', '#BC9CFF')(class='colors__rectangle--purple')
-					+colorItem('Green', '#6FCF97')(class='colors__rectangle--green')
-			.type
-				ul.type__list
-					+titleItem('H1', 'This one is the sub-section or widget title', 'h1')
-					+titleItem('H2', 'Next one is the item title inside widgets', 'h2')
-					+titleItem('H3', 'This is a label or CTA text', 'h3')
-					+titleItem('Body', 'This is the body text which is used for most of the design, like paragraphs, lists, etc.', 'body')
+			.container.flex
+				.colors
+					ul
+						+colorItem('Dark Shade 100%', '#1F2041')(class='colors__rectangle--dark100')
+						+colorItem('Dark Shade 75%', '#1F2041')(class='colors__rectangle--dark75')
+						+colorItem('Dark Shade 50%', '#1F2041')(class='colors__rectangle--dark50')
+						+colorItem('Dark Shade 25%', '#1F2041')(class='colors__rectangle--dark25')
+						+colorItem('Dark Shade 5%', '#1F2041')(class='colors__rectangle--dark5')
+						+colorItem('Purple', '#BC9CFF')(class='colors__rectangle--purple')
+						+colorItem('Green', '#6FCF97')(class='colors__rectangle--green')
+				.type
+					ul.type__list
+						+titleItem('H1', 'This one is the sub-section or widget title', 'h1')
+						+titleItem('H2', 'Next one is the item title inside widgets', 'h2')
+						+titleItem('H3', 'This is a label or CTA text', 'h3')
+						+titleItem('Body', 'This is the body text which is used for most of the design, like paragraphs, lists, etc.', 'body')

@@ -1,4 +1,7 @@
 .colors {
+	margin-top: -rem(60px);
+	height: 100vh;
+
 	&__item {
 		@extend .font-h2;
 		display: flex;
@@ -55,6 +58,7 @@
 
 
 .type {
+	margin-top: -rem(60px);
 	max-width: 403px;
 
 	// &__list {}

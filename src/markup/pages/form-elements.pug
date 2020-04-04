@@ -5,128 +5,126 @@ html(lang='ru')
 	include ../components/component-import
 	include ../modules/module-import
 	+head()
-	body.wrapper-UI.wrapper-UI--background--write
-		.header-UI
-			.header-UI__logo
-				+logo('grey')
-			.grid
-				.row
-					form.column
-						ul.elements
-							li.elements__item
-								+title-component('Text Field', 'Default')
-								+text-field-basic('Email', 'Email', 'email')
-							li.elements__item
-								+title-component('Text Field', 'Hover / Focus')
-								+text-field-basic('text', 'Просто текст', 'text', false, '', 'This is pretty awesome', 'text-field__input--active')
-							li.elements__item
-								+title-component('Dropdown', 'Default')
-								+dropdownChoose('guests', ['Сколько гостей', 0, 0, 0], false)
-							li.elements__item
-								+title-component('masked text field', 'Default')
-								+text-field-basic('text', 'ДД.ММ.ГГГГ', 'date', true, 'Пожалуйста, используйте формат ДД.ММ.ГГГГ', '', '')
-							li.elements__item.elements__item--row
-								+calendar()
-							li.elements__item
-								+title-component('filter date dropdown')
-								+date-filter()
-							li.elements__item
-								+title-component('subscription text field')
-								+text-field-subscribe()
-					.column.column--middle
-						ul.elements
-							li.elements__item.elements__item--middle
-								+title-component('Checkbox Buttons')
-								+checkbox-list()
-							li.elements__item.elements__item--middle
-								+title-component('Radio Buttons')
-								+radio('Мужчина', 'Женщина')
-							li.elements__item.elements__item--middle
-								+title-component('Toggle')
-								.subscription-toggle
-									ul.subscription-toggle__list
-										li.subscription-toggle__item
-											+toggle('Получать спецпредложения', true)
-										li.subscription-toggle__item
-											+toggle('Получать спецпредложения', false)
-							li.elements__item.elements__item--middle
-								+title-component('like Buttons')
-								.like-group
-									ul.like-group__list
-										li.like-group__item
-											+like(2, false)
-										li.like-group__item
-											+like(12, true)
-							li.elements__item.elements__item--middle
-								+title-component('rate button')
-								.rate-group
-									ul.rate-group__list
-										li.rate-group__item
-											+rating('first', 4)
-										li.rate-group__item
-											+rating('second', 5)
-					.column
-						ul.elements
-							li.elements__item.elements__item--middle
-								+slider
-							li.elements__item
-								+title-component('Buttons')
-								.buttons
-									ul.buttons__list
-										li.buttons__item.buttons__item--middle
-											+button-filled-color()
-											+button-filled-color('CLICK ME', 'button--click')
-										li.buttons__item.buttons__item--middle
-											+button-white()
-											+button-white('CLICK ME', 'button--click--gradient')
-										li.buttons__item.buttons__item--small
-											+button-text()
-											+button-text('CLICK ME', 'button--click--text')
-										li.buttons__item
-										+button-elongated()
-							li.elements__item
-								+title-component('pagination')
-								+pagination
-							li.elements__item
-				.row
-					.column
-						ul.elements
-							li.elements__item
-								+title-component('dropdown', 'Default', 'max-width: 266px')
-								+dropdownChoose('rooms', ['2 спальни, 2 кровати, без ванных комнат', 2, 2, 0], false)
-							li.elements__item
-								+title-component('dropdown', 'Default', 'max-width: 266px')
-								+dropdownChoose('rooms', ['2 спальни, 2 кровати, без ванных комнат', 2, 2, 0], true)
-							li.elements__item
-								+checkbox-drop-list(false)
-							li.elements__item
-								+checkbox-drop-list(true)
-							li.elements__item
-								+details('Комфорт', 'Шумопоглощающие стены', 'comfort.svg')
-							li.elements__item
-								+details('Удобство', 'Окно в каждой из спален', 'convenience.svg')
-							li.elements__item
+	body.wrapper.inner
+		+logo('grey')
+		.grid
+			.row
+				form.column
+					ul.elements
+						li.elements__item
+							+title-component('Text Field', 'Default')
+							+text-field-basic('Email', 'Email', 'email')
+						li.elements__item
+							+title-component('Text Field', 'Hover / Focus')
+							+text-field-basic('text', 'Просто текст', 'text', false, '', 'This is pretty awesome', 'text-field__input--active')
+						li.elements__item
+							+title-component('Dropdown', 'Default')
+							+dropdownChoose('guests', ['Сколько гостей', 0, 0, 0], false)
+						li.elements__item
+							+title-component('masked text field', 'Default')
+							+text-field-basic('text', 'ДД.ММ.ГГГГ', 'date', true, 'Пожалуйста, используйте формат ДД.ММ.ГГГГ', '', '')
+						li.elements__item.elements__item--row
+							+calendar()
+						li.elements__item
+							+title-component('filter date dropdown')
+							+date-filter()
+						li.elements__item
+							+title-component('subscription text field')
+							+text-field-subscribe()
+				.column.column--middle
+					ul.elements
+						li.elements__item.elements__item--middle
+							+title-component('Checkbox Buttons')
+							+checkbox-list()
+						li.elements__item.elements__item--middle
+							+title-component('Radio Buttons')
+							+radio('Мужчина', 'Женщина')
+						li.elements__item.elements__item--middle
+							+title-component('Toggle')
+							.subscription-toggle
+								ul.subscription-toggle__list
+									li.subscription-toggle__item
+										+toggle('Получать спецпредложения', true)
+									li.subscription-toggle__item
+										+toggle('Получать спецпредложения', false)
+						li.elements__item.elements__item--middle
+							+title-component('like Buttons')
+							.like-group
+								ul.like-group__list
+									li.like-group__item
+										+like(2, false)
+									li.like-group__item
+										+like(12, true)
+						li.elements__item.elements__item--middle
+							+title-component('rate button')
+							.rate-group
+								ul.rate-group__list
+									li.rate-group__item
+										+rating('first', 4)
+									li.rate-group__item
+										+rating('second', 5)
+				.column
+					ul.elements
+						li.elements__item.elements__item--middle
+							+slider
+						li.elements__item
+							+title-component('Buttons')
+							.buttons
+								ul.buttons__list
+									li.buttons__item.buttons__item--middle
+										+button-filled-color()
+										+button-filled-color('CLICK ME', 'button--click')
+									li.buttons__item.buttons__item--middle
+										+button-white()
+										+button-white('CLICK ME', 'button--click--gradient')
+									li.buttons__item.buttons__item--small
+										+button-text()
+										+button-text('CLICK ME', 'button--click--text')
+									li.buttons__item
+									+button-elongated()
+						li.elements__item.elements__item--width
+							+title-component('pagination')
+							+pagination
+						li.elements__item
+			.row
+				.column
+					ul.elements
+						li.elements__item
+							+title-component('dropdown', 'Default', 'max-width: 266px')
+							+dropdownChoose('rooms', ['2 спальни, 2 кровати, без ванных комнат', 2, 2, 0], false)
+						li.elements__item
+							+title-component('dropdown', 'Default', 'max-width: 266px')
+							+dropdownChoose('rooms', ['2 спальни, 2 кровати, без ванных комнат', 2, 2, 0], true)
+						li.elements__item
+							+checkbox-drop-list(false)
+						li.elements__item
+							+checkbox-drop-list(true)
+						li.elements__item
+							+details('Комфорт', 'Шумопоглощающие стены', 'comfort.svg')
+						li.elements__item
+							+details('Удобство', 'Окно в каждой из спален', 'convenience.svg')
+						li.elements__item
 
 
-					.column.column--double
-						.row.row--double
-							.column
-								ul.elements
-									li.elements__item
-										+title-component('Dropdown')
-										+dropdownChoose('guests', ['Сколько гостей', 0, 0, 0], true)
-									li.elements__item.elements__item--paddTop
-										+title-component('Rich Checkbox Buttons')
-										+checkbox-list('rich')
+				.column.column--double
+					.row.row--double
+						.column
+							ul.elements
+								li.elements__item
+									+title-component('Dropdown')
+									+dropdownChoose('guests', ['Сколько гостей', 0, 0, 0], true)
+								li.elements__item.elements__item--paddTop
+									+title-component('Rich Checkbox Buttons')
+									+checkbox-list('rich')
 
-							.column
-								ul.elements
-									li.elements__item
-										+title-component('Dropdown')
-										+dropdownChoose('guests', ['3 Гостя', 2, 1, 0], true)
-									li.elements__item.elements__item--paddTop
-										+title-component('bullet list')
-										+bullet([{text: 'Нельзя с питомцами'}, {text: 'Без вечеринок и мероприятий'},{text: 'Время прибытия — после 13:00, а выезд до 12:00'}])
-						.row.row--bottom
-							.elements__item
-								+comment
+						.column
+							ul.elements
+								li.elements__item
+									+title-component('Dropdown')
+									+dropdownChoose('guests', ['3 Гостя', 2, 1, 0], true)
+								li.elements__item.elements__item--paddTop
+									+title-component('bullet list')
+									+bullet([{text: 'Нельзя с питомцами'}, {text: 'Без вечеринок и мероприятий'},{text: 'Время прибытия — после 13:00, а выезд до 12:00'}])
+					.row.row--bottom
+						.elements__item
+							+comment

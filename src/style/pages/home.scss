@@ -23,13 +23,11 @@
 	@extend .font-body;
 	color: rgba(31, 32, 65, 0.75);
 
-	&__form {
-		height: 100%;
-	}
+	// &__form {}
 
 	&__epigraph {
-		margin-bottom: 15px;
-		align-self: end;
+		margin-bottom: -rem(15px);
+		align-self: flex-end;
 		max-width: 297px;
 		text-align: right;
 	}
