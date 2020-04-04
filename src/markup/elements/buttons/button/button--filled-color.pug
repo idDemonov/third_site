@@ -1,2 +1,3 @@
-mixin button-filled-color(text= 'CLICK ME', addClassB='')
-    button(class= ['button', 'button--filled-color', addClassB])= text
+mixin button-filled-color(text= 'CLICK ME', addClassB='', url='index.html')
+    button(class= ['button', 'button--filled-color', addClassB])
+        a.button__link(href= url)= text
