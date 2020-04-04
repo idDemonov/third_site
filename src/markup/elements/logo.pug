@@ -6,6 +6,6 @@ mixin logo(type='default')
 			a.logo__text(href='index.html')
 				img(src=require('../../assets/img/logo/toxin.svg').default, alt='Логотип')
 	if type == 'grey'
-		.logo
-			.logo__icon.logo__icon--grey
+		.logo.logo--grey
+			.logo__icon
 				img(src=require('../../assets/img/logo/logo-grey.svg').default, alt='Логотип')
