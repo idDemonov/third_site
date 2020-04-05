@@ -1,0 +1,62 @@
+.statistics {
+	display: flex;
+	align-items: flex-end;
+
+	&__tree {
+		width: 122px;
+		height: 122px;
+		text-align: center;
+		background-image: url(../assets/img/background/graf.svg);
+		background-repeat: no-repeat;
+		background-position-x: left;
+		background-position-y: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&__num {
+		@extend .font-h1;
+		color: $purple-color;
+	}
+
+	&__text {
+		@extend .font-h3;
+		color: $purple-color;
+	}
+
+	&__description {
+		padding-left: -rem(30px);
+	}
+
+	&__item {
+		position: relative;
+		@extend .font-body;
+
+		&:before {
+			content: '';
+			width: 10px;
+			height: 10px;
+			left: -14px;
+			top: 6px;
+			position: absolute;
+			border-radius: 50%;
+		}
+
+		&--superb:before {
+			background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+		}
+
+		&--good:before {
+			background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+		}
+
+		&--satisfactory:before {
+			background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+		}
+
+		&--disappointed:before {
+			background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+		}
+	}
+}

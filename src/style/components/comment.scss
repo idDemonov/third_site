@@ -3,14 +3,13 @@
         min-width: 200px;
     }
 
-    &__liked {
-        padding-left: -rem(4px);
-    }
+
 
     &__content {
         display: flex;
         max-width: 710px;
         margin-top: -rem(10px);
+
     }
 }
 
@@ -34,9 +33,15 @@
     // &__last-time{}
 }
 
-.content {
+.comment-content {
     &__text {
         @extend .font-body;
         margin-left: -rem(13px);
+    }
+
+    &__liked {
+        padding-left: -rem(4px);
+        position: relative;
+        z-index: 1;
     }
 }

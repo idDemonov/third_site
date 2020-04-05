@@ -10,10 +10,10 @@ mixin room(numRoom= '888', price= '9 990', urlImg= ['one', 'two', 'three', 'four
 				img(src= require('../../assets/img/rooms/' + urlImg[2] + '.png').default, alt="")
 			li.slide
 				img(src= require('../../assets/img/rooms/' + urlImg[3] + '.png').default, alt="")
-		.card-room__details.room-details
-			.room-details__title
+		.card-room__details.room-detail
+			.room-detail__title
 				+room-title(numRoom, suite, price)
-			.room-details__property
-					.room-details__rating
+			.room-detail__property
+					.room-detail__rating
 						+rating(numRoom, rating)
-					.room-details__review= numReview
+					.room-detail__review= numReview

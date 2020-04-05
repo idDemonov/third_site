@@ -8,7 +8,40 @@ html(lang='ru')
 	body.wrapper
 		.inner
 			+header()
-			main.main.main--background-user
-				.main__body.container.inner-wrapper
+			main.room-main
+				.background-room
+					.background-room__left
+					.background-room__right.background-room-right
+						.background-room-right__top
+						.background-room-right__bottom
+				.container.flex
+					.content-room
+						.content-room__column
+							.room-details
+								h3.room-main__title Сведения о номере
+								+details()
+								+details('Удобство','Окно в каждой из спален', 'convenience.svg')
+								+details('Уют', 'Номер оснащён камином', 'whatshot.svg')
+							.room-impressions
+								h3.room-main__title Впечатления от номера
+								+statistics()
+						.content-room__row
+							.reviews
+								h3.room-main__title Отзывы посетителей номера
+								.reviews__comment
+									+comment()
+								.reviews__comment
+									+comment('Патрисия Стёклышкова', 'Неделю назад', 'author-woman.png', '2', false, 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент')
+						.content-room__column
+							.rules
+								h3.room-main__title Правила
+								+bullet([{text: 'Нельзя с питомцами'}, {text: 'Без вечеринок и мероприятий'},{text: 'Время прибытия — после 13:00, а выезд до 12:00'}])
+							.abolition
+								h3.room-main__title Отмена
+								p.abolition__text
+									| Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+					aside.booking
+						+reservation()
+
 			+footer()
 			+footer-copyright('Copyright © 2018 Toxin отель. Все права зачищены.')

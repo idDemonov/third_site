@@ -5,7 +5,7 @@ mixin comment(name= 'Мурад Сарафанов', time= '5 дней наза�
                 img(src= require('../../assets/img/author-logo/' +urlLogo).default, width='48px', height='48px')
             h5.author__name= name
             .author__last-time= time
-        .comment__content.content
-            .comment__liked
+        .comment__content.comment-content
+            .comment-content__liked
                 +like(valLike, like)
-            span.content__text= descr
+            span.comment-content__text= descr

@@ -1,0 +1,109 @@
+.room-main {
+	&__title {
+		@extend .font-h2;
+		padding-bottom: -rem(20px);
+	}
+}
+
+.content-room {
+	margin-top: -rem(70px);
+	margin-bottom: -rem(40px);
+	max-width: 720px;
+
+
+	&__column {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: -rem(30px);
+	}
+
+	&__row {
+		margin-bottom: -rem(30px);
+	}
+}
+
+.room-details {}
+
+.room-impressions {
+	margin: 0 auto;
+}
+
+.reviews {
+	&__comment {
+		margin-bottom: -rem(20px);
+	}
+}
+
+.rules {}
+
+.abolition {
+	max-width: 340px;
+	@extend .font-body;
+
+	&__text {}
+}
+
+.booking {
+	max-width: 380px;
+	margin-top: -rem(70px);
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//          ===== Background =====
+.background-room {
+	display: flex;
+	width: 100%;
+	height: 100%;
+
+	&__left {
+		background-image: url(../assets/img/background/back-room-left.jpg);
+		background-size: cover;
+		background-position: center center;
+		width: 70%;
+		min-height: 400px;
+		max-height: 600px;
+		height: 50vh;
+	}
+
+	&__right {
+		width: 50%;
+	}
+}
+
+.background-room-right {
+	max-height: 50vh;
+
+	&__top {
+		background-image: url(../assets/img/background/back-room-right-top.jpg);
+		background-size: cover;
+		background-position: center center;
+		min-height: 200px;
+		max-height: 300px;
+		height: 25vh;
+	}
+
+	&__bottom {
+		background-image: url(../assets/img/background/back-room-right-bottom.jpg);
+		background-size: cover;
+		background-position: center center;
+		min-height: 200px;
+		max-height: 300px;
+		height: 25vh;
+	}
+}
