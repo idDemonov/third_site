@@ -14,6 +14,8 @@ var validate = new Bouncer("form");
 
 
 
+
+
 //                    ================ Слайдер, для прокрутки картинок ================
 import { tns } from "./vendors/tiny-slider";
 
@@ -34,10 +36,13 @@ if (sliders) {
     });
   })
 }
-
-
-
-
+//      Настройка перехода по ссылке, тупой выриант, сделал на время, чтобы просто работало
+document.querySelectorAll('.tns-outer')
+  .forEach((elem) => {
+    elem.addEventListener('click', event => {
+      if (event.target.classList.contains('tns-controls')) location.href = 'room.html'
+    })
+  })
 
 
 
@@ -57,7 +62,7 @@ if (calendars) {
       nextArrow: "",
       minDate: 12
     });
-    // Кнопки у input
+    // Кнопки у input, отстойно реализовано, знаю
     prim.element.querySelectorAll(".calendar__button")[0]
       .addEventListener('click', (e) => {
         e.stopPropagation()

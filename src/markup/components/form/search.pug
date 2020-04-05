@@ -1,7 +1,7 @@
 mixin search(text='Найдём номера под ваши пожелания')
 	.search-card
 		h1.search-card__title= text
-		form.search-card__form.search-data(action='about.html', target='_blank')
+		form.search-card__form.search-data(action='about.html')
 			ul.search-data__list
 				li.search-data__item
 					+calendar('Прибытие', 'Выезд')
@@ -9,4 +9,4 @@ mixin search(text='Найдём номера под ваши пожелания'
 					+title-component('Гости')
 					+dropdownChoose('guests', ['Сколько гостей', 0, 0, 0], false)
 				li.search-data__item.search-data__item--additional-padding
-					+button-elongated('Подобрать номер')
+					+button-elongated('Подобрать номер', 'submit')

@@ -2,7 +2,8 @@ mixin room(numRoom= '888', price= '9 990', urlImg= ['one', 'two', 'three', 'four
 	.card-room
 		ul.card-room__slider.room-slider
 			li.slide
-				img(src= require('../../assets/img/rooms/'+ urlImg[0] +'.png').default, alt="")
+				a(href='#')
+					img(src= require('../../assets/img/rooms/'+ urlImg[0] +'.png').default, alt="")
 			li.slide
 				img(src= require('../../assets/img/rooms/' + urlImg[1] + '.png').default, alt="")
 			li.slide

@@ -6,14 +6,50 @@ mixin header()
 					ul.navigation-header__list
 						li.navigation-header__item
 							a.navigation-header__link(href='colors-type.html') О нас
-						li.navigation-header__item
-							a.navigation-header__link.link-menu-header(href='about.html') Услуги
+						li.navigation-header__item.dropdown-menu Услуги
+							ul.submenu.submenu--service
+								li.submenu__item
+									a.submenu__link(href='header-footer.html') Footer-Header
+								li.submenu__item
+									a.submenu__link(href='cards.html') Cards
+								li.submenu__item
+									a.submenu__link(href='colors-type.html') Font-Color
+								li.submenu__item
+									a.submenu__link(href='form-elements.html') Form-Element
+								li.submenu__item
+									a.submenu__link(href='index.html') Home
+								li.submenu__item
+									a.submenu__link(href='about.html') Result
+								li.submenu__item
+									a.submenu__link(href='log.html') Log In
+								li.submenu__item
+									a.submenu__link(href='register.html') Register
+								li.submenu__item
+									a.submenu__link(href='room.html') Room
 						li.navigation-header__item
 							a.navigation-header__link(href='header-footer.html') Вакансии
 						li.navigation-header__item
 							a.navigation-header__link(href='cards.html') Новости
-						li.navigation-header__item
-							a.navigation-header__link.link-menu-header(href='form-elements.html') Соглашения
+						li.navigation-header__item.dropdown-menu Соглашения
+							ul.submenu.submenu--documentation
+								li.submenu__item
+									a.submenu__link(href='header-footer.html') Footer-Header
+								li.submenu__item
+									a.submenu__link(href='cards.html') Cards
+								li.submenu__item
+									a.submenu__link(href='colors-type.html') Font-Color
+								li.submenu__item
+									a.submenu__link(href='form-elements.html') Form-Element
+								li.submenu__item
+									a.submenu__link(href='index.html') Home
+								li.submenu__item
+									a.submenu__link(href='about.html') Result
+								li.submenu__item
+									a.submenu__link(href='log.html') Log In
+								li.submenu__item
+									a.submenu__link(href='register.html') Register
+								li.submenu__item
+									a.submenu__link(href='room.html') Room
 						li.navigation-header__item
 							+button-white('войти', '', 'log.html')
 						li.navigation-header__item

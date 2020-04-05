@@ -2,7 +2,7 @@
 	background-color: rgb(255, 255, 255);
 	height: 70px;
 	@extend .font-body;
-	color: rgba(31, 32, 65, 0.5);
+	color: $dark-color-50;
 	// box-shadow: 0px 10px 0px rgba(31, 32, 65, 0.05);
 
 	&__navigation {
@@ -12,7 +12,7 @@
 
 .inner-header {
 	width: 100%;
-	box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05)
+	box-shadow: 0px 10px 20px $dark-color-5;
 }
 
 .navigation-header {
@@ -23,7 +23,7 @@
 	}
 
 	&__item {
-		padding-left: -rem(25px);
+		margin-left: -rem(25px);
 		align-self: center;
 
 		&--user {
@@ -46,7 +46,78 @@
 	&__link {
 		&--active {
 			font-weight: 700;
-			color: rgba(31, 32, 65, 0.75);
+			color: $dark-color-75;
 		}
 	}
+}
+
+.dropdown-menu {
+	cursor: pointer;
+	position: relative;
+	padding-right: -rem(20px);
+
+
+	&:after {
+		content: '';
+		width: 24px;
+		height: 10px;
+		position: absolute;
+		background-image: url(../assets/img/button/dropdown.svg);
+		background-position-x: center;
+		background-position-y: bottom;
+		background-repeat: no-repeat;
+		bottom: 8px;
+		right: -4px;
+	}
+
+
+}
+
+.submenu {
+	border-radius: 4px;
+	position: absolute;
+	top: 30px;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	transition: 0.5s ease-in-out;
+	width: 130px;
+	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+
+
+
+	&--service {
+		left: -25px;
+	}
+
+	&--documentation {
+		left: -10px;
+	}
+
+
+	&__item {
+		width: 100%;
+		border-bottom: 1px solid $dark-color-25;
+
+		&:hover {
+			background: $dark-color-5;
+		}
+
+	}
+
+	&__link {
+
+		padding: 0 -rem(10px);
+	}
+}
+
+.dropdown-menu .submenu {
+	visibility: hidden;
+	opacity: 0;
+	background: rgb(255, 255, 255);
+}
+
+.dropdown-menu:hover .submenu {
+	visibility: visible;
+	opacity: 1;
 }
