@@ -1,0 +1,15 @@
+doctype html
+html(lang='ru')
+	//- Mixins
+	include ../elements/element-import
+	include ../components/component-import
+	include ../modules/module-import
+	+head()
+	body.wrapper
+		.inner
+			+header()
+			main.main.main--background-user
+				.main__body.container.inner-wrapper
+					+login()
+			+footer()
+			+footer-copyright('Copyright © 2018 Toxin отель. Все права зачищены.')

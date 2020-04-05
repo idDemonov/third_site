@@ -2,7 +2,7 @@ export const calcGuestsWriteInput = (input, lowdown, buttonClear) => {
   let people = {
     adult: 0,
     children: 0,
-    babies: 0
+    babies: 0,
   };
   for (let type of lowdown) {
     people[type.dataset.typeRoom] = type.value;
