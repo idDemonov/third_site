@@ -1,18 +1,28 @@
 .main {
 	flex-wrap: nowrap;
 
-	&--wrapper-background {
-		background-image: url(../assets/img/background/image-1.jpg);
-		background-size: cover;
-		background-position: center center;
+	&--background {
+
+
 		width: 100%;
 		min-height: 500px;
+
+		&-index {
+			background-image: url(../assets/img/background/back-index.jpg);
+			background-size: cover;
+			background-position: center center;
+		}
+
+		&-user {
+			background-image: url(../assets/img/background/back-user.jpg);
+			background-size: cover;
+			background-position: center center;
+		}
 	}
 
 	&__body {
 		padding-top: -rem(70px);
-		height: 100vh;
-		max-height: 830px;
+		height: calc(100vh - 70px);
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
