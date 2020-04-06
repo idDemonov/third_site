@@ -24,7 +24,7 @@
 	&__text {
 		position: relative;
 		display: block;
-		margin-top: -(-rem(16px));
+		margin-top: -(-rem(20px));
 		padding-left: -rem(22px);
 		@include fontSize($size: 10px);
 		line-height: -lineHeight($f-size: 10px, $l-height: 12px);
