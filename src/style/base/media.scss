@@ -1,45 +1,84 @@
-// @media screen and (max-width: 971px) {
-// 	.footer {
-// 		&__body {
-// 			padding-bottom: 65px;
-// 			padding-top: 25px;
-// 			}
-// 		}
-// 	.body-footer {
-// 		&__logo {
-// 			width: 100%;
-// 			flex-grow: 1;
-// 			}
-// 		}
-// }
+@media screen and (max-width: 991px) {
+	.header {
+		display: none; // Пока не сделано бурегер меню
+	}
 
-// @media screen and (max-width: 840px) { // Скрываю меню
-// 	.body-header {
-// 		&__menu {
-// 			display: none;
-// 		}
-// 	}
-// 	.wrapper-burger {
-// 		flex-basis: 320px;
-// 		display: block;
-// 	}
-// }
+	.footer__list {
+		flex-wrap: wrap;
+		margin-top: -rem(30px);
+	}
 
-// @media screen and (max-width: 380px) {
-// 	.body-main {
-// 		&__form {
-// 		padding: 30px 20px 20px;
-// 		}
-// 	}
-// 	.form-main {
-// 		&__title {
-// 			font-size: 22px;
-// 			line-height: 25px;
-// 		}
-// 	}
-// 	.arrival-date-for {
-// 			&__calendar {
-// 				font-size: 11px;
-// 			}
-// 	}
-// }
+	.footer__item {
+		width: auto;
+	}
+
+	.footer-subscribe {
+		width: 100%;
+	}
+
+	.footer-navigation {
+		width: 60%;
+	}
+
+	.footer-navigation__list {
+		padding: 0;
+		padding-right: -rem(10px);
+	}
+
+	.logo {
+		justify-content: center;
+	}
+
+	.footer-logo {
+		max-width: 460px;
+		margin: 0 auto;
+		text-align: center;
+		margin-bottom: -rem(30px);
+	}
+
+	.body-main__form {
+		position: relative;
+	}
+
+	.body-main__form.search-card {
+		position: absolute;
+	}
+}
+
+@media screen and (max-width: 735px) {
+	.footer-navigation {
+		max-width: 100%;
+		width: 100%;
+		margin-bottom: -rem(30px);
+	}
+
+	.footer-subscribe {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		max-width: 100%;
+
+		&__text {
+			max-width: 100%;
+		}
+
+		&__form {
+			width: 100%;
+			max-width: 260px;
+		}
+	}
+
+	.footer__list {
+		margin-bottom: -rem(30px);
+	}
+}
+
+@media screen and (max-width: 450px) {
+
+	.footer-navigation,
+	.footer-subscribe {
+		display: none;
+	}
+
+
+}
