@@ -62,7 +62,7 @@ if (calendars) {
       nextArrow: "",
       minDate: 12
     });
-    // Кнопки у input, отстойно реализовано, знаю
+    // Кнопки у input.Отстойно реализовано, знаю
     prim.element.querySelectorAll(".calendar__button")[0]
       .addEventListener('click', (e) => {
         e.stopPropagation()

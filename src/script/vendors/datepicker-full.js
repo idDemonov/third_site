@@ -1,4 +1,4 @@
-(function () {
+export let Datepickers = (function () {
   'use strict';
 
   function hasProperty(obj, prop) {
@@ -1686,7 +1686,7 @@
         style
       } = this.element;
 
-      const {
+      let {
         config,
         inputField
       } = this.datepicker;
@@ -1702,7 +1702,18 @@
       } = container.getBoundingClientRect();
 
       // Выравниваю всегда по первому input
-      const myInputField = this.datepicker.rangepicker.element.firstElementChild;
+      // const myInputField = this.datepicker.rangepicker.element.firstElementChild;
+      // console.log(myInputField);
+
+      // console.log(this.datepicker);
+      // console.log(this.datepicker.element.form.start);
+      // console.log(inputField);
+      inputField = this.datepicker.element.form.start
+      // console.log(this.datepicker.rangepicker);
+      // console.log(this.datepicker.rangepicker.element);
+
+
+
 
 
       const {
@@ -1710,7 +1721,7 @@
         top: inputTop,
         width: inputWidth,
         height: inputHeight
-      } = myInputField.getBoundingClientRect();
+      } = inputField.getBoundingClientRect();
 
       let {
         x: orientX,

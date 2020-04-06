@@ -29,15 +29,18 @@ const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.p
 // Функция, которая сжимает css если isProd true
 const optimization = () => {
 	const config = { // Если скрипты используют одну и туже библиотеку
+		minimize: false, // Не смог решить проблему с календарём, опция не сжимает js
 		// splitChunks: { // webpack вынесет её в отдельный скрипт и подключит
 		//     chunks: "all"
 		// }
 	}
-	if (isProd) { // Если production то сжимает javascript код
-		config.minimizer = [
-			new TerserWebpackPlugin()
-		]
-	}
+	// if (isProd) { // Если production то сжимает javascript код
+	// 	config.minimizer = [
+	// 		new TerserWebpackPlugin({
+	// 			exclude: /\/datepicker-full.js/,
+	// 		})
+	// 	]
+	// }
 	return config;
 }
 
