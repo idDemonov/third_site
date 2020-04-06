@@ -19,9 +19,12 @@ html(lang='ru')
 						.content-room__column
 							.room-details
 								h3.room-main__title Сведения о номере
-								+details()
-								+details('Удобство','Окно в каждой из спален', 'convenience.svg')
-								+details('Уют', 'Номер оснащён камином', 'whatshot.svg')
+								.room-details__item.room-details__item--border-bottom
+									+details()
+								.room-details__item.room-details__item--border-bottom
+									+details('Удобство','Окно в каждой из спален', 'convenience.svg')
+								.room-details__item
+									+details('Уют', 'Номер оснащён камином', 'whatshot.svg')
 							.room-impressions
 								h3.room-main__title Впечатления от номера
 								+statistics()

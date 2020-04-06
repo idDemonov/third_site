@@ -22,7 +22,15 @@
 	}
 }
 
-.room-details {}
+.room-details {
+	&__item {
+		&--border-bottom {
+			margin-bottom: -rem(20px);
+			border-bottom: -rem(1px) solid rgba(31, 32, 65, 0.1);
+		}
+	}
+
+}
 
 .room-impressions {
 	margin: 0 auto;
