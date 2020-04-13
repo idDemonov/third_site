@@ -1,4 +1,4 @@
-# Сайт TOXIN"
+# Сайт TOXIN
 
 <p align="center"><a href="https://demonovhost.github.io/Toxin/" target="_blank" rel="noopener noreferrer"><img width="100" src="logo.svg" alt="Логотип"></a></p>
 
